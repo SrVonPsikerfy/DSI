@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSIProyectoFinal
 {
-    class Class1
+    class Knights
     {
     }
 }
