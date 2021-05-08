@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\check.png" />
+    <Content Include="Assets\gauntletIcon.png" />
     <Content Include="Assets\homeButton.png" />
     <Content Include="Assets\NivelAux.png" />
     <Content Include="Assets\settingsButton.png" />

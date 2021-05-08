@@ -54,34 +54,70 @@
                     Grid.ColumnSpan="2"
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"
+                    VerticalAlignment="Center"
                     Height="Auto"
                     Width="Auto">
-            <Button Width="Auto"
+
+            <Button Content="Personaje 1"
+                    FontSize="30"
+                    FontWeight="Bold"
+                    Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     BorderThickness="7"
-                    BorderBrush="Black">
-                <TextBlock Text="Personaje 1"
-                           FontSize="30"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Stretch"/>
-            </Button>
+                    BorderBrush="Black"/>
 
-            <Button Width="Auto"
+            <Button Content="Personaje 2"
+                    Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    BorderBrush="Black">
-                <TextBlock Text="Personaje 2"
-                           FontSize="30"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"/>
-            </Button>
+                    BorderBrush="Black" Margin="0,10,0,0"
+                    FontSize="30"
+                    FontWeight="Bold"/>
 
+            <Button Content="Personaje 3"
+                    Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderBrush="Black" Margin="0,10,0,0"
+                    FontSize="30"
+                    FontWeight="Bold"/>
+        </StackPanel>
+
+        <Image Source="/Assets/gauntletIcon.png"
+               Grid.ColumnSpan="2"
+               Grid.Row="1"
+               Stretch="Uniform"
+               VerticalAlignment="Stretch"
+               HorizontalAlignment="Stretch"/>
+        <Button Content="GO!" Grid.Column="2"  Grid.Row="2" VerticalAlignment="Top"
+                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"/>
+
+        <StackPanel Grid.Row="2"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <Image Source="/Assets/homeButton.png"
+               Grid.Row="2"
+               Height="50"
+               Width="50"
+               Margin="0,0,0,10"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Stretch="Uniform"/>
+            <Image Source="/Assets/settingsButton.png"
+               Grid.Row="2"
+               Height="50"
+               Width="50"
+               Margin="0,0,0,5"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Stretch="Uniform"/>
         </StackPanel>
         
+
     </Grid>
 </Page>
