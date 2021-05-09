@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ataque.xaml.cs">
+      <DependentUpon>Ataque.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gauntlet.xaml.cs">
       <DependentUpon>Gauntlet.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,11 @@
   <ItemGroup>
     <Content Include="Assets\atacanteIcon.png" />
     <Content Include="Assets\atacanteSelectedIcon.png" />
+    <Content Include="Assets\attack.png" />
+    <Content Include="Assets\attackBackground.png" />
+    <Content Include="Assets\cart1.png" />
+    <Content Include="Assets\cart2.png" />
+    <Content Include="Assets\cart3.png" />
     <Content Include="Assets\check.png" />
     <Content Include="Assets\defensorIcon.png" />
     <Content Include="Assets\defensorSelectedIcon.png" />
@@ -166,6 +174,7 @@
     <Content Include="Assets\homeButton.png" />
     <Content Include="Assets\iridium.png" />
     <Content Include="Assets\NivelAux.png" />
+    <Content Include="Assets\pauseButton.png" />
     <Content Include="Assets\playIcon.png" />
     <Content Include="Assets\pvpIcon.png" />
     <Content Include="Assets\settingsButton.png" />
@@ -184,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Ataque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Gauntlet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
