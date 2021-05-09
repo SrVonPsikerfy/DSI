@@ -135,6 +135,9 @@
     <Compile Include="ModoHistoria.xaml.cs">
       <DependentUpon>ModoHistoria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Opciones.xaml.cs">
+      <DependentUpon>Opciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pause.xaml.cs">
       <DependentUpon>Pause.xaml</DependentUpon>
     </Compile>
@@ -142,13 +145,13 @@
     <Compile Include="PVP.xaml.cs">
       <DependentUpon>PVP.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Store.xaml.cs">
+      <DependentUpon>Store.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TeamConfig.xaml.cs">
       <DependentUpon>TeamConfig.xaml</DependentUpon>
     </Compile>
     <Compile Include="Teams.cs" />
-    <Compile Include="Victoria.xaml.cs">
-      <DependentUpon>Victoria.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TeamSelect.xaml.cs">
       <DependentUpon>TeamSelect.xaml</DependentUpon>
     </Compile>
@@ -167,18 +170,23 @@
     <Content Include="Assets\cart2.png" />
     <Content Include="Assets\cart3.png" />
     <Content Include="Assets\check.png" />
+    <Content Include="Assets\defender_class_icon.png" />
     <Content Include="Assets\defensorIcon.png" />
     <Content Include="Assets\defensorSelectedIcon.png" />
-    <Content Include="Assets\exp.png" />
+    <Content Include="Assets\exit_icon.png" />
     <Content Include="Assets\gauntletIcon.png" />
+    <Content Include="Assets\healer_class_icon.png" />
     <Content Include="Assets\homeButton.png" />
-    <Content Include="Assets\iridium.png" />
+    <Content Include="Assets\melee_class_icon.png" />
+    <Content Include="Assets\moneda.png" />
     <Content Include="Assets\NivelAux.png" />
     <Content Include="Assets\pauseButton.png" />
     <Content Include="Assets\playIcon.png" />
     <Content Include="Assets\pvpIcon.png" />
     <Content Include="Assets\settingsButton.png" />
     <Content Include="Assets\shop.png" />
+    <Content Include="Assets\sniper_class_icon.png" />
+    <Content Include="Assets\support_class_icon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -213,6 +221,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Opciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pause.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -221,9 +233,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Victoria.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Store.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TeamConfig.xaml">
       <SubType>Designer</SubType>
