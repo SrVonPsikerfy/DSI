@@ -122,6 +122,9 @@
     <Compile Include="Ataque.xaml.cs">
       <DependentUpon>Ataque.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Defensa.xaml.cs">
+      <DependentUpon>Defensa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gauntlet.xaml.cs">
       <DependentUpon>Gauntlet.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,9 @@
     <Compile Include="TeamSelect.xaml.cs">
       <DependentUpon>TeamSelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Victoria.xaml.cs">
+      <DependentUpon>Victoria.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -171,6 +177,7 @@
     <Content Include="Assets\cart3.png" />
     <Content Include="Assets\check.png" />
     <Content Include="Assets\defender_class_icon.png" />
+    <Content Include="Assets\defense.png" />
     <Content Include="Assets\defensorIcon.png" />
     <Content Include="Assets\defensorSelectedIcon.png" />
     <Content Include="Assets\exit_icon.png" />
@@ -202,6 +209,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Ataque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Defensa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -244,6 +255,10 @@
     <Page Include="TeamSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Victoria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

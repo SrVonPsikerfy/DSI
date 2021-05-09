@@ -36,7 +36,7 @@
                    Fill="LightGreen" 
                    HorizontalAlignment="Stretch">
         </Rectangle>
-        <Image Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Source="/Assets/Iridium.png" MaxHeight="300" MaxWidth="300" />
+        <Image Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Source="/Assets/moneda.png" MaxHeight="300" MaxWidth="300" />
         <TextBlock Grid.Row="4" Grid.Column="2"  SizeChanged="TextBlock_SizeChanged" x:Name="iridiumCount" Text="3000" FontSize="72" FontFamily="Helvetica" FontWeight="Bold" Foreground="DeepPink" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         <Image Grid.Row="3"  Grid.RowSpan="2" Grid.Column="3" Source="/Assets/exp.png"  />
