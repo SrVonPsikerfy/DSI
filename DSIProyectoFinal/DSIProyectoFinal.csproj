@@ -167,6 +167,7 @@
     <Content Include="Assets\healer_class_icon.png" />
     <Content Include="Assets\homeButton.png" />
     <Content Include="Assets\melee_class_icon.png" />
+    <Content Include="Assets\moneda.png" />
     <Content Include="Assets\NivelAux.png" />
     <Content Include="Assets\playIcon.png" />
     <Content Include="Assets\pvpIcon.png" />

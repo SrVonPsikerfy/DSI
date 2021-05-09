@@ -141,5 +141,10 @@
             </DropDownButton.Flyout>
 
         </DropDownButton>
+        
+        <!--Moneda de juego disponible para gastar-->
+        <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
+            <Image Source="./Assets/settingsButton.png"/>
+        </StackPanel>
     </Grid>
 </Page>
