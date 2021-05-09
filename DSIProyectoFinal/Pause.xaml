@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="DSIProyectoFinal.Pause"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DSIProyectoFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!-- Definicion de columnas !-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4.5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column ="1" Grid.Row="1" Background="#FFF7A56B"/>
+
+        <!--Grid del texto y los botones-->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <!--Dimensiones nuevo grid-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Texto !-->
+            <TextBlock FontFamily="Helvetica"
+            FontSize="70" VerticalAlignment="Top" HorizontalAlignment="Center" FontStyle="Normal" 
+            CharacterSpacing="200" Foreground="Black" Margin="0,40,0,0" Grid.Column="1" Grid.Row="0"
+            FontWeight="Bold" Text="PAUSA">
+            </TextBlock>
+
+            <!-- Botones !-->
+            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="144" Width="344">
+                <!--Resume-->
+                <StackPanel>
+                    <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
+                       AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    <TextBlock Text="Resume" FontSize="40" Foreground="Black"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="144" Width="344">
+                <!--Resume-->
+                <StackPanel>
+                    <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
+                       AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    <TextBlock Text="Options" FontSize="40" Foreground="Black"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Height="144" Width="344">
+                <!--Resume-->
+                <StackPanel>
+                    <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
+                       AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    <TextBlock Text="Exit Level" FontSize="40" Foreground="Black"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+
+
+
+    </Grid>
+</Page>

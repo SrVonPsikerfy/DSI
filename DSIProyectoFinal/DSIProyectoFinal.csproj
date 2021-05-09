@@ -132,6 +132,9 @@
     <Compile Include="ModoHistoria.xaml.cs">
       <DependentUpon>ModoHistoria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pause.xaml.cs">
+      <DependentUpon>Pause.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PVP.xaml.cs">
       <DependentUpon>PVP.xaml</DependentUpon>
@@ -158,6 +161,7 @@
     <Content Include="Assets\gauntletIcon.png" />
     <Content Include="Assets\homeButton.png" />
     <Content Include="Assets\NivelAux.png" />
+    <Content Include="Assets\playIcon.png" />
     <Content Include="Assets\pvpIcon.png" />
     <Content Include="Assets\settingsButton.png" />
     <Content Include="Assets\shop.png" />
@@ -188,6 +192,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ModoHistoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pause.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
