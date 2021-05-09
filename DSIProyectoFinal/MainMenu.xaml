@@ -80,23 +80,25 @@
 
     <Page.Resources>
         <Style x:Key="CircleButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="Black"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="BorderBrush" Value="Green"/>
             <Setter Property="BorderThickness" Value="200"/>
             <Setter Property="Padding" Value="8,4,8,4"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
             <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
             <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            <Setter Property="Width" Value="60"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Grid x:Name="RootGrid">
+                        <Grid x:Name="RootGrid" Margin="0,0,-59,0">
                             <Ellipse x:Name="BorderCircle"
                                      Stroke="{TemplateBinding BorderBrush}"
-                                     StrokeThickness="5"/>
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Fill="Gray"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -106,12 +108,12 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.7*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition x:Name="lastRow" Height="0.5*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1.2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -125,12 +127,106 @@
                    TextWrapping="WrapWholeWords"
                    FontStretch="Expanded" Height="402"/>
 
-        <StackPanel>
-            
+        <StackPanel Grid.Column ="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top">
+            <Button
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"
+                BorderThickness="3"
+                Content="CAMPAIGN"
+                FontFamily="Segoe UI"
+                FontSize="40"
+                Margin="0,0,0,70"
+                Background="RosyBrown"
+                BorderBrush="Black" FontWeight="Bold"/>
+
+            <Border Background="Red">
+                <TextBlock Text="EXTRA MODES"
+                   TextAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   TextWrapping="WrapWholeWords"
+                   FontStretch="Expanded" MaxHeight="30" Width="578"/>
+            </Border>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Stretch">
+                <Button 
+                        BorderThickness="3"
+                        Content="PVP"
+                        FontFamily="Segoe UI"
+                        HorizontalAlignment="Stretch"
+                        FontSize="30"
+                        FontStretch="ExtraCondensed"
+                    HorizontalContentAlignment="Stretch"
+                    MaxWidth="250"
+                        Background="RosyBrown"
+                        BorderBrush="Black" FontWeight="Bold"/>
+                <Button 
+                        BorderThickness="3"
+                        Content="GAUNTLET"
+                        FontFamily="Segoe UI"
+                        HorizontalAlignment="Stretch"
+                        FontSize="30"
+                    MaxWidth="250"
+                    HorizontalContentAlignment="Stretch"
+                        Background="RosyBrown"
+                        BorderBrush="Black" FontWeight="Bold"/>
+                <Button
+                        BorderThickness="3"
+                        Content="SWARM"
+                        FontFamily="Segoe UI"
+                        HorizontalAlignment="Stretch"
+                        FontSize="30"
+                    MaxWidth="250"
+                    HorizontalContentAlignment="Stretch"
+                    
+                        Background="RosyBrown"
+                        BorderBrush="Black" FontWeight="Bold"/>
+            </StackPanel>
         </StackPanel>
-        
-        <Button Grid.Row="2" Width="287" Height="265"
-                Content="./Assets/shop.png"
-                Style="{StaticResource CircleButtonStyle}"/>
+
+        <Button Grid.Row="2"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Left"
+                Margin="4,4,4,4"
+                BorderThickness="2">
+            <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
+        </Button>
+
+        <Button Content="TEAMS" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top"
+                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" 
+                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"/>
+
+        <Button Content="ABILITIES" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom"
+                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"
+                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button Background="White" BorderThickness="2">
+                <Image Source="/Assets/homeButton.png"
+                       Grid.Row="2"
+                       Height="50"
+                       Width="50"
+                       Margin="0,0,0,5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform"/>
+            </Button>
+            <Button Background="White" BorderThickness="2">
+                <Image Source="/Assets/settingsButton.png"
+                       Grid.Row="2"
+                       Height="50"
+                       Width="50"
+                       Margin="0,0,0,5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform"/>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>
