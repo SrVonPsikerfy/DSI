@@ -158,6 +158,7 @@
   <ItemGroup>
     <Content Include="Assets\atacanteIcon.png" />
     <Content Include="Assets\atacanteSelectedIcon.png" />
+    <Content Include="Assets\castle.jpg" />
     <Content Include="Assets\check.png" />
     <Content Include="Assets\defender_class_icon.png" />
     <Content Include="Assets\defensorIcon.png" />
