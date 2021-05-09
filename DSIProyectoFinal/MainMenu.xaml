@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light">
 
     <!--<VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">
@@ -104,8 +105,32 @@
     </Page.Resources>
 
     <Grid>
-        <!--<Button Background="Red"
-            Width="287" Height="265" Content="Esto es un boton circular"
-            Style="{StaticResource CircleButtonStyle}"/>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   Text="KNIGHT of the FALLEN"
+                   SizeChanged="TextBlock_SizeChanged"
+                   FontSize="80"
+                   FontWeight="Bold"
+                   VerticalAlignment="Top"
+                   TextAlignment="Left"
+                   TextWrapping="WrapWholeWords"
+                   FontStretch="Expanded" Height="402"/>
+
+        <StackPanel>
+            
+        </StackPanel>
+        
+        <Button Grid.Row="2" Width="287" Height="265"
+                Content="./Assets/shop.png"
+                Style="{StaticResource CircleButtonStyle}"/>
     </Grid>
 </Page>
