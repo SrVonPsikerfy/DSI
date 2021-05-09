@@ -45,7 +45,7 @@
         </Button>
 
         <!--Indicador de en que pagina se esta y logo del juego-->
-        <StackPanel Grid.Column="4"
+        <StackPanel Grid.Column="2"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Right"
@@ -65,5 +65,55 @@
                            Width="Auto"/>
             </Button>
         </StackPanel>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <!-- Definicion de columnas !-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Idioma-->
+            <TextBlock Grid.Row="0" Grid.Column="0"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"
+                       Text="Language" FontWeight="Bold" FontSize="40" Foreground="Black">
+            </TextBlock>
+
+            <TextBlock Grid.Row="1" Grid.Column="0"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"
+                       Text="Master" FontWeight="Bold" FontSize="40" Foreground="Black">
+            </TextBlock>
+
+            <TextBlock Grid.Row="2" Grid.Column="0"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"
+                       Text="Music" FontWeight="Bold" FontSize="40" Foreground="Black">
+            </TextBlock>
+
+            <TextBlock Grid.Row="3" Grid.Column="0"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"
+                       Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black">
+            </TextBlock>
+
+            <DropDownButton Grid.Column="1" HorizontalAlignment="Center"
+                            Content="English" Foreground="Black" Background="#FF363535" Width="223"/>
+
+            <Slider Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Background="#66727070" Foreground="Black" Width="316">
+            </Slider>
+
+            <Slider Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Background="#66727070" Foreground="Black" Width="316">
+            </Slider>
+
+            <Slider Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Background="#66727070" Foreground="Black" Width="316">
+            </Slider>
+        </Grid>
     </Grid>
 </Page>
