@@ -7,12 +7,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="StoreKnightsTemplate">
+            <Grid Height="300" Width="300" Margin="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!--Imagen-->
+                <Image x:Name="ItemImage"
+                Source="Assets/StoreLogo.png" Stretch="Uniform" />
+
+                <StackPanel Orientation="Vertical" Grid.Row="1">
+                    <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
+                        AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    <TextBlock Text="ImageTitle" HorizontalAlignment="Center"                                Style="{StaticResource SubtitleTextBlockStyle}" />
+                </StackPanel>
+
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1.5*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,8 +45,46 @@
         </Grid.RowDefinitions>
         
         <!--lista de compras-->
-        <GridView Grid.Row="1" Grid.Column="1">
-            
+        <GridView ItemTemplate="{StaticResource StoreKnightsTemplate}" Grid.Row="1" Grid.Column="1">
+               
         </GridView>
+
+        <!--BACK BUTTON-->
+        <Button Background="SandyBrown" Grid.Row="0" Grid.Column="0"
+                Width= "Auto"
+                Height="50"
+                HorizontalAlignment="Stretch">
+            <TextBlock Text="BACK"
+                       FontSize="30"
+                       Width="Auto"/>
+        </Button>
+
+        <!--Home y Settings-->
+        <StackPanel Grid.Row="2"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <Button>
+                <Image Source="/Assets/homeButton.png"
+               Grid.Row="2"
+               Height="50"
+               Width="50"
+               Margin="0,0,0,10"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Stretch="Uniform"/>
+            </Button>
+            <Button>
+                <Image Source="/Assets/settingsButton.png"
+               Grid.Row="2"
+               Height="50"
+               Width="50"
+               Margin="0,0,0,5"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Stretch="Uniform"/>
+            </Button>
+            
+        </StackPanel>
     </Grid>
 </Page>
