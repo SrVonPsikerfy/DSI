@@ -31,6 +31,7 @@
         </DataTemplate>
     </Page.Resources>
 
+    
     <Grid>
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
@@ -46,8 +47,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <!--lista de compras-->
-        <GridView ItemTemplate="{StaticResource StoreKnightsTemplate}" Grid.Row="1" Grid.Column="1">
+        <!--Lista de compras-->
+        <GridView ItemTemplate="{StaticResource StoreKnightsTemplate}" Grid.Row="1" Grid.Column="2"
+                  Grid.ColumnSpan="3">
                
         </GridView>
 
@@ -55,7 +57,7 @@
         <Button Background="SandyBrown" Grid.Row="0" Grid.Column="0"
                 Width= "Auto"
                 Height="50"
-                HorizontalAlignment="Stretch">
+                HorizontalAlignment="Stretch" Margin="0,37,0,0" VerticalAlignment="Top">
             <TextBlock Text="BACK"
                        FontSize="30"
                        Width="Auto"/>
@@ -81,23 +83,32 @@
             <Border Grid.Column ="2" Grid.Row="0" Background="#FF9C9C9C"/>
             <Border Grid.Column ="2" Grid.Row="2" Background="#FF9C9C9C"/>
 
-            <Image Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto"
+            <Button Grid.Column="0" Grid.Row="0">
+                <Image Width="Auto" Height="Auto"
             Source="./Assets/melee_class_icon.png"/>
+            </Button>
 
-            <Image Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto"
+            <Button Grid.Column="2" Grid.Row="0">
+                <Image  Width="Auto" Height="Auto"
             Source="./Assets/sniper_class_icon.png"/>
+            </Button>
 
-            <Image Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto"
+            <Button Grid.Column="1" Grid.Row="1">
+                <Image  Width="Auto" Height="Auto"
             Source="./Assets/support_class_icon.png"/>
+            </Button>
 
-            <Image Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto"
+            <Button Grid.Column="0" Grid.Row="2">
+                <Image Width="Auto" Height="Auto"
             Source="./Assets/defender_class_icon.png"/>
+            </Button>
 
-            <Image Grid.Column="2" Grid.Row="2" Width="Auto" Height="Auto"
+            <Button Grid.Column="2" Grid.Row="2">
+                <Image  Width="Auto" Height="Auto"
             Source="./Assets/healer_class_icon.png"/>
-
-
+            </Button>
         </Grid>
+        
         <!--Home y Settings-->
         <StackPanel Grid.Row="2"
                     VerticalAlignment="Bottom"
@@ -106,8 +117,8 @@
             <Button>
                 <Image Source="./Assets/homeButton.png"
                Grid.Row="2"
-               Height="50"
-               Width="50"
+               Height="100"
+               Width="100"
                Margin="0,0,0,10"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
@@ -116,8 +127,8 @@
             <Button>
                 <Image Source="./Assets/settingsButton.png"
                Grid.Row="2"
-               Height="50"
-               Width="50"
+               Height="100"
+               Width="100"
                Margin="0,0,0,5"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
@@ -130,6 +141,7 @@
         <DropDownButton Grid.Column="2" Grid.Row="0"
                         HorizontalAlignment="Stretch" VerticalAlignment="Center"
                         Height="50" Width="Auto"
+                        FontSize="20"
                         Content="Order by None"
                         >
             <DropDownButton.Flyout>
@@ -144,7 +156,32 @@
         
         <!--Moneda de juego disponible para gastar-->
         <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
-            <Image Source="./Assets/settingsButton.png"/>
+            <Image Source="./Assets/moneda.png" Height="89" Width="133"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Text="99999" FontSize="40" Margin="60,0,0,0"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <!--Indicador de en que pagina se esta y logo del juego-->
+        <StackPanel Grid.Column="4"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Stretch"
+                   Text="KotF"
+                   FontSize="48" FontWeight="Bold"/>
+            <Button Background="SkyBlue"
+                    Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    FontStretch="Expanded">
+                <TextBlock Text="STORE"
+                           IsTextScaleFactorEnabled="True"
+                           FontSize="30"
+                           TextWrapping="Wrap"
+                           FontStretch="Expanded"
+                           Width="Auto"/>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>
