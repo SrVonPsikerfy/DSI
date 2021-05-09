@@ -143,6 +143,9 @@
       <DependentUpon>TeamConfig.xaml</DependentUpon>
     </Compile>
     <Compile Include="Teams.cs" />
+    <Compile Include="Victoria.xaml.cs">
+      <DependentUpon>Victoria.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TeamSelect.xaml.cs">
       <DependentUpon>TeamSelect.xaml</DependentUpon>
     </Compile>
@@ -158,8 +161,10 @@
     <Content Include="Assets\check.png" />
     <Content Include="Assets\defensorIcon.png" />
     <Content Include="Assets\defensorSelectedIcon.png" />
+    <Content Include="Assets\exp.png" />
     <Content Include="Assets\gauntletIcon.png" />
     <Content Include="Assets\homeButton.png" />
+    <Content Include="Assets\iridium.png" />
     <Content Include="Assets\NivelAux.png" />
     <Content Include="Assets\playIcon.png" />
     <Content Include="Assets\pvpIcon.png" />
@@ -202,6 +207,10 @@
     <Page Include="PVP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Victoria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="TeamConfig.xaml">
       <SubType>Designer</SubType>
