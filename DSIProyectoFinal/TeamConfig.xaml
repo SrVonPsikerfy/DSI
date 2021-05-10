@@ -92,13 +92,13 @@
                   Grid.ColumnSpan="2"
                   BorderBrush="Black" BorderThickness="3"
                    Margin="8"
-                   Background="Violet">
+                   Background="CadetBlue">
 
         </GridView>
 
-        <!--BOTON GO-->
-        <Button Content="SAVE" Grid.Column="1"  Grid.Row="2" Grid.ColumnSpan="2"
-                VerticalAlignment="Top" HorizontalAlignment="Stretch"
+        <!--BOTON SAVE-->
+        <Button Content="SAVE" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
+                VerticalAlignment="Top" HorizontalAlignment="Center"
                 FontSize="30" FontWeight="Bold" Width="450" />
 
         <!--BOTON HOME Y OPCIONES-->
