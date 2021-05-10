@@ -25,6 +25,11 @@
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="5" Grid.RowSpan="8"
+               Source="./Assets/castle.jpg"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Button Background="SandyBrown"
                 Width="Auto" Height="50"
