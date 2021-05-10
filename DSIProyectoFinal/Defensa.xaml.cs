@@ -20,19 +20,18 @@ namespace DSIProyectoFinal
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class ModoHistoria : Page
+    public sealed partial class Defensa : Page
     {
-        public ModoHistoria()
+        public Defensa()
         {
             this.InitializeComponent();
         }
-
         private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (((Frame)Window.Current.Content).ActualHeight > 540 && ((Frame)Window.Current.Content).ActualWidth > 960)
-                (sender as TextBlock).FontSize = 100;
+                (sender as TextBlock).FontSize = 60;
             else
-                (sender as TextBlock).FontSize = 40;
+                (sender as TextBlock).FontSize = 30;
         }
     }
 }

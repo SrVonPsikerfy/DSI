@@ -20,19 +20,11 @@ namespace DSIProyectoFinal
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class ModoHistoria : Page
+    public sealed partial class SelectorZona : Page
     {
-        public ModoHistoria()
+        public SelectorZona()
         {
             this.InitializeComponent();
-        }
-
-        private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (((Frame)Window.Current.Content).ActualHeight > 540 && ((Frame)Window.Current.Content).ActualWidth > 960)
-                (sender as TextBlock).FontSize = 100;
-            else
-                (sender as TextBlock).FontSize = 40;
         }
     }
 }

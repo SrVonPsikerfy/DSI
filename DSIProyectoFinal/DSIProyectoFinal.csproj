@@ -122,6 +122,9 @@
     <Compile Include="Ataque.xaml.cs">
       <DependentUpon>Ataque.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Defensa.xaml.cs">
+      <DependentUpon>Defensa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gauntlet.xaml.cs">
       <DependentUpon>Gauntlet.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,9 @@
     <Compile Include="PVP.xaml.cs">
       <DependentUpon>PVP.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectorZona.xaml.cs">
+      <DependentUpon>SelectorZona.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Store.xaml.cs">
       <DependentUpon>Store.xaml</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     <Compile Include="TeamSelect.xaml.cs">
       <DependentUpon>TeamSelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Victoria.xaml.cs">
+      <DependentUpon>Victoria.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -162,6 +171,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\arrow.png" />
     <Content Include="Assets\atacanteIcon.png" />
     <Content Include="Assets\atacanteSelectedIcon.png" />
     <Content Include="Assets\castle.jpg" />
@@ -173,12 +183,15 @@
     <Content Include="Assets\check.png" />
     <Content Include="Assets\circle.png" />
     <Content Include="Assets\defender_class_icon.png" />
+    <Content Include="Assets\defense.png" />
     <Content Include="Assets\defensorIcon.png" />
     <Content Include="Assets\defensorSelectedIcon.png" />
+    <Content Include="Assets\enemy_icon.png" />
     <Content Include="Assets\exit_icon.png" />
     <Content Include="Assets\gauntletIcon.png" />
     <Content Include="Assets\healer_class_icon.png" />
     <Content Include="Assets\homeButton.png" />
+    <Content Include="Assets\mana_icon.png" />
     <Content Include="Assets\melee_class_icon.png" />
     <Content Include="Assets\moneda.png" />
     <Content Include="Assets\NivelAux.png" />
@@ -205,6 +218,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Ataque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Defensa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,6 +253,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SelectorZona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Store.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,6 +268,10 @@
     <Page Include="TeamSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Victoria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
