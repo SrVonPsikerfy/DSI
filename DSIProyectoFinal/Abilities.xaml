@@ -10,20 +10,30 @@
     RequestedTheme="Light">
 
     <Page.Resources>
-        <!-- In this example, the ListView's ItemTemplate property is bound to a data template (shown below)
-called StyledGridTemplate, defined in the Page.Resources section of the XAML file.
+        <DataTemplate x:Key="KnightsTemplate">
+            <Grid Height="150" Width="150" Margin="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
 
-The data template is defined to display a CustomDataObject object (same type as in above sample). -->
+                <!--Imagen-->
+                <Image x:Name="KnightImage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Source="./Assets/stick-man-hi.png" Stretch="Uniform" />
 
-        <DataTemplate x:Name="ImageOverlayTemplate" x:DataType="local:Knights">
-            <Grid Width="100">
-                <Image Source="{x:Bind ImageLocation}" Stretch="UniformToFill"/>
-                <StackPanel Orientation="Vertical" Height="40" VerticalAlignment="Bottom" Padding="5,1,5,1"
-                    Background="LightGray" Opacity=".75">
-                    <TextBlock Text="{x:Bind Name}"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+                    <TextBlock x:Name="Prize" Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Style="{StaticResource SubtitleTextBlockStyle}" />
+                    <Image x:Name="Image" Source="./Assets/defender_class_icon.png" HorizontalAlignment="Stretch"
+                        AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
+
+        <ItemsPanelTemplate x:Key="KnightsPanel">
+            <ItemsWrapGrid Orientation="Horizontal"
+                           HorizontalAlignment="Center" />
+        </ItemsPanelTemplate>
     </Page.Resources>
     
     <Grid>
@@ -44,11 +54,18 @@ The data template is defined to display a CustomDataObject object (same type as 
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="6" Grid.RowSpan="5"
+               Source="/Assets/menu.png"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Button Background="SandyBrown"
                 Width="Auto"
                 Height="50"
-                HorizontalAlignment="Stretch">
+                HorizontalAlignment="Stretch"
+                FocusVisualPrimaryBrush="SaddleBrown"
+                >
             <TextBlock Text="BACK"
                        FontSize="30"
                        Width="Auto" FontFamily="Helvetica LT Std Black"/>
@@ -75,35 +92,17 @@ The data template is defined to display a CustomDataObject object (same type as 
             </Button>
         </StackPanel>
 
-        <!-- The GridView used for this example is shown below. Setter properties are used to customize
-        some parts of the GridViewItems (i.e. the margins). -->
-        <GridView
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            x:Name="StyledGrid"
-            ItemTemplate="{StaticResource ImageOverlayTemplate}">
+        <!--Lista de Caballeros-->
+        <GridView x:Name="GridSelect"
+                  ItemTemplate="{StaticResource KnightsTemplate}"
+                  ItemsPanel="{StaticResource KnightsPanel}"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="2"
+                  BorderBrush="White" BorderThickness="3"
+                   Margin="8"
+                   Background="#335F9EA0">
 
-            <GridView.ItemContainerStyle>
-                <Style TargetType="GridViewItem">
-                    <Setter Property="Margin" Value="31, 15, 31, 15"/>
-                </Style>
-            </GridView.ItemContainerStyle>
-
-            <!-- An extra property also needs to be added to the GridView's ItemsWrapGrid.
-    The following sets the maximum # of items to show before wrapping.-->
-            <GridView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid x:Name="MaxItemsWrapGrid"
-                           MaximumRowsOrColumns="3"
-                           Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </GridView.ItemsPanel>
         </GridView>
-
-        <Grid Grid.Row="1"
-              Grid.Column="2">
-            
-        </Grid>
 
         <StackPanel Grid.Row="4"
                     VerticalAlignment="Bottom"
@@ -133,6 +132,8 @@ The data template is defined to display a CustomDataObject object (same type as 
                     VerticalAlignment="Center">
             <TextBlock Text="SKILLS"
                        FontSize="30"
+                       IsColorFontEnabled="True"
+                       Foreground="White"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <Button Background="Transparent">
@@ -145,15 +146,98 @@ The data template is defined to display a CustomDataObject object (same type as 
                 <Image Source="/Assets/unequipedSkill.png"/>
             </Button>
         </StackPanel>
-        
-            
-            
+
+        <Grid Grid.Row="1"
+              Grid.Column="3"
+              Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Column="1">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Column="2">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Column="3">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Column="4">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Column="5">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+            <Button Background="Transparent"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="2">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+
+        </Grid>
 
 
         <TextBlock Grid.Row="2"
                    Grid.Column="3"
                    Grid.ColumnSpan="2"
                    Text="POINTS AVAILABLE: "
+                   Foreground="White"
                    FontSize="30"
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
@@ -175,11 +259,13 @@ The data template is defined to display a CustomDataObject object (same type as 
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
+                       Foreground="White"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="1"
                        Text="DEF (MAG)"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
@@ -187,6 +273,7 @@ The data template is defined to display a CustomDataObject object (same type as 
             <TextBlock Grid.Row="2"
                        Text="RANGE"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
@@ -194,6 +281,7 @@ The data template is defined to display a CustomDataObject object (same type as 
             <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -201,12 +289,14 @@ The data template is defined to display a CustomDataObject object (same type as 
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Grid.Row="2"
                        Text="3"
+                       Foreground="White"
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
@@ -229,12 +319,14 @@ The data template is defined to display a CustomDataObject object (same type as 
             <TextBlock Text="ATK (PHY)"
                        FontSize="20"
                        VerticalAlignment="Center"
+                       Foreground="White"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="1"
                        Text="ATK (MAG)"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
@@ -242,6 +334,7 @@ The data template is defined to display a CustomDataObject object (same type as 
             <TextBlock Grid.Row="2"
                        Text="MANA"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
@@ -249,6 +342,7 @@ The data template is defined to display a CustomDataObject object (same type as 
             <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -256,6 +350,7 @@ The data template is defined to display a CustomDataObject object (same type as 
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -263,6 +358,7 @@ The data template is defined to display a CustomDataObject object (same type as 
                        Grid.Row="2"
                        Text="10"
                        FontSize="20"
+                       Foreground="White"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -272,6 +368,7 @@ The data template is defined to display a CustomDataObject object (same type as 
                    Grid.Column="5"
                    Text="SKADI"
                    FontSize="30"
+                   Foreground="White"
                    FontWeight="Bold"
                    FontStyle="Italic" FontFamily="Helvetica LT Std Black"/>
 
@@ -285,12 +382,14 @@ The data template is defined to display a CustomDataObject object (same type as 
 
             <TextBlock Text="LVL 69"
                        FontSize="25*"
+                       Foreground="White"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Stretch" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Row="1"
                        Text="Exp. 210/420"
+                       Foreground="White"
                        FontSize="15"
                        VerticalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -298,7 +397,7 @@ The data template is defined to display a CustomDataObject object (same type as 
                          Width="130"
                          Value="30"
                          HorizontalAlignment="Stretch"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center" Background="White"/>
 
         </Grid>
 
