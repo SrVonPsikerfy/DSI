@@ -182,6 +182,11 @@
     <Content Include="Assets\cart3.png" />
     <Content Include="Assets\check.png" />
     <Content Include="Assets\circle.png" />
+    <Content Include="Assets\circle1.png" />
+    <Content Include="Assets\circle2.png" />
+    <Content Include="Assets\circle3.png" />
+    <Content Include="Assets\circle4.png" />
+    <Content Include="Assets\circle5.png" />
     <Content Include="Assets\defender_class_icon.png" />
     <Content Include="Assets\defense.png" />
     <Content Include="Assets\defensorIcon.png" />
@@ -201,6 +206,7 @@
     <Content Include="Assets\settingsButton.png" />
     <Content Include="Assets\shop.png" />
     <Content Include="Assets\sniper_class_icon.png" />
+    <Content Include="Assets\stick-man-hi-small.png" />
     <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\support_class_icon.png" />
     <Content Include="Properties\Default.rd.xml" />
