@@ -133,7 +133,7 @@
                    TextAlignment="Left"
                    TextWrapping="WrapWholeWords"
                    FontStretch="Expanded"
-                   Height="402"/>
+                   Height="402" FontFamily="Abril Fatface"/>
 
         <!--Boton Campaña-->
         <Button Grid.Row ="0" Grid.Column="1" Grid.RowSpan="1"

@@ -8,14 +8,41 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Light">
-    
+
+    <Page.Resources>
+        <DataTemplate x:Key="KnightsTemplate">
+            <Grid Height="150" Width="150" Margin="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!--Imagen-->
+                <Image x:Name="KnightImage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Source="./Assets/stick-man-hi.png" Stretch="Uniform" />
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+                    <TextBlock x:Name="Prize" Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Style="{StaticResource SubtitleTextBlockStyle}" />
+                    <Image x:Name="Image" Source="./Assets/defender_class_icon.png" HorizontalAlignment="Stretch"
+                        AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <ItemsPanelTemplate x:Key="KnightsPanel">
+            <ItemsWrapGrid Orientation="Horizontal"
+                           HorizontalAlignment="Center" />
+        </ItemsPanelTemplate>
+    </Page.Resources>
+
     <Grid>
         <!--Definicion de filas y columnas-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
@@ -57,9 +84,21 @@
             </Button>
         </StackPanel>
 
-        <!--BOTON GO-->
-        <Button Content="SAVE" Grid.Column="1"  Grid.Row="2" Grid.ColumnSpan="2"
-                VerticalAlignment="Top" HorizontalAlignment="Stretch"
+        <!--Lista de Caballeros-->
+        <GridView x:Name="GridSelect"
+                  ItemTemplate="{StaticResource KnightsTemplate}"
+                  ItemsPanel="{StaticResource KnightsPanel}"
+                  Grid.Row="1" Grid.Column="3"
+                  Grid.ColumnSpan="2"
+                  BorderBrush="Black" BorderThickness="3"
+                   Margin="8"
+                   Background="CadetBlue">
+
+        </GridView>
+
+        <!--BOTON SAVE-->
+        <Button Content="SAVE" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
+                VerticalAlignment="Top" HorizontalAlignment="Center"
                 FontSize="30" FontWeight="Bold" Width="450" />
 
         <!--BOTON HOME Y OPCIONES-->
@@ -104,11 +143,10 @@
                     <TextBlock Text="2" FontSize="80" Width="Auto" Height="Auto"/>
                 </Button>
 
+                <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
+                    <TextBlock Text="3" FontSize="70" Width="Auto" Height="Auto"/>
+                </Button>
             </StackPanel>
-
-            <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
-                <TextBlock Text="3" FontSize="70" Width="Auto" Height="Auto"/>
-            </Button>
         </StackPanel>
 
     </Grid>
