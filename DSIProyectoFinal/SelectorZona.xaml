@@ -1,0 +1,117 @@
+﻿<Page
+    x:Class="DSIProyectoFinal.SelectorZona"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DSIProyectoFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="12*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--BackButton-->
+        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="backButton" Content="&lt; BACK" HorizontalAlignment="Left" VerticalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" FontSize="50" MaxWidth="400"/>
+
+        <!--Titulo mas indicador de modo de juego-->
+        <StackPanel Grid.Column="3"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Stretch"
+                   Text="KotF"
+                   FontSize="48" FontWeight="Bold"/>
+            <Button Background="SkyBlue"
+                    Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    FontStretch="Expanded">
+                <TextBlock Text="CAMPAIGN"
+                           IsTextScaleFactorEnabled="True"
+                           FontSize="30"
+                           TextWrapping="Wrap"
+                           FontStretch="Expanded"
+                           Width="Auto"/>
+            </Button>
+        </StackPanel>
+
+
+
+        <!--HomeButton-->
+        <Button Grid.Row="7" Grid.Column="0" x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,5" Style="{StaticResource DateTimePickerFlyoutButtonStyle}">
+            <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+        </Button>
+
+        <!--SettingsButton-->
+        <Button Grid.Row="7" Grid.Column="0" x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5" Style="{StaticResource DateTimePickerFlyoutButtonStyle}">
+            <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+        </Button>
+
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="1" Background="Transparent" MaxHeight="118" MaxWidth="133"  VerticalAlignment="Stretch">
+                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            </Button>
+
+            <Button Grid.Column="3" Grid.Row="2" Background="Transparent" MaxHeight="118" MaxWidth="133" VerticalAlignment="Stretch">
+                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            </Button>
+            
+            <ContentControl Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center">
+                <Image  Source="/Assets/arrow.png" Rotation="0">
+                </Image>
+            </ContentControl>
+
+
+            <Button Grid.Column="5" Grid.Row="1" Background="Transparent" MaxHeight="118" MaxWidth="133" VerticalAlignment="Stretch">
+                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            </Button>
+
+
+            <Button Grid.Column="7" Grid.Row="0" Background="Transparent" MaxHeight="118" MaxWidth="133"  VerticalAlignment="Stretch">
+                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            </Button>
+
+
+            <Button Grid.Column="7" Grid.Row="2" Background="Transparent" MaxHeight="118" MaxWidth="133" VerticalAlignment="Stretch" IsEnabled="False">
+                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            </Button>
+
+
+            <Button Grid.Column="10" Grid.Row="1" Background="Transparent" MaxHeight="118" MaxWidth="133">
+                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Page>

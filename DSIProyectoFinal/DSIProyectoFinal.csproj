@@ -148,6 +148,9 @@
     <Compile Include="PVP.xaml.cs">
       <DependentUpon>PVP.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectorZona.xaml.cs">
+      <DependentUpon>SelectorZona.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Store.xaml.cs">
       <DependentUpon>Store.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\arrow.png" />
     <Content Include="Assets\atacanteIcon.png" />
     <Content Include="Assets\atacanteSelectedIcon.png" />
     <Content Include="Assets\castle.jpg" />
@@ -196,6 +200,7 @@
     <Content Include="Assets\settingsButton.png" />
     <Content Include="Assets\shop.png" />
     <Content Include="Assets\sniper_class_icon.png" />
+    <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\support_class_icon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -244,6 +249,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PVP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectorZona.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

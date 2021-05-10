@@ -10,14 +10,14 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -27,24 +27,56 @@
         </Grid.ColumnDefinitions>
 
         <!--BackButton-->
-        <Button Grid.Row="0" Grid.Column="0" x:Name="backButton" Content="&lt; BACK" HorizontalAlignment="Left" Style="{StaticResource AccentButtonStyle}" FontSize="60" Width="400"/>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="backButton" Content="&lt; BACK" HorizontalAlignment="Left" VerticalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" FontSize="50" MaxWidth="400"/>
+
+        <StackPanel Grid.Column="3"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Stretch"
+                   Text="KotF"
+                   FontSize="48" FontWeight="Bold"/>
+            <Button Background="SkyBlue"
+                    Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    FontStretch="Expanded">
+                <TextBlock Text="CHAPTER 1"
+                           IsTextScaleFactorEnabled="True"
+                           FontSize="30"
+                           TextWrapping="Wrap"
+                           FontStretch="Expanded"
+                           Width="Auto"/>
+            </Button>
+        </StackPanel>
         
-        <!--Titulo-->
-        <TextBlock Grid.Row="0" Grid.Column="4" Text="KotF" FontFamily='Abril Fatface' FontSize="115,2" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,0"/>
-        
-        <!--Nombre de la pantalla en la que estamos-->
-        <TextBlock Grid.Row="0" Grid.Column="4" Text="CHAPTER 1" FontFamily='Abril Fatface' FontSize="41" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin=" 5,5"/>
-        
+        <!--<StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            --><!--Titulo--><!--
+            <TextBlock Grid.Row="0" Grid.Column="4" Text="KotF" FontFamily='Abril Fatface' SizeChanged="TextBlock_SizeChanged" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,0"/>
+
+            --><!--Nombre de la pantalla en la que estamos--><!--
+            <TextBlock Grid.Row="0" Grid.Column="4" Text="CHAPTER 1" FontFamily='Abril Fatface' FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin=" 5,5"/>
+            
+        </StackPanel>-->
+
         <!--Circulo que dice en que nivel estás-->
         <Image Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" Source="/Assets/NivelAux.png" />
-        
-        <!--Selector de zona-->
-        <Image Grid.Row="1" Grid.Column="2" Source="/Assets/check.png" Width="96" Height="96"/>
-        <Image Grid.Row="2" Grid.Column="2" Source="/Assets/check.png" Width="96" Height="96"/>
 
-        <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" x:Name="Page1_1" Content="Page 1 - 1" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580"  Height="87" Margin="0,5"/>
-        <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="Page1_2" Content="Page 1 - 2" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580" Height="87" Margin="0,5"/>
-        
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" >
+
+            <!--Selector de zona-->
+            <Image Grid.Row="1" Grid.Column="2" Source="/Assets/check.png" Width="96" Height="96"/>
+            <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" x:Name="Page1_1" Content="Page 1 - 1" HorizontalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580"  Height="87" Margin="0,5"/>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" >
+
+            <Image Grid.Row="2" Grid.Column="2" Source="/Assets/check.png" Width="96" Height="96" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="Page1_2" Content="Page 1 - 2" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580" Height="87" Margin="0,5"/>
+        </StackPanel>
         <!--Nivel Seleccionado-->
         <Button Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" x:Name="Page1_3" Content="Page 1 - 3" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="72" Width="800" Height="132" Margin="0,5"/>
 
@@ -53,16 +85,16 @@
 
 
         <!--Boton de play-->
-        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="¡PLAY!" HorizontalAlignment="Center" Style="{StaticResource ButtonRevealStyle}" FontSize="70" Width="500"/>
+        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="¡PLAY!" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="500"/>
 
         <!--HomeButton-->
         <Button Grid.Row="7" Grid.Column="0" x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,5" Style="{StaticResource DateTimePickerFlyoutButtonStyle}">
-            <Image Source="/Assets/homeButton.png" Width="144" Height="144"/>
+            <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
         </Button>
 
         <!--SettingsButton-->
         <Button Grid.Row="7" Grid.Column="0" x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5" Style="{StaticResource DateTimePickerFlyoutButtonStyle}">
-            <Image Source="/Assets/settingsButton.png" Width="144" Height="144"/>
+            <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
         </Button>
     </Grid>
 </Page>

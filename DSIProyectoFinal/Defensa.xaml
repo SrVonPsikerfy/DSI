@@ -29,10 +29,10 @@
             <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/defense.png" MaxHeight="87" MaxWidth="87" />
 
             <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="200" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center" Foreground="blue" FontWeight="Bold"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="200" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center" Foreground="blue" FontWeight="Bold"/>
                 <Image Source="./Assets/mana_icon.png" MaxHeight="60" MaxWidth="87" Margin="0,0,20,0"/>
-                
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="10/45" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
+
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="10/45" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
                 <Image Source="./Assets/enemy_icon.png" MaxHeight="60" MaxWidth="87" VerticalAlignment="Center"/>
             </StackPanel>
             <!--Boton de pausa-->
@@ -40,38 +40,170 @@
                 <Image Source="./Assets/pauseButton.png" MaxHeight="87" MaxWidth="87"/>
             </Button>
 
+            <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Image  Grid.Row="1" Grid.Column="2" Source="/Assets/attackBackground.png" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <!--<Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-        </Grid>-->
+                <Border Grid.Row="0" Grid.Column="0" Background="CornflowerBlue"/>
+                <Border Grid.Row="1" Grid.Column="0" Background="CornflowerBlue"/>
+
+                <Border Grid.Row="3" Grid.Column="1" Background="Green"/>
+
+                <Border Grid.Row="2" Grid.Column="7" Background="OrangeRed"/>
+                <Border Grid.Row="3" Grid.Column="7" Background="OrangeRed"/>
+
+                <!--Columnas-->
+                <Rectangle Grid.Row="1" Grid.ColumnSpan="8" 
+                Fill="Black" Height="5" VerticalAlignment="Top"/>
+                <Rectangle Grid.Row="2" Grid.ColumnSpan="8" 
+                Fill="Black" Height="5" VerticalAlignment="Top"/>
+                <Rectangle Grid.Row="3" Grid.ColumnSpan="8" 
+                Fill="Black" Height="5" VerticalAlignment="Top"/>
+
+                <!--Columnas-->
+                <Rectangle Grid.Column="1" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+                <Rectangle Grid.Column="2" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+                <Rectangle Grid.Column="3" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+                <Rectangle Grid.Column="4" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+                <Rectangle Grid.Column="5" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+                <Rectangle Grid.Column="6" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+                <Rectangle Grid.Column="7" Grid.RowSpan="4" 
+                Fill="Black" Width="5" HorizontalAlignment="Left"/>
+
+            </Grid>
 
             <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch">
-                <Image Source="/Assets/cart1.png" MaxWidth="168" MaxHeight="225" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
-                <Image Source="/Assets/cart2.png" MaxWidth="168" MaxHeight="225" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
-                <Image Source="/Assets/cart1.png" MaxWidth="168" MaxHeight="225" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
-                <Image Source="/Assets/cart3.png" MaxWidth="225" MaxHeight="252" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+
+                <ContentControl>
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="20" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
+                <ContentControl>
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                        <TextBlock Text="20" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+                            
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
+                <ContentControl>
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="CornflowerBlue">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="30" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/support_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
+                <ContentControl>
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="SandyBrown">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="25" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/sniper_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+                <ContentControl>
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="20" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
             </StackPanel>
 
 
             <Canvas Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-        </Canvas>
+            </Canvas>
 
         </Grid>
     </Grid>
