@@ -101,7 +101,16 @@
             </TextBlock>
 
             <DropDownButton Grid.Column="1" HorizontalAlignment="Center"
-                            Content="English" Foreground="Black" Background="#FF363535" Width="223"/>
+                             Foreground="White" Background="#FF363535" Width="223"
+                            Content="English">
+                <DropDownButton.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem Text="Order by None"/>
+                        <MenuFlyoutItem Text="Order by Price"/>
+                        <MenuFlyoutItem Text="Order by Alphabetical"/>
+                    </MenuFlyout>
+                </DropDownButton.Flyout>
+            </DropDownButton>
 
             <Slider Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" Width="316">
