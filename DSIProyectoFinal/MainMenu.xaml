@@ -110,7 +110,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0.40*"/>
             <RowDefinition Height="0.85*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition x:Name="lastRow" Height="0.5*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -119,7 +120,7 @@
         </Grid.ColumnDefinitions>
 
         <!--Fondo-->
-        <Image Grid.ColumnSpan="2" Grid.RowSpan="4"
+        <Image Grid.ColumnSpan="2" Grid.RowSpan="5"
                Source="./Assets/castle.jpg"
                Stretch="Fill"/>
 
@@ -149,7 +150,8 @@
         <!--Botones modos extra-->
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1"
                         VerticalAlignment="Center">
-            <Border Background="Red" VerticalAlignment="Top">
+            <Border Background="Red" VerticalAlignment="Top"
+                    BorderBrush="Black" BorderThickness="3">
                 <TextBlock Text="EXTRA MODES"
                    TextAlignment="Center"
                    FontSize="20"
@@ -196,27 +198,29 @@
         </StackPanel>
 
         <!--Boton de Tienda-->
-        <Button Grid.Row="3"
+        <Button Grid.Row="4"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Left"
                 Margin="4,4,4,4"
-                BorderThickness="2"
-                Background="#FF9C9C9C">
+                Background="#FF9C9C9C"
+                BorderBrush="Black" BorderThickness="3">
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
 
         <!--Boton de Equipos-->
-        <Button Content="TEAMS" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top"
+        <Button Content="TEAMS" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom"
                 FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" 
-                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"/>
+                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"
+                BorderBrush="Black" BorderThickness="3"/>
 
         <!--Boton de Caballeros-->
-        <Button Content="KNIGHTS" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom"
+        <Button Content="KNIGHTS" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"
                 FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"
-                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"/>
+                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"
+                BorderBrush="Black" BorderThickness="3"/>
 
         <!--Opciones-->
-        <StackPanel Grid.Row="3" Grid.Column="1"
+        <StackPanel Grid.Row="4" Grid.Column="1"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
