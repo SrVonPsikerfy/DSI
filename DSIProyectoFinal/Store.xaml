@@ -6,29 +6,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light">
+    
     <Page.Resources>
         <DataTemplate x:Key="StoreKnightsTemplate">
-            <Grid Height="300" Width="300" Margin="8">
+            <Grid Height="200" Width="200" Margin="8">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--Imagen-->
-                <Image x:Name="ItemImage"
-                Source=".Assets/StoreLogo.png" Stretch="Uniform" />
+                <Image x:Name="KnightImage" Grid.Row="0"
+                Source="./Assets/stick-man-hi.png" Stretch="Uniform" />
 
-                <StackPanel Orientation="Vertical" Grid.Row="1">
-                    <Image Source="./Assets/playIcon.png" HorizontalAlignment="Stretch"
+                <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                    <Image x:Name="IridiumImage" Source="./Assets/moneda.png" HorizontalAlignment="Stretch"
                         AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock Text="ImageTitle" HorizontalAlignment="Center" 
+                    <TextBlock x:Name="Prize" Text="Knight" HorizontalAlignment="Center" VerticalAlignment="Center"
                                Style="{StaticResource SubtitleTextBlockStyle}" />
 
                 </StackPanel>
-
             </Grid>
         </DataTemplate>
+
+        <ItemsPanelTemplate x:Key="StoreKnightsPanel">
+            <ItemsWrapGrid Orientation="Horizontal"
+                           HorizontalAlignment="Center" />
+        </ItemsPanelTemplate>
     </Page.Resources>
 
     
@@ -46,10 +52,21 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="5" Grid.RowSpan="4"
+               Source="./Assets/castle.jpg"
+               Stretch="Fill"/>
+
         <!--Lista de compras-->
-        <GridView ItemTemplate="{StaticResource StoreKnightsTemplate}" Grid.Row="1" Grid.Column="2"
-                  Grid.ColumnSpan="3">
+        <GridView x:Name="GridPurchase"
+                  ItemTemplate="{StaticResource StoreKnightsTemplate}"
+                  ItemsPanel="{StaticResource StoreKnightsPanel}"
+                  Grid.Row="1" Grid.Column="2"
+                  Grid.ColumnSpan="3"
+                  BorderBrush="Black" BorderThickness="3"
+                   Margin="8"
+                   Background="Violet">
                
         </GridView>
 
@@ -76,65 +93,59 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <!--Colores temporales para ver los iconos (mas tarde la propia imagen tendra el fondo)-->
-            <Border Grid.Column ="0" Grid.Row="0" Background="#FF9C9C9C"/>
-            <Border Grid.Column ="0" Grid.Row="2" Background="#FF9C9C9C"/>
-            <Border Grid.Column ="1" Grid.Row="1" Background="#FF9C9C9C"/>
-            <Border Grid.Column ="2" Grid.Row="0" Background="#FF9C9C9C"/>
-            <Border Grid.Column ="2" Grid.Row="2" Background="#FF9C9C9C"/>
 
-            <Button Grid.Column="0" Grid.Row="0">
+            <!--Colores temporales para ver los iconos (mas tarde la propia imagen tendra el fondo)-->
+            <Button Grid.Column="0" Grid.Row="0" Background="#FF9C9C9C">
                 <Image Width="Auto" Height="Auto"
             Source="./Assets/melee_class_icon.png"/>
             </Button>
 
-            <Button Grid.Column="2" Grid.Row="0">
+            <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
                 <Image  Width="Auto" Height="Auto"
             Source="./Assets/sniper_class_icon.png"/>
             </Button>
 
-            <Button Grid.Column="1" Grid.Row="1">
+            <Button Grid.Column="1" Grid.Row="1" Background="#FF9C9C9C">
                 <Image  Width="Auto" Height="Auto"
             Source="./Assets/support_class_icon.png"/>
             </Button>
 
-            <Button Grid.Column="0" Grid.Row="2">
+            <Button Grid.Column="0" Grid.Row="2" Background="#FF9C9C9C">
                 <Image Width="Auto" Height="Auto"
             Source="./Assets/defender_class_icon.png"/>
             </Button>
 
-            <Button Grid.Column="2" Grid.Row="2">
+            <Button Grid.Column="2" Grid.Row="2" Background="#FF9C9C9C">
                 <Image  Width="Auto" Height="Auto"
             Source="./Assets/healer_class_icon.png"/>
             </Button>
         </Grid>
         
         <!--Home y Settings-->
-        <StackPanel Grid.Row="2"
+        <StackPanel Grid.Row="3"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-            <Button>
-                <Image Source="./Assets/homeButton.png"
-               Grid.Row="2"
-               Height="100"
-               Width="100"
-               Margin="0,0,0,10"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Stretch="Uniform"/>
+            <Button Background="White" BorderThickness="2">
+                <Image Source="/Assets/homeButton.png"
+                       Grid.Row="2"
+                       Height="50"
+                       Width="50"
+                       Margin="0,0,0,5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform"/>
             </Button>
-            <Button>
-                <Image Source="./Assets/settingsButton.png"
-               Grid.Row="2"
-               Height="100"
-               Width="100"
-               Margin="0,0,0,5"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Stretch="Uniform"/>
+            <Button Background="White" BorderThickness="2">
+                <Image Source="/Assets/settingsButton.png"
+                       Grid.Row="2"
+                       Height="50"
+                       Width="50"
+                       Margin="0,0,0,5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform"/>
             </Button>
-            
         </StackPanel>
         
         <!--Dropdown de para ordenar el GridView-->
@@ -142,8 +153,7 @@
                         HorizontalAlignment="Stretch" VerticalAlignment="Center"
                         Height="50" Width="Auto"
                         FontSize="20"
-                        Content="Order by None"
-                        >
+                        Content="Order by None">
             <DropDownButton.Flyout>
                 <MenuFlyout Placement="Bottom">
                     <MenuFlyoutItem Text="Order by None"/>

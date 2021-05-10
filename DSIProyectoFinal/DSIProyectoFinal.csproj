@@ -181,6 +181,7 @@
     <Content Include="Assets\cart2.png" />
     <Content Include="Assets\cart3.png" />
     <Content Include="Assets\check.png" />
+    <Content Include="Assets\circle.png" />
     <Content Include="Assets\defender_class_icon.png" />
     <Content Include="Assets\defense.png" />
     <Content Include="Assets\defensorIcon.png" />

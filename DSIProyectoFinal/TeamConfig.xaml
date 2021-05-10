@@ -6,9 +6,110 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light">
+    
     <Grid>
+        <!--Definicion de filas y columnas-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <!--BACK BUTTON-->
+        <Button Background="SandyBrown"
+                Width="Auto" Height="50"
+                HorizontalAlignment="Stretch"
+                Grid.ColumnSpan="2">
+            <TextBlock Text="BACK"
+                       FontSize="30"
+                       Width="Auto"/>
+        </Button>
+
+        <!--Indicador de en que menu se esta-->
+        <StackPanel Grid.Column="4"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch">
+            <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Stretch"
+                   Text="KotF"
+                   FontSize="48" FontWeight="Bold"/>
+            <Button Background="SkyBlue"
+                    Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    FontStretch="Expanded">
+                <TextBlock Text="TEAMS"
+                           IsTextScaleFactorEnabled="True"
+                           FontSize="30"
+                           TextWrapping="Wrap"
+                           FontStretch="Expanded"
+                           Width="Auto"/>
+            </Button>
+        </StackPanel>
+
+        <!--BOTON GO-->
+        <Button Content="SAVE" Grid.Column="1"  Grid.Row="2" Grid.ColumnSpan="2"
+                VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                FontSize="30" FontWeight="Bold" Width="450" />
+
+        <!--BOTON HOME Y OPCIONES-->
+        <StackPanel Grid.Row="2"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <Button Background="White" BorderThickness="2">
+                <Image Source="/Assets/homeButton.png"
+                       Grid.Row="2"
+                       Height="50"
+                       Width="50"
+                       Margin="0,0,0,5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform"/>
+            </Button>
+            <Button Background="White" BorderThickness="2">
+                <Image Source="/Assets/settingsButton.png"
+                       Grid.Row="2"
+                       Height="50"
+                       Width="50"
+                       Margin="0,0,0,5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform"/>
+            </Button>
+        </StackPanel>
+
+        <!--GRIDVIEW DE MIEMBROS DEL EQUIPO-->
+        
+        <!--BOTONES DE SELECCION DE EQUIPO-->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2"
+                    HorizontalAlignment="Center" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+
+                <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
+                    <TextBlock Text="1" FontSize="70" Width="Auto" Height="Auto"/>
+                </Button>
+
+                <Button Grid.Column="2" Grid.Row="0" Background="#FF6A6969">
+                    <TextBlock Text="2" FontSize="80" Width="Auto" Height="Auto"/>
+                </Button>
+
+            </StackPanel>
+
+            <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
+                <TextBlock Text="3" FontSize="70" Width="Auto" Height="Auto"/>
+            </Button>
+        </StackPanel>
 
     </Grid>
 </Page>
