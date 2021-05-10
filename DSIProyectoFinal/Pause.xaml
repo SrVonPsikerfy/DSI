@@ -39,13 +39,13 @@
 
             <!-- Texto !-->
             <TextBlock FontFamily="Helvetica"
-            FontSize="70" VerticalAlignment="Top" HorizontalAlignment="Center" FontStyle="Normal" 
-            CharacterSpacing="200" Foreground="Black" Margin="0,40,0,0" Grid.Column="1" Grid.Row="0"
+            FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Normal" 
+            CharacterSpacing="200" Foreground="Black" Grid.Column="1" Grid.Row="0"
             FontWeight="Bold" Text="PAUSA">
             </TextBlock>
 
             <!-- Botones !-->
-            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="144" Width="344">
+            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344">
                 <!--Resume-->
                 <StackPanel>
                     <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
@@ -54,7 +54,7 @@
                 </StackPanel>
             </Button>
 
-            <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="144" Width="344">
+            <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344">
                 <!--Options-->
                 <StackPanel>
                     <Image Source="/Assets/settings_icon.png" HorizontalAlignment="Stretch"
@@ -63,11 +63,11 @@
                 </StackPanel>
             </Button>
 
-            <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Height="144" Width="344">
+            <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344">
                 <!--Exit Level-->
                 <StackPanel>
                     <Image Source="/Assets/exit_icon.png" HorizontalAlignment="Stretch"
-                       RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                       RenderTransformOrigin="0.5,0.5" MaxHeight="52" MaxWidth="52" />
                     <TextBlock Text="Exit Level" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
                 </StackPanel>
             </Button>

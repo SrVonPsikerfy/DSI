@@ -145,7 +145,8 @@
             <TextBlock HorizontalAlignment="Right"
                        VerticalAlignment="Stretch"
                    Text="KotF"
-                   FontSize="48" FontWeight="Bold"/>
+                   FontSize="48" FontWeight="Bold"
+                       FontFamily="Abril Fatface"/>
             <Button Background="SkyBlue"
                     Width="Auto"
                     Height="Auto"

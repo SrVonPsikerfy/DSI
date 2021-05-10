@@ -120,34 +120,19 @@
             Source="./Assets/healer_class_icon.png"/>
             </Button>
         </Grid>
-        
-        <!--Home y Settings-->
-        <StackPanel Grid.Row="3"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"
-                    Orientation="Horizontal">
-            <Button Background="White" BorderThickness="2">
-                <Image Source="/Assets/homeButton.png"
-                       Grid.Row="2"
-                       Height="50"
-                       Width="50"
-                       Margin="0,0,0,5"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Stretch="Uniform"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0"  Grid.ColumnSpan="2">
+            <!--HomeButton-->
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent">
+                <Image Source="/Assets/homeButton.png" MaxWidth="70" MaxHeight="70"/>
             </Button>
-            <Button Background="White" BorderThickness="2">
-                <Image Source="/Assets/settingsButton.png"
-                       Grid.Row="2"
-                       Height="50"
-                       Width="50"
-                       Margin="0,0,0,5"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Stretch="Uniform"/>
+
+            <!--SettingsButton-->
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent">
+                <Image Source="/Assets/settingsButton.png" MaxWidth="70" MaxHeight="70"/>
             </Button>
         </StackPanel>
-        
+
         <!--Dropdown de para ordenar el GridView-->
         <DropDownButton Grid.Column="2" Grid.Row="0"
                         HorizontalAlignment="Stretch" VerticalAlignment="Center"
@@ -165,10 +150,10 @@
         </DropDownButton>
         
         <!--Moneda de juego disponible para gastar-->
-        <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
-            <Image Source="./Assets/moneda.png" Height="89" Width="133"
-                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock Text="99999" FontSize="40" Margin="60,0,0,0"
+        <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="./Assets/moneda.png" MaxHeight="89" MaxWidth="133"
+                   HorizontalAlignment="Left" />
+            <TextBlock Text="99999" FontSize="40" 
                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
         
@@ -179,7 +164,8 @@
             <TextBlock HorizontalAlignment="Right"
                        VerticalAlignment="Stretch"
                    Text="KotF"
-                   FontSize="48" FontWeight="Bold"/>
+                   FontSize="48" FontWeight="Bold"
+                       FontFamily="Abril Fatface"/>
             <Button Background="SkyBlue"
                     Width="Auto"
                     Height="Auto"

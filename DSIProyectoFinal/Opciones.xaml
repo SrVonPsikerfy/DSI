@@ -36,12 +36,12 @@
         <Button Grid.Row="2"
                 HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <Image Source="./Assets/homeButton.png"
-               Height="100"
-               Width="100"
+               MaxHeight="100"
+               MaxWidth="100"
                Margin="0,0,0,10"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Stretch="Uniform"/>
+               VerticalAlignment="Stretch"
+               HorizontalAlignment="Stretch"
+              />
         </Button>
 
         <!--Indicador de en que pagina se esta y logo del juego-->
@@ -51,7 +51,8 @@
             <TextBlock HorizontalAlignment="Right"
                        VerticalAlignment="Stretch"
                    Text="KotF"
-                   FontSize="48" FontWeight="Bold"/>
+                   FontSize="48" FontWeight="Bold"
+                       FontFamily="Abril Fatface"/>
             <Button Background="SkyBlue"
                     Width="Auto"
                     Height="Auto"
@@ -100,28 +101,28 @@
                        Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black">
             </TextBlock>
 
-            <DropDownButton Grid.Column="1" HorizontalAlignment="Center"
-                             Foreground="White" Background="#FF363535" Width="223"
+            <DropDownButton Grid.Column="1" HorizontalAlignment="Stretch"
+                             Foreground="White" Background="#FF363535" MaxWidth="223"
                             Content="English">
                 <DropDownButton.Flyout>
                     <MenuFlyout Placement="Bottom">
-                        <MenuFlyoutItem Text="Order by None"/>
-                        <MenuFlyoutItem Text="Order by Price"/>
-                        <MenuFlyoutItem Text="Order by Alphabetical"/>
+                        <MenuFlyoutItem Text="English"/>
+                        <MenuFlyoutItem Text="Spanish"/>
+                        <MenuFlyoutItem Text="Japanese"/>
                     </MenuFlyout>
                 </DropDownButton.Flyout>
             </DropDownButton>
 
-            <Slider Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Background="#66727070" Foreground="Black" Width="316">
+            <Slider Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                    Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
 
-            <Slider Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Background="#66727070" Foreground="Black" Width="316">
+            <Slider Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                    Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
 
-            <Slider Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Background="#66727070" Foreground="Black" Width="316">
+            <Slider Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                    Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
         </Grid>
     </Grid>
