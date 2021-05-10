@@ -193,6 +193,7 @@
     <Content Include="Assets\defensorSelectedIcon.png" />
     <Content Include="Assets\enemy_icon.png" />
     <Content Include="Assets\exit_icon.png" />
+    <Content Include="Assets\exp.png" />
     <Content Include="Assets\gauntletIcon.png" />
     <Content Include="Assets\healer_class_icon.png" />
     <Content Include="Assets\homeButton.png" />
