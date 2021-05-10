@@ -187,6 +187,7 @@
     <Content Include="Assets\settingsButton.png" />
     <Content Include="Assets\shop.png" />
     <Content Include="Assets\sniper_class_icon.png" />
+    <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\support_class_icon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

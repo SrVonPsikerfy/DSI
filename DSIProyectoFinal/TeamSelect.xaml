@@ -62,7 +62,7 @@
                     Height="Auto"
                     Width="Auto">
 
-            <Button Content="Personaje 1"
+            <Button Content="Equipo 1"
                     FontSize="30"
                     FontWeight="Bold"
                     Width="Auto"
@@ -72,7 +72,7 @@
                     BorderThickness="7"
                     BorderBrush="Black"/>
 
-            <Button Content="Personaje 2"
+            <Button Content="Equipo 2"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
@@ -81,7 +81,7 @@
                     FontSize="30"
                     FontWeight="Bold"/>
 
-            <Button Content="Personaje 3"
+            <Button Content="Equipo 3"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
