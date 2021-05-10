@@ -10,8 +10,10 @@
     RequestedTheme="Light">
 
     <Grid>
+        <!--Definicion de filas y columnas-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="15*"/>
@@ -20,20 +22,21 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="50*"/>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
         <!--BACK BUTTON-->
         <Button Background="SandyBrown"
-                Width="Auto"
-                Height="50"
-                HorizontalAlignment="Stretch">
+                Width="Auto" Height="50"
+                HorizontalAlignment="Stretch"
+                Grid.ColumnSpan="2">
             <TextBlock Text="BACK"
                        FontSize="30"
                        Width="Auto"/>
         </Button>
 
-        <StackPanel Grid.Column="3"
+        <!--Indicador de en que menu se esta-->
+        <StackPanel Grid.Column="4"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Right"
@@ -45,7 +48,7 @@
                     Height="Auto"
                     HorizontalAlignment="Stretch"
                     FontStretch="Expanded">
-                <TextBlock Text="GAUNTLET"
+                <TextBlock Text="TEAM SELECT"
                            IsTextScaleFactorEnabled="True"
                            FontSize="30"
                            TextWrapping="Wrap"
@@ -54,7 +57,7 @@
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="2"
+        <StackPanel Grid.Column="3"
                     Grid.ColumnSpan="2"
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
@@ -62,7 +65,7 @@
                     Height="Auto"
                     Width="Auto">
 
-            <Button Content="Personaje 1"
+            <Button Content="Equipo 1"
                     FontSize="30"
                     FontWeight="Bold"
                     Width="Auto"
@@ -72,7 +75,7 @@
                     BorderThickness="7"
                     BorderBrush="Black"/>
 
-            <Button Content="Personaje 2"
+            <Button Content="Equipo 2"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
@@ -81,7 +84,7 @@
                     FontSize="30"
                     FontWeight="Bold"/>
 
-            <Button Content="Personaje 3"
+            <Button Content="Equipo 3"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
@@ -91,15 +94,13 @@
                     FontWeight="Bold"/>
         </StackPanel>
 
-        <Image Source="/Assets/gauntletIcon.png"
-               Grid.ColumnSpan="2"
-               Grid.Row="1"
-               Stretch="Uniform"
-               VerticalAlignment="Stretch"
-               HorizontalAlignment="Stretch"/>
-        <Button Content="GO!" Grid.Column="2"  Grid.Row="2" VerticalAlignment="Top"
-                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"/>
 
+        <!--BOTON GO-->
+        <Button Content="GO!" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
+                VerticalAlignment="Top" HorizontalAlignment="Center"
+                FontSize="30" FontWeight="Bold" Width="450" />
+
+        <!--BOTON HOME Y OPCIONES-->
         <StackPanel Grid.Row="2"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
@@ -126,6 +127,19 @@
             </Button>
         </StackPanel>
 
+        <!--GRIDVIEW DE MIEMBROS DEL EQUIPO-->
+        
+        
+        <!--BOTON A LA PESTAÑA TEAMS-->
+        <Button Grid.Row="2" Grid.Column="3"
+                Background="DodgerBlue"
+                Width="Auto" Height="50"
+                HorizontalAlignment="Stretch"
+                Grid.ColumnSpan="2">
+            <TextBlock Text="TEAMS"
+                       FontSize="30"
+                       Width="Auto"/>
+        </Button>
 
     </Grid>
 </Page>
