@@ -20,9 +20,14 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <!--BackButton-->
-        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="backButton" Content="&lt; BACK" HorizontalAlignment="Left" VerticalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" FontSize="50" MaxWidth="400"/>
-
+        <!--BACK BUTTON-->
+        <Button Background="SandyBrown"
+                Width="Auto" Height="50"
+                HorizontalAlignment="Stretch">
+            <TextBlock Text="BACK"
+                       FontSize="30"
+                       Width="Auto"/>
+        </Button>
         <!--Titulo mas indicador de modo de juego-->
         <StackPanel Grid.Column="3"
                     VerticalAlignment="Stretch"
