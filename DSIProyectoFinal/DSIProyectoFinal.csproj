@@ -196,8 +196,11 @@
     <Content Include="Assets\gauntletIcon.png" />
     <Content Include="Assets\healer_class_icon.png" />
     <Content Include="Assets\homeButton.png" />
+    <Content Include="Assets\ingameBackground.jpg" />
+    <Content Include="Assets\mainMenu.jpg" />
     <Content Include="Assets\mana_icon.png" />
     <Content Include="Assets\melee_class_icon.png" />
+    <Content Include="Assets\menu.png" />
     <Content Include="Assets\moneda.png" />
     <Content Include="Assets\NivelAux.png" />
     <Content Include="Assets\pauseButton.png" />
