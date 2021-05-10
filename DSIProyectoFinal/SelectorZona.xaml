@@ -79,12 +79,12 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Grid.Row="1" Background="Transparent" MaxHeight="118" MaxWidth="133"  VerticalAlignment="Stretch">
-                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            <Button Grid.Column="1" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300">
+                <Image Source="/Assets/circle1.png"/>
             </Button>
 
-            <Button Grid.Column="3" Grid.Row="2" Background="Transparent" MaxHeight="118" MaxWidth="133" VerticalAlignment="Stretch">
-                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            <Button Grid.Column="3" Grid.Row="2" Background="Transparent" MaxHeight="300" MaxWidth="300" >
+                <Image Source="/Assets/circle2.png"/>
             </Button>
             
             <ContentControl Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center">
@@ -93,23 +93,23 @@
             </ContentControl>
 
 
-            <Button Grid.Column="5" Grid.Row="1" Background="Transparent" MaxHeight="118" MaxWidth="133" VerticalAlignment="Stretch">
-                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            <Button Grid.Column="5" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300">
+                <Image Source="/Assets/circle3.png"/>
             </Button>
 
 
-            <Button Grid.Column="7" Grid.Row="0" Background="Transparent" MaxHeight="118" MaxWidth="133"  VerticalAlignment="Stretch">
-                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            <Button Grid.Column="7" Grid.Row="0" Background="Transparent" MaxHeight="300" MaxWidth="300" >
+                <Image Source="/Assets/circle4.png"/>
             </Button>
 
 
-            <Button Grid.Column="7" Grid.Row="2" Background="Transparent" MaxHeight="118" MaxWidth="133" VerticalAlignment="Stretch" IsEnabled="False">
-                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            <Button Grid.Column="7" Grid.Row="2" Background="Transparent" MaxHeight="300" MaxWidth="300" IsEnabled="False">
+                <Image Source="/Assets/circle.png"/>
             </Button>
 
 
-            <Button Grid.Column="10" Grid.Row="1" Background="Transparent" MaxHeight="118" MaxWidth="133">
-                <Image Source="/Assets/NivelAux.png" MaxHeight="216" MaxWidth="216"/>
+            <Button Grid.Column="10" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300">
+                <Image Source="/Assets/circle5.png"/>
             </Button>
         </Grid>
 
