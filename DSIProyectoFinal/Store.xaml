@@ -66,7 +66,7 @@
                   Grid.ColumnSpan="3"
                   BorderBrush="Black" BorderThickness="3"
                    Margin="8"
-                   Background="Violet">
+                   Background="DimGray">
                
         </GridView>
 
