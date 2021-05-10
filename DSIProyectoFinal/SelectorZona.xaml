@@ -45,17 +45,17 @@
             </Button>
         </StackPanel>
 
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2">
+            <!--HomeButton-->
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent">
+                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
 
-
-        <!--HomeButton-->
-        <Button Grid.Row="7" Grid.Column="0" x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,5" Style="{StaticResource DateTimePickerFlyoutButtonStyle}">
-            <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
-        </Button>
-
-        <!--SettingsButton-->
-        <Button Grid.Row="7" Grid.Column="0" x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5" Style="{StaticResource DateTimePickerFlyoutButtonStyle}">
-            <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
-        </Button>
+            <!--SettingsButton-->
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent">
+                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+        </StackPanel>
 
 
         <Grid Grid.Row="1" Grid.ColumnSpan="3">
@@ -86,13 +86,7 @@
             <Button Grid.Column="3" Grid.Row="2" Background="Transparent" MaxHeight="300" MaxWidth="300" >
                 <Image Source="/Assets/circle2.png"/>
             </Button>
-            
-            <ContentControl Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center">
-                <Image  Source="/Assets/arrow.png" Rotation="0">
-                </Image>
-            </ContentControl>
-
-
+         
             <Button Grid.Column="5" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300">
                 <Image Source="/Assets/circle3.png"/>
             </Button>

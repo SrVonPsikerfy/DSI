@@ -147,8 +147,72 @@
                 Background="RosyBrown"
                 BorderBrush="Black" FontWeight="Bold"/>
 
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Extra Modes-->
+            <Border Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Background="Red" VerticalAlignment="Bottom"
+                    BorderBrush="Black" BorderThickness="3">
+                <TextBlock Text="EXTRA MODES"
+                   TextAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Center"
+                   FontStretch="Expanded" MaxHeight="30" Width="578"/>
+            </Border>
+            
+               
+                <Button Grid.Row="2"
+                        Grid.Column="0"
+                        VerticalAlignment="Top"
+                        BorderThickness="3"
+                        Content="PVP"
+                        FontFamily="Segoe UI"
+                        HorizontalAlignment="Stretch"
+                        FontSize="30"
+                        FontStretch="ExtraCondensed"
+                    HorizontalContentAlignment="Center"
+                        Background="RosyBrown"
+                        BorderBrush="Black" FontWeight="Bold"/>
+                <Button Grid.Row="2"
+                        Grid.Column="1"
+                        VerticalAlignment="Top"
+                        BorderThickness="3"
+                        Content="GAUNTLET"
+                        FontFamily="Segoe UI"
+                        HorizontalAlignment="Stretch"
+                        FontSize="30"
+                    HorizontalContentAlignment="Center"
+                        Background="RosyBrown"
+                        BorderBrush="Black" FontWeight="Bold"/>
+                <Button Grid.Row="2"
+                        Grid.Column="2"
+                        VerticalAlignment="Top"
+                        BorderThickness="3"
+                        Content="SWARM"
+                        FontFamily="Segoe UI"
+                        HorizontalAlignment="Stretch"
+                        FontSize="30"
+                    HorizontalContentAlignment="Center"
+                    
+                        Background="RosyBrown"
+                        BorderBrush="Black" FontWeight="Bold"/>
+        </Grid>
         <!--Botones modos extra-->
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1"
+        <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1"
                         VerticalAlignment="Center">
             <Border Background="Red" VerticalAlignment="Top"
                     BorderBrush="Black" BorderThickness="3">
@@ -195,7 +259,7 @@
                         Background="RosyBrown"
                         BorderBrush="Black" FontWeight="Bold"/>
             </StackPanel>
-        </StackPanel>
+        </StackPanel>-->
 
         <!--Boton de Tienda-->
         <Button Grid.Row="4"
