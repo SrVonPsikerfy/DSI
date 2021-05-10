@@ -117,6 +117,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <Image Grid.ColumnSpan="1" Grid.RowSpan="2" Source="./Assets/castle.png"/>
+
         <TextBlock Grid.Row="0" Grid.Column="0"
                    Text="KNIGHT of the FALLEN"
                    SizeChanged="TextBlock_SizeChanged"
@@ -127,21 +129,29 @@
                    TextWrapping="WrapWholeWords"
                    FontStretch="Expanded" Height="402"/>
 
-        <StackPanel Grid.Column ="1"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Top">
-            <Button
+        <Grid Grid.Column ="1"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Top">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row ="0"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 BorderThickness="3"
                 Content="CAMPAIGN"
                 FontFamily="Segoe UI"
                 FontSize="40"
-                Margin="0,0,0,70"
                 Background="RosyBrown"
                 BorderBrush="Black" FontWeight="Bold"/>
 
-            <Border Background="Red">
+            <Border Background="Red" Grid.Row ="2">
                 <TextBlock Text="EXTRA MODES"
                    TextAlignment="Center"
                    FontSize="20"
@@ -151,7 +161,8 @@
             </Border>
 
             <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Stretch">
+                    HorizontalAlignment="Stretch"
+                        Grid.Row ="3">
                 <Button 
                         BorderThickness="3"
                         Content="PVP"
@@ -185,7 +196,7 @@
                         Background="RosyBrown"
                         BorderBrush="Black" FontWeight="Bold"/>
             </StackPanel>
-        </StackPanel>
+        </Grid>
 
         <Button Grid.Row="2"
                 VerticalAlignment="Stretch"
