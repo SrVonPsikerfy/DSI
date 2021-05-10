@@ -22,7 +22,12 @@
             <RowDefinition Height="50*"/>
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
-        
+
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="4" Grid.RowSpan="3"
+               Source="./Assets/castle.jpg"
+               Stretch="Fill"/>
+
         <!--BACK BUTTON-->
         <Button Background="SandyBrown"
                 Width="Auto"
