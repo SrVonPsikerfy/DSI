@@ -42,7 +42,6 @@
 
 
         <!--GRID CON LOS MIEMBROS DEL EQUIPO-->
-
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="30" RowSpacing="30">
             <!--Definicion de filas y columnas-->
             <Grid.ColumnDefinitions>
