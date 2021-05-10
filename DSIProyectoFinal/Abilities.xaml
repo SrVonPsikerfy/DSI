@@ -51,7 +51,7 @@ The data template is defined to display a CustomDataObject object (same type as 
                 HorizontalAlignment="Stretch">
             <TextBlock Text="BACK"
                        FontSize="30"
-                       Width="Auto"/>
+                       Width="Auto" FontFamily="Helvetica LT Std Black"/>
         </Button>
 
         <StackPanel Grid.Column="5"
@@ -127,13 +127,36 @@ The data template is defined to display a CustomDataObject object (same type as 
                Stretch="Uniform"/>
         </StackPanel>
 
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    VerticalAlignment="Center">
+            <TextBlock Text="SKILLS"
+                       FontSize="30"
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+
+            <Button Background="Transparent">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+            <Button Background="Transparent">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+            <Button Background="Transparent">
+                <Image Source="/Assets/unequipedSkill.png"/>
+            </Button>
+        </StackPanel>
+        
+            
+            
+
+
         <TextBlock Grid.Row="2"
                    Grid.Column="3"
                    Grid.ColumnSpan="2"
                    Text="POINTS AVAILABLE: "
                    FontSize="30"
                    FontWeight="Bold"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
         <Grid Grid.Row="3"
               Grid.Column="4">
@@ -152,41 +175,41 @@ The data template is defined to display a CustomDataObject object (same type as 
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic"/>
+                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="1"
                        Text="DEF (MAG)"
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic"/>
+                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="2"
                        Text="RANGE"
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic"/>
+                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Grid.Row="2"
                        Text="3"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
         </Grid>
 
@@ -207,41 +230,41 @@ The data template is defined to display a CustomDataObject object (same type as 
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic"/>
+                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="1"
                        Text="ATK (MAG)"
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic"/>
+                       FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Row="2"
                        Text="MANA"
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic"/>
+                       FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Grid.Row="2"
                        Text="10"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
         </Grid>
 
@@ -250,7 +273,7 @@ The data template is defined to display a CustomDataObject object (same type as 
                    Text="SKADI"
                    FontSize="30"
                    FontWeight="Bold"
-                   FontStyle="Italic"/>
+                   FontStyle="Italic" FontFamily="Helvetica LT Std Black"/>
 
         <Grid Grid.Row="3"
               Grid.Column="5">
@@ -264,12 +287,12 @@ The data template is defined to display a CustomDataObject object (same type as 
                        FontSize="25*"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Stretch"/>
+                       HorizontalAlignment="Stretch" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Row="1"
                        Text="Exp. 210/420"
                        FontSize="15"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <ProgressBar Grid.Row="2"
                          Width="130"

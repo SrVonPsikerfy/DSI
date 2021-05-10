@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Abilities.xaml.cs">
+      <DependentUpon>Abilities.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -203,6 +206,7 @@
     <Content Include="Assets\sniper_class_icon.png" />
     <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\support_class_icon.png" />
+    <Content Include="Assets\unequipedSkill.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -217,6 +221,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Abilities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Ataque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -281,6 +289,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fonts\AbrilFatface-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\HelveticaLTStd-Blk.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\HelveticaLTStd-BlkCond.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\HelveticaLTStd-BlkCondObl.otf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
