@@ -106,7 +106,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
+    <Grid Background="#FFB8C0CD">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.40*"/>
             <RowDefinition Height="0.85*"/>
