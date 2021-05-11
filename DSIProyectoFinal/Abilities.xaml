@@ -36,7 +36,7 @@
         </ItemsPanelTemplate>
     </Page.Resources>
     
-    <Grid>
+    <Grid Background="#FFB8C0CD">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="25*"/>
@@ -54,11 +54,6 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <!--Fondo-->
-        <Image Grid.ColumnSpan="6" Grid.RowSpan="5"
-               Source="/Assets/menu.png"
-               Stretch="Fill"/>
-        
         <!--BACK BUTTON-->
         <Button Background="SandyBrown"
                 Width="Auto"
@@ -135,7 +130,7 @@
             <TextBlock Text="SKILLS"
                        FontSize="30"
                        IsColorFontEnabled="True"
-                       Foreground="White"
+                       Foreground="Black"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <Button Background="Transparent">
@@ -238,8 +233,8 @@
         <TextBlock Grid.Row="2"
                    Grid.Column="3"
                    Grid.ColumnSpan="2"
-                   Text="POINTS AVAILABLE: "
-                   Foreground="White"
+                   Text="POINTS AVAILABLE: 2"
+                   Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
@@ -261,13 +256,13 @@
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       Foreground="White"
+                       Foreground="Black"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="1"
                        Text="DEF (MAG)"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
@@ -275,7 +270,7 @@
             <TextBlock Grid.Row="2"
                        Text="RANGE"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
@@ -283,7 +278,7 @@
             <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -291,14 +286,14 @@
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Column="1"
                        Grid.Row="2"
                        Text="3"
-                       Foreground="White"
+                       Foreground="Black"
                        FontSize="20"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
@@ -321,14 +316,14 @@
             <TextBlock Text="ATK (PHY)"
                        FontSize="20"
                        VerticalAlignment="Center"
-                       Foreground="White"
+                       Foreground="Black"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
             <TextBlock Grid.Row="1"
                        Text="ATK (MAG)"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
@@ -336,7 +331,7 @@
             <TextBlock Grid.Row="2"
                        Text="MANA"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
@@ -344,7 +339,7 @@
             <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -352,7 +347,7 @@
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -360,7 +355,7 @@
                        Grid.Row="2"
                        Text="10"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
@@ -370,7 +365,7 @@
                    Grid.Column="5"
                    Text="SKADI"
                    FontSize="30"
-                   Foreground="White"
+                   Foreground="Black"
                    FontWeight="Bold"
                    FontStyle="Italic" FontFamily="Helvetica LT Std Black"/>
 
@@ -384,14 +379,14 @@
 
             <TextBlock Text="LVL 69"
                        FontSize="25*"
-                       Foreground="White"
+                       Foreground="Black"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Stretch" FontFamily="Helvetica LT Std Black"/>
 
             <TextBlock Grid.Row="1"
                        Text="Exp. 210/420"
-                       Foreground="White"
+                       Foreground="Black"
                        FontSize="15"
                        VerticalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 

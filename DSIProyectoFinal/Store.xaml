@@ -37,8 +37,8 @@
         </ItemsPanelTemplate>
     </Page.Resources>
 
-    
-    <Grid>
+
+    <Grid Background="#FFB8C0CD">
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*"/>
@@ -52,11 +52,6 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!--Fondo-->
-        <Image Grid.ColumnSpan="5" Grid.RowSpan="4"
-               Source="./Assets/castle.jpg"
-               Stretch="Fill"/>
 
         <!--Lista de compras-->
         <GridView x:Name="GridPurchase"

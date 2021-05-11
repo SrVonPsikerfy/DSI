@@ -36,7 +36,7 @@
         </ItemsPanelTemplate>
     </Page.Resources>
 
-    <Grid>
+    <Grid Background="#FFB8C0CD">
         <!--Definicion de filas y columnas-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
