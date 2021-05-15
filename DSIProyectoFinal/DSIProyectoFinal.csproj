@@ -173,6 +173,7 @@
     <Content Include="Assets\arrow.png" />
     <Content Include="Assets\atacanteIcon.png" />
     <Content Include="Assets\atacanteSelectedIcon.png" />
+    <Content Include="Assets\atras.png" />
     <Content Include="Assets\castle.jpg" />
     <Content Include="Assets\attack.png" />
     <Content Include="Assets\attackBackground.png" />
