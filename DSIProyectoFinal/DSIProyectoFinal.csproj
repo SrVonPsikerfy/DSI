@@ -125,11 +125,9 @@
     <Compile Include="Ataque.xaml.cs">
       <DependentUpon>Ataque.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AvailableKnights.cs" />
     <Compile Include="Defensa.xaml.cs">
       <DependentUpon>Defensa.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Gauntlet.xaml.cs">
-      <DependentUpon>Gauntlet.xaml</DependentUpon>
     </Compile>
     <Compile Include="Knights.cs" />
     <Compile Include="MainMenu.xaml.cs">
@@ -154,6 +152,7 @@
     <Compile Include="Store.xaml.cs">
       <DependentUpon>Store.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StoreKnights.cs" />
     <Compile Include="TeamConfig.xaml.cs">
       <DependentUpon>TeamConfig.xaml</DependentUpon>
     </Compile>
@@ -174,7 +173,7 @@
     <Content Include="Assets\arrow.png" />
     <Content Include="Assets\atacanteIcon.png" />
     <Content Include="Assets\atacanteSelectedIcon.png" />
-    <Content Include="Assets\back.png" />
+    <Content Include="Assets\atras.png" />
     <Content Include="Assets\castle.jpg" />
     <Content Include="Assets\attack.png" />
     <Content Include="Assets\attackBackground.png" />
@@ -239,10 +238,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Defensa.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Gauntlet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
