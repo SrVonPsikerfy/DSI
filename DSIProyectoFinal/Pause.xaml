@@ -45,7 +45,7 @@
             </TextBlock>
 
             <!-- Botones !-->
-            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344">
+            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344" Click="Resume">
                 <!--Resume-->
                 <StackPanel>
                     <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"

@@ -43,5 +43,12 @@ namespace DSIProyectoFinal
 
             base.OnNavigatedTo(e);
         }
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
+        }
     }
 }

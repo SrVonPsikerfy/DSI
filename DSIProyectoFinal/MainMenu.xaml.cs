@@ -34,5 +34,40 @@ namespace DSIProyectoFinal
             else
                 (sender as TextBlock).FontSize = 40;
         }
+
+        private void GoToTeams(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TeamConfig));
+        }
+
+        private void GoToKnights(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Abilities));
+        }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Opciones));
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
+        private void GoToPvp(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PVP));
+        }
+
+        private void GoToStore(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Store));
+        }
+
+        private void GoToModoHistoria(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ModoHistoria));
+        }
     }
 }

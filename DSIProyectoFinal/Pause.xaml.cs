@@ -26,5 +26,12 @@ namespace DSIProyectoFinal
         {
             this.InitializeComponent();
         }
+        private void Resume(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
+        }
     }
 }

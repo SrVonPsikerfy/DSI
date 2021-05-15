@@ -68,6 +68,7 @@
                 Height="50"
                 HorizontalAlignment="Stretch"
                 FocusVisualPrimaryBrush="SaddleBrown"
+                Click="GoBack"
                 >
             <TextBlock Text="BACK"
                        FontSize="30"

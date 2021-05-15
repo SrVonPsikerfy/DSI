@@ -145,7 +145,8 @@
                 FontFamily="Segoe UI"
                 FontSize="40"
                 Background="RosyBrown"
-                BorderBrush="Black" FontWeight="Bold"/>
+                BorderBrush="Black" FontWeight="Bold"
+                Click="GoToModoHistoria"/>
 
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
@@ -160,22 +161,9 @@
             </Grid.ColumnDefinitions>
 
             <!--Extra Modes-->
-            <Border Grid.Row="1"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="3"
-                    Background="Red" VerticalAlignment="Bottom"
-                    BorderBrush="Black" BorderThickness="3">
-                <TextBlock Text="EXTRA MODES"
-                   TextAlignment="Center"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   TextWrapping="WrapWholeWords"
-                           HorizontalAlignment="Center"
-                   FontStretch="Expanded" MaxHeight="30" Width="578"/>
-            </Border>
-            
-               
-                <Button Grid.Row="2"
+
+
+            <Button Grid.Row="2"
                         Grid.Column="0"
                         VerticalAlignment="Top"
                         BorderThickness="3"
@@ -186,30 +174,8 @@
                         FontStretch="ExtraCondensed"
                     HorizontalContentAlignment="Center"
                         Background="RosyBrown"
-                        BorderBrush="Black" FontWeight="Bold"/>
-                <Button Grid.Row="2"
-                        Grid.Column="1"
-                        VerticalAlignment="Top"
-                        BorderThickness="3"
-                        Content="GAUNTLET"
-                        FontFamily="Segoe UI"
-                        HorizontalAlignment="Stretch"
-                        FontSize="30"
-                    HorizontalContentAlignment="Center"
-                        Background="RosyBrown"
-                        BorderBrush="Black" FontWeight="Bold"/>
-                <Button Grid.Row="2"
-                        Grid.Column="2"
-                        VerticalAlignment="Top"
-                        BorderThickness="3"
-                        Content="SWARM"
-                        FontFamily="Segoe UI"
-                        HorizontalAlignment="Stretch"
-                        FontSize="30"
-                    HorizontalContentAlignment="Center"
-                    
-                        Background="RosyBrown"
-                        BorderBrush="Black" FontWeight="Bold"/>
+                        BorderBrush="Black" FontWeight="Bold"
+                        Click="GoToPvp"/>
         </Grid>
         <!--Botones modos extra-->
         <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1"
@@ -267,7 +233,8 @@
                 HorizontalAlignment="Left"
                 Margin="4,4,4,4"
                 Background="#FF9C9C9C"
-                BorderBrush="Black" BorderThickness="3">
+                BorderBrush="Black" BorderThickness="3"
+                Click="GoToStore">
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
 
@@ -275,20 +242,20 @@
         <Button Content="TEAMS" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom"
                 FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" 
                 MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"
-                BorderBrush="Black" BorderThickness="3"/>
+                BorderBrush="Black" BorderThickness="3" Click="GoToTeams"/>
 
         <!--Boton de Caballeros-->
         <Button Content="KNIGHTS" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"
                 FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"
                 MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"
-                BorderBrush="Black" BorderThickness="3"/>
+                BorderBrush="Black" BorderThickness="3" Click="GoToKnights"/>
 
         <!--Opciones-->
         <StackPanel Grid.Row="4" Grid.Column="1"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
-            <Button Background="White" BorderThickness="2">
+            <Button Background="White" BorderThickness="2" Click="Exit">
                 <Image Source="/Assets/exit_icon.png"
                        Grid.Row="2"
                        Height="50"
@@ -298,7 +265,7 @@
                        HorizontalAlignment="Center"
                        Stretch="Uniform"/>
             </Button>
-            <Button Background="White" BorderThickness="2">
+            <Button Background="White" BorderThickness="2" Click="GoToSettings">
                 <Image Source="/Assets/settingsButton.png"
                        Grid.Row="2"
                        Height="50"
