@@ -57,7 +57,8 @@
         <Button Background="SandyBrown"
                 Width="Auto" Height="50"
                 HorizontalAlignment="Stretch"
-                Grid.ColumnSpan="2">
+                Grid.ColumnSpan="2"
+                Click="GoBack">
             <TextBlock Text="BACK"
                        FontSize="30"
                        Width="Auto"/>

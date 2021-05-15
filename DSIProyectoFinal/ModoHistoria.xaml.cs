@@ -34,5 +34,13 @@ namespace DSIProyectoFinal
             else
                 (sender as TextBlock).FontSize = 40;
         }
+
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
+        }
     }
 }

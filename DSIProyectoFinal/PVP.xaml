@@ -28,7 +28,8 @@
         <Button Background="SandyBrown"
                 Width="Auto"
                 Height="50"
-                HorizontalAlignment="Stretch">
+                HorizontalAlignment="Stretch"
+                Click="GoBack">
             <TextBlock Text="BACK"
                        FontSize="30"
                        Width="Auto"/>

@@ -29,7 +29,8 @@
         <Button Background="SandyBrown"
                 Width="Auto" Height="50"
                 HorizontalAlignment="Stretch"
-                Grid.ColumnSpan="2">
+                Grid.ColumnSpan="2"
+                Click="GoBack">
             <TextBlock Text="BACK"
                        FontSize="30"
                        Width="Auto"/>
@@ -291,7 +292,7 @@
         <!--BOTON GO-->
         <Button Content="GO!" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
                 VerticalAlignment="Top" HorizontalAlignment="Stretch"
-                FontSize="30" FontWeight="Bold" MaxWidth="450" Click="Button_Click" />
+                FontSize="30" FontWeight="Bold" MaxWidth="450"/>
 
         <!--BOTON HOME Y OPCIONES-->
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
