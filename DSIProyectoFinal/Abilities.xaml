@@ -34,6 +34,14 @@
             <ItemsWrapGrid Orientation="Horizontal"
                            HorizontalAlignment="Center" />
         </ItemsPanelTemplate>
+
+        <Style x:Key="BackButtonStyle" TargetType="Button">
+            <Setter Property="Content">
+                <Setter.Value>
+                    <Image />
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
     
     <Grid Background="#FFB8C0CD">
