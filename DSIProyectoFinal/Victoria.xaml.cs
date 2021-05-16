@@ -50,7 +50,7 @@ namespace DSIProyectoFinal
 
         private void GoToLevelSelect(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SelectorZona));
+            Frame.Navigate(typeof(ModoHistoria));
         }
     }
 }
