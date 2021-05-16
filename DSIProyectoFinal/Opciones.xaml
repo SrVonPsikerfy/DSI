@@ -8,7 +8,25 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    
     <Page.Resources>
+        <!--Blue Flag Style-->
+        <Style x:Key="BlueFlagImage" TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Source" Value="/Assets/blue_cropped_flag.png"/>
+        </Style>
+        <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
+            <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
+            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        
         <!--BACK BUTTON-->
         <Style x:Key="BackButtonStyle" TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -31,7 +49,7 @@
             <Setter Property="Text" Value="BACK"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="80"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
         </Style>
@@ -52,17 +70,21 @@
         <Border Grid.Row="1" Grid.Column="1" Background="Beige"/>
 
         <!--BACK BUTTON-->
-        <Button Style="{StaticResource BackButtonStyle}"
+        <Viewbox>
+            <Grid>
+                <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
-            <Grid Style="{StaticResource BackButtonGrid}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-                <Image Style="{StaticResource BackButtonImage}"/>
-                <TextBlock Style="{StaticResource BackButtonText}"/>
+                    <Grid Style="{StaticResource BackButtonGrid}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Style="{StaticResource BackButtonImage}"/>
+                        <TextBlock Style="{StaticResource BackButtonText}"/>
+                    </Grid>
+                </Button>
             </Grid>
-        </Button>
+        </Viewbox>
 
         <!--Boton Home-->
         <Button Grid.Row="2"
@@ -78,7 +100,7 @@
         </Button>
 
         <!--Indicador de en que pagina se esta y logo del juego-->
-        <Viewbox  Grid.Column="2">
+        <Viewbox  Grid.Column="2" HorizontalAlignment="Right">
 
             <StackPanel
                     VerticalAlignment="Stretch"
@@ -86,20 +108,13 @@
                 <TextBlock HorizontalAlignment="Right"
                        VerticalAlignment="Stretch"
                    Text="KotF"
-                   FontSize="48" FontWeight="Bold"
+                   FontSize="150" FontWeight="Bold"
                        FontFamily="Abril Fatface"/>
-                <Button Background="SkyBlue"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    FontStretch="Expanded">
+                <Grid>
+                    <Image Style="{StaticResource BlueFlagImage}"/>
                     <TextBlock Text="OPCIONES"
-                           IsTextScaleFactorEnabled="True"
-                           FontSize="30"
-                           TextWrapping="Wrap"
-                           FontStretch="Expanded"
-                           Width="Auto"/>
-                </Button>
+                           Style="{StaticResource BlueFlagTextStyle}"/>
+                </Grid>
             </StackPanel>
 
         </Viewbox>
