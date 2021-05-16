@@ -36,8 +36,9 @@
                 <Image Source="./Assets/enemy_icon.png" MaxHeight="60" MaxWidth="87" VerticalAlignment="Center"/>
             </StackPanel>
             <!--Boton de pausa-->
-            <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                <Image Source="./Assets/pauseButton.png" MaxHeight="87" MaxWidth="87"/>
+            <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Click="GoToPause">
+                <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
             </Button>
 
             <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">

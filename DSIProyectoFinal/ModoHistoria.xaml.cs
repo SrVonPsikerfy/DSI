@@ -42,5 +42,10 @@ namespace DSIProyectoFinal
                 this.Frame.GoBack();
             }
         }
+
+        private void GoToPlay(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Defensa));
+        }
     }
 }
