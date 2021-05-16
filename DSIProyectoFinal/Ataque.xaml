@@ -28,8 +28,9 @@
         <!--Timer-->
         <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
         <!--Boton de pausa-->
-        <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-            <Image Source="./Assets/pauseButton.png" MaxHeight="87" MaxWidth="87"/>
+        <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="GoToPause">
+            <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
         </Button>
 
 

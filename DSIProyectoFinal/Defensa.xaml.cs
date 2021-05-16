@@ -33,5 +33,10 @@ namespace DSIProyectoFinal
             else
                 (sender as TextBlock).FontSize = 30;
         }
+
+        private void GoToPause(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pause));
+        }
     }
 }
