@@ -22,58 +22,61 @@
         </Grid.RowDefinitions>
         <Border Grid.Column ="1" Grid.Row="1" Background="#FFF7A56B"/>
 
-        <!--Grid del texto y los botones-->
-        <Grid Grid.Column="1" Grid.Row="1">
-            <!--Dimensiones nuevo grid-->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1.5*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <Viewbox Grid.Column="1" Grid.Row="1">
+            <!--Grid del texto y los botones-->
+            <Grid>
+                <!--Dimensiones nuevo grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-            <!-- Texto !-->
-            <TextBlock FontFamily="Helvetica"
+                <!-- Texto !-->
+                <TextBlock FontFamily="Helvetica"
             FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Normal" 
             CharacterSpacing="200" Foreground="Black" Grid.Column="1" Grid.Row="0"
             FontWeight="Bold" Text="PAUSA">
-            </TextBlock>
+                </TextBlock>
 
-            <!-- Botones !-->
-            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344" Click="Resume">
-                <!--Resume-->
-                <StackPanel>
-                    <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
+                <!-- Botones !-->
+                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344" Click="Resume">
+                    <!--Resume-->
+                    <StackPanel>
+                        <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
                         RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock Text="Resume" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
-                </StackPanel>
-            </Button>
+                        <TextBlock Text="Resume" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
+                    </StackPanel>
+                </Button>
 
-            <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
+                <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
                     Click="GoToSettings">
-                <!--Options-->
-                <StackPanel>
-                    <Image Source="/Assets/settings_icon.png" HorizontalAlignment="Stretch"
+                    <!--Options-->
+                    <StackPanel>
+                        <Image Source="/Assets/settings_icon.png" HorizontalAlignment="Stretch"
                         RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock Text="Options" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
-                </StackPanel>
-            </Button>
+                        <TextBlock Text="Options" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
+                    </StackPanel>
+                </Button>
 
-            <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
+                <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
                     Click="GoToPreviousMenu">
-                <!--Exit Level-->
-                <StackPanel>
-                    <Image Source="/Assets/exit_icon.png" HorizontalAlignment="Stretch"
+                    <!--Exit Level-->
+                    <StackPanel>
+                        <Image Source="/Assets/exit_icon.png" HorizontalAlignment="Stretch"
                        RenderTransformOrigin="0.5,0.5" MaxHeight="52" MaxWidth="52" />
-                    <TextBlock Text="Exit Level" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
-                </StackPanel>
-            </Button>
-        </Grid>
+                        <TextBlock Text="Exit Level" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Viewbox>
+        
 
 
 

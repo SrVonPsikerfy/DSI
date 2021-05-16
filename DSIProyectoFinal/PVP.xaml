@@ -35,9 +35,35 @@
             <Setter Property="Text" Value="BACK"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="60"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
+        </Style>
+
+        <!--KotF Style-->
+        <Style x:Key="KotFStyle" TargetType="TextBlock">
+            <Setter Property="Text" Value="KotF"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="FontSize" Value="96"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        <!--Blue Flag Style-->
+        <Style x:Key="BlueFlagImage" TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Source" Value="/Assets/blue_cropped_flag.png"/>
+        </Style>
+        <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
+            <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
+            <Setter Property="FontSize" Value="90"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
     </Page.Resources>
 
@@ -57,38 +83,37 @@
         </Grid.RowDefinitions>
 
         <!--BACK BUTTON-->
-        <Button Style="{StaticResource BackButtonStyle}"
-                Click="GoBack">
-            <Grid Style="{StaticResource BackButtonGrid}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-                <Image Style="{StaticResource BackButtonImage}"/>
-                <TextBlock Style="{StaticResource BackButtonText}"/>
+        <Viewbox>
+            <Grid>
+                <Button Style="{StaticResource BackButtonStyle}"
+                        Click="GoBack">
+                    <Grid Style="{StaticResource BackButtonGrid}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Style="{StaticResource BackButtonImage}"/>
+                        <TextBlock Style="{StaticResource BackButtonText}"/>
+                    </Grid>
+                </Button>
             </Grid>
-        </Button>
+        </Viewbox>
 
-        <StackPanel Grid.Column="3"
+        <Viewbox Grid.Column="5" VerticalAlignment="Top">
+            <Grid>
+                <StackPanel 
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Right"
-                       VerticalAlignment="Stretch"
-                   Text="KotF"
-                   FontSize="48" FontWeight="Bold"
-                       FontFamily="Abril Fatface"/>
-            <Button Background="SkyBlue"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    FontStretch="Expanded">
-                <TextBlock Text="PVP"
-                           IsTextScaleFactorEnabled="True"
-                           FontSize="30"
-                           FontStretch="Expanded"
-                           Width="Auto"/>
-            </Button>
-        </StackPanel>
+                    <TextBlock Style="{StaticResource KotFStyle}"/>
+
+                    <Grid>
+                        <Image Style="{StaticResource BlueFlagImage}"/>
+                        <TextBlock Text="PVP"
+                           Style="{StaticResource BlueFlagTextStyle}"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
 
         <Rectangle x:Name="rectangleModeSelection" Grid.Row="1"
                    Grid.RowSpan="2"
@@ -149,24 +174,31 @@
                Stretch="Uniform"
                VerticalAlignment="Stretch"
                HorizontalAlignment="Stretch"/>
-        <Button Content="ENTER" Grid.Column="2" Grid.ColumnSpan="2"  Grid.Row="3" VerticalAlignment="Center"
+
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="2"  Grid.Row="3">
+            <Grid>
+                <Button Content="ENTER" VerticalAlignment="Center"
                 FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" MinWidth="100" MinHeight="50" Margin="30,0,30,0"
                 Click="EnterClick"/>
+            </Grid>
+        </Viewbox>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2">
-            <!--HomeButton-->
-            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
-                    Click="GoToMainMenu">
-                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
-            </Button>
+        <Viewbox HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <!--HomeButton-->
+                    <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+                            Click="GoToMainMenu">
+                        <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+                    </Button>
 
-            <!--SettingsButton-->
-            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
-                    Click="GoToSettings">
-                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
-            </Button>
-        </StackPanel>
-
-
+                    <!--SettingsButton-->
+                    <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+                            Click="GoToSettings">
+                        <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>
