@@ -39,5 +39,13 @@ namespace DSIProyectoFinal
         {
             this.Frame.Navigate(typeof(TeamConfig));
         }
+        private void GoToMainMenu(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainMenu));
+        }
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Opciones));
+        }
     }
 }
