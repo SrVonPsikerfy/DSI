@@ -140,26 +140,26 @@
             <Viewbox  Grid.Row="0" Grid.Column="1">
                 <TextBlock
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Language" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+                       Text="Language" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
             <Viewbox Grid.Row="1" Grid.Column="1">
 
                 <TextBlock 
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Master" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+                       Text="Master" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
             <Viewbox Grid.Row="2" Grid.Column="1">
                 <TextBlock 
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Music" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+                       Text="Music" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
             <Viewbox  Grid.Row="3" Grid.Column="1">
                 <TextBlock
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+                       Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
             <Viewbox Grid.Column="3" >

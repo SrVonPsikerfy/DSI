@@ -104,7 +104,7 @@
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <TextBlock x:Name="LevelText" Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" Text="3"
-                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="160"></TextBlock>
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="160" FontFamily="Abril Fatface"></TextBlock>
         
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->

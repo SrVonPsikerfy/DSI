@@ -36,7 +36,7 @@
             <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid Background="#FFB8C0CD">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
@@ -61,7 +61,7 @@
                 <TextBlock Style="{StaticResource BackButtonText}"/>
             </Grid>
         </Button>
-        
+
         <!--Titulo mas indicador de modo de juego-->
         <StackPanel Grid.Column="3"
                     VerticalAlignment="Stretch"
@@ -103,7 +103,7 @@
         <Grid Grid.Row="1" Grid.ColumnSpan="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -113,31 +113,47 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300"
-                    x:Name="level1" Click="ChangeToChapterSelection">
-                <Image Source="/Assets/circle1.png"/>
-            </Button>
+            <ListView Grid.Row="1" Grid.ColumnSpan="6"
+                           ShowsScrollingPlaceholders="True"
+                           ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                           ScrollViewer.HorizontalScrollMode="Enabled" 
+                           ScrollViewer.VerticalScrollMode="Disabled"
+                           Background="Aqua"
+                      BorderThickness="10"
+                      BorderBrush="DarkBlue">
 
-            <Button Grid.Column="3" Grid.Row="2" Background="Transparent" MaxHeight="300" MaxWidth="300"
-                    x:Name="level2" Click="ChangeToChapterSelection">
-                <Image Source="/Assets/circle2.png"/>
-            </Button>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Background="Transparent" Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
 
-            <Button Grid.Column="5" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300"
-                    x:Name="level3" Click="ChangeToChapterSelection">
-                <Image Source="/Assets/circle3.png"/>
-            </Button>
+                <ListViewItem Background="Transparent"  MaxHeight="300" MaxWidth="300"
+                    x:Name="level1" >
+                    <Image Source="/Assets/circle1.png"/>
+                </ListViewItem>
+
+                <ListViewItem Background="Transparent"  MaxHeight="300" MaxWidth="300"
+                    x:Name="level2" >
+                    <Image Source="/Assets/circle2.png"/>
+                </ListViewItem>
+
+                <ListViewItem  Background="Transparent" MaxHeight="300" MaxWidth="300"
+                    x:Name="level3" >
+                    <Image Source="/Assets/circle3.png"/>
+                </ListViewItem>
+            </ListView>
 
 
-            <Button Grid.Column="7" Grid.Row="0" Background="Transparent" MaxHeight="300" MaxWidth="300"
+
+
+
+
+
+            <!--<Button Grid.Column="7" Grid.Row="0" Background="Transparent" MaxHeight="300" MaxWidth="300"
                     x:Name="level4" Click="ChangeToChapterSelection">
                 <Image Source="/Assets/circle4.png"/>
             </Button>
@@ -149,8 +165,8 @@
 
             <Button Grid.Column="7" Grid.Row="2" Background="Transparent" MaxHeight="300" MaxWidth="300" IsEnabled="False">
                 <Image Source="/Assets/circle.png"/>
-            </Button>
-            
+            </Button>-->
+
         </Grid>
     </Grid>
 </Page>

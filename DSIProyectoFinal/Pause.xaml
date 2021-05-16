@@ -38,41 +38,53 @@
             </Grid.RowDefinitions>
 
             <!-- Texto !-->
-            <TextBlock FontFamily="Helvetica"
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <TextBlock FontFamily="Abril Fatface"
             FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Normal" 
-            CharacterSpacing="200" Foreground="Black" Grid.Column="1" Grid.Row="0"
-            FontWeight="Bold" Text="PAUSA">
-            </TextBlock>
+            CharacterSpacing="200" Foreground="Black" 
+            FontWeight="Bold" Text="PAUSA"/>
+            </Viewbox>
 
             <!-- Botones !-->
             <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344" Click="Resume">
                 <!--Resume-->
-                <StackPanel>
-                    <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
+                <Viewbox>
+                    <StackPanel>
+                        <Image Source="/Assets/playIcon.png" HorizontalAlignment="Stretch"
                         RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock Text="Resume" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
-                </StackPanel>
+                        <TextBlock Text="Resume" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
+                    </StackPanel>
+                </Viewbox>
             </Button>
 
             <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
                     Click="GoToSettings">
-                <!--Options-->
-                <StackPanel>
-                    <Image Source="/Assets/settings_icon.png" HorizontalAlignment="Stretch"
+                <Viewbox>
+
+                    <!--Options-->
+                    <StackPanel>
+                        <Image Source="/Assets/settings_icon.png" HorizontalAlignment="Stretch"
                         RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock Text="Options" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
-                </StackPanel>
+                        <TextBlock Text="Options" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
+                    </StackPanel>
+                </Viewbox>
+
             </Button>
 
             <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
                     Click="GoToPreviousMenu">
-                <!--Exit Level-->
-                <StackPanel>
-                    <Image Source="/Assets/exit_icon.png" HorizontalAlignment="Stretch"
+                <Viewbox>
+
+                    <!--Exit Level-->
+                    <StackPanel>
+                        <Image Source="/Assets/exit_icon.png" HorizontalAlignment="Stretch"
                        RenderTransformOrigin="0.5,0.5" MaxHeight="52" MaxWidth="52" />
-                    <TextBlock Text="Exit Level" FontSize="40" Foreground="Black" FontFamily="Helvetica"/>
-                </StackPanel>
+                        <TextBlock Text="Exit Level" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
+                    </StackPanel>
+                </Viewbox>
+
             </Button>
+
         </Grid>
 
 

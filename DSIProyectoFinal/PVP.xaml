@@ -51,7 +51,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
@@ -97,41 +97,43 @@
                    Fill="Green">
         </Rectangle>
 
-        
-        <StackPanel Grid.Column="2"
+
+        <Viewbox Grid.Column="2"
                     Grid.ColumnSpan="2"
                     Grid.Row="2"
-                    HorizontalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
                     VerticalAlignment="Top">
 
-            <Button Content="Lobby 1"
+            <StackPanel 
+                    >
+
+                <Button Content="Lobby 1"
                     FontSize="30"
-                    FontWeight="Bold"
-                    Width="Auto"
-                    Height="Auto"
+                    FontWeight="Bold"         
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     BorderThickness="7"
-                    BorderBrush="Black"/>
+                    BorderBrush="Black"
+                    Margin="0,10,0,0"
+                    FontFamily="Abril Fatface"/>
 
-            <Button Content="Lobby 2"
-                    Width="Auto"
-                    Height="Auto"
+                <Button Content="Lobby 2"                   
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     BorderBrush="Black" Margin="0,10,0,0"
                     FontSize="30"
-                    FontWeight="Bold"/>
+                    FontWeight="Bold"
+                    FontFamily="Abril Fatface"/>
 
-            <Button Content="Lobby 3"
-                    Width="Auto"
-                    Height="Auto"
+                <Button Content="Lobby 3"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    BorderBrush="Black" Margin="0,10,0,0"
+                    BorderBrush="Black" Margin="0,10,0,40"
                     FontSize="30"
-                    FontWeight="Bold"/>
-        </StackPanel>
+                    FontWeight="Bold"
+                    FontFamily="Abril Fatface"/>
+            </StackPanel>
+        </Viewbox>
 
         <Button x:Name="attackButton" Grid.Row="1"  Grid.Column="2" Click="AttackClick">
             <Image x:Name="attackImage" Source="/Assets/atacanteIcon.png"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -149,9 +151,13 @@
                Stretch="Uniform"
                VerticalAlignment="Stretch"
                HorizontalAlignment="Stretch"/>
-        <Button Content="ENTER" Grid.Column="2" Grid.ColumnSpan="2"  Grid.Row="3" VerticalAlignment="Center"
-                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" MinWidth="100" MinHeight="50" Margin="30,0,30,0"
+
+
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="2"  Grid.Row="3">
+            <Button Content="ENTER"  VerticalAlignment="Center"
+                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" MinWidth="100" MinHeight="50" Margin="0,10,0,10" FontFamily="Abril Fatface"
                 Click="EnterClick"/>
+        </Viewbox>
 
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->
