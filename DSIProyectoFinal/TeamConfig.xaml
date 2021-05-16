@@ -329,7 +329,8 @@
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-            <Button Background="White" BorderThickness="2">
+            <Button Background="White" BorderThickness="2"
+                    Click="GoToMainMenu">
                 <Image Source="/Assets/homeButton.png"
                        Grid.Row="2"
                        MaxHeight="50"
@@ -338,7 +339,8 @@
                        HorizontalAlignment="Center"
                        Stretch="Uniform"/>
             </Button>
-            <Button Background="White" BorderThickness="2">
+            <Button Background="White" BorderThickness="2"
+                    Click="GoToSettings">
                 <Image Source="/Assets/settingsButton.png"
                        Grid.Row="2"
                        MaxHeight="50"

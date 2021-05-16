@@ -50,5 +50,14 @@ namespace DSIProyectoFinal
                 this.Frame.GoBack();
             }
         }
+        private void GoToMainMenu(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainMenu));
+        }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Opciones));
+        }
     }
 }

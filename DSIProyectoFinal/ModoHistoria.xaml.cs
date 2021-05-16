@@ -33,5 +33,20 @@ namespace DSIProyectoFinal
                 this.Frame.GoBack();
             }
         }
+
+        private void GoToPlay(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Defensa));
+        }
+
+        private void GoToMainMenu(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainMenu));
+        }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Opciones));
+        }
     }
 }
