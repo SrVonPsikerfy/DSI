@@ -19,12 +19,12 @@
                 </Grid.RowDefinitions>
 
                 <!--Imagen-->
-                <Image x:Name="knightImage" Grid.Row="0"
-                Source="{x:Bind ImageLocation}"  Stretch="Uniform" />
+                <Image x:Name="KnightImage" Grid.Row="0"
+                Source="{x:Bind ImageLocation}" Stretch="Uniform" />
 
                 <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
                     <Image x:Name="IridiumImage" Source="./Assets/moneda.png" HorizontalAlignment="Stretch"
-                        AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                        AutomationProperties.Name="Attack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                     <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
                                Style="{StaticResource SubtitleTextBlockStyle}" />
 
