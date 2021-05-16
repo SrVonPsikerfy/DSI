@@ -129,7 +129,7 @@
     <Compile Include="Defensa.xaml.cs">
       <DependentUpon>Defensa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Knights.cs" />
+    <Compile Include="Knight.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>

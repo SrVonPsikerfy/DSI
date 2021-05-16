@@ -28,7 +28,7 @@ namespace DSIProyectoFinal
             this.InitializeComponent();
         }
 
-        private ObservableCollection<Knights> knights { get; } = new ObservableCollection<Knights>();
+        private ObservableCollection<Knight> knights { get; } = new ObservableCollection<Knight>();
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -36,7 +36,7 @@ namespace DSIProyectoFinal
             {
                 bool[] abilities = { true, false, true };
                 int[] pickedAbilities = { 1, 2, 3 };
-                knights.Add(new Knights("Knight", "Assets/Imagen.png", "Rol", 5, 6, 7, 8, 9, 10, 1, 69, 210, 420, 21, abilities, pickedAbilities));
+                knights.Add(new Knight("Knight", "Assets/Imagen.png", "Rol", 5, 6, 7, 8, 9, 10, 1, 69, 210, 420, 21, abilities, pickedAbilities));
             }
             // Remove this when replaced with XAML bindings
             GridSelect.ItemsSource = knights;

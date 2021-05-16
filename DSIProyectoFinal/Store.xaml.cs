@@ -26,7 +26,7 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class Store : Page
     {
-        private ObservableCollection<Knights> knights { get; } = new ObservableCollection<Knights>();
+        private ObservableCollection<Tuple<Knight, bool>> Knights { get; } = new ObservableCollection<Tuple<Knight, bool>>();
 
         public Store()
         {
@@ -35,14 +35,14 @@ namespace DSIProyectoFinal
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                bool[] abilities = { true, false, true };
-                int[] pickedAbilities = { 1, 2, 3 };
-                knights.Add(new Knights("Knight", "Assets/Imagen.png", "Rol", 5, 6, 7, 8, 9, 10, 1, 69, 210, 420, 21, abilities, pickedAbilities));
-            }
+            if (Knights != null)
+                foreach (Tuple<Knight, bool> knight in StoreKnights.GetStoreKnights())
+                {
+                    Tuple<Knight, bool> storeKnight = new Tuple<Knight, bool>(new Knight(knight.Item1), knight.Item2);
+                    Knights.Add(storeKnight);
+                }
             // Remove this when replaced with XAML bindings
-            GridPurchase.ItemsSource = knights;
+            //GridPurchase.ItemsSource = Knights;
 
             base.OnNavigatedTo(e);
         }
@@ -50,6 +50,12 @@ namespace DSIProyectoFinal
         {
             if (this.Frame.CanGoBack)
             {
+                List<Tuple<Knight, bool>> NewList = new List<Tuple<Knight, bool>>();
+
+                foreach (Tuple<Knight, bool> knight in Knights)
+                    NewList.Add(knight);
+
+                StoreKnights.UpdateKnights(NewList);
                 this.Frame.GoBack();
             }
         }

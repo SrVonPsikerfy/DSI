@@ -8,9 +8,9 @@ namespace DSIProyectoFinal
 {
     public class AvailableKnights
     {
-        public static List<Knights> AvailableKnight = new List<Knights>()
+        public static List<Knight> AvailableKnightsForTeams = new List<Knight>()
         {
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",
@@ -28,7 +28,7 @@ namespace DSIProyectoFinal
                 new bool[3]{ true, false, true},
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              ),
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",
@@ -46,7 +46,7 @@ namespace DSIProyectoFinal
                 new bool[3]{ true, false, true},
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              ),
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",
@@ -64,7 +64,7 @@ namespace DSIProyectoFinal
                 new bool[3]{ true, false, true},
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              ),
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",
@@ -82,7 +82,7 @@ namespace DSIProyectoFinal
                 new bool[3]{ true, false, true},
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              ),
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",
@@ -100,7 +100,7 @@ namespace DSIProyectoFinal
                 new bool[3]{ true, false, true},
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              ),
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",
@@ -118,7 +118,7 @@ namespace DSIProyectoFinal
                 new bool[3]{ true, false, true},
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              ),
-            new Knights(
+            new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
                 "Rol",

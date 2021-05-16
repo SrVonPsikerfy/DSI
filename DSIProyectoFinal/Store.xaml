@@ -10,7 +10,8 @@
     RequestedTheme="Light">
     
     <Page.Resources>
-        <DataTemplate x:Key="StoreKnightsTemplate">
+        <DataTemplate x:Key="StoreKnightsTemplate"
+                      x:DataType="local:Knight">
             <Grid Height="200" Width="200" Margin="8">
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -18,13 +19,13 @@
                 </Grid.RowDefinitions>
 
                 <!--Imagen-->
-                <Image x:Name="KnightImage" Grid.Row="0"
-                Source="./Assets/stick-man-hi.png" Stretch="Uniform" />
+                <Image x:Name="knightImage" Grid.Row="0"
+                Source="{x:Bind ImageLocation}"  Stretch="Uniform" />
 
                 <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
                     <Image x:Name="IridiumImage" Source="./Assets/moneda.png" HorizontalAlignment="Stretch"
                         AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock x:Name="Prize" Text="Knight" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
                                Style="{StaticResource SubtitleTextBlockStyle}" />
 
                 </StackPanel>
@@ -84,6 +85,7 @@
         <GridView x:Name="GridPurchase"
                   ItemTemplate="{StaticResource StoreKnightsTemplate}"
                   ItemsPanel="{StaticResource StoreKnightsPanel}"
+                  ItemsSource= "{x:Bind Knights}"
                   Grid.Row="1" Grid.Column="2"
                   Grid.ColumnSpan="3"
                   BorderBrush="Black" BorderThickness="3"
