@@ -36,7 +36,7 @@
             <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid Background="#FFB8C0CD">
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
@@ -67,7 +67,7 @@
         <!--Boton Home-->
         <Button Grid.Row="2"
                 HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Click="GoToMainMenu">
+                Click="GoToMainMenu" Background="Transparent">
             <Image Source="./Assets/homeButton.png"
                MaxHeight="100"
                MaxWidth="100"
@@ -78,32 +78,40 @@
         </Button>
 
         <!--Indicador de en que pagina se esta y logo del juego-->
-        <StackPanel Grid.Column="2"
+        <Viewbox  Grid.Column="2">
+
+            <StackPanel
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Right"
+                <TextBlock HorizontalAlignment="Right"
                        VerticalAlignment="Stretch"
                    Text="KotF"
                    FontSize="48" FontWeight="Bold"
                        FontFamily="Abril Fatface"/>
-            <Button Background="SkyBlue"
+                <Button Background="SkyBlue"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
                     FontStretch="Expanded">
-                <TextBlock Text="OPCIONES"
+                    <TextBlock Text="OPCIONES"
                            IsTextScaleFactorEnabled="True"
                            FontSize="30"
                            TextWrapping="Wrap"
                            FontStretch="Expanded"
                            Width="Auto"/>
-            </Button>
-        </StackPanel>
+                </Button>
+            </StackPanel>
+
+        </Viewbox>
+
 
         <Grid Grid.Column="1" Grid.Row="1">
             <!-- Definicion de columnas !-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -114,27 +122,34 @@
             </Grid.RowDefinitions>
 
             <!--Idioma-->
-            <TextBlock Grid.Row="0" Grid.Column="0"
+            <Viewbox  Grid.Row="0" Grid.Column="1">
+                <TextBlock
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Language" FontWeight="Bold" FontSize="40" Foreground="Black">
-            </TextBlock>
+                       Text="Language" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+            </Viewbox>
 
-            <TextBlock Grid.Row="1" Grid.Column="0"
+            <Viewbox Grid.Row="1" Grid.Column="1">
+
+                <TextBlock 
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Master" FontWeight="Bold" FontSize="40" Foreground="Black">
-            </TextBlock>
+                       Text="Master" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+            </Viewbox>
 
-            <TextBlock Grid.Row="2" Grid.Column="0"
+            <Viewbox Grid.Row="2" Grid.Column="1">
+                <TextBlock 
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Music" FontWeight="Bold" FontSize="40" Foreground="Black">
-            </TextBlock>
+                       Text="Music" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+            </Viewbox>
 
-            <TextBlock Grid.Row="3" Grid.Column="0"
+            <Viewbox  Grid.Row="3" Grid.Column="1">
+                <TextBlock
                        VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black">
-            </TextBlock>
+                       Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black"/>
+            </Viewbox>
 
-            <DropDownButton Grid.Column="1" HorizontalAlignment="Stretch"
+            <Viewbox Grid.Column="3" >
+                
+            <DropDownButton 
                              Foreground="White" Background="#FF363535" MaxWidth="223"
                             Content="English">
                 <DropDownButton.Flyout>
@@ -145,16 +160,17 @@
                     </MenuFlyout>
                 </DropDownButton.Flyout>
             </DropDownButton>
+            </Viewbox>
 
-            <Slider Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+            <Slider Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
 
-            <Slider Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+            <Slider Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
 
-            <Slider Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+            <Slider Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
         </Grid>
