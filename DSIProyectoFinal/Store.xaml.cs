@@ -26,8 +26,9 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class Store : Page
     {
-        private ObservableCollection<Knight> Knights { get; } = new ObservableCollection<Knight>();
+        private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
         private List<bool> Buyable { get; } = new List<bool>();
+        int index = -1;
 
         public Store()
         {
@@ -43,7 +44,7 @@ namespace DSIProyectoFinal
                     Knights.Add(storeKnight.Item1);
                     Buyable.Add(storeKnight.Item2);
                 }
-            //// Remove this when replaced with XAML bindings
+            // Remove this when replaced with XAML bindings
             //GridPurchase.ItemsSource = Knights;
 
             base.OnNavigatedTo(e);
@@ -54,7 +55,7 @@ namespace DSIProyectoFinal
             {
                 List<Tuple<Knight, bool>> NewList = new List<Tuple<Knight, bool>>();
 
-                for(int i = 0; i < Knights.Count(); i++)
+                for (int i = 0; i < Knights.Count(); i++)
                     NewList.Add(new Tuple<Knight, bool>(Knights[i], Buyable[i]));
 
                 StoreKnights.UpdateKnights(NewList);
@@ -72,5 +73,59 @@ namespace DSIProyectoFinal
             Frame.Navigate(typeof(Opciones));
         }
 
+        public void GridPurchase_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            index = Knights.IndexOf((Knight)e.ClickedItem);
+
+            if (Buyable[index])
+            {
+                (sender as GridView).SelectedIndex = index;
+
+                FalseBackground.Visibility = Visibility.Visible;
+                ConfirmBox.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Get the instance of ComboBox
+            ComboBox comboBox = sender as ComboBox;
+
+            // Get the ComboBox selected item text
+            string selectedItem = comboBox.SelectedItem.ToString();
+
+            switch (selectedItem)
+            {
+                case "Order by Price":
+                    object x = new ObservableCollection<Knight>(Knights.OrderBy(s => s.ShopCost).ToList());
+                    Knights = x as ObservableCollection<Knight>;
+                    break;
+                case "Order by Alphabetical":
+                    Knights = new ObservableCollection<Knight>(Knights.OrderBy(s => s.Name).ToList());
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FalseBackground.Visibility = Visibility.Collapsed;
+            ConfirmBox.Visibility = Visibility.Collapsed;
+
+
+            int newMoney = int.Parse(Money.Text) - Knights[index].ShopCost;
+            Money.Text = newMoney.ToString();
+            Buyable[index] = false;
+            index = -1;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FalseBackground.Visibility = Visibility.Collapsed;
+            ConfirmBox.Visibility = Visibility.Collapsed;
+
+            index = -1;
+        }
     }
 }

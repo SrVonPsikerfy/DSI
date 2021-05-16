@@ -216,6 +216,7 @@
     <Content Include="Assets\settings_icon.png" />
     <Content Include="Assets\shop.png" />
     <Content Include="Assets\sniper_class_icon.png" />
+    <Content Include="Assets\sold_icon.png" />
     <Content Include="Assets\stick-man-hi-small.png" />
     <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\support_class_icon.png" />

@@ -10,6 +10,7 @@
     RequestedTheme="Light">
     
     <Page.Resources>
+        <!--Template-->
         <DataTemplate x:Key="StoreKnightsTemplate"
                       x:DataType="local:Knight">
             <Grid Height="200" Width="200" Margin="8">
@@ -24,11 +25,17 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
                     <Image x:Name="IridiumImage" Source="./Assets/moneda.png" HorizontalAlignment="Stretch"
-                        AutomationProperties.Name="Attack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
-                    <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}" />
-
+                           RenderTransformOrigin="0.5,0.5" MaxHeight="50" MaxWidth="50"/>
+                    <TextBlock x:Name="Prize" Text="{x:Bind ShopCost}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                               TextAlignment="Center" FontSize="20" FontFamily="Abril FatFace" 
+                               Margin="0,2,10,0" Foreground="Purple"/>
+                    <TextBlock x:Name="Name" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                               TextAlignment="Center" FontSize="22" FontFamily="Abril FatFace"/>
                 </StackPanel>
+
+                <Image Grid.RowSpan="2" x:Name="Sold" Source="./Assets/sold_icon.png"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed"
+                       Opacity="0.5"/>
             </Grid>
         </DataTemplate>
 
@@ -37,7 +44,7 @@
                            HorizontalAlignment="Center" />
         </ItemsPanelTemplate>
 
-        <!--BACK BUTTON-->
+        <!--BACK BUTTON STYLES-->
         <Style x:Key="BackButtonStyle" TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -85,14 +92,14 @@
         <GridView x:Name="GridPurchase"
                   ItemTemplate="{StaticResource StoreKnightsTemplate}"
                   ItemsPanel="{StaticResource StoreKnightsPanel}"
-                  ItemsSource= "{x:Bind Knights}"
+                  ItemsSource= "{x:Bind Knights, Mode=OneWay}"
+                  ItemClick="GridPurchase_ItemClick"
+                  IsItemClickEnabled="True"
                   Grid.Row="1" Grid.Column="2"
                   Grid.ColumnSpan="3"
                   BorderBrush="Black" BorderThickness="3"
-                   Margin="8"
-                   Background="DimGray">
-               
-        </GridView>
+                  Margin="8"
+                  Background="DimGray"/>
 
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
@@ -163,26 +170,22 @@
         </StackPanel>
 
         <!--Dropdown de para ordenar el GridView-->
-        <DropDownButton Grid.Column="2" Grid.Row="0"
+        <ComboBox Grid.Column="2" Grid.Row="0"
                         HorizontalAlignment="Stretch" VerticalAlignment="Center"
                         Height="50" Width="Auto"
                         FontSize="20"
-                        Content="Order by None">
-            <DropDownButton.Flyout>
-                <MenuFlyout Placement="Bottom">
-                    <MenuFlyoutItem Text="Order by None"/>
-                    <MenuFlyoutItem Text="Order by Price"/>
-                    <MenuFlyoutItem Text="Order by Alphabetical"/>
-                </MenuFlyout>
-            </DropDownButton.Flyout>
-
-        </DropDownButton>
+                        PlaceholderText="Order by ..."
+                        SelectionChanged="ComboBox_SelectionChanged">
+            <x:String>Order by None</x:String>
+            <x:String>Order by Price</x:String>
+            <x:String>Order by Alphabetical</x:String>
+        </ComboBox>
         
         <!--Moneda de juego disponible para gastar-->
         <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Source="./Assets/moneda.png" MaxHeight="89" MaxWidth="133"
                    HorizontalAlignment="Left" />
-            <TextBlock Text="99999" FontSize="40" 
+            <TextBlock x:Name="Money" Text="99999" FontSize="40" 
                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
         
@@ -208,5 +211,21 @@
                            Width="Auto"/>
             </Button>
         </StackPanel>
+
+        <!--Menu confirmacion-->
+        <Image x:Name="FalseBackground" Grid.ColumnSpan="5" Grid.RowSpan="3"
+               Source="./Assets/castle.jpg"
+               Stretch="Fill"
+               Opacity="0"
+               Visibility="Collapsed"/>
+        <Viewbox x:Name="ConfirmBox" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="U want sum?"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="yes" Click="Button_Click"/>
+                    <Button Content="no" Click="Button_Click_1"/>
+                </StackPanel>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>

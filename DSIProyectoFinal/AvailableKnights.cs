@@ -13,7 +13,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+                Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,
@@ -31,7 +32,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+                Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,
@@ -49,7 +51,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+               Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,
@@ -67,7 +70,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+                Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,
@@ -85,7 +89,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+               Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,
@@ -103,7 +108,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+               Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,
@@ -121,7 +127,8 @@ namespace DSIProyectoFinal
             new Knight(
                 "Knight",
                 "Assets/stick-man-hi-small.png",
-                "Rol",
+               Knight.Rol.Defender,
+                    100,
                 5,
                 6,
                 7,

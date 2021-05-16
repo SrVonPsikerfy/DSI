@@ -8,9 +8,22 @@ namespace DSIProyectoFinal
 {
     public class Knight
     {
+        public enum Rol { Defender, Melee, Sniper, Support, Healer }
+
+        private static string[] roleLocation { get; set; } = new string[5]
+        {
+            "./Assets/defender_class_icon.png",
+            "./Assets/melee_class_icon.png",
+            "./Assets/sniper_class_icon.png",
+            "./Assets/support_class_icon.png",
+            "./Assets/healer_class_icon.png"
+        };
+
         public string Name { get; set; }
         public string ImageLocation { get; set; }
-        public string Role { get; set; }
+         
+        public Rol RoleLocation { get; set; }
+        public int ShopCost { get; set; }
         public int Cost { get; set; }
         public int AtkPhy { get; set; }
         public int AtkMag { get; set; }
@@ -25,13 +38,14 @@ namespace DSIProyectoFinal
         public bool[] Abilities { get; set; }
         public int[] EquipedAbilities { get; set; }
 
-        public Knight(string name, string imageLocation, string role, int cost, int atkPhy, int atkMag, int mana, int defPhy, int defMag,
+        public Knight(string name, string imageLocation, Rol role, int shopCost, int cost, int atkPhy, int atkMag, int mana, int defPhy, int defMag,
             int range, int lvl, int currentExp, int maxExp, int pointsAvailable, bool[] abilities, int[] equipedAbilities)
         {
             Name = name;
             ImageLocation = imageLocation;
-            Role = role;
+            RoleLocation = role;
             Cost = cost;
+            ShopCost = shopCost;
             AtkPhy = atkPhy;
             AtkMag = atkMag;
             Mana = mana;
@@ -50,8 +64,9 @@ namespace DSIProyectoFinal
         {
             Name = knight_.Name;
             ImageLocation = knight_.ImageLocation;
-            Role = knight_.Role;
+            RoleLocation = knight_.RoleLocation;
             Cost = knight_.Cost;
+            ShopCost = knight_.ShopCost;
             AtkPhy = knight_.AtkPhy;
             AtkMag = knight_.AtkMag;
             Mana = knight_.Mana;
