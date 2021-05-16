@@ -106,15 +106,17 @@
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-            <Image Source="/Assets/homeButton.png"
-               Grid.Row="2"
-               Height="50"
-               Width="50"
-               Margin="0,0,0,10"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Stretch="Uniform"/>
-            <Image Source="/Assets/settingsButton.png"
+            <Button Grid.Row="2" Click="GoToMainMenu">
+                <Image Source="/Assets/homeButton.png"
+                   Height="50"
+                   Width="50"
+                   Margin="0,0,0,10"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Stretch="Uniform"/>
+            </Button>
+            <Button Grid.Row="2" Click="GoToSettings">
+                <Image Source="/Assets/settingsButton.png"
                Grid.Row="2"
                Height="50"
                Width="50"
@@ -122,6 +124,7 @@
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
                Stretch="Uniform"/>
+            </Button>
         </StackPanel>
 
         <StackPanel Orientation="Vertical"

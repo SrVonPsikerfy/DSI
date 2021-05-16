@@ -35,7 +35,8 @@
 
         <!--Boton Home-->
         <Button Grid.Row="2"
-                HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                Click="GoToMainMenu">
             <Image Source="./Assets/homeButton.png"
                MaxHeight="100"
                MaxWidth="100"

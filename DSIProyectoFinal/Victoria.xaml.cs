@@ -42,5 +42,10 @@ namespace DSIProyectoFinal
             else
                 (sender as Button).FontSize = 20;
         }
+
+        private void GoToMainMenu(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainMenu));
+        }
     }
 }

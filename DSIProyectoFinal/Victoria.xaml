@@ -46,8 +46,10 @@
         <Rectangle Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Fill="DarkGreen" MaxWidth="800" MaxHeight="150" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <TextBlock  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" SizeChanged="TextBlock_SizeChanged" Text="Victory!" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Abril Fatface"/>
 
-        <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"  SizeChanged="Button_SizeChanged" Content="CHAPTER SELECT" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" MaxWidth="864" MaxHeight="144"  Style="{StaticResource AccentButtonStyle}" Margin="10,10,0,10" Background="ForestGreen"></Button>
-        <Button Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" SizeChanged="Button_SizeChanged" Content="MAIN MENU" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" MaxWidth="864" MaxHeight="144" Style="{StaticResource AccentButtonStyle}" Margin="0,10,10,10" Background="ForestGreen"></Button>
+        <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"  SizeChanged="Button_SizeChanged" Content="CHAPTER SELECT" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" MaxWidth="864" MaxHeight="144"  Style="{StaticResource AccentButtonStyle}" Margin="10,10,0,10" Background="ForestGreen"
+                Click="Button_Click"></Button>
+        <Button Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" SizeChanged="Button_SizeChanged" Content="MAIN MENU" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="Black" MaxWidth="864" MaxHeight="144" Style="{StaticResource AccentButtonStyle}" Margin="0,10,10,10" Background="ForestGreen"
+                Click="GoToMainMenu"></Button>
 
     </Grid>
 </Page>

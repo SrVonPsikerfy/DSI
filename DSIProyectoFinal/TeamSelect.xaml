@@ -297,12 +297,14 @@
         <!--BOTON HOME Y OPCIONES-->
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
             <!--HomeButton-->
-            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent">
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+                    Click="GoToMainMenu">
                 <Image Source="/Assets/homeButton.png" MaxWidth="50" MaxHeight="50"/>
             </Button>
 
             <!--SettingsButton-->
-            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent">
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+                    Click="GoToSettings">
                 <Image Source="/Assets/settingsButton.png" MaxWidth="50" MaxHeight="50"/>
             </Button>
         </StackPanel>

@@ -119,12 +119,14 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->
-            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent">
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+                    Click="GoToMainMenu">
                 <Image Source="/Assets/homeButton.png" MaxWidth="70" MaxHeight="70"/>
             </Button>
 
             <!--SettingsButton-->
-            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent">
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+                    Click="GoToSettings">
                 <Image Source="/Assets/settingsButton.png" MaxWidth="70" MaxHeight="70"/>
             </Button>
         </StackPanel>
