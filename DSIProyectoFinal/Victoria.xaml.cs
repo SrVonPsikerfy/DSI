@@ -47,5 +47,10 @@ namespace DSIProyectoFinal
         {
             Frame.Navigate(typeof(MainMenu));
         }
+
+        private void GoToLevelSelect(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SelectorZona));
+        }
     }
 }
