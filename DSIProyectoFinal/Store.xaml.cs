@@ -26,7 +26,8 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class Store : Page
     {
-        private ObservableCollection<Tuple<Knight, bool>> Knights { get; } = new ObservableCollection<Tuple<Knight, bool>>();
+        private ObservableCollection<Knight> Knights { get; } = new ObservableCollection<Knight>();
+        private List<bool> Buyable { get; } = new List<bool>();
 
         public Store()
         {
@@ -39,9 +40,10 @@ namespace DSIProyectoFinal
                 foreach (Tuple<Knight, bool> knight in StoreKnights.GetStoreKnights())
                 {
                     Tuple<Knight, bool> storeKnight = new Tuple<Knight, bool>(new Knight(knight.Item1), knight.Item2);
-                    Knights.Add(storeKnight);
+                    Knights.Add(storeKnight.Item1);
+                    Buyable.Add(storeKnight.Item2);
                 }
-            // Remove this when replaced with XAML bindings
+            //// Remove this when replaced with XAML bindings
             //GridPurchase.ItemsSource = Knights;
 
             base.OnNavigatedTo(e);
@@ -52,8 +54,8 @@ namespace DSIProyectoFinal
             {
                 List<Tuple<Knight, bool>> NewList = new List<Tuple<Knight, bool>>();
 
-                foreach (Tuple<Knight, bool> knight in Knights)
-                    NewList.Add(knight);
+                for(int i = 0; i < Knights.Count(); i++)
+                    NewList.Add(new Tuple<Knight, bool>(Knights[i], Buyable[i]));
 
                 StoreKnights.UpdateKnights(NewList);
                 this.Frame.GoBack();

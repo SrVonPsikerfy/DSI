@@ -48,5 +48,12 @@ namespace DSIProyectoFinal
         {
             Frame.Navigate(typeof(Opciones));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = e.OriginalSource as Button;
+            string s = b.Name;
+            Frame.Navigate(typeof(SelectorCapitulo), s[5]);
+        }
     }
 }

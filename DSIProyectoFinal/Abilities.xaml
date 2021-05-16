@@ -57,7 +57,7 @@
             <Setter Property="Text" Value="BACK"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="60"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
         </Style>
@@ -67,7 +67,7 @@
             <Setter Property="Text" Value="KotF"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="FontSize" Value="96"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
@@ -80,7 +80,7 @@
         </Style>
         <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
             <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="60"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -109,29 +109,39 @@
         </Grid.RowDefinitions>
 
         <!--BACK BUTTON-->
-        <Button Style="{StaticResource BackButtonStyle}"
+        <Viewbox>
+            <Grid>
+                <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
-            <Grid Style="{StaticResource BackButtonGrid}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-                <Image Style="{StaticResource BackButtonImage}"/>
-                <TextBlock Style="{StaticResource BackButtonText}"/>
+                    <Grid Style="{StaticResource BackButtonGrid}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Style="{StaticResource BackButtonImage}"/>
+                        <TextBlock Style="{StaticResource BackButtonText}"/>
+                    </Grid>
+                </Button>
             </Grid>
-        </Button>
+        </Viewbox>
 
-        <StackPanel Grid.Column="5"
+
+        <Viewbox Grid.Column="5" VerticalAlignment="Top">
+            <Grid>
+                <StackPanel 
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <TextBlock Style="{StaticResource KotFStyle}"/>
+                    <TextBlock Style="{StaticResource KotFStyle}"/>
 
-            <Grid>
-                <Image Style="{StaticResource BlueFlagImage}"/>
-                <TextBlock Text="KNIGHTS"
+                    <Grid>
+                        <Image Style="{StaticResource BlueFlagImage}"/>
+                        <TextBlock Text="KNIGHTS"
                            Style="{StaticResource BlueFlagTextStyle}"/>
+                    </Grid>
+                </StackPanel>
             </Grid>
-        </StackPanel>
+        </Viewbox>
+        
 
         <!--Lista de Caballeros-->
         <GridView x:Name="GridSelect"
@@ -142,24 +152,24 @@
                   BorderBrush="White" BorderThickness="3"
                    Margin="8"
                    Background="#335F9EA0">
-
         </GridView>
 
-        <StackPanel Grid.Row="4"
-                    VerticalAlignment="Bottom"
+        <Viewbox Grid.Row="4" HorizontalAlignment="Left">
+            <Grid>
+                <StackPanel VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-            <Button Grid.Row="2" Click="GoToMainMenu">
-                <Image Source="/Assets/homeButton.png"
+                    <Button Grid.Row="2" Click="GoToMainMenu">
+                        <Image Source="/Assets/homeButton.png"
                    Height="50"
                    Width="50"
                    Margin="0,0,0,10"
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Left"
                    Stretch="Uniform"/>
-            </Button>
-            <Button Grid.Row="2" Click="GoToSettings">
-                <Image Source="/Assets/settingsButton.png"
+                    </Button>
+                    <Button Grid.Row="2" Click="GoToSettings">
+                        <Image Source="/Assets/settingsButton.png"
                Grid.Row="2"
                Height="50"
                Width="50"
@@ -167,30 +177,37 @@
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left"
                Stretch="Uniform"/>
-            </Button>
-        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+        
 
-        <StackPanel Orientation="Vertical"
-                    Grid.Row="1"
-                    Grid.Column="2"
+        <Viewbox Grid.Row="1"
+                 Grid.Column="2">
+            <Grid>
+                <StackPanel Orientation="Vertical"
+                    
                     VerticalAlignment="Center">
-            <TextBlock Text="SKILLS"
-                       FontSize="30"
+                    <TextBlock Text="SKILLS"
+                       FontSize="60"
                        IsColorFontEnabled="True"
                        Foreground="Black"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-            <Button Background="Transparent">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-            <Button Background="Transparent">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-            <Button Background="Transparent">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-        </StackPanel>
-
+                    <Button Background="Transparent">
+                        <Image Source="/Assets/unequipedSkill.png"/>
+                    </Button>
+                    <Button Background="Transparent">
+                        <Image Source="/Assets/unequipedSkill.png"/>
+                    </Button>
+                    <Button Background="Transparent">
+                        <Image Source="/Assets/unequipedSkill.png"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+        
         <Grid Grid.Row="1"
               Grid.Column="3"
               Grid.ColumnSpan="3">
@@ -277,97 +294,105 @@
         </Grid>
 
 
-        <TextBlock Grid.Row="2"
-                   Grid.Column="3"
-                   Grid.ColumnSpan="2"
+        <Viewbox Grid.Row="2"
+                 Grid.Column="3"
+                 Grid.ColumnSpan="2">
+            <Grid>
+                <TextBlock 
                    Text="POINTS AVAILABLE: 2"
                    Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+            </Grid>
+        </Viewbox>
+        
 
-        <Grid Grid.Row="3"
+        <Viewbox Grid.Row="3"
               Grid.Column="4">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
 
-            <TextBlock Text="DEF (PHY)"
-                       FontSize="20"
+                <TextBlock Text="DEF (PHY)"
+                       FontSize="10"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Foreground="Black"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
-            <TextBlock Grid.Row="1"
+                <TextBlock Grid.Row="1"
                        Text="DEF (MAG)"
-                       FontSize="20"
+                       FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
-            <TextBlock Grid.Row="2"
+                <TextBlock Grid.Row="2"
                        Text="RANGE"
-                       FontSize="20"
+                       FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
-            <TextBlock Grid.Column="1"
+                <TextBlock Grid.Column="1"
                        Text="100"
-                       FontSize="20"
+                       FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Column="1"
+                <TextBlock Grid.Column="1"
                        Grid.Row="1"
                        Text="100"
-                       FontSize="20"
+                       FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Column="1"
+                <TextBlock Grid.Column="1"
                        Grid.Row="2"
                        Text="3"
                        Foreground="Black"
-                       FontSize="20"
+                       FontSize="10"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-        </Grid>
+            </Grid>
+        </Viewbox>
 
-        <Grid Grid.Row="3"
-              Grid.Column="3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
+        <Viewbox Grid.Row="3"
+                 Grid.Column="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
 
-            <TextBlock Text="ATK (PHY)"
+                <TextBlock Text="ATK (PHY)"
                        FontSize="20"
                        VerticalAlignment="Center"
                        Foreground="Black"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
-            <TextBlock Grid.Row="1"
+                <TextBlock Grid.Row="1"
                        Text="ATK (MAG)"
                        FontSize="20"
                        Foreground="Black"
@@ -375,7 +400,7 @@
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Row="2"
+                <TextBlock Grid.Row="2"
                        Text="MANA"
                        FontSize="20"
                        Foreground="Black"
@@ -383,14 +408,14 @@
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Column="1"
+                <TextBlock Grid.Column="1"
                        Text="100"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Column="1"
+                <TextBlock Grid.Column="1"
                        Grid.Row="1"
                        Text="100"
                        FontSize="20"
@@ -398,7 +423,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Column="1"
+                <TextBlock Grid.Column="1"
                        Grid.Row="2"
                        Text="10"
                        FontSize="20"
@@ -406,44 +431,54 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-        </Grid>
+            </Grid>
+        </Viewbox>
 
-        <TextBlock Grid.Row="2"
-                   Grid.Column="5"
+
+        <Viewbox Grid.Row="2"
+                 Grid.Column="5">
+            <Grid>
+                <TextBlock 
                    Text="SKADI"
                    FontSize="30"
                    Foreground="Black"
                    FontWeight="Bold"
                    FontStyle="Italic" FontFamily="Helvetica LT Std Black"/>
+            </Grid>
+        </Viewbox>
 
-        <Grid Grid.Row="3"
-              Grid.Column="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
 
-            <TextBlock Text="LVL 69"
+        <Viewbox Grid.Row="3"
+                 Grid.Column="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="LVL 69"
                        FontSize="25*"
                        Foreground="Black"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Stretch" FontFamily="Helvetica LT Std Black"/>
 
-            <TextBlock Grid.Row="1"
+                <TextBlock Grid.Row="1"
                        Text="Exp. 210/420"
                        Foreground="Black"
                        FontSize="15"
                        VerticalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
 
-            <ProgressBar Grid.Row="2"
+                <ProgressBar Grid.Row="2"
                          Width="130"
                          Value="30"
                          HorizontalAlignment="Stretch"
                          VerticalAlignment="Center" Background="White"/>
 
-        </Grid>
+            </Grid>
+        </Viewbox>
+        
 
 
     </Grid>

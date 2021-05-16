@@ -57,5 +57,13 @@ namespace DSIProyectoFinal
         {
             Frame.Navigate(typeof(Opciones));
         }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            
+            base.OnNavigatedTo(e);
+            char s = (Char)e.Parameter;
+            LevelText.Text = s.ToString();
+        }
     }
 }
