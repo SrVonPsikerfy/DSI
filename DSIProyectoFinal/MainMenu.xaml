@@ -108,66 +108,65 @@
 
     <Grid Background="#FFB8C0CD">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.40*"/>
-            <RowDefinition Height="0.85*"/>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition x:Name="lastRow" Height="0.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition x:Name="lastRow" Height="0.8*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <!--Fondo-->
-        <Image Grid.ColumnSpan="2" Grid.RowSpan="5"
+        <Image Grid.ColumnSpan="3" Grid.RowSpan="5"
                Source="./Assets/castle.jpg"
                Stretch="Fill"/>
 
         <!--Titulo-->
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+        <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" MaxWidth="1000">
+        <TextBlock 
                    Text="KNIGHT of the FALLEN"
-                   SizeChanged="TextBlock_SizeChanged"
                    FontSize="100"
                    FontWeight="Bold"
-                   VerticalAlignment="Top"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
                    TextAlignment="Left"
                    TextWrapping="WrapWholeWords"
                    FontStretch="Expanded"
-                   Height="402" FontFamily="Abril Fatface"/>
+                   FontFamily="Abril Fatface"/>
+
+        </Viewbox>
 
         <!--Boton Campaña-->
-        <Button Grid.Row ="0" Grid.Column="1" Grid.RowSpan="1"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch"
-                BorderThickness="3"
-                Content="CAMPAIGN"
-                FontFamily="Segoe UI"
-                FontSize="40"
-                Background="RosyBrown"
-                BorderBrush="Black" FontWeight="Bold"
-                Click="GoToModoHistoria"/>
+        <Viewbox Grid.Row="1" Grid.Column="1" >
+            <Grid>                
+            <Button
+                Click="GoToModoHistoria"
+                Background="Transparent">
+                    <Grid>
+                        <Image Source="/Assets/blue_flag.png"/>
+                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="/Assets/book_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
+                            <TextBlock Text="CAMPAIGN" 
+                           VerticalAlignment="Center"
+                           FontFamily="Abril Fatface"
+                           FontSize="50"
+                           FontWeight="Bold"/>
+                        </StackPanel>
+                    </Grid>
+            </Button>
+            
+          
+            </Grid>
 
-        <Grid Grid.Row="1" Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <!--Extra Modes-->
-
-
-            <Button Grid.Row="2"
-                        Grid.Column="0"
-                        VerticalAlignment="Top"
+        </Viewbox>
+        <Button Grid.Row="2"
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
                         BorderThickness="3"
-                        Content="PVP"
                         FontFamily="Segoe UI"
                         HorizontalAlignment="Stretch"
                         FontSize="30"
@@ -175,8 +174,16 @@
                     HorizontalContentAlignment="Center"
                         Background="RosyBrown"
                         BorderBrush="Black" FontWeight="Bold"
-                        Click="GoToPvp"/>
-        </Grid>
+                        Click="GoToPvp">
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="/Assets/pvp_black_icon.png" MaxWidth="50" MaxHeight="80" />
+                <TextBlock Text="PVP" 
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe UI"
+                           FontSize="40"
+                           FontWeight="Bold"/>
+            </StackPanel>
+        </Button>
         <!--Botones modos extra-->
         <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1"
                         VerticalAlignment="Center">
@@ -238,17 +245,41 @@
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
 
-        <!--Boton de Equipos-->
-        <Button Content="TEAMS" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom"
-                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch" 
-                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"
-                BorderBrush="Black" BorderThickness="3" Click="GoToTeams"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
+            <!--Boton de Equipos-->
+            <Button BorderThickness="3"
+                    MaxWidth="300"
+                    Background="RosyBrown"
+                    BorderBrush="Black"
+                    Click="GoToTeams">
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="/Assets/knight_icon.png" MaxWidth="40" MaxHeight="70" />
+                    <TextBlock Text="TEAMS" 
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe UI"
+                           FontSize="30"
+                           FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
 
-        <!--Boton de Caballeros-->
-        <Button Content="KNIGHTS" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"
-                FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"
-                MinWidth="100" MinHeight="50" Margin="30,0,0,0" Background="ForestGreen"
-                BorderBrush="Black" BorderThickness="3" Click="GoToKnights"/>
+            <!--Boton de Caballeros-->
+            <Button            
+                MaxWidth="300"
+                Background="RosyBrown"
+                BorderBrush="Black"
+                BorderThickness="3" 
+                Click="GoToKnights">
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="/Assets/knight_icon.png" MaxWidth="40" MaxHeight="70" />
+                    <TextBlock Text="KNIGHTS" 
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe UI"
+                           FontSize="30"
+                           FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
 
         <!--Opciones-->
         <StackPanel Grid.Row="4" Grid.Column="1"
