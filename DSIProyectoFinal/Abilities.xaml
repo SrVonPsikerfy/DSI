@@ -61,7 +61,33 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
         </Style>
-        
+
+        <!--KotF Style-->
+        <Style x:Key="KotFStyle" TargetType="TextBlock">
+            <Setter Property="Text" Value="KotF"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        <!--Blue Flag Style-->
+        <Style x:Key="BlueFlagImage" TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Source" Value="/Assets/blue_cropped_flag.png"/>
+        </Style>
+        <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
+            <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
     </Page.Resources>
     
     <Grid Background="#FFB8C0CD">
@@ -98,24 +124,13 @@
         <StackPanel Grid.Column="5"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Right"
-                       VerticalAlignment="Stretch"
-                   Text="KotF"
-                   FontSize="48" FontWeight="Bold"
-                       FontFamily="Abril Fatface"/>
-            <Button Background="SkyBlue"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    FontStretch="Expanded">
+            <TextBlock Style="{StaticResource KotFStyle}"/>
+
+            <Grid>
+                <Image Style="{StaticResource BlueFlagImage}"/>
                 <TextBlock Text="KNIGHTS"
-                           IsTextScaleFactorEnabled="True"
-                           FontSize="30"
-                           FontWeight="Bold"
-                           FontStretch="Expanded"
-                           Width="Auto"
-                           FontFamily="Abril Fatface"/>
-            </Button>
+                           Style="{StaticResource BlueFlagTextStyle}"/>
+            </Grid>
         </StackPanel>
 
         <!--Lista de Caballeros-->
