@@ -12,7 +12,7 @@ namespace DSIProyectoFinal
         {
             new Tuple<Knight, bool>(
                 new Knight(
-                    "Knight",
+                    "VAMOSSSS",
                     "Assets/stick-man-hi-small.png",
                     "Rol",
                     5,
