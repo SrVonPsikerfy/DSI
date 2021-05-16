@@ -64,6 +64,13 @@ namespace DSIProyectoFinal
             base.OnNavigatedTo(e);
             char s = (Char)e.Parameter;
             LevelText.Text = s.ToString();
+
+            //inicializacion provisional
+            Zone1.Content = "Page " + s.ToString() + " - 1";
+            Zone2.Content = "Page " + s.ToString() + " - 2";
+            Zone3.Content = "Page " + s.ToString() + " - 3";
+            Zone4.Content = "Page " + s.ToString() + " - 4";
+            Zone5.Content = "Page " + s.ToString() + " - 5";
         }
     }
 }
