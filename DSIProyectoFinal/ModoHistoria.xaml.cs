@@ -26,26 +26,12 @@ namespace DSIProyectoFinal
         {
             this.InitializeComponent();
         }
-
-        private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (((Frame)Window.Current.Content).ActualHeight > 540 && ((Frame)Window.Current.Content).ActualWidth > 960)
-                (sender as TextBlock).FontSize = 100;
-            else
-                (sender as TextBlock).FontSize = 40;
-        }
-
         private void GoBack(object sender, RoutedEventArgs e)
         {
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
             }
-        }
-
-        private void GoToPlay(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Defensa));
         }
     }
 }

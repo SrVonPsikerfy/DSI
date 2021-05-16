@@ -198,7 +198,7 @@
             <!--TeamsButton-->
             <Viewbox Grid.Row="0" Grid.Column="0">
                 <Button
-                Click="GoToModoHistoria"
+                Click="GoToTeams"
                 Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
@@ -217,7 +217,7 @@
             <!--TeamsButton-->
             <Viewbox Grid.Row="0" Grid.Column="1">
                 <Button Grid.Row="0" Grid.Column ="0"
-                Click="GoToModoHistoria"
+                Click="GoToKnights"
                 Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>

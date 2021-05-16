@@ -133,8 +133,8 @@
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModoHistoria.xaml.cs">
-      <DependentUpon>ModoHistoria.xaml</DependentUpon>
+    <Compile Include="SelectorCapitulo.xaml.cs">
+      <DependentUpon>SelectorCapitulo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
@@ -146,8 +146,8 @@
     <Compile Include="PVP.xaml.cs">
       <DependentUpon>PVP.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SelectorZona.xaml.cs">
-      <DependentUpon>SelectorZona.xaml</DependentUpon>
+    <Compile Include="ModoHistoria.xaml.cs">
+      <DependentUpon>ModoHistoria.xaml</DependentUpon>
     </Compile>
     <Compile Include="Store.xaml.cs">
       <DependentUpon>Store.xaml</DependentUpon>
@@ -249,7 +249,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ModoHistoria.xaml">
+    <Page Include="SelectorCapitulo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -265,7 +265,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SelectorZona.xaml">
+    <Page Include="ModoHistoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

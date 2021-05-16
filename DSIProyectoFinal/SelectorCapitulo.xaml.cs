@@ -20,18 +20,32 @@ namespace DSIProyectoFinal
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class SelectorZona : Page
+    public sealed partial class SelectorCapitulo : Page
     {
-        public SelectorZona()
+        public SelectorCapitulo()
         {
             this.InitializeComponent();
         }
+
+        private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (((Frame)Window.Current.Content).ActualHeight > 540 && ((Frame)Window.Current.Content).ActualWidth > 960)
+                (sender as TextBlock).FontSize = 100;
+            else
+                (sender as TextBlock).FontSize = 40;
+        }
+
         private void GoBack(object sender, RoutedEventArgs e)
         {
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
             }
+        }
+
+        private void GoToPlay(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Defensa));
         }
     }
 }
