@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,6 +23,7 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class PVP : Page
     {
+        bool isAtacking = false;
         public PVP()
         {
             this.InitializeComponent();
@@ -33,6 +35,37 @@ namespace DSIProyectoFinal
             {
                 this.Frame.GoBack();
             }
+        }
+
+        private void DefendClick(object sender, RoutedEventArgs e)
+        {
+            rectangleModeSelection.Fill = (SolidColorBrush)Resources["GreenColor"];
+            defenseImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/defensorSelectedIcon.png"));
+            attackImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/atacanteIcon.png"));
+            isAtacking = false;
+        }
+
+        private void AttackClick(object sender, RoutedEventArgs e)
+        {
+            rectangleModeSelection.Fill = (SolidColorBrush)Resources["RedColor"];
+            attackImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/atacanteSelectedIcon.png"));
+            defenseImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/defensorIcon.png"));
+            isAtacking = true;
+        }
+
+        private void EnterClick(object sender, RoutedEventArgs e)
+        {
+            if(isAtacking) this.Frame.Navigate(typeof(Ataque));
+            else this.Frame.Navigate(typeof(Defensa));
+        }
+        private void GoToMainMenu(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainMenu));
+        }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Opciones));
         }
     }
 }

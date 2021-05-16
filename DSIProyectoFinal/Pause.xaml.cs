@@ -33,5 +33,18 @@ namespace DSIProyectoFinal
                 this.Frame.GoBack();
             }
         }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Opciones));
+        }
+
+        private void GoToPreviousMenu(object sender, RoutedEventArgs e)
+        {
+            //aqui no se sabe que menu es el anterior
+            //lo que dijo aaron de hacer el pausa no en otra pagina sino en la misma
+            //habria que cambiar el resume entonces
+            this.Frame.Navigate(typeof(MainMenu));
+        }
     }
 }
