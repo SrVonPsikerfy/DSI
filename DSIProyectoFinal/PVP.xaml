@@ -12,6 +12,33 @@
     <Page.Resources>
         <SolidColorBrush x:Key="GreenColor" Color="Green"/>
         <SolidColorBrush x:Key="RedColor" Color="Red"/>
+
+        <!--BACK BUTTON-->
+        <Style x:Key="BackButtonStyle" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+        </Style>
+        <Style x:Key="BackButtonGrid" TargetType="Grid">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+        <Style x:Key="BackButtonImage" TargetType="Image">
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+            <Setter Property="Source" Value="/Assets/atrasNew.png"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="BackButtonText" TargetType="TextBlock">
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Text" Value="BACK"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
+        </Style>
     </Page.Resources>
 
     <Grid Background="#FFB8C0CD">
@@ -30,14 +57,16 @@
         </Grid.RowDefinitions>
 
         <!--BACK BUTTON-->
-        <Button Background="SandyBrown"
-                Width="Auto"
-                Height="50"
-                HorizontalAlignment="Stretch"
+        <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
-            <TextBlock Text="BACK"
-                       FontSize="30"
-                       Width="Auto"/>
+            <Grid Style="{StaticResource BackButtonGrid}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Image Style="{StaticResource BackButtonImage}"/>
+                <TextBlock Style="{StaticResource BackButtonText}"/>
+            </Grid>
         </Button>
 
         <StackPanel Grid.Column="3"
