@@ -6,7 +6,136 @@ using System.Threading.Tasks;
 
 namespace DSIProyectoFinal
 {
-    class Teams
+    public class Teams
     {
+        public static List<Knights> TeamKnights = new List<Knights>()
+        {
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             ),
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             ),
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             ),
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             ),
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             ),
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             ),
+            new Knights(
+                "Knight",
+                "Assets/stick-man-hi-small.png",
+                "Rol",
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new bool[3]{ true, false, true},
+                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+             )
+          };
     }
 }

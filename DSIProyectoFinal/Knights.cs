@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSIProyectoFinal
 {
-    class Knights
+    public class Knights
     {
         public string Name { get; set; }
         public string ImageLocation { get; set; }
