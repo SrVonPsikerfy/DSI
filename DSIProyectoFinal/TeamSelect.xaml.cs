@@ -34,5 +34,10 @@ namespace DSIProyectoFinal
                 this.Frame.GoBack();
             }
         }
+
+        private void GoToTeamConfig(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TeamConfig));
+        }
     }
 }

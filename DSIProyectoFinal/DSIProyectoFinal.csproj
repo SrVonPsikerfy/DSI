@@ -204,7 +204,7 @@
     <Content Include="Assets\menu.png" />
     <Content Include="Assets\moneda.png" />
     <Content Include="Assets\NivelAux.png" />
-    <Content Include="Assets\pauseButton.png" />
+    <Content Include="Assets\pause_icon.png" />
     <Content Include="Assets\playIcon.png" />
     <Content Include="Assets\pvpIcon.png" />
     <Content Include="Assets\settingsButton.png" />

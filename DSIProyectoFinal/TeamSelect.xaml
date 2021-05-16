@@ -315,7 +315,8 @@
                 Background="DodgerBlue"
                 Width="Auto" Height="50"
                 HorizontalAlignment="Stretch"
-                Grid.ColumnSpan="2">
+                Grid.ColumnSpan="2"
+                Click="GoToTeamConfig">
             <TextBlock Text="TEAMS"
                        FontSize="30"
                        Width="Auto"/>
