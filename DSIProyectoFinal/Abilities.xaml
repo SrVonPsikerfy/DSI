@@ -192,7 +192,7 @@
 
         <Viewbox Grid.Row="1"
                  Grid.Column="2">
-            <Grid>
+            <Grid Background="#FF8B5555">
                 <StackPanel Orientation="Vertical"
                     
                     VerticalAlignment="Center">
@@ -200,7 +200,7 @@
                        FontSize="60"
                        IsColorFontEnabled="True"
                        Foreground="Black"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black" SelectionChanged="TextBlock_SelectionChanged"/>
 
                     <Button Background="Transparent">
                         <Image Source="/Assets/unequipedSkill.png"/>
