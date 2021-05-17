@@ -504,6 +504,7 @@ namespace DSIProyectoFinal
             iconList.Add(TeamMemberIcon6);
             iconList.Add(TeamMemberIcon7);
             iconList.Add(TeamMemberIcon8);
+            UpdateKnight(Team1)
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
