@@ -37,7 +37,7 @@ namespace DSIProyectoFinal
 
         private void GoToTeams(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(TeamSelect));
+            this.Frame.Navigate(typeof(TeamConfig));
         }
 
         private void GoToKnights(object sender, RoutedEventArgs e)

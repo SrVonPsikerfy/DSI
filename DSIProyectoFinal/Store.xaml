@@ -39,7 +39,7 @@
 
                 <Image Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Sold" Source="./Assets/sold_icon.png"
                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                       Visibility="{x:Bind Bought, Mode=OneWay}" Opacity="0.5"/>
+                       Visibility="{x:Bind Bought, Mode=TwoWay}" Opacity="0.5"/>
 
                 <Image Grid.Column="1" x:Name="ClassIcon" Source="{x:Bind RoleLocation}"
                        HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
@@ -232,8 +232,8 @@
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="U want sum?"/>
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="yes" Click="Button_Click"/>
-                    <Button Content="no" Click="Button_Click_1"/>
+                    <Button Content="yes" Click="ConfirmBuy_Click"/>
+                    <Button Content="no" Click="CancelBuy_Click"/>
                 </StackPanel>
             </StackPanel>
         </Viewbox>

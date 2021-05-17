@@ -144,5 +144,20 @@ namespace DSIProyectoFinal
                 new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
              )
           };
+
+        public static void AddAvailableKnight(Knight newKnight)
+        {
+            AvailableKnightsForTeams.Add(newKnight);
+        }
+
+        public static void UpdateAvailableKnights(List<Knight> newList)
+        {
+            AvailableKnightsForTeams = newList;
+        }
+
+        public static IList<Knight> GetAvailableKnights()
+        {
+            return AvailableKnightsForTeams;
+        }
     }
 }

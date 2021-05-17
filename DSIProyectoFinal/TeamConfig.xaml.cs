@@ -23,7 +23,7 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class TeamConfig : Page
     {
-        private ObservableCollection<Knight> knights { get; } = new ObservableCollection<Knight>();
+        private ObservableCollection<Knight> knights { get; set; } = new ObservableCollection<Knight>();
 
         public TeamConfig()
         {

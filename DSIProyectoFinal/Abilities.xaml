@@ -10,7 +10,8 @@
     RequestedTheme="Light">
 
     <Page.Resources>
-        <DataTemplate x:Key="KnightsTemplate">
+        <DataTemplate x:Key="KnightsTemplate"
+                      x:DataType="local:Knight">
             <Grid Height="150" Width="150" Margin="8">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -19,12 +20,12 @@
 
                 <!--Imagen-->
                 <Image x:Name="KnightImage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                Source="./Assets/stick-man-hi.png" Stretch="Uniform" />
+                       Source="{x:Bind ImageLocation}" Stretch="Uniform"/>
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
-                    <TextBlock x:Name="Prize" Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}" />
-                    <Image x:Name="Image" Source="./Assets/defender_class_icon.png" HorizontalAlignment="Stretch"
+                    <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    <Image x:Name="Image" Source="{x:Bind RoleLocation}" HorizontalAlignment="Stretch"
                         AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                 </StackPanel>
             </Grid>
@@ -147,11 +148,12 @@
         <GridView x:Name="GridSelect"
                   ItemTemplate="{StaticResource KnightsTemplate}"
                   ItemsPanel="{StaticResource KnightsPanel}"
+                  ItemsSource="{x:Bind Knights}"
                   Grid.Row="1"
                   Grid.ColumnSpan="2"
                   BorderBrush="White" BorderThickness="3"
-                   Margin="8"
-                   Background="#335F9EA0">
+                   Margin="8" Background="#335F9EA0"
+                  >
         </GridView>
 
         <Viewbox Grid.Row="4" HorizontalAlignment="Left">

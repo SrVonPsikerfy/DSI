@@ -55,7 +55,7 @@ namespace DSIProyectoFinal
         {
             if (Frame.CanGoBack)
             {
-                StoreKnights.UpdateKnights(Knights.ToList());
+                StoreKnights.UpdateStoreKnights(Knights.ToList());
                 StoreKnights.Prize = int.Parse(Money.Text);
                 Frame.GoBack();
             }
@@ -63,14 +63,14 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
-            StoreKnights.UpdateKnights(Knights.ToList());
+            StoreKnights.UpdateStoreKnights(Knights.ToList());
             StoreKnights.Prize = int.Parse(Money.Text);
             Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
-            StoreKnights.UpdateKnights(Knights.ToList());
+            StoreKnights.UpdateStoreKnights(Knights.ToList());
             StoreKnights.Prize = int.Parse(Money.Text);
             Frame.Navigate(typeof(Opciones));
         }
@@ -110,19 +110,22 @@ namespace DSIProyectoFinal
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ConfirmBuy_Click(object sender, RoutedEventArgs e)
         {
             FalseBackground.Visibility = Visibility.Collapsed;
             ConfirmBox.Visibility = Visibility.Collapsed;
 
             int newMoney = int.Parse(Money.Text) - Knights[index].ShopCost;
+
             Money.Text = newMoney.ToString();
             Knights[index].Bought = Visibility.Visible;
+            AvailableKnights.AddAvailableKnight(Knights[index]);
             Buyable[index] = false;
+
             index = -1;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void CancelBuy_Click(object sender, RoutedEventArgs e)
         {
             FalseBackground.Visibility = Visibility.Collapsed;
             ConfirmBox.Visibility = Visibility.Collapsed;
