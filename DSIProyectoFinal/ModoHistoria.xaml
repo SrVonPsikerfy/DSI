@@ -33,7 +33,33 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="30"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        <!--KotF Style-->
+        <Style x:Key="KotFStyle" TargetType="TextBlock">
+            <Setter Property="Text" Value="KotF"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="FontSize" Value="96"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        <!--Blue Flag Style-->
+        <Style x:Key="BlueFlagImage" TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Source" Value="/Assets/blue_cropped_flag.png"/>
+        </Style>
+        <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
+            <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
+            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
     </Page.Resources>
 
@@ -62,28 +88,21 @@
             </Grid>
         </Button>
 
-        <!--Titulo mas indicador de modo de juego-->
-        <StackPanel Grid.Column="3"
+        <Viewbox Grid.Column="5" VerticalAlignment="Top">
+            <Grid>
+                <StackPanel 
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Right"
-                       VerticalAlignment="Stretch"
-                   Text="KotF"
-                   FontSize="48" FontWeight="Bold"
-                       FontFamily="Abril Fatface"/>
-            <Button Background="SkyBlue"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    FontStretch="Expanded">
-                <TextBlock Text="CAMPAIGN"
-                           IsTextScaleFactorEnabled="True"
-                           FontSize="30"
-                           TextWrapping="Wrap"
-                           FontStretch="Expanded"
-                           Width="Auto"/>
-            </Button>
-        </StackPanel>
+                    <TextBlock Style="{StaticResource KotFStyle}"/>
+
+                    <Grid>
+                        <Image Style="{StaticResource BlueFlagImage}"/>
+                        <TextBlock Text="CAMPAIGN"
+                           Style="{StaticResource BlueFlagTextStyle}"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
 
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->

@@ -37,7 +37,7 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="60"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
 
         <!--KotF Style-->
