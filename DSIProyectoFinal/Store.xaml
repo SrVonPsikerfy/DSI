@@ -73,9 +73,35 @@
             <Setter Property="Text" Value="BACK"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="60"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontFamily" Value="Helvetica LT Std Black"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        <!--KotF Style-->
+        <Style x:Key="KotFStyle" TargetType="TextBlock">
+            <Setter Property="Text" Value="KotF"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="FontSize" Value="96"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
+        </Style>
+
+        <!--Blue Flag Style-->
+        <Style x:Key="BlueFlagImage" TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Source" Value="/Assets/blue_cropped_flag.png"/>
+        </Style>
+        <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
+            <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
+            <Setter Property="FontSize" Value="90"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
     </Page.Resources>
 
@@ -114,17 +140,20 @@
                   Background="DimGray"/>
 
         <!--BACK BUTTON-->
-        <Button Style="{StaticResource BackButtonStyle}"
+        <Viewbox>
+            <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBackPage">
-            <Grid Style="{StaticResource BackButtonGrid}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-                <Image Style="{StaticResource BackButtonImage}"/>
-                <TextBlock Style="{StaticResource BackButtonText}"/>
-            </Grid>
-        </Button>
+                <Grid Style="{StaticResource BackButtonGrid}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Style="{StaticResource BackButtonImage}"/>
+                    <TextBlock Style="{StaticResource BackButtonText}"/>
+                </Grid>
+            </Button>
+        </Viewbox>
+        
 
         <!--Grid de seleccion de filtros-->
         <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
@@ -167,31 +196,36 @@
             </Button>
         </Grid>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0"  Grid.ColumnSpan="2">
-            <!--HomeButton-->
-            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+        <Viewbox Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <!--HomeButton-->
+                <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
                     Click="GoToMainMenu">
-                <Image Source="/Assets/homeButton.png" MaxWidth="70" MaxHeight="70"/>
-            </Button>
+                    <Image Source="/Assets/homeButton.png" MaxWidth="70" MaxHeight="70"/>
+                </Button>
 
-            <!--SettingsButton-->
-            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+                <!--SettingsButton-->
+                <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
                     Click="GoToSettings">
-                <Image Source="/Assets/settingsButton.png" MaxWidth="70" MaxHeight="70"/>
-            </Button>
-        </StackPanel>
+                    <Image Source="/Assets/settingsButton.png" MaxWidth="70" MaxHeight="70"/>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+        
 
         <!--Dropdown de para ordenar el GridView-->
-        <ComboBox Grid.Column="2" Grid.Row="0"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                        Height="50" Width="Auto"
-                        FontSize="20"
-                        PlaceholderText="Order by ..."
-                        SelectionChanged="ComboBox_SelectionChanged">
-            <x:String>Order by None</x:String>
-            <x:String>Order by Price</x:String>
-            <x:String>Order by Alphabetical</x:String>
-        </ComboBox>
+        <Viewbox Grid.Column="2" Grid.Row="0">
+            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                      Height="50" Width="Auto"
+                      FontSize="20"
+                      PlaceholderText="Order by ..."
+                      SelectionChanged="ComboBox_SelectionChanged">
+                <x:String>Order by None</x:String>
+                <x:String>Order by Price</x:String>
+                <x:String>Order by Alphabetical</x:String>
+            </ComboBox>
+        </Viewbox>
+        
         
         <!--Moneda de juego disponible para gastar-->
         <Viewbox x:Name="Monedas" Grid.Column="3" Grid.Row="0" Margin="20, 10, 20, 10">
@@ -205,27 +239,21 @@
         </Viewbox>
 
         <!--Indicador de en que pagina se esta y logo del juego-->
-        <StackPanel Grid.Column="4"
+        <Viewbox Grid.Column="5" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Grid>
+                <StackPanel 
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Right"
-                       VerticalAlignment="Stretch"
-                   Text="KotF"
-                   FontSize="48" FontWeight="Bold"
-                       FontFamily="Abril Fatface"/>
-            <Button Background="SkyBlue"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    FontStretch="Expanded">
-                <TextBlock Text="STORE"
-                           IsTextScaleFactorEnabled="True"
-                           FontSize="30"
-                           TextWrapping="Wrap"
-                           FontStretch="Expanded"
-                           Width="Auto"/>
-            </Button>
-        </StackPanel>
+                    <TextBlock Style="{StaticResource KotFStyle}"/>
+
+                    <Grid>
+                        <Image Style="{StaticResource BlueFlagImage}"/>
+                        <TextBlock Text="STORE"
+                           Style="{StaticResource BlueFlagTextStyle}"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
 
         <!--Menu confirmacion-->
         <Image x:Name="FalseBackground" Grid.ColumnSpan="5" Grid.RowSpan="3"
