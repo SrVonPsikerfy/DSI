@@ -24,6 +24,7 @@ namespace DSIProyectoFinal
         public string ImageLocation { get; set; }
          
         public Rol Role { get; set; }
+        public string RoleLocation { get; set; }
 
 
         public int ShopCost { get; set; }
@@ -50,6 +51,7 @@ namespace DSIProyectoFinal
             Name = name;
             ImageLocation = imageLocation;
             Role = role;
+            RoleLocation = roleLocation[(int)Role];
 
             ShopCost = shopCost;
             Bought = visibility;
@@ -75,6 +77,7 @@ namespace DSIProyectoFinal
             Name = knight_.Name;
             ImageLocation = knight_.ImageLocation;
             Role = knight_.Role;
+            RoleLocation = roleLocation[(int)Role];
 
             ShopCost = knight_.ShopCost;
             Bought = knight_.Bought;

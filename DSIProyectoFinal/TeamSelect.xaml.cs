@@ -534,5 +534,16 @@ namespace DSIProyectoFinal
             TeamSelect2.BorderThickness = new Thickness(2);
             TeamSelect3.BorderThickness = new Thickness(7);
         }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Escape)
+            {
+                if (this.Frame.CanGoBack)
+                {
+                    this.Frame.GoBack();
+                }
+            }
+        }
     }
 }

@@ -67,7 +67,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
+    <Grid KeyDown="Grid_KeyDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="50*"/>

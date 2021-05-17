@@ -8,34 +8,41 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Light">
-    
+
     <Page.Resources>
         <!--Template-->
         <DataTemplate x:Key="StoreKnightsTemplate"
                       x:DataType="local:Knight">
-            <Grid Height="200" Width="200" Margin="8">
+            <Grid Height="180" Width="180" Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition MaxWidth="40"/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <!--Imagen-->
-                <Image x:Name="KnightImage" Grid.Row="0"
+                <Image x:Name="KnightImage" Grid.Row="0"  Grid.ColumnSpan="2"
                 Source="{x:Bind ImageLocation}" Stretch="Uniform" />
 
-                <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
                     <Image x:Name="IridiumImage" Source="./Assets/moneda.png" HorizontalAlignment="Stretch"
                            RenderTransformOrigin="0.5,0.5" MaxHeight="50" MaxWidth="50"/>
-                    <TextBlock x:Name="Prize" Text="{x:Bind ShopCost}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               TextAlignment="Center" FontSize="20" FontFamily="Abril FatFace" 
-                               Margin="0,2,10,0" Foreground="Purple"/>
+                    <TextBlock x:Name="Prize" Text="{x:Bind ShopCost}" HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" TextAlignment="Center" FontSize="20"
+                               FontFamily="Abril FatFace" Margin="0,2,10,0" Foreground="Purple"/>
                     <TextBlock x:Name="Name" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
                                TextAlignment="Center" FontSize="22" FontFamily="Abril FatFace"/>
                 </StackPanel>
 
-                <Image Grid.RowSpan="2" x:Name="Sold" Source="./Assets/sold_icon.png"
-                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{x:Bind Bought, Mode=OneWay}"
-                       Opacity="0.5"/>
+                <Image Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Sold" Source="./Assets/sold_icon.png"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                       Visibility="{x:Bind Bought, Mode=OneWay}" Opacity="0.5"/>
+
+                <Image Grid.Column="1" x:Name="ClassIcon" Source="{x:Bind RoleLocation}"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
             </Grid>
         </DataTemplate>
 
@@ -73,7 +80,7 @@
     </Page.Resources>
 
 
-    <Grid>
+    <Grid KeyDown="Grid_KeyDown">
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*"/>
@@ -187,13 +194,16 @@
         </ComboBox>
         
         <!--Moneda de juego disponible para gastar-->
-        <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Image Source="./Assets/moneda.png" MaxHeight="89" MaxWidth="133"
+        <Viewbox x:Name="Monedas" Grid.Column="3" Grid.Row="0" Margin="20, 10, 20, 10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="./Assets/moneda.png" MaxHeight="89" MaxWidth="133"
                    HorizontalAlignment="Left" />
-            <TextBlock x:Name="Money" Text="0" FontSize="40" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </StackPanel>
-        
+                <TextBlock x:Name="Money" Text="0" FontSize="40" FontFamily="Abril FatFace"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Foreground="Purple" FontWeight="Bold"/>
+            </StackPanel>
+        </Viewbox>
+
         <!--Indicador de en que pagina se esta y logo del juego-->
         <StackPanel Grid.Column="4"
                     VerticalAlignment="Stretch"

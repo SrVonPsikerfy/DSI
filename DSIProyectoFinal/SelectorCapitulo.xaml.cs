@@ -72,5 +72,16 @@ namespace DSIProyectoFinal
             Zone4.Content = "Page " + s.ToString() + " - 4";
             Zone5.Content = "Page " + s.ToString() + " - 5";
         }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Escape)
+            {
+                if (this.Frame.CanGoBack)
+                {
+                    this.Frame.GoBack();
+                }
+            }
+        }
     }
 }
