@@ -34,7 +34,7 @@ namespace DSIProyectoFinal
             new Knight(
                     "Knight",
                     "Assets/stick-man-hi-small.png",
-                    Knight.Rol.Defender,
+                    Knight.Rol.Support,
                     100,
                     5,
                     6,
