@@ -73,7 +73,7 @@
         <Viewbox>
             <Grid>
                 <Button Style="{StaticResource BackButtonStyle}"
-                Click="GoBack">
+                Click="GoBack" TabIndex="0">
                     <Grid Style="{StaticResource BackButtonGrid}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
@@ -87,7 +87,7 @@
         </Viewbox>
 
         <!--Boton Home-->
-        <Button Grid.Row="2"
+        <Button TabIndex="4" Grid.Row="2"
                 HorizontalAlignment="Left" VerticalAlignment="Bottom"
                 Click="GoToMainMenu" Background="Transparent">
             <Image Source="./Assets/homeButton.png"
@@ -133,59 +133,36 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--Idioma-->
-            <Viewbox  Grid.Row="0" Grid.Column="1">
-                <TextBlock
-                       VerticalAlignment="Center" HorizontalAlignment="Right"
-                       Text="Language" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
-            </Viewbox>
-
-            <Viewbox Grid.Row="1" Grid.Column="1">
+            <Viewbox Grid.Row="0" Grid.Column="1">
 
                 <TextBlock 
                        VerticalAlignment="Center" HorizontalAlignment="Right"
                        Text="Master" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
-            <Viewbox Grid.Row="2" Grid.Column="1">
+            <Viewbox Grid.Row="1" Grid.Column="1">
                 <TextBlock 
                        VerticalAlignment="Center" HorizontalAlignment="Right"
                        Text="Music" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
-            <Viewbox  Grid.Row="3" Grid.Column="1">
+            <Viewbox  Grid.Row="2" Grid.Column="1">
                 <TextBlock
                        VerticalAlignment="Center" HorizontalAlignment="Right"
                        Text="SFX" FontWeight="Bold" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
             </Viewbox>
 
-            <Viewbox Grid.Column="3" >
-                
-            <DropDownButton 
-                             Foreground="White" Background="#FF363535" MaxWidth="223"
-                            Content="English">
-                <DropDownButton.Flyout>
-                    <MenuFlyout Placement="Bottom">
-                        <MenuFlyoutItem Text="English"/>
-                        <MenuFlyoutItem Text="Spanish"/>
-                        <MenuFlyoutItem Text="Japanese"/>
-                    </MenuFlyout>
-                </DropDownButton.Flyout>
-            </DropDownButton>
-            </Viewbox>
-
-            <Slider Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+            <Slider TabIndex="1" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
 
-            <Slider Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+            <Slider TabIndex="2" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
 
-            <Slider Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+            <Slider TabIndex="3" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                     Background="#66727070" Foreground="Black" MaxWidth="316">
             </Slider>
         </Grid>
