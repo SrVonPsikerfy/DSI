@@ -13,11 +13,11 @@ namespace DSIProyectoFinal
 
         private static string[] roleLocation { get; set; } = new string[5]
         {
-            "./Assets/defender_class_icon.png",
-            "./Assets/melee_class_icon.png",
-            "./Assets/sniper_class_icon.png",
-            "./Assets/support_class_icon.png",
-            "./Assets/healer_class_icon.png"
+            "ms-appx:///Assets/defender_class_icon.png",
+            "ms-appx:///Assets/melee_class_icon.png",
+            "ms-appx:///Assets/sniper_class_icon.png",
+            "ms-appx:///Assets/support_class_icon.png",
+            "ms-appx:///Assets/healer_class_icon.png"
         };
 
         public string Name { get; set; }
