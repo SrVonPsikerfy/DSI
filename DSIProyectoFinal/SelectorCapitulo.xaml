@@ -63,7 +63,7 @@
         </Style>
     </Page.Resources>
     
-    <Grid Background="#FFB8C0CD" KeyDown="Grid_KeyDown">
+    <Grid KeyDown="Grid_KeyDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
@@ -81,6 +81,11 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+        <!--Fondo-->
+        <Image Grid.ColumnSpan ="4" Grid.RowSpan="8"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
@@ -163,7 +168,7 @@
 
 
         <!--Boton de play-->
-        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="¡PLAY!" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="500"
+        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="¡PLAY!" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="500" FontFamily="Abril Fatface"
                 Click="GoToPlay"/>
 
        

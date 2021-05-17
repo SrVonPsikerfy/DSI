@@ -88,7 +88,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid Background="#FFB8C0CD" KeyDown="Grid_KeyDown">
+    <Grid KeyDown="Grid_KeyDown">
         <!--Definicion de filas y columnas-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
@@ -104,7 +104,12 @@
             <RowDefinition Height="13*"/>
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
-
+        
+        <!--Fondo-->
+        <Image Grid.ColumnSpan ="5" Grid.RowSpan="4"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Viewbox Grid.ColumnSpan="2">
             <Grid>
