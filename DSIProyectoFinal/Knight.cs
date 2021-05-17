@@ -124,6 +124,5 @@ namespace DSIProyectoFinal
             IsActive = isActive;
             IsUnlocked = isUnlocked;
         }
-        }
     }
 }
