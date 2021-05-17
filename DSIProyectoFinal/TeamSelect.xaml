@@ -318,7 +318,8 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     BorderThickness="7"
-                    BorderBrush="Black"/>
+                    BorderBrush="Black"
+                    FontFamily="Abril Fatface"/>
 
                     <Button x:Name="TeamSelect2" Click="SelectTeam2" 
                         Content="Equipo 2"
@@ -328,7 +329,8 @@
                     VerticalAlignment="Stretch"
                     BorderBrush="Black" Margin="0,10,0,0"
                     FontSize="30"
-                    FontWeight="Bold"/>
+                    FontWeight="Bold"
+                    FontFamily="Abril Fatface"/>
 
                     <Button x:Name="TeamSelect3" Click="SelectTeam3" 
                         Content="Equipo 3"
@@ -338,7 +340,8 @@
                     VerticalAlignment="Stretch"
                     BorderBrush="Black" Margin="0,10,0,0"
                     FontSize="30"
-                    FontWeight="Bold"/>
+                    FontWeight="Bold"
+                    FontFamily="Abril Fatface"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
@@ -348,7 +351,7 @@
         <!--BOTON GO-->
         <Button Content="GO!" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
                 VerticalAlignment="Top" HorizontalAlignment="Stretch"
-                FontSize="30" FontWeight="Bold" MaxWidth="450"/>
+                FontSize="30" FontWeight="Bold" MaxWidth="450" FontFamily="Abril Fatface"/>
 
         <!--BOTON HOME Y OPCIONES-->
         <Viewbox Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" HorizontalAlignment="Left">
@@ -378,7 +381,8 @@
                 Click="GoToTeamConfig">
                     <TextBlock Text="TEAMS"
                        FontSize="30"
-                       Width="Auto"/>
+                       Width="Auto"
+                       FontFamily="Abril Fatface"/>
                 </Button>
             </Grid>
         </Viewbox>
