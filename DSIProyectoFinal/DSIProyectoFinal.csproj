@@ -225,7 +225,6 @@
     <Content Include="Assets\pvpIcon.png" />
     <Content Include="Assets\pvp_black_icon.png" />
     <Content Include="Assets\settingsButton.png" />
-    <Content Include="Assets\settings_icon.png" />
     <Content Include="Assets\shop.png" />
     <Content Include="Assets\sniper_class_icon.png" />
     <Content Include="Assets\sold_icon.png" />

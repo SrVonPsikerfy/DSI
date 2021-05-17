@@ -36,8 +36,9 @@ namespace DSIProyectoFinal
         }
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
-            Frame.GoBack();
-            Frame.GoBack();
+            while (this.Frame.CanGoBack)
+                Frame.GoBack();
+            //Frame.GoBack();
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
