@@ -37,39 +37,41 @@ namespace DSIProyectoFinal
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
+
             if (Knights != null)
-                foreach (Tuple<Knight, bool> knight in StoreKnights.GetStoreKnights())
+                foreach (Knight knight in StoreKnights.GetStoreKnights())
                 {
-                    Tuple<Knight, bool> storeKnight = new Tuple<Knight, bool>(new Knight(knight.Item1), knight.Item2);
-                    Knights.Add(storeKnight.Item1);
-                    Buyable.Add(storeKnight.Item2);
+                    Knights.Add(new Knight(knight));
+                    if (knight.Bought == Visibility.Visible) Buyable.Add(false);
+                    else Buyable.Add(true);
                 }
-            // Remove this when replaced with XAML bindings
-            //GridPurchase.ItemsSource = Knights;
+
+            Money.Text = StoreKnights.Prize.ToString();
 
             base.OnNavigatedTo(e);
         }
-        private void GoBack(object sender, RoutedEventArgs e)
+
+        private void GoBackPage(object sender, RoutedEventArgs e)
         {
-            if (this.Frame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                List<Tuple<Knight, bool>> NewList = new List<Tuple<Knight, bool>>();
-
-                for (int i = 0; i < Knights.Count(); i++)
-                    NewList.Add(new Tuple<Knight, bool>(Knights[i], Buyable[i]));
-
-                StoreKnights.UpdateKnights(NewList);
-                this.Frame.GoBack();
+                StoreKnights.UpdateKnights(Knights.ToList());
+                StoreKnights.Prize = int.Parse(Money.Text);
+                Frame.GoBack();
             }
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainMenu));
+            StoreKnights.UpdateKnights(Knights.ToList());
+            StoreKnights.Prize = int.Parse(Money.Text);
+            Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            StoreKnights.UpdateKnights(Knights.ToList());
+            StoreKnights.Prize = int.Parse(Money.Text);
             Frame.Navigate(typeof(Opciones));
         }
 
@@ -113,9 +115,9 @@ namespace DSIProyectoFinal
             FalseBackground.Visibility = Visibility.Collapsed;
             ConfirmBox.Visibility = Visibility.Collapsed;
 
-
             int newMoney = int.Parse(Money.Text) - Knights[index].ShopCost;
             Money.Text = newMoney.ToString();
+            Knights[index].Bought = Visibility.Visible;
             Buyable[index] = false;
             index = -1;
         }

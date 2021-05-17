@@ -8,10 +8,11 @@ namespace DSIProyectoFinal
 {
     public class StoreKnights
     {
-        static List<Tuple<Knight, bool>> StoredKnights = new List<Tuple<Knight, bool>>()
+        public static int Prize = 2000;
+
+        static List<Knight> StoredKnights = new List<Knight>()
         {
-            new Tuple<Knight, bool>(
-                new Knight(
+            new Knight(
                     "lllll",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -29,9 +30,8 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true),
-             new Tuple<Knight, bool>(
-                new Knight(
+                ),
+            new Knight(
                     "Knight",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -49,9 +49,8 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true),
-             new Tuple<Knight, bool>(
-                new Knight(
+                ),
+            new Knight(
                     "Knight",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -69,9 +68,8 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true),
-             new Tuple<Knight, bool>(
-                new Knight(
+                ),
+            new Knight(
                     "Knight",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -89,9 +87,8 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true),
-             new Tuple<Knight, bool>(
-                new Knight(
+                ),
+            new Knight(
                     "b",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -109,9 +106,8 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true),
-             new Tuple<Knight, bool>(
-                new Knight(
+                ),
+            new Knight(
                     "a",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -129,9 +125,8 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true),
-             new Tuple<Knight, bool>(
-                new Knight(
+                ),
+            new Knight(
                     "Knight",
                     "Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
@@ -149,15 +144,15 @@ namespace DSIProyectoFinal
                     21,
                     new bool[3]{ true, false, true},
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
-                ), true)
+                )
           };
 
-        public static void UpdateKnights(List<Tuple<Knight, bool>> newList)
+        public static void UpdateKnights(List<Knight> newList)
         {
             StoredKnights = newList;
         }
 
-        public static IList<Tuple<Knight, bool>> GetStoreKnights()
+        public static IList<Knight> GetStoreKnights()
         {
             return StoredKnights;
         }
