@@ -46,5 +46,16 @@ namespace DSIProyectoFinal
             //habria que cambiar el resume entonces
             this.Frame.Navigate(typeof(MainMenu));
         }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Escape)
+            {
+                if (this.Frame.CanGoBack)
+                {
+                    this.Frame.GoBack();
+                }
+            }
+        }
     }
 }

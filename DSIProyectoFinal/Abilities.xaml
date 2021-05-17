@@ -90,7 +90,7 @@
 
     </Page.Resources>
     
-    <Grid Background="#FFB8C0CD">
+    <Grid Background="#FFB8C0CD" KeyDown="Grid_KeyDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="25*"/>

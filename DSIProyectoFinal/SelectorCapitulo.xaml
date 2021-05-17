@@ -63,7 +63,7 @@
         </Style>
     </Page.Resources>
     
-    <Grid Background="#FFB8C0CD">
+    <Grid Background="#FFB8C0CD" KeyDown="Grid_KeyDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>

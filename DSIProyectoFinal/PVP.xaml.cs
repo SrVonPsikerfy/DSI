@@ -67,5 +67,16 @@ namespace DSIProyectoFinal
         {
             Frame.Navigate(typeof(Opciones));
         }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Escape)
+            {
+                if (this.Frame.CanGoBack)
+                {
+                    this.Frame.GoBack();
+                }
+            }
+        }
     }
 }

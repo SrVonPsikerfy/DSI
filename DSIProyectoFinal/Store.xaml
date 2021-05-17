@@ -80,7 +80,7 @@
     </Page.Resources>
 
 
-    <Grid Background="#FFB8C0CD">
+    <Grid Background="#FFB8C0CD" KeyDown="Grid_KeyDown">
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*"/>
