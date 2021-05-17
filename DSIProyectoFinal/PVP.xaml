@@ -142,7 +142,7 @@
                     FontWeight="Bold"         
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    BorderThickness="7"
+                    BorderThickness="2"
                     BorderBrush="Black"
                     Margin="0,10,0,0"
                     FontFamily="Abril Fatface"/>

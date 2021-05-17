@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -487,10 +490,20 @@ namespace DSIProyectoFinal
                     new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
                 )
         };
+        static private List<Knight> SelectedList { get; set; }
+        private List<Image> iconList { get; set; } = new List<Image>();
 
         public TeamSelect()
         {
             this.InitializeComponent();
+            iconList.Add(TeamMemberIcon1);
+            iconList.Add(TeamMemberIcon2);
+            iconList.Add(TeamMemberIcon3);
+            iconList.Add(TeamMemberIcon4);
+            iconList.Add(TeamMemberIcon5);
+            iconList.Add(TeamMemberIcon6);
+            iconList.Add(TeamMemberIcon7);
+            iconList.Add(TeamMemberIcon8);
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
@@ -519,6 +532,7 @@ namespace DSIProyectoFinal
             TeamSelect1.BorderThickness = new Thickness(7);
             TeamSelect2.BorderThickness = new Thickness(2);
             TeamSelect3.BorderThickness = new Thickness(2);
+            UpdateKnight(Team1);
         }
 
         private void SelectTeam2(object sender, RoutedEventArgs e)
@@ -526,6 +540,7 @@ namespace DSIProyectoFinal
             TeamSelect1.BorderThickness = new Thickness(2);
             TeamSelect2.BorderThickness = new Thickness(7);
             TeamSelect3.BorderThickness = new Thickness(2);
+            UpdateKnight(Team2);
         }
 
         private void SelectTeam3(object sender, RoutedEventArgs e)
@@ -533,6 +548,18 @@ namespace DSIProyectoFinal
             TeamSelect1.BorderThickness = new Thickness(2);
             TeamSelect2.BorderThickness = new Thickness(2);
             TeamSelect3.BorderThickness = new Thickness(7);
+            UpdateKnight(Team3);
+        }
+
+        private void UpdateKnight(List<Knight> selectedTeam)
+        {
+            int i = 0;
+            foreach(Image image in iconList)
+            {
+                string stringUrl = selectedTeam[i].RoleLocation;
+                image.Source = new BitmapImage(new Uri(stringUrl));//"ms-appx:///Assets/atacanteSelectedIcon.png"
+                i++;
+            }
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
