@@ -23,23 +23,23 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class Abilities : Page
     {
+        private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
+
         public Abilities()
         {
             this.InitializeComponent();
         }
 
-        private ObservableCollection<Knight> knights { get; } = new ObservableCollection<Knight>();
-
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            for (int i = 0; i < 30; i++)
-            {
-                bool[] abilities = { true, false, true };
-                int[] pickedAbilities = { 1, 2, 3 };
-                knights.Add(new Knight("Knight", "Assets/Imagen.png", Knight.Rol.Defender, 100, 5, 6, 7, 8, 9, 10, 1, 69, 210, 420, 21, abilities, pickedAbilities));
-            }
-            // Remove this when replaced with XAML bindings
-            GridSelect.ItemsSource = knights;
+            if (Knights != null)
+                foreach (Knight knight in AvailableKnights.GetAvailableKnights())
+                {
+                    Knights.Add(new Knight(knight));
+                }
+
+            //// Remove this when replaced with XAML bindings
+            //GridSelect.ItemsSource = Knights;
 
             base.OnNavigatedTo(e);
         }

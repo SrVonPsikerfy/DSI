@@ -147,7 +147,7 @@ namespace DSIProyectoFinal
                 )
           };
 
-        public static void UpdateKnights(List<Knight> newList)
+        public static void UpdateStoreKnights(List<Knight> newList)
         {
             StoredKnights = newList;
         }
