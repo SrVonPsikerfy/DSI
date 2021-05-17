@@ -109,8 +109,8 @@
     <Grid KeyDown="Grid_KeyDown">
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.75*"/>
-            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="*"/>
@@ -153,7 +153,6 @@
                 </Grid>
             </Button>
         </Viewbox>
-        
 
         <!--Grid de seleccion de filtros-->
         <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
@@ -170,30 +169,20 @@
             </Grid.RowDefinitions>
 
             <!--Colores temporales para ver los iconos (mas tarde la propia imagen tendra el fondo)-->
-            <Button Grid.Column="0" Grid.Row="0" Background="#FF9C9C9C">
-                <Image Width="Auto" Height="Auto"
+            <Image   Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto"
             Source="./Assets/melee_class_icon.png"/>
-            </Button>
 
-            <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
-                <Image  Width="Auto" Height="Auto"
+            <Image  Grid.Column="2" Grid.Row="0" Width="Auto" Height="Auto"
             Source="./Assets/sniper_class_icon.png"/>
-            </Button>
 
-            <Button Grid.Column="1" Grid.Row="1" Background="#FF9C9C9C">
-                <Image  Width="Auto" Height="Auto"
+            <Image Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto"
             Source="./Assets/support_class_icon.png"/>
-            </Button>
 
-            <Button Grid.Column="0" Grid.Row="2" Background="#FF9C9C9C">
-                <Image Width="Auto" Height="Auto"
+            <Image Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto"
             Source="./Assets/defender_class_icon.png"/>
-            </Button>
 
-            <Button Grid.Column="2" Grid.Row="2" Background="#FF9C9C9C">
-                <Image  Width="Auto" Height="Auto"
+            <Image Grid.Column="2" Grid.Row="2"  Width="Auto" Height="Auto"
             Source="./Assets/healer_class_icon.png"/>
-            </Button>
         </Grid>
 
         <Viewbox Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Bottom">
@@ -211,7 +200,7 @@
                 </Button>
             </StackPanel>
         </Viewbox>
-        
+
 
         <!--Dropdown de para ordenar el GridView-->
         <Viewbox Grid.Column="2" Grid.Row="0">
@@ -225,8 +214,8 @@
                 <x:String>Order by Alphabetical</x:String>
             </ComboBox>
         </Viewbox>
-        
-        
+
+
         <!--Moneda de juego disponible para gastar-->
         <Viewbox x:Name="Monedas" Grid.Column="3" Grid.Row="0" Margin="20, 10, 20, 10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -261,14 +250,27 @@
                Stretch="Fill"
                Opacity="0"
                Visibility="Collapsed"/>
-        <Viewbox x:Name="ConfirmBox" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="U want sum?"/>
-                <StackPanel Orientation="Horizontal">
-                    <Button Content="yes" Click="ConfirmBuy_Click"/>
-                    <Button Content="no" Click="CancelBuy_Click"/>
+        
+        <Viewbox x:Name="ConfirmBox" Grid.RowSpan="3" Grid.ColumnSpan="5"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Rectangle Fill="RosyBrown" Grid.RowSpan="2"/>
+                <StackPanel Orientation="Vertical" Grid.RowSpan="2">
+                    <TextBlock Text="Are you sure?" FontFamily="Abril Fatface"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Content="Yes" Click="ConfirmBuy_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch"/>
+                        <Button Grid.Column ="1" Content="No" Click="CancelBuy_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch" />
+                    </Grid>
                 </StackPanel>
-            </StackPanel>
+            </Grid>
         </Viewbox>
     </Grid>
 </Page>

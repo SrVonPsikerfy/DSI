@@ -166,7 +166,7 @@
                 <StackPanel VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-                    <Button Grid.Row="2" Click="GoToMainMenu">
+                    <Button Grid.Row="2" Click="GoToMainMenu" Background="Transparent">
                         <Image Source="/Assets/homeButton.png"
                    Height="50"
                    Width="50"
@@ -175,7 +175,7 @@
                    HorizontalAlignment="Left"
                    Stretch="Uniform"/>
                     </Button>
-                    <Button Grid.Row="2" Click="GoToSettings">
+                    <Button Grid.Row="2" Click="GoToSettings" Background="Transparent">
                         <Image Source="/Assets/settingsButton.png"
                Grid.Row="2"
                Height="50"

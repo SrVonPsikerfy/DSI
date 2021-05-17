@@ -358,7 +358,7 @@
                  HorizontalAlignment="Left">
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <Button Background="White" BorderThickness="2"
+                    <Button Background="Transparent" BorderThickness="2"
                     Click="GoToMainMenu">
                         <Image Source="/Assets/homeButton.png"
                        Grid.Row="2"
@@ -368,7 +368,7 @@
                        HorizontalAlignment="Center"
                        Stretch="Uniform"/>
                     </Button>
-                    <Button Background="White" BorderThickness="2"
+                    <Button Background="Transparent" BorderThickness="2"
                     Click="GoToSettings">
                         <Image Source="/Assets/settingsButton.png"
                        Grid.Row="2"

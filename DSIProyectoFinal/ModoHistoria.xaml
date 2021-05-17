@@ -102,7 +102,7 @@
 
                     <Grid>
                         <Image Style="{StaticResource BlueFlagImage}"/>
-                        <TextBlock Text="CAMPAIGN"
+                        <TextBlock Text="CAMPAIGN" Margin="0,0,20,0"
                            Style="{StaticResource BlueFlagTextStyle}"/>
                     </Grid>
                 </StackPanel>
