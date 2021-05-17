@@ -119,7 +119,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -141,7 +141,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember2" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -162,7 +162,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember3" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -184,7 +184,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember4" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -206,7 +206,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember5" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -228,7 +228,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember6" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -250,7 +250,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="TeamMember7" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Image Source="./Assets/stick-man-hi.png"/>
                 </Button>
 
@@ -272,8 +272,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                <Button x:Name="TeamMember8" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image Source="./Asset/stick-man-hi.png"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
@@ -309,7 +309,8 @@
                     VerticalAlignment="Center">
             <Grid>
                 <StackPanel>
-                    <Button Content="Equipo 1"
+                    <Button x:Name="TeamSelect1" Click="SelectTeam1"
+                        Content="Equipo 1"
                     FontSize="30"
                     FontWeight="Bold"
                     Width="Auto"
@@ -319,7 +320,8 @@
                     BorderThickness="7"
                     BorderBrush="Black"/>
 
-                    <Button Content="Equipo 2"
+                    <Button x:Name="TeamSelect2" Click="SelectTeam2" 
+                        Content="Equipo 2"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
@@ -328,7 +330,8 @@
                     FontSize="30"
                     FontWeight="Bold"/>
 
-                    <Button Content="Equipo 3"
+                    <Button x:Name="TeamSelect3" Click="SelectTeam3" 
+                        Content="Equipo 3"
                     Width="Auto"
                     Height="Auto"
                     HorizontalAlignment="Stretch"
