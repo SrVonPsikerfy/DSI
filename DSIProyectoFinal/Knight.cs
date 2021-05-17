@@ -22,7 +22,7 @@ namespace DSIProyectoFinal
 
         public string Name { get; set; }
         public string ImageLocation { get; set; }
-         
+
         public Rol Role { get; set; }
         public string RoleLocation { get; set; }
 
@@ -81,7 +81,7 @@ namespace DSIProyectoFinal
 
             ShopCost = knight_.ShopCost;
             Bought = knight_.Bought;
-            
+
             Cost = knight_.Cost;
             AtkPhy = knight_.AtkPhy;
             AtkMag = knight_.AtkMag;
@@ -96,6 +96,34 @@ namespace DSIProyectoFinal
             PointsAvailable = knight_.PointsAvailable;
             Abilities = knight_.Abilities;
             EquipedAbilities = knight_.EquipedAbilities;
+        }
+    }
+
+    public class Skill
+    {
+        public string Name { get; set; }
+        public int SkillId { get; set; }
+
+        public bool IsActive { get; set; }
+        public bool IsUnlocked { get; set; }
+
+        public Skill(Skill skill_)
+        {
+            Name = skill_.Name;
+            SkillId = skill_.SkillId;
+
+            IsActive = skill_.IsActive;
+            IsUnlocked = skill_.IsUnlocked;
+        }
+
+        public Skill(string name, int skillId, bool isActive, bool isUnlocked)
+        {
+            Name = name;
+            SkillId = skillId;
+
+            IsActive = isActive;
+            IsUnlocked = isUnlocked;
+        }
         }
     }
 }
