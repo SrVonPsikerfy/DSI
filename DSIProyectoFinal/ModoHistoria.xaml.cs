@@ -49,11 +49,12 @@ namespace DSIProyectoFinal
             Frame.Navigate(typeof(Opciones));
         }
 
-        private void ChangeToChapterSelection(object sender, RoutedEventArgs e)
+
+        private void ChangeToChapterSelection(object sender, ItemClickEventArgs e)
         {
-            Button b = e.OriginalSource as Button;
-            string s = b.Name;
-            Frame.Navigate(typeof(SelectorCapitulo), s[5]);
+            //Image b = e.OriginalSource as Image;
+            //string s = b.Name;
+            //Frame.Navigate(typeof(SelectorCapitulo), s[5]);
         }
     }
 }

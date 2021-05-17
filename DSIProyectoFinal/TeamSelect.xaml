@@ -63,7 +63,7 @@
         </Style>
     </Page.Resources>
     
-    <Grid Background="#FFB8C0CD">
+    <Grid>
         <!--Definicion de filas y columnas-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
@@ -80,6 +80,11 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="5" Grid.RowSpan="4"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack" Grid.ColumnSpan="2">

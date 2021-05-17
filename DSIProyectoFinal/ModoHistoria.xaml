@@ -63,7 +63,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid Background="#FFB8C0CD">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="12*"></RowDefinition>
@@ -74,7 +74,12 @@
             <ColumnDefinition Width="4*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
+        
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="3" Grid.RowSpan="3"
+               Source="./Assets/Backgrounds/oldPaper.png"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
@@ -122,7 +127,7 @@
         <Grid Grid.Row="1" Grid.ColumnSpan="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1.3*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -134,15 +139,19 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
+            <Image Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="6"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+            
             <ListView Grid.Row="1" Grid.ColumnSpan="6"
                            ShowsScrollingPlaceholders="True"
                            ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                            ScrollViewer.HorizontalScrollBarVisibility="Auto"
                            ScrollViewer.HorizontalScrollMode="Enabled" 
                            ScrollViewer.VerticalScrollMode="Disabled"
-                           Background="Aqua"
-                      BorderThickness="10"
-                      BorderBrush="DarkBlue">
+                      ItemClick="ChangeToChapterSelection"
+                      IsItemClickEnabled="True">
+
 
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -151,7 +160,7 @@
                 </ListView.ItemsPanel>
 
                 <ListViewItem Background="Transparent"  MaxHeight="300" MaxWidth="300"
-                    x:Name="level1" >
+                    x:Name="level1">
                     <Image Source="/Assets/circle1.png"/>
                 </ListViewItem>
 

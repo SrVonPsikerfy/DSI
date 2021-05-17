@@ -20,7 +20,15 @@
             <RowDefinition Height="7*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Column ="1" Grid.Row="1" Background="#FFF7A56B"/>
+
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="3" Grid.RowSpan="3"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+
+        <Image Grid.Column ="1" Grid.Row="1"
+               Source="./Assets/Backgrounds/oldPaper.png"
+               Stretch="Fill"/>
 
         <Viewbox Grid.Column="1" Grid.Row="1">
             <!--Grid del texto y los botones-->

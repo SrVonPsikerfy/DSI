@@ -67,7 +67,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid Background="#FFB8C0CD">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="50*"/>
@@ -82,6 +82,11 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="4" Grid.RowSpan="4"
+               Source="./Assets/Backgrounds/oldPaper.png"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Viewbox>
             <Grid>

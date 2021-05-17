@@ -122,7 +122,7 @@
 
         <!--Fondo-->
         <Image Grid.ColumnSpan="3" Grid.RowSpan="5"
-               Source="./Assets/castle.jpg"
+               Source="./Assets/Backgrounds/OficialMenu1.jpg"
                Stretch="Fill"/>
 
         <!--Titulo-->

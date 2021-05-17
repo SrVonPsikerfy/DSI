@@ -90,7 +90,7 @@
 
     </Page.Resources>
     
-    <Grid Background="#FFB8C0CD">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="25*"/>
@@ -108,6 +108,11 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
+        <!--Fondo-->
+        <Image Grid.ColumnSpan ="6" Grid.RowSpan="5"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+        
         <!--BACK BUTTON-->
         <Viewbox>
             <Grid>

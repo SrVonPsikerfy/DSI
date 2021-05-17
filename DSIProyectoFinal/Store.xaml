@@ -73,7 +73,7 @@
     </Page.Resources>
 
 
-    <Grid Background="#FFB8C0CD">
+    <Grid>
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*"/>
@@ -87,6 +87,11 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <!--Fondo-->
+        <Image Grid.ColumnSpan ="5" Grid.RowSpan="3"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
 
         <!--Lista de compras-->
         <GridView x:Name="GridPurchase"

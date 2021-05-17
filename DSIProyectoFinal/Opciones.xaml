@@ -67,7 +67,14 @@
             <RowDefinition Height="2.5*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="1" Grid.Column="1" Background="Beige"/>
+        <!--Fondo-->
+        <Image Grid.ColumnSpan="5" Grid.RowSpan="4"
+               Source="./Assets/Backgrounds/mainMenu.jpg"
+               Stretch="Fill"/>
+
+        <Image Grid.Column ="1" Grid.Row="1"
+               Source="./Assets/Backgrounds/oldPaper.png"
+               Stretch="Fill"/>
 
         <!--BACK BUTTON-->
         <Viewbox>
