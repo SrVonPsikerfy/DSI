@@ -34,7 +34,7 @@
                 </StackPanel>
 
                 <Image Grid.RowSpan="2" x:Name="Sold" Source="./Assets/sold_icon.png"
-                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{x:Bind Bought, Mode=OneWay}"
                        Opacity="0.5"/>
             </Grid>
         </DataTemplate>
@@ -103,7 +103,7 @@
 
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
-                Click="GoBack">
+                Click="GoBackPage">
             <Grid Style="{StaticResource BackButtonGrid}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -185,7 +185,7 @@
         <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Source="./Assets/moneda.png" MaxHeight="89" MaxWidth="133"
                    HorizontalAlignment="Left" />
-            <TextBlock x:Name="Money" Text="99999" FontSize="40" 
+            <TextBlock x:Name="Money" Text="0" FontSize="40" 
                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
         

@@ -36,7 +36,8 @@ namespace DSIProyectoFinal
         }
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainMenu));
+            Frame.GoBack();
+            Frame.GoBack();
         }
     }
 }
