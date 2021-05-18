@@ -491,12 +491,13 @@ namespace DSIProyectoFinal
         //        )
         //};
         //static private List<Knight> SelectedList { get; set; }
-        private List<Image> iconKnightList { get; set; } = new List<Image>();
-        private List<Image> imageKnightList { get; set; } = new List<Image>();
+        private List<Image> iconKnightList { get; set; } = null;
+        private List<Image> imageKnightList { get; set; } = null;
 
-        private List<Knight> t1 = new List<Knight>(),
-            t2 = new List<Knight>(),
-            t3 = new List<Knight>();
+        public TeamSelect()
+        {
+            this.InitializeComponent();
+        }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -507,34 +508,13 @@ namespace DSIProyectoFinal
 
         private void InitializeLists()
         {
-            t1 = Teams.Team1;
-            t2 = Teams.Team2;
-            t3 = Teams.Team3;
+            iconKnightList = new List<Image>() { TeamMemberIcon1, TeamMemberIcon2, TeamMemberIcon3,
+                TeamMemberIcon4, TeamMemberIcon5, TeamMemberIcon6, TeamMemberIcon7, TeamMemberIcon8 };
 
-            iconKnightList.Add(TeamMemberIcon1);
-            iconKnightList.Add(TeamMemberIcon2);
-            iconKnightList.Add(TeamMemberIcon3);
-            iconKnightList.Add(TeamMemberIcon4);
-            iconKnightList.Add(TeamMemberIcon5);
-            iconKnightList.Add(TeamMemberIcon6);
-            iconKnightList.Add(TeamMemberIcon7);
-            iconKnightList.Add(TeamMemberIcon8);
+            imageKnightList = new List<Image>() { TeamMemberImage1, TeamMemberImage2, TeamMemberImage3, TeamMemberImage4,
+                TeamMemberImage5, TeamMemberImage6, TeamMemberImage7, TeamMemberImage8 };
 
-            imageKnightList.Add(TeamMemberImage1);
-            imageKnightList.Add(TeamMemberImage2);
-            imageKnightList.Add(TeamMemberImage3);
-            imageKnightList.Add(TeamMemberImage4);
-            imageKnightList.Add(TeamMemberImage5);
-            imageKnightList.Add(TeamMemberImage6);
-            imageKnightList.Add(TeamMemberImage7);
-            imageKnightList.Add(TeamMemberImage8);
-
-            UpdateKnight(t1);
-        }
-
-        public TeamSelect()
-        {
-            this.InitializeComponent();
+            UpdateKnight(Teams.Team1);
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
@@ -549,10 +529,13 @@ namespace DSIProyectoFinal
         {
             this.Frame.Navigate(typeof(TeamConfig));
         }
+
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainMenu));
+            while (this.Frame.CanGoBack)
+                this.Frame.GoBack();
         }
+
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Opciones));
@@ -563,7 +546,7 @@ namespace DSIProyectoFinal
             TeamSelect1.BorderThickness = new Thickness(7);
             TeamSelect2.BorderThickness = new Thickness(2);
             TeamSelect3.BorderThickness = new Thickness(2);
-            UpdateKnight(t1);
+            UpdateKnight(Teams.Team1);
         }
 
         private void SelectTeam2(object sender, RoutedEventArgs e)
@@ -571,7 +554,7 @@ namespace DSIProyectoFinal
             TeamSelect1.BorderThickness = new Thickness(2);
             TeamSelect2.BorderThickness = new Thickness(7);
             TeamSelect3.BorderThickness = new Thickness(2);
-            UpdateKnight(t2);
+            UpdateKnight(Teams.Team2);
         }
 
         private void SelectTeam3(object sender, RoutedEventArgs e)
@@ -579,7 +562,7 @@ namespace DSIProyectoFinal
             TeamSelect1.BorderThickness = new Thickness(2);
             TeamSelect2.BorderThickness = new Thickness(2);
             TeamSelect3.BorderThickness = new Thickness(7);
-            UpdateKnight(t3);
+            UpdateKnight(Teams.Team3);
         }
 
         private void UpdateKnight(List<Knight> selectedTeam)
@@ -587,7 +570,7 @@ namespace DSIProyectoFinal
             for (int i = 0; i < iconKnightList.Count(); i++)
             {
                 string stringUrl = selectedTeam[i].RoleLocation;
-                iconKnightList[i].Source = new BitmapImage(new Uri(stringUrl));//"ms-appx:///Assets/atacanteSelectedIcon.png"
+                iconKnightList[i].Source = new BitmapImage(new Uri(stringUrl)); //"ms-appx:///Assets/atacanteSelectedIcon.png"
                 imageKnightList[i].Source = new BitmapImage(new Uri(selectedTeam[i].ImageLocation));
             }
         }
@@ -602,7 +585,5 @@ namespace DSIProyectoFinal
                 }
             }
         }
-
-      
     }
 }
