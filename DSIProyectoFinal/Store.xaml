@@ -37,12 +37,12 @@
                                TextAlignment="Center" FontSize="22" FontFamily="Abril FatFace"/>
                 </StackPanel>
 
+                <Image Grid.Column="1" x:Name="ClassIcon" Source="{x:Bind RoleLocation}"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+
                 <Image Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Sold" Source="./Assets/sold_icon.png"
                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                        Visibility="{x:Bind Bought, Mode=TwoWay}" Opacity="0.5"/>
-
-                <Image Grid.Column="1" x:Name="ClassIcon" Source="{x:Bind RoleLocation}"
-                       HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
             </Grid>
         </DataTemplate>
 
@@ -130,7 +130,7 @@
         <GridView x:Name="GridPurchase"
                   ItemTemplate="{StaticResource StoreKnightsTemplate}"
                   ItemsPanel="{StaticResource StoreKnightsPanel}"
-                  ItemsSource= "{x:Bind Knights, Mode=OneWay}"
+                  ItemsSource= "{x:Bind Knights, Mode=TwoWay}"
                   ItemClick="GridPurchase_ItemClick"
                   IsItemClickEnabled="True"
                   Grid.Row="1" Grid.Column="2"

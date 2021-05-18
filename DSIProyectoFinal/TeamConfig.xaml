@@ -171,13 +171,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage1"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon1"/>
 
             </Grid>
 
@@ -193,13 +193,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage2"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon2"/>
             </Grid>
 
             <!--MIEMBRO 3-->
@@ -214,13 +214,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage3"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon3"/>
 
             </Grid>
 
@@ -236,13 +236,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage4"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon4"/>
 
             </Grid>
 
@@ -258,13 +258,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage5"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon5"/>
 
             </Grid>
 
@@ -280,13 +280,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage6"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon6"/>
 
             </Grid>
 
@@ -302,13 +302,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage7"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon7"/>
 
             </Grid>
             
@@ -324,13 +324,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Image Source="./Assets/stick-man-hi.png"/>
+                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage8"/>
                 </Button>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"/>
+                    VerticalAlignment="Top" x:Name="TeamMemberIcon8"/>
 
             </Grid>
             
@@ -392,15 +392,15 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal">
 
-                        <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
+                        <Button x:Name="Select1" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam1">
                             <TextBlock Text="1" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
                         </Button>
 
-                        <Button Grid.Column="2" Grid.Row="0" Background="#FF6A6969">
+                        <Button x:Name="Select2" Grid.Column="2" Grid.Row="0" Background="#FF6A6969" Click="SelectTeam2">
                             <TextBlock Text="2" FontSize="80" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
                         </Button>
 
-                        <Button Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C">
+                        <Button x:Name="Select3" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam3">
                             <TextBlock Text="3" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
                         </Button>
                     </StackPanel>

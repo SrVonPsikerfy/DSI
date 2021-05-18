@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -30,6 +31,10 @@ namespace DSIProyectoFinal
             t3 = new List<Knight>(),
             tAux = null;
 
+        private List<Image> iconKnightList { get; set; } = null;
+        private List<Image> imageKnightList { get; set; } = null;
+
+
         public TeamConfig()
         {
             this.InitializeComponent();
@@ -47,9 +52,51 @@ namespace DSIProyectoFinal
             t2 = new List<Knight>(Teams.Team2);
             t3 = new List<Knight>(Teams.Team3);
 
-            tAux = t1;
+            iconKnightList = new List<Image>() { TeamMemberIcon1, TeamMemberIcon2, TeamMemberIcon3,
+                TeamMemberIcon4, TeamMemberIcon5, TeamMemberIcon6, TeamMemberIcon7, TeamMemberIcon8 };
+
+            imageKnightList = new List<Image>() { TeamMemberImage1, TeamMemberImage2, TeamMemberImage3, TeamMemberImage4,
+                TeamMemberImage5, TeamMemberImage6, TeamMemberImage7, TeamMemberImage8 };
+
+            UpdateKnight(t1);
 
             base.OnNavigatedTo(e);
+        }
+
+        private void SelectTeam1(object sender, RoutedEventArgs e)
+        {
+            Select1.BorderThickness = new Thickness(7);
+            Select2.BorderThickness = new Thickness(2);
+            Select3.BorderThickness = new Thickness(2);
+            UpdateKnight(t1);
+        }
+
+        private void SelectTeam2(object sender, RoutedEventArgs e)
+        {
+            Select1.BorderThickness = new Thickness(2);
+            Select2.BorderThickness = new Thickness(7);
+            Select3.BorderThickness = new Thickness(2);
+            UpdateKnight(t2);
+        }
+
+        private void SelectTeam3(object sender, RoutedEventArgs e)
+        {
+            Select1.BorderThickness = new Thickness(2);
+            Select2.BorderThickness = new Thickness(2);
+            Select3.BorderThickness = new Thickness(7);
+            UpdateKnight(t3);
+        }
+
+        private void UpdateKnight(List<Knight> selectedTeam)
+        {
+            tAux = selectedTeam;
+
+            for (int i = 0; i < iconKnightList.Count(); i++)
+            {
+                string stringUrl = selectedTeam[i].RoleLocation;
+                iconKnightList[i].Source = new BitmapImage(new Uri(stringUrl)); //"ms-appx:///Assets/atacanteSelectedIcon.png"
+                imageKnightList[i].Source = new BitmapImage(new Uri(selectedTeam[i].ImageLocation));
+            }
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
