@@ -111,8 +111,7 @@ namespace DSIProyectoFinal
             {
                 Skills.Add(skill);
             }
-            selectedKnight.Clear();
-            selectedKnight.Add(knight);
+            selectedKnight[0] = knight;
             UpdateSelectedSkills();
         }
 
@@ -161,6 +160,7 @@ namespace DSIProyectoFinal
                 selectedKnight[0].EquipedAbilities.Add(skill);
                 SelectedSkillsImages[nextFreeSkillIndex].Source = new BitmapImage(new Uri(skill.ImageSource));
                 skill.IsActive = true;
+                UpdateSelectedSkills();
             }
         }
 
@@ -179,7 +179,7 @@ namespace DSIProyectoFinal
             while (i < selectedKnight[0].EquipedAbilities.Count)
             {
                 SelectedSkills.Add(selectedKnight[0].EquipedAbilities[i]);
-                SelectedSkillsImages[i].Source = new BitmapImage(new Uri(selectedKnight[0].EquipedAbilities[0].ImageSource));
+                SelectedSkillsImages[i].Source = new BitmapImage(new Uri(selectedKnight[0].EquipedAbilities[i].ImageSource));
                 i++;
             }
             //se meten imagenes de relleno para el resto que no tienen mas habilidades equipadas
