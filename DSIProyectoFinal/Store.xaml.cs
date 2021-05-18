@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,7 +30,7 @@ namespace DSIProyectoFinal
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
         private List<bool> Buyable { get; } = new List<bool>();
         int index = -1;
-
+        private Image imageSoldReference;
         public Store()
         {
             this.InitializeComponent();
@@ -86,6 +87,15 @@ namespace DSIProyectoFinal
 
                 FalseBackground.Visibility = Visibility.Visible;
                 ConfirmBox.Visibility = Visibility.Visible;
+
+                GridViewItem gridViewItem = (GridViewItem)this.GridPurchase.ContainerFromIndex(index);
+                if (gridViewItem != null) imageSoldReference = (FindByName("Sold", gridViewItem) as Image);
+                //guardacion de la casilla
+                //se obtiene el gridViewItem
+                //GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
+                ////de momento la plantilla solo tiene imagen
+                //Image image = null;
+                //if (gridViewItem != null) image = (FindByName("skillImage", gridViewItem) as Image);
             }
         }
 
@@ -122,6 +132,11 @@ namespace DSIProyectoFinal
             Knights[index].Bought = Visibility.Visible;
             AvailableKnights.AddAvailableKnight(Knights[index]);
             Buyable[index] = false;
+            if (imageSoldReference != null) imageSoldReference.Visibility = Visibility.Visible;
+
+
+
+
 
             index = -1;
         }
@@ -143,6 +158,29 @@ namespace DSIProyectoFinal
                     this.Frame.GoBack();
                 }
             }
+        }
+
+        private FrameworkElement FindByName(string name, FrameworkElement root)
+        {
+            Stack<FrameworkElement> tree = new Stack<FrameworkElement>();
+            tree.Push(root);
+
+            while (tree.Count > 0)
+            {
+                FrameworkElement current = tree.Pop();
+                if (current.Name == name)
+                    return current;
+
+                int count = VisualTreeHelper.GetChildrenCount(current);
+                for (int i = 0; i < count; ++i)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(current, i);
+                    if (child is FrameworkElement)
+                        tree.Push((FrameworkElement)child);
+                }
+            }
+
+            return null;
         }
     }
 }

@@ -155,11 +155,13 @@ namespace DSIProyectoFinal
         {
             if (selectedKnight[0].EquipedAbilities.Count < 3)
             {
+                //se actualiza el source
+                skill.EquipAbility();
                 int nextFreeSkillIndex = selectedKnight[0].EquipedAbilities.Count;
                 SelectedSkills.Add(skill);
                 selectedKnight[0].EquipedAbilities.Add(skill);
                 SelectedSkillsImages[nextFreeSkillIndex].Source = new BitmapImage(new Uri(skill.ImageSource));
-                skill.IsActive = true;
+                image.Source = new BitmapImage(new Uri(skill.ImageSource));
                 UpdateSelectedSkills();
             }
         }
@@ -171,10 +173,11 @@ namespace DSIProyectoFinal
             {
                 if (SelectedSkills[i] == skill)
                 {
+                    skill.UnequipAbility();
                     SelectedSkills.RemoveAt(i);
                     selectedKnight[0].EquipedAbilities.RemoveAt(i);
                     SelectedSkillsImages[i].Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_not_used.png"));
-                    skill.IsActive = false;
+                    image.Source = new BitmapImage(new Uri(skill.ImageSource));
                     UpdateSelectedSkills();
                     break;
                 }

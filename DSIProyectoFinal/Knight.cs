@@ -136,8 +136,10 @@ namespace DSIProyectoFinal
 
             IsActive = isActive;
             IsUnlocked = isUnlocked;
-            if(isUnlocked) ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon_unlocked.png";
+            if (IsActive) ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon_active.png";
+            else if (isUnlocked) ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon_unlocked.png";
             else ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon.png";
+            
             PointsNeeded = pointsNeeded;
         }
 
@@ -145,6 +147,18 @@ namespace DSIProyectoFinal
         {
             ImageSource = "ms-appx:///Assets/skills/skill" + SkillId.ToString() + "_icon_unlocked.png";
             IsUnlocked = true;
+        }
+
+        public void EquipAbility()
+        {
+            ImageSource = "ms-appx:///Assets/skills/skill" + SkillId.ToString() + "_icon_active.png";
+            IsActive = true;
+        }
+
+        public void UnequipAbility()
+        {
+            ImageSource = "ms-appx:///Assets/skills/skill" + SkillId.ToString() + "_icon_unlocked.png";
+            IsActive = false;
         }
     }
 }
