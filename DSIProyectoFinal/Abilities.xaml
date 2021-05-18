@@ -367,6 +367,7 @@
                    Text="{x:Bind selectedKnight[0].PointsAvailable, Mode=OneWay}"
                    Foreground="Black"
                    FontSize="30"
+                   Margin="10,0,0,0"
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
             </StackPanel>
@@ -393,7 +394,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Foreground="Black"
-                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
+                       FontStyle="Normal" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="1"
                        Text="DEF (MAG)"
@@ -401,7 +402,7 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
+                       FontStyle="Normal" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="2"
                        Text="RANGE"
@@ -409,12 +410,13 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
+                       FontStyle="Normal" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Column="1"
                        Text="{x:Bind selectedKnight[0].DefPhy, Mode=OneWay}"
                        FontSize="10"
                        Foreground="Black"
+                       Margin="10,0,0,0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
@@ -423,6 +425,7 @@
                        Text="{x:Bind selectedKnight[0].DefMag, Mode=OneWay}"
                        FontSize="10"
                        Foreground="Black"
+                       Margin="10,0,0,0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
@@ -430,6 +433,7 @@
                        Grid.Row="2"
                        Text="{x:Bind selectedKnight[0].Range, Mode=OneWay}"
                        Foreground="Black"
+                       Margin="10,0,0,0"
                        FontSize="10"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
@@ -457,7 +461,7 @@
                        VerticalAlignment="Center"
                        Foreground="Black"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
+                       FontStyle="Normal" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="1"
                        Text="ATK (MAG)"
@@ -465,7 +469,7 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontWeight="Bold" FontFamily="Abril Fatface"/>
+                       FontStyle="Normal" FontWeight="Bold" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Row="2"
                        Text="MANA"
@@ -473,12 +477,13 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontWeight="Bold" FontFamily="Abril Fatface"/>
+                       FontStyle="Normal" FontWeight="Bold" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
                        Text="{x:Bind selectedKnight[0].AtkPhy, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
+                       Margin="10,0,0,0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
@@ -487,6 +492,7 @@
                        Text="{x:Bind selectedKnight[0].AtkMag, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
+                       Margin="10,0,0,0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
@@ -495,6 +501,7 @@
                        Text="{x:Bind selectedKnight[0].Mana, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
+                       Margin="10,0,0,0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
@@ -506,17 +513,17 @@
                  Grid.Column="4"
                  Grid.ColumnSpan="2"
                  x:Name="KnightName"
-                 Margin="0,0,20,0"
-                 MaxWidth="200"
-                 MaxHeight="50"
-                 HorizontalAlignment="Left">
+                 MaxWidth="300"
+                 MaxHeight="70"
+                 Margin="20,0,20,0"
+                 HorizontalAlignment="Right">
             <Grid>
                 <TextBlock 
                    Text="{x:Bind selectedKnight[0].Name, Mode=OneWay}"
                    FontSize="25"
                    Foreground="Black"
                    FontWeight="Bold"
-                   FontStyle="Italic" FontFamily="Abril Fatface"/>
+                   FontStyle="Normal" TextDecorations="Underline" FontFamily="Abril Fatface"/>
             </Grid>
         </Viewbox>
 
@@ -524,7 +531,8 @@
         <Viewbox Grid.Row="3"
                  Grid.Column="4"
                  Grid.ColumnSpan="2"
-                 HorizontalAlignment="Left"
+                 Margin="0,0,20,0"
+                 HorizontalAlignment="Right"
                  x:Name="KnightExp">
             <Grid>
                 <Grid.RowDefinitions>
@@ -538,13 +546,13 @@
                        Foreground="Black"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Stretch" FontFamily="Abril Fatface"/>
+                       HorizontalAlignment="Right" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Row="1"
                        Text="Exp. 210/420"
                        Foreground="Black"
                        FontSize="15"
-                       VerticalAlignment="Center" FontFamily="Abril Fatface"/>
+                       VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Abril Fatface"/>
 
                 <ProgressBar Grid.Row="2"
                          Width="130"
