@@ -101,17 +101,15 @@ namespace DSIProyectoFinal
         private void AbilitySelection(object sender, ItemClickEventArgs e)
         {
             Skill skill = e.ClickedItem as Skill;
-            
-            if (!skill.IsUnlocked) UnlockAbility(skill);
-
 
             //actualizar imagen desbloqueada
             int index = Skills.IndexOf(skill);
             GridSkills.SelectedIndex = index;
-            
+
+            if (!skill.IsUnlocked) UnlockAbility(skill, index);
         }
 
-        private void UnlockAbility(Skill skill)
+        private void UnlockAbility(Skill skill, int index)
         {
             skill.UnlockAbility();
             //buscarla y cargarla
