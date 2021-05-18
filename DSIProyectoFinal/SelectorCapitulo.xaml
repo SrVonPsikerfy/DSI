@@ -11,18 +11,18 @@
     <Page.Resources>
         <!--BACK BUTTON-->
         <Style x:Key="BackButtonStyle" TargetType="Button">
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="BorderBrush" Value="{x:Null}"/>
         </Style>
         <Style x:Key="BackButtonGrid" TargetType="Grid">
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>
         <Style x:Key="BackButtonImage" TargetType="Image">
             <Setter Property="Grid.ColumnSpan" Value="2"/>
             <Setter Property="Source" Value="/Assets/atrasNew.png"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="Stretch" Value="Uniform"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
