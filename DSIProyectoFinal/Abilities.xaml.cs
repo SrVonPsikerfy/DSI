@@ -28,7 +28,8 @@ namespace DSIProyectoFinal
     {
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
         private ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
-        private ObservableCollection<Skill> SelectedSkills { get; set; } = new ObservableCollection<Skill>();
+        private List<Skill> SelectedSkills { get; set; } = new List<Skill>();
+        private List<Image> SelectedSkillsImages { get; set; } = new List<Image>();
 
         //Knight selectedKnight;
         private ObservableCollection<Knight> selectedKnight { get; set; } = new ObservableCollection<Knight>();
@@ -49,9 +50,9 @@ namespace DSIProyectoFinal
             //// Remove this when replaced with XAML bindings
             //GridSelect.ItemsSource = Knights;
 
+            InitializeSelectedSkillsImages();
             selectedKnight.Add(Knights[0]);
             SelectKnight(selectedKnight[0]);
-            UpdateSelectedSkills();
             base.OnNavigatedTo(e);
         }
 
@@ -61,6 +62,13 @@ namespace DSIProyectoFinal
             {
                 this.Frame.GoBack();
             }
+        }
+
+        private void InitializeSelectedSkillsImages()
+        {
+            SelectedSkillsImages.Add(SelectedSkillImage1);
+            SelectedSkillsImages.Add(SelectedSkillImage2);
+            SelectedSkillsImages.Add(SelectedSkillImage3);
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
@@ -138,14 +146,14 @@ namespace DSIProyectoFinal
             skill.UnlockAbility();
             //buscarla y cargarla
             //se carga el source
-            image.Source = new BitmapImage(new Uri(skill.ImageSource)); ;
+            image.Source = new BitmapImage(new Uri(skill.ImageSource));
             selectedKnight[0].PointsAvailable -= skill.PointsNeeded;
             AvailablePoints.Text = selectedKnight[0].PointsAvailable.ToString();
         }
 
         private void EquipAbility(Skill skill, int index, Image image)
         {
-
+            
         }
 
 
@@ -156,10 +164,17 @@ namespace DSIProyectoFinal
 
         private void UpdateSelectedSkills()
         {
-            SelectedSkills = new ObservableCollection<Skill>();
-            foreach (Skill skill in selectedKnight[0].EquipedAbilities)
+            //el clear da error
+            SelectedSkills.Clear();
+            //foreach (Skill skill in selectedKnight[0].EquipedAbilities)
+            //{
+            //    SelectedSkills.Add(skill);
+
+            //}
+            for (int i = 0; i < selectedKnight[0].EquipedAbilities.Count; i++)
             {
-                SelectedSkills.Add(skill);
+                SelectedSkills.Add(selectedKnight[0].EquipedAbilities[i]);
+                SelectedSkillsImages[i].Source = new BitmapImage(new Uri(selectedKnight[0].EquipedAbilities[0].ImageSource));
             }
         }
 

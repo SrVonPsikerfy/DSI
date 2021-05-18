@@ -48,10 +48,10 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                
-                <!--Boton-->
                     <Image x:Name="skillImage"
-                Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform" />
+                Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform">
+                    </Image>
+
             </Grid>
         </DataTemplate>
 
@@ -254,13 +254,13 @@
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black" SelectionChanged="TextBlock_SelectionChanged"/>
 
                     <Button Background="Transparent">
-                        <Image Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
+                        <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
                     </Button>
                     <Button Background="Transparent">
-                        <Image Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}"/>
+                        <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}"/>
                     </Button>
                     <Button Background="Transparent">
-                        <Image Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}"/>
+                        <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}"/>
                     </Button>
                 </StackPanel>
             </Grid>

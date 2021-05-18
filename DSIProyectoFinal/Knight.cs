@@ -73,7 +73,10 @@ namespace DSIProyectoFinal
             EquipedAbilities = new List<Skill>(3);
             foreach (Skill skill in Abilities)
             {
-                if (skill.IsActive) EquipedAbilities.Add(skill);
+                if (skill.IsActive)
+                {
+                    EquipedAbilities.Add(skill);
+                }
                 //NO METER MAS DE 3
                 if (EquipedAbilities.Count >= 3) break;
             }
