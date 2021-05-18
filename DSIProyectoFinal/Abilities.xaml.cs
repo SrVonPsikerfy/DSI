@@ -142,13 +142,25 @@ namespace DSIProyectoFinal
 
         private void UnlockAbility(Skill skill, int index, Image image)
         {
-            //se actualiza el source
-            skill.UnlockAbility();
-            //buscarla y cargarla
-            //se carga el source
-            image.Source = new BitmapImage(new Uri(skill.ImageSource));
-            selectedKnight[0].PointsAvailable -= skill.PointsNeeded;
-            AvailablePoints.Text = selectedKnight[0].PointsAvailable.ToString();
+            if(selectedKnight[0].PointsAvailable >= skill.PointsNeeded)
+            {
+                //se actualiza el source
+                skill.UnlockAbility();
+                //buscarla y cargarla
+                //se carga el source
+                image.Source = new BitmapImage(new Uri(skill.ImageSource));
+                selectedKnight[0].PointsAvailable -= skill.PointsNeeded;
+                AvailablePoints.Text = selectedKnight[0].PointsAvailable.ToString();
+
+                skill.CostVisibility = Visibility.Collapsed;
+
+                GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
+                if (gridViewItem != null) (FindByName("skillCircleOfPoint", gridViewItem) as Image).Visibility = Visibility.Collapsed;
+                
+
+                gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
+                if (gridViewItem != null) (FindByName("skillPointsNeeded", gridViewItem) as TextBlock).Visibility = Visibility.Collapsed;
+            }
         }
 
         private void EquipAbility(Skill skill, int index, Image image)

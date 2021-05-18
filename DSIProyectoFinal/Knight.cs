@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Windows.UI.Xaml;
 
 namespace DSIProyectoFinal
@@ -116,8 +112,8 @@ namespace DSIProyectoFinal
         public string ImageSource { get; set; }
         public bool IsActive { get; set; }
         public bool IsUnlocked { get; set; }
-
         public int PointsNeeded { get; set; }
+        public Visibility CostVisibility { get; set; }
 
         public Skill(Skill skill_)
         {
@@ -127,6 +123,7 @@ namespace DSIProyectoFinal
             IsActive = skill_.IsActive;
             IsUnlocked = skill_.IsUnlocked;
             PointsNeeded = skill_.PointsNeeded;
+            CostVisibility = skill_.CostVisibility;
         }
 
         public Skill(string name, int skillId, bool isActive, bool isUnlocked, int pointsNeeded = 3)
@@ -141,6 +138,8 @@ namespace DSIProyectoFinal
             else ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon.png";
             
             PointsNeeded = pointsNeeded;
+            if (isUnlocked) CostVisibility = Visibility.Collapsed;
+            else CostVisibility = Visibility.Visible;
         }
 
         public void UnlockAbility()
