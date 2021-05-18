@@ -167,7 +167,18 @@ namespace DSIProyectoFinal
 
         private void UnequipAbility(Skill skill, int index, Image image)
         {
-
+            for(int i = 0; i < selectedKnight[0].EquipedAbilities.Count; i++)
+            {
+                if (SelectedSkills[i] == skill)
+                {
+                    SelectedSkills.RemoveAt(i);
+                    selectedKnight[0].EquipedAbilities.RemoveAt(i);
+                    SelectedSkillsImages[i].Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_not_used.png"));
+                    skill.IsActive = false;
+                    UpdateSelectedSkills();
+                    break;
+                }
+            }
         }
 
         private void UpdateSelectedSkills()
