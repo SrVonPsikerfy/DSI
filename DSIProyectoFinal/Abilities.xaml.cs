@@ -26,6 +26,7 @@ namespace DSIProyectoFinal
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
         private ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
 
+        Knight selectedKnight;
         public Abilities()
         {
             this.InitializeComponent();
@@ -41,6 +42,8 @@ namespace DSIProyectoFinal
 
             //// Remove this when replaced with XAML bindings
             //GridSelect.ItemsSource = Knights;
+
+            selectedKnight = Knights[2];
 
             base.OnNavigatedTo(e);
         }
@@ -81,7 +84,13 @@ namespace DSIProyectoFinal
 
         private void KnightSelection(object sender, ItemClickEventArgs e)
         {
-
+            Knight k = e.ClickedItem as Knight;
+            Skills.Clear();
+            foreach (Skill skill in k.Abilities)
+            {
+                Skills.Add(skill);
+            }
+            selectedKnight = k;
         }
     }
 }

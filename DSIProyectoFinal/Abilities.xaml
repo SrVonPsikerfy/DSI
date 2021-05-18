@@ -340,20 +340,28 @@
 
         <Viewbox Grid.Row="2"
                  Grid.Column="3"
-                 Grid.ColumnSpan="2">
-            <Grid>
+                 Grid.ColumnSpan="2"
+                 x:Name="KnightPoints">
+            <StackPanel Orientation="Horizontal">
                 <TextBlock 
-                   Text="POINTS AVAILABLE: 2"
+                   Text="POINTS AVAILABLE: "
                    Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
-            </Grid>
+                <TextBlock x:Name="AvailablePoints"
+                   Text="{x:Bind selectedKnight.PointsAvailable, Mode=TwoWay}"
+                   Foreground="Black"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+            </StackPanel>
         </Viewbox>
         
 
         <Viewbox Grid.Row="3"
-              Grid.Column="4">
+              Grid.Column="4"
+                 x:Name="KnightStats2">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -390,7 +398,7 @@
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
                 <TextBlock Grid.Column="1"
-                       Text="100"
+                       Text="{x:Bind selectedKnight.DefPhy, Mode=TwoWay}"
                        FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -398,7 +406,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="1"
-                       Text="100"
+                       Text="{x:Bind selectedKnight.DefMag, Mode=TwoWay}"
                        FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -406,7 +414,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="2"
-                       Text="3"
+                       Text="{x:Bind selectedKnight.Range, Mode=TwoWay}"
                        Foreground="Black"
                        FontSize="10"
                        VerticalAlignment="Center"
@@ -416,7 +424,8 @@
         </Viewbox>
 
         <Viewbox Grid.Row="3"
-                 Grid.Column="3">
+                 Grid.Column="3"
+                 x:Name="KnightStats1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -453,7 +462,7 @@
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
 
                 <TextBlock Grid.Column="1"
-                       Text="100"
+                       Text="{x:Bind selectedKnight.AtkPhy, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -461,7 +470,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="1"
-                       Text="100"
+                       Text="{x:Bind selectedKnight.AtkMag, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -469,7 +478,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="2"
-                       Text="10"
+                       Text="{x:Bind selectedKnight.Mana, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -480,11 +489,12 @@
 
 
         <Viewbox Grid.Row="2"
-                 Grid.Column="5">
+                 Grid.Column="5"
+                 x:Name="KnightName">
             <Grid>
                 <TextBlock 
-                   Text="SKADI"
-                   FontSize="30"
+                   Text="{x:Bind selectedKnight.Name, Mode=OneWay}"
+                   FontSize="25"
                    Foreground="Black"
                    FontWeight="Bold"
                    FontStyle="Italic" FontFamily="Helvetica LT Std Black"/>
@@ -493,7 +503,8 @@
 
 
         <Viewbox Grid.Row="3"
-                 Grid.Column="5">
+                 Grid.Column="5"
+                 x:Name="KnightExp">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
