@@ -74,7 +74,7 @@
 
                         <!--Options-->
                         <StackPanel>
-                            <Image Source="/Assets/settings_icon.png" HorizontalAlignment="Stretch"
+                            <Image Source="/Assets/settingsButton.png" HorizontalAlignment="Stretch"
                         RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                             <TextBlock Text="Options" FontSize="40" Foreground="Black" FontFamily="Abril Fatface"/>
                         </StackPanel>

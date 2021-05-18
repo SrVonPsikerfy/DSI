@@ -11,9 +11,9 @@ namespace DSIProyectoFinal
         public static List<Knight> AvailableKnightsForTeams = new List<Knight>()
         {
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
-                Knight.Rol.Defender,
+                "Draku",
+                "ms-appx:///Assets/Knights/stickman1.png",
+                Knight.Rol.Healer,
                     100,
                 50,
                 6,
@@ -31,8 +31,8 @@ namespace DSIProyectoFinal
 
              ),
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
+                "Keo",
+                "ms-appx:///Assets/Knights/stickman2.png",
                 Knight.Rol.Defender,
                     100,
                 60,
@@ -50,9 +50,9 @@ namespace DSIProyectoFinal
                 
              ),
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
-               Knight.Rol.Defender,
+                "Pala",
+                "ms-appx:///Assets/Knights/stickman3.png",
+               Knight.Rol.Sniper,
                     100,
                 70,
                 6,
@@ -69,9 +69,9 @@ namespace DSIProyectoFinal
                 
              ),
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
-                Knight.Rol.Defender,
+                "Dora",
+                "ms-appx:///Assets/Knights/stickman4.png",
+                Knight.Rol.Melee,
                     100,
                 5,
                 6,
@@ -88,9 +88,9 @@ namespace DSIProyectoFinal
                 
              ),
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
-               Knight.Rol.Defender,
+                "Etod",
+                "ms-appx:///Assets/Knights/stickman5.png",
+               Knight.Rol.Healer,
                     100,
                 5,
                 900,
@@ -107,9 +107,9 @@ namespace DSIProyectoFinal
                 
              ),
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
-               Knight.Rol.Defender,
+                "Dio",
+                "ms-appx:///Assets/Knights/stickman2.png",
+               Knight.Rol.Melee,
                     100,
                 5,
                 6,
@@ -126,9 +126,9 @@ namespace DSIProyectoFinal
                 
              ),
             new Knight(
-                "Knight",
-                "Assets/stick-man-hi-small.png",
-               Knight.Rol.Defender,
+                "Sanic",
+                "ms-appx:///Assets/Knights/stickman6.png",
+               Knight.Rol.Healer,
                     100,
                 5,
                 6,

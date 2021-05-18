@@ -14,7 +14,7 @@ namespace DSIProyectoFinal
         {
             new Knight(
                     "lllll",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
                     23,
                     5,
@@ -33,7 +33,7 @@ namespace DSIProyectoFinal
                 ),
             new Knight(
                     "Knight",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Support,
                     100,
                     5,
@@ -52,7 +52,7 @@ namespace DSIProyectoFinal
                 ),
             new Knight(
                     "Knight",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
                     100,
                     5,
@@ -71,7 +71,7 @@ namespace DSIProyectoFinal
                 ),
             new Knight(
                     "Knight",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
                     100,
                     5,
@@ -90,7 +90,7 @@ namespace DSIProyectoFinal
                 ),
             new Knight(
                     "b",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
                     500,
                     5,
@@ -109,7 +109,7 @@ namespace DSIProyectoFinal
                 ),
             new Knight(
                     "a",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
                     100,
                     5,
@@ -128,7 +128,7 @@ namespace DSIProyectoFinal
                 ),
             new Knight(
                     "Knight",
-                    "Assets/stick-man-hi-small.png",
+                    "ms-appx:///Assets/stick-man-hi-small.png",
                     Knight.Rol.Defender,
                     100,
                     5,

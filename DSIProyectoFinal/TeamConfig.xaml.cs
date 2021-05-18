@@ -34,6 +34,10 @@ namespace DSIProyectoFinal
         private List<Image> iconKnightList { get; set; } = null;
         private List<Image> imageKnightList { get; set; } = null;
 
+        private Knight selectedKnight = null;
+        private Knight gridKnight = null;
+        int index = -1;
+
 
         public TeamConfig()
         {
@@ -106,6 +110,42 @@ namespace DSIProyectoFinal
                 this.Frame.GoBack();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            index = int.Parse((sender as Button).Name[1].ToString()) - 1;
+            selectedKnight = Knights[index];
+            if (gridKnight != null)
+            {
+                ChangeChar();
+            }
+        }
+
+        private void Available_Select(object sender, ItemClickEventArgs e)
+        {
+            gridKnight = (Knight)e.ClickedItem;
+
+            if (selectedKnight != null)
+            {
+                ChangeChar();
+            }
+        }
+
+        private void ChangeChar()
+        {
+            if (selectedKnight != gridKnight && !tAux.Contains(gridKnight))
+            {
+                tAux[index] = gridKnight;
+                imageKnightList[index].Source = new BitmapImage(new Uri(tAux[index].ImageLocation));
+                iconKnightList[index].Source = new BitmapImage(new Uri(tAux[index].RoleLocation));
+            }
+
+            index = -1;
+            gridKnight = null;
+            selectedKnight = null;
+            GridSelect.SelectedItem = null;
+        }
+
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
             while (this.Frame.CanGoBack)

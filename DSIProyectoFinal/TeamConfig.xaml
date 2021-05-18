@@ -115,7 +115,7 @@
         <Viewbox Grid.ColumnSpan="2">
             <Grid>
                 <Button Style="{StaticResource BackButtonStyle}"
-                Click="GoBack" Grid.ColumnSpan="2">
+                    Click="GoBack" Grid.ColumnSpan="2">
                     <Grid Style="{StaticResource BackButtonGrid}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
@@ -170,7 +170,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b1" Grid.ColumnSpan="2"  Grid.RowSpan="2"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage1"/>
                 </Button>
 
@@ -192,7 +195,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b2" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage2"/>
                 </Button>
 
@@ -213,7 +219,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b3" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage3"/>
                 </Button>
 
@@ -235,7 +244,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b4" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage4"/>
                 </Button>
 
@@ -257,7 +269,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b5" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage5"/>
                 </Button>
 
@@ -279,7 +294,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b6" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage6"/>
                 </Button>
 
@@ -301,7 +319,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b7" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage7"/>
                 </Button>
 
@@ -323,7 +344,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button x:Name="b8" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="Button_Click">
                     <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage8"/>
                 </Button>
 
@@ -341,6 +365,8 @@
                   ItemTemplate="{StaticResource KnightsTemplate}"
                   ItemsPanel="{StaticResource KnightsPanel}"
                   ItemsSource="{x:Bind Knights}"
+                  ItemClick="Available_Select"
+                  IsItemClickEnabled="True"
                   Grid.Row="1" Grid.Column="3"
                   Grid.ColumnSpan="2"
                   BorderBrush="Black" BorderThickness="3"

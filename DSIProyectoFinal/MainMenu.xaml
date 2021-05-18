@@ -292,8 +292,7 @@
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Left"
                 Margin="4,4,4,4"
-                Background="#FF9C9C9C"
-                BorderBrush="Black" BorderThickness="3"
+                Background="Transparent"
                 Click="GoToStore">
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
