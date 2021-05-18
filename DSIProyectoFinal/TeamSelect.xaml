@@ -395,13 +395,13 @@
                 FontSize="30" FontWeight="Bold" MaxWidth="450" FontFamily="Abril Fatface"/>
 
         <!--BOTON HOME Y OPCIONES-->
-        <Viewbox Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" HorizontalAlignment="Left">
+        <Viewbox Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" HorizontalAlignment="Left"  MaxWidth="200" MaxHeight="200">
             <Grid>
                 <StackPanel Orientation="Horizontal">
                     <!--HomeButton-->
                     <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
                     Click="GoToMainMenu">
-                        <Image Source="/Assets/homeButton.png" MaxWidth="50" MaxHeight="50"/>
+                        <Image Source="/Assets/homeButton.png"/>
                     </Button>
 
                     <!--SettingsButton-->

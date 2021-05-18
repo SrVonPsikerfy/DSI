@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,8 +21,15 @@ namespace DSIProyectoFinal
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
+
     public sealed partial class Ataque : Page
     {
+
+
+        private string nameCart;
+        bool clicked = false;
+
+        private ContentControl carta;
         public Ataque()
         {
             this.InitializeComponent();
@@ -49,6 +57,57 @@ namespace DSIProyectoFinal
                     this.Frame.Navigate(typeof(Pause));
                 }
             }
+        }
+
+        private void MovingCard(object sender, PointerRoutedEventArgs e)
+        {
+            //Si estoy pulsando una carta distinta...
+            if (nameCart != (sender as ContentControl).Name)
+            {
+                //Guardamos el nombre de la carta nueva
+                nameCart = (sender as ContentControl).Name;
+
+                if (carta != null)
+                    //Dejamos la otra con su opacidad al maximo
+                    (carta.Content as Grid).Opacity = 1;
+
+                //Guardamos el contentControl
+                carta = (sender as ContentControl);
+
+                //Cojo el grid de dentro
+                Grid aux = (carta.Content as Grid);
+
+                //Y cambio su opacidad
+                if (aux.Opacity == 1)
+                    aux.Opacity = 0.5;
+                else
+                    aux.Opacity = 1;
+
+            }
+            else
+            {
+                //Cojo el grid de dentro
+                Grid aux = (carta.Content as Grid);
+
+                //Y cambio su opacidad
+                if (aux.Opacity == 1)
+                    aux.Opacity = 0.5;
+                else
+                    aux.Opacity = 1;
+
+                carta = null;
+                nameCart = "";
+            }
+        }
+
+        private void PuttingCard(object sender, PointerRoutedEventArgs e)
+        {
+            //Grid aux = ((sender as ContentControl).Content as Grid);
+            //aux = (carta.Content as Grid);
+
+            (sender as ContentControl).Content = carta.Content;
+            //carta.IsEnabled = false;
+
         }
     }
 }

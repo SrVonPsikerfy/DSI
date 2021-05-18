@@ -26,12 +26,13 @@
         <Image Grid.ColumnSpan ="5" Grid.RowSpan="3"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
+
         <!--Icono de ataque-->
         <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/attack.png" MaxHeight="87" MaxWidth="87" />
-        
+
         <!--Timer-->
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" FontFamily="Abril Fatface" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
+        
         <!--Boton de pausa-->
         <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 Click="GoToPause">
@@ -40,6 +41,7 @@
 
 
         <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -56,6 +58,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+
+
 
             <Border Grid.Row="0" Grid.Column="0" Background="CornflowerBlue"/>
             <Border Grid.Row="1" Grid.Column="0" Background="CornflowerBlue"/>
@@ -89,12 +93,65 @@
             <Rectangle Grid.Column="7" Grid.RowSpan="4" 
                 Fill="Black" Width="5" HorizontalAlignment="Left"/>
 
+            <!--Fila1-->
+            <ContentControl Grid.Column="4" PointerPressed="PuttingCard" Name="cartDOsS">
+                <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="2/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+
+                    <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
+                    <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                </Grid>
+            </ContentControl>
+            <ContentControl Grid.Row="0" Grid.Column="1" x:Name="content01" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="0" Grid.Column="2" x:Name="content02" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="0" Grid.Column="3" x:Name="content03" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="0" Grid.Column="4" x:Name="content04" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="0" Grid.Column="5" x:Name="content05" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="0" Grid.Column="6" x:Name="content06" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="0" Grid.Column="7" x:Name="content07" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+
+            <ContentControl Grid.Row="1" Grid.Column="0" x:Name="content10" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="1" x:Name="content11" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="2" x:Name="content12" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="3" x:Name="content13" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="4" x:Name="content14" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="5" x:Name="content15" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="6" x:Name="content16" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="1" Grid.Column="7" x:Name="content17" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+
+            <ContentControl Grid.Row="2" Grid.Column="0" x:Name="content20" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="1" x:Name="content21" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="2" x:Name="content22" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="3" x:Name="content23" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="4" x:Name="content24" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="5" x:Name="content25" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="6" x:Name="content26" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="2" Grid.Column="7" x:Name="content27" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+
+            <ContentControl Grid.Row="3" Grid.Column="0" x:Name="content30" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="1" x:Name="content31" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="2" x:Name="content32" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="3" x:Name="content33" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="4" x:Name="content34" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="5" x:Name="content35" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="6" x:Name="content36" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+            <ContentControl Grid.Row="3" Grid.Column="7" x:Name="content37" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
         </Grid>
 
         <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
-           
-            
-            <ContentControl>
+
+
+            <ContentControl PointerPressed="MovingCard" Name="cartUNO" >
+
                 <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -112,7 +169,7 @@
                 </Grid>
             </ContentControl>
 
-            <ContentControl>
+            <ContentControl PointerPressed="MovingCard" Name="cartDOS">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -130,7 +187,7 @@
                 </Grid>
             </ContentControl>
 
-            <ContentControl>
+            <ContentControl PointerPressed="MovingCard" Name="cartTRES">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="CornflowerBlue">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -148,7 +205,7 @@
                 </Grid>
             </ContentControl>
 
-            <ContentControl>
+            <ContentControl PointerPressed="MovingCard" Name="cartCUATRO">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="SandyBrown">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -164,13 +221,8 @@
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
                 </Grid>
             </ContentControl>
-           
+
         </StackPanel>
-
-
-        <!--<Canvas Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-
-        </Canvas>-->
 
     </Grid>
 </Page>

@@ -168,7 +168,7 @@
 
 
         <!--Boton de play-->
-        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="PLAY!" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="500" FontFamily="Abril Fatface"
+        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="Go to Select Team" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="700" MaxHeight="200" FontFamily="Abril Fatface"
                 Click="GoToPlay"/>
 
        

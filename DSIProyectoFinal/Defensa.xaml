@@ -9,8 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
-
+        
         <Grid KeyDown="Grid_KeyDown">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -30,7 +29,7 @@
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
             
-            <!--Icono de ataque-->
+            <!--Icono de Defensa-->
             <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/defense.png" MaxHeight="87" MaxWidth="87" />
 
             <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -40,6 +39,7 @@
                 <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="10/45" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
                 <Image Source="./Assets/enemy_icon.png" MaxHeight="60" MaxWidth="87" VerticalAlignment="Center"/>
             </StackPanel>
+            
             <!--Boton de pausa-->
             <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Click="GoToPause">
