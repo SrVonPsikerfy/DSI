@@ -12,7 +12,7 @@ namespace DSIProyectoFinal
         {
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                 Knight.Rol.Defender,
                     100,
                 50,
@@ -32,7 +32,7 @@ namespace DSIProyectoFinal
              ),
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                 Knight.Rol.Defender,
                     100,
                 60,
@@ -51,7 +51,7 @@ namespace DSIProyectoFinal
              ),
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                Knight.Rol.Defender,
                     100,
                 70,
@@ -70,7 +70,7 @@ namespace DSIProyectoFinal
              ),
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                 Knight.Rol.Defender,
                     100,
                 5,
@@ -89,7 +89,7 @@ namespace DSIProyectoFinal
              ),
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                Knight.Rol.Defender,
                     100,
                 5,
@@ -108,7 +108,7 @@ namespace DSIProyectoFinal
              ),
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                Knight.Rol.Defender,
                     100,
                 5,
@@ -127,7 +127,7 @@ namespace DSIProyectoFinal
              ),
             new Knight(
                 "Knight",
-                "Assets/stick-man-hi-small.png",
+                "ms-appx:///Assets/stick-man-hi-small.png",
                Knight.Rol.Defender,
                     100,
                 5,
