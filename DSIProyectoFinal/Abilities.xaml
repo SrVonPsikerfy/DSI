@@ -350,7 +350,7 @@
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
                 <TextBlock x:Name="AvailablePoints"
-                   Text="{x:Bind selectedKnight.PointsAvailable, Mode=TwoWay}"
+                   Text="{x:Bind selectedKnight[0].PointsAvailable, Mode=TwoWay}"
                    Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
@@ -398,7 +398,7 @@
                        FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
 
                 <TextBlock Grid.Column="1"
-                       Text="{x:Bind selectedKnight.DefPhy, Mode=TwoWay}"
+                       Text="{x:Bind selectedKnight[0].DefPhy, Mode=OneWay}"
                        FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -406,7 +406,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="1"
-                       Text="{x:Bind selectedKnight.DefMag, Mode=TwoWay}"
+                       Text="{x:Bind selectedKnight[0].DefMag, Mode=OneWay}"
                        FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -414,7 +414,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="2"
-                       Text="{x:Bind selectedKnight.Range, Mode=TwoWay}"
+                       Text="{x:Bind selectedKnight[0].Range, Mode=OneWay}"
                        Foreground="Black"
                        FontSize="10"
                        VerticalAlignment="Center"
@@ -462,7 +462,7 @@
                        FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
 
                 <TextBlock Grid.Column="1"
-                       Text="{x:Bind selectedKnight.AtkPhy, Mode=OneWay}"
+                       Text="{x:Bind selectedKnight[0].AtkPhy, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -470,7 +470,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="1"
-                       Text="{x:Bind selectedKnight.AtkMag, Mode=OneWay}"
+                       Text="{x:Bind selectedKnight[0].AtkMag, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -478,7 +478,7 @@
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="2"
-                       Text="{x:Bind selectedKnight.Mana, Mode=OneWay}"
+                       Text="{x:Bind selectedKnight[0].Mana, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
@@ -493,7 +493,7 @@
                  x:Name="KnightName">
             <Grid>
                 <TextBlock 
-                   Text="{x:Bind selectedKnight.Name, Mode=OneWay}"
+                   Text="{x:Bind selectedKnight[0].Name, Mode=OneWay}"
                    FontSize="25"
                    Foreground="Black"
                    FontWeight="Bold"

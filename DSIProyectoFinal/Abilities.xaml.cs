@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Reflection;
+using System.ComponentModel;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,7 +28,8 @@ namespace DSIProyectoFinal
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
         private ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
 
-        Knight selectedKnight;
+        //Knight selectedKnight;
+        private ObservableCollection<Knight> selectedKnight { get; set; } = new ObservableCollection<Knight>();
         public Abilities()
         {
             this.InitializeComponent();
@@ -43,7 +46,7 @@ namespace DSIProyectoFinal
             //// Remove this when replaced with XAML bindings
             //GridSelect.ItemsSource = Knights;
 
-            selectedKnight = Knights[2];
+            selectedKnight.Add(Knights[2]);
 
             base.OnNavigatedTo(e);
         }
@@ -90,7 +93,7 @@ namespace DSIProyectoFinal
             {
                 Skills.Add(skill);
             }
-            selectedKnight = k;
+            selectedKnight[0] = k;            
         }
     }
 }
