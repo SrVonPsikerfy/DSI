@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Reflection;
 using System.ComponentModel;
+using Windows.UI.Xaml.Media.Imaging;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -95,6 +96,60 @@ namespace DSIProyectoFinal
                 Skills.Add(skill);
             }
             selectedKnight[0] = k;            
+        }
+
+        private void AbilitySelection(object sender, ItemClickEventArgs e)
+        {
+            Skill skill = e.ClickedItem as Skill;
+            
+            if (!skill.IsUnlocked) UnlockAbility(skill);
+
+
+            //actualizar imagen desbloqueada
+            int index = Skills.IndexOf(skill);
+            GridSkills.SelectedIndex = index;
+            
+        }
+
+        private void UnlockAbility(Skill skill)
+        {
+            skill.UnlockAbility();
+            //buscarla y cargarla
+            GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
+            if (gridViewItem != null)
+            {
+                (FindByName("skillImage", gridViewItem) as Image).Source = new BitmapImage(new Uri(skill.ImageSource)); ;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
+
+
+        private FrameworkElement FindByName(string name, FrameworkElement root)
+        {
+            Stack<FrameworkElement> tree = new Stack<FrameworkElement>();
+            tree.Push(root);
+
+            while (tree.Count > 0)
+            {
+                FrameworkElement current = tree.Pop();
+                if (current.Name == name)
+                    return current;
+
+                int count = VisualTreeHelper.GetChildrenCount(current);
+                for (int i = 0; i < count; ++i)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(current, i);
+                    if (child is FrameworkElement)
+                        tree.Push((FrameworkElement)child);
+                }
+            }
+
+            return null;
         }
     }
 }

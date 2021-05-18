@@ -48,11 +48,10 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
+                
                 <!--Boton-->
-                <Button x:Name="gridSkillButton">
-                    <Image x:Name="SkillImage"
-                Source="{x:Bind ImageSource}" Stretch="Uniform" />
-                </Button>
+                    <Image x:Name="skillImage"
+                Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform" />
             </Grid>
         </DataTemplate>
 
@@ -188,15 +187,30 @@
                   >
         </GridView>
 
+        <GridView x:Name="GridSkills"
+                  ItemTemplate="{StaticResource SkillTemplate}"
+                  ItemsPanel="{StaticResource SkillPanel}"
+                  ItemsSource="{x:Bind Skills}"
+                  Grid.Row="1"
+                  Grid.Column="3"
+                  Grid.ColumnSpan="3"
+                  BorderBrush="White" BorderThickness="3"
+                   Margin="8" Background="#335F9EA0"
+                  IsItemClickEnabled="True"
+                  ItemClick="AbilitySelection"
+                  >
+        </GridView>
+
         <!--HABILIDADES-->
-        <GridView Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3"
+        <!--<GridView Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3"
                    ItemTemplate="{StaticResource SkillTemplate}"
                   ItemsPanel="{StaticResource SkillPanel}"
                   ItemsSource="{x:Bind Skills}"
                    BorderBrush="White" BorderThickness="3"
-                   Margin="8" Background="#335F9EA0">
-            
-        </GridView>
+                   Margin="8" Background="#335F9EA0"
+                  IsItemClickEnabled="True"
+                  ItemClick="AbilitySelection">
+        </GridView>-->
         
         <Viewbox Grid.Row="4" HorizontalAlignment="Left">
             <Grid>

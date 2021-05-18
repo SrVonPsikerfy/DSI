@@ -126,5 +126,11 @@ namespace DSIProyectoFinal
             if(isUnlocked) ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon_unlocked.png";
             else ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon.png";
         }
+
+        public void UnlockAbility()
+        {
+            ImageSource = "ms-appx:///Assets/skills/skill" + SkillId.ToString() + "_icon_unlocked.png";
+            IsUnlocked = true;
+        }
     }
 }
