@@ -111,7 +111,8 @@ namespace DSIProyectoFinal
             {
                 Skills.Add(skill);
             }
-            selectedKnight[0] = knight;
+            selectedKnight.Clear();
+            selectedKnight.Add(knight);
             UpdateSelectedSkills();
         }
 
@@ -153,7 +154,14 @@ namespace DSIProyectoFinal
 
         private void EquipAbility(Skill skill, int index, Image image)
         {
-            
+            if (selectedKnight[0].EquipedAbilities.Count < 3)
+            {
+                int nextFreeSkillIndex = selectedKnight[0].EquipedAbilities.Count;
+                SelectedSkills.Add(skill);
+                selectedKnight[0].EquipedAbilities.Add(skill);
+                SelectedSkillsImages[nextFreeSkillIndex].Source = new BitmapImage(new Uri(skill.ImageSource));
+                skill.IsActive = true;
+            }
         }
 
 
@@ -166,15 +174,19 @@ namespace DSIProyectoFinal
         {
             //el clear da error
             SelectedSkills.Clear();
-            //foreach (Skill skill in selectedKnight[0].EquipedAbilities)
-            //{
-            //    SelectedSkills.Add(skill);
-
-            //}
-            for (int i = 0; i < selectedKnight[0].EquipedAbilities.Count; i++)
+            int i = 0;
+            //se meten las habilidades equipadas
+            while (i < selectedKnight[0].EquipedAbilities.Count)
             {
                 SelectedSkills.Add(selectedKnight[0].EquipedAbilities[i]);
                 SelectedSkillsImages[i].Source = new BitmapImage(new Uri(selectedKnight[0].EquipedAbilities[0].ImageSource));
+                i++;
+            }
+            //se meten imagenes de relleno para el resto que no tienen mas habilidades equipadas
+            while(i < 3)
+            {
+                SelectedSkillsImages[i].Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_not_used.png"));
+                i++;
             }
         }
 

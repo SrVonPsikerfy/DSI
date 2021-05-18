@@ -255,6 +255,7 @@
     <Content Include="Assets\skills\skill8_icon_unlocked.png" />
     <Content Include="Assets\skills\skill9_icon.png" />
     <Content Include="Assets\skills\skill9_icon_unlocked.png" />
+    <Content Include="Assets\skills\skill_not_used.png" />
     <Content Include="Assets\sniper_class_icon.png" />
     <Content Include="Assets\sold_icon.png" />
     <Content Include="Assets\stick-man-hi-small.png" />
