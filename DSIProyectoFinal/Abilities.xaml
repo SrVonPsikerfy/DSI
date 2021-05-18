@@ -36,6 +36,31 @@
                            HorizontalAlignment="Center" />
         </ItemsPanelTemplate>
 
+
+        <!--Template-->
+        <DataTemplate x:Key="SkillTemplate"
+                      x:DataType="local:Skill">
+            <Grid Height="180" Width="180" Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!--Boton-->
+                <Button x:Name="gridSkillButton">
+                    <Image x:Name="SkillImage"
+                Source="{x:Bind ImageSource}" Stretch="Uniform" />
+                </Button>
+            </Grid>
+        </DataTemplate>
+
+        <ItemsPanelTemplate x:Key="SkillPanel">
+            <ItemsWrapGrid Orientation="Horizontal"
+                           HorizontalAlignment="Center" />
+        </ItemsPanelTemplate>
+
         <!--BACK BUTTON-->
         <Style x:Key="BackButtonStyle" TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -158,9 +183,21 @@
                   Grid.ColumnSpan="2"
                   BorderBrush="White" BorderThickness="3"
                    Margin="8" Background="#335F9EA0"
+                  IsItemClickEnabled="True"
+                  ItemClick="KnightSelection"
                   >
         </GridView>
 
+        <!--HABILIDADES-->
+        <GridView Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3"
+                   ItemTemplate="{StaticResource SkillTemplate}"
+                  ItemsPanel="{StaticResource SkillPanel}"
+                  ItemsSource="{x:Bind Skills}"
+                   BorderBrush="White" BorderThickness="3"
+                   Margin="8" Background="#335F9EA0">
+            
+        </GridView>
+        
         <Viewbox Grid.Row="4" HorizontalAlignment="Left">
             <Grid>
                 <StackPanel VerticalAlignment="Bottom"
@@ -215,7 +252,7 @@
             </Grid>
         </Viewbox>
         
-        <Grid Grid.Row="1"
+        <!--<Grid Grid.Row="1"
               Grid.Column="3"
               Grid.ColumnSpan="3">
             <Grid.RowDefinitions>
@@ -298,7 +335,7 @@
                 <Image Source="/Assets/unequipedSkill.png"/>
             </Button>
 
-        </Grid>
+        </Grid>-->
 
 
         <Viewbox Grid.Row="2"

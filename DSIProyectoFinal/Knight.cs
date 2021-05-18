@@ -42,11 +42,11 @@ namespace DSIProyectoFinal
         public int MaxExp { get; set; }
 
         public int PointsAvailable { get; set; }
-        public bool[] Abilities { get; set; }
+        public Skill[] Abilities { get; set; }
         public int[] EquipedAbilities { get; set; }
 
         public Knight(string name, string imageLocation, Rol role, int shopCost, int cost, int atkPhy, int atkMag, int mana, int defPhy, int defMag,
-            int range, int lvl, int currentExp, int maxExp, int pointsAvailable, bool[] abilities, int[] equipedAbilities, Visibility visibility = Visibility.Collapsed)
+            int range, int lvl, int currentExp, int maxExp, int pointsAvailable, Skill[] abilities, int[] equipedAbilities, Visibility visibility = Visibility.Collapsed)
         {
             Name = name;
             ImageLocation = imageLocation;
@@ -103,7 +103,7 @@ namespace DSIProyectoFinal
     {
         public string Name { get; set; }
         public int SkillId { get; set; }
-
+        public string ImageSource { get; set; }
         public bool IsActive { get; set; }
         public bool IsUnlocked { get; set; }
 
@@ -123,6 +123,8 @@ namespace DSIProyectoFinal
 
             IsActive = isActive;
             IsUnlocked = isUnlocked;
+            if(isUnlocked) ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon_unlocked.png";
+            else ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon.png";
         }
     }
 }

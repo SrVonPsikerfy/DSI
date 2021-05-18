@@ -24,6 +24,7 @@ namespace DSIProyectoFinal
     public sealed partial class Abilities : Page
     {
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
+        private ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
 
         public Abilities()
         {
@@ -74,6 +75,11 @@ namespace DSIProyectoFinal
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void KnightSelection(object sender, ItemClickEventArgs e)
         {
 
         }
