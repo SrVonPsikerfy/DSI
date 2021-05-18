@@ -353,7 +353,7 @@
 
 
         <Viewbox Grid.Row="2"
-                 Grid.Column="3"
+                 Grid.Column="2"
                  Grid.ColumnSpan="2"
                  x:Name="KnightPoints">
             <StackPanel Orientation="Horizontal">
@@ -374,7 +374,7 @@
         
 
         <Viewbox Grid.Row="3"
-              Grid.Column="4"
+              Grid.Column="3"
                  x:Name="KnightStats2">
             <Grid>
                 <Grid.RowDefinitions>
@@ -438,7 +438,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="3"
-                 Grid.Column="3"
+                 Grid.Column="2"
                  x:Name="KnightStats1">
             <Grid>
                 <Grid.RowDefinitions>
@@ -503,8 +503,13 @@
 
 
         <Viewbox Grid.Row="2"
-                 Grid.Column="5"
-                 x:Name="KnightName">
+                 Grid.Column="4"
+                 Grid.ColumnSpan="2"
+                 x:Name="KnightName"
+                 Margin="0,0,20,0"
+                 MaxWidth="200"
+                 MaxHeight="50"
+                 HorizontalAlignment="Left">
             <Grid>
                 <TextBlock 
                    Text="{x:Bind selectedKnight[0].Name, Mode=OneWay}"
@@ -517,7 +522,9 @@
 
 
         <Viewbox Grid.Row="3"
-                 Grid.Column="5"
+                 Grid.Column="4"
+                 Grid.ColumnSpan="2"
+                 HorizontalAlignment="Left"
                  x:Name="KnightExp">
             <Grid>
                 <Grid.RowDefinitions>
