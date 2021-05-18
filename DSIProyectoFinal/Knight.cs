@@ -43,10 +43,10 @@ namespace DSIProyectoFinal
 
         public int PointsAvailable { get; set; }
         public Skill[] Abilities { get; set; }
-        public int[] EquipedAbilities { get; set; }
+        public List<Skill> EquipedAbilities { get; set; }
 
         public Knight(string name, string imageLocation, Rol role, int shopCost, int cost, int atkPhy, int atkMag, int mana, int defPhy, int defMag,
-            int range, int lvl, int currentExp, int maxExp, int pointsAvailable, Skill[] abilities, int[] equipedAbilities, Visibility visibility = Visibility.Collapsed)
+            int range, int lvl, int currentExp, int maxExp, int pointsAvailable, Skill[] abilities, Visibility visibility = Visibility.Collapsed)
         {
             Name = name;
             ImageLocation = imageLocation;
@@ -69,7 +69,14 @@ namespace DSIProyectoFinal
 
             PointsAvailable = pointsAvailable;
             Abilities = abilities;
-            EquipedAbilities = equipedAbilities;
+
+            EquipedAbilities = new List<Skill>(3);
+            foreach (Skill skill in Abilities)
+            {
+                if (skill.IsActive) EquipedAbilities.Add(skill);
+                //NO METER MAS DE 3
+                if (EquipedAbilities.Count >= 3) break;
+            }
         }
 
         public Knight(Knight knight_)
@@ -107,6 +114,8 @@ namespace DSIProyectoFinal
         public bool IsActive { get; set; }
         public bool IsUnlocked { get; set; }
 
+        public int PointsNeeded { get; set; }
+
         public Skill(Skill skill_)
         {
             Name = skill_.Name;
@@ -114,9 +123,10 @@ namespace DSIProyectoFinal
 
             IsActive = skill_.IsActive;
             IsUnlocked = skill_.IsUnlocked;
+            PointsNeeded = skill_.PointsNeeded;
         }
 
-        public Skill(string name, int skillId, bool isActive, bool isUnlocked)
+        public Skill(string name, int skillId, bool isActive, bool isUnlocked, int pointsNeeded = 3)
         {
             Name = name;
             SkillId = skillId;
@@ -125,6 +135,7 @@ namespace DSIProyectoFinal
             IsUnlocked = isUnlocked;
             if(isUnlocked) ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon_unlocked.png";
             else ImageSource = "ms-appx:///Assets/skills/skill" + skillId.ToString() + "_icon.png";
+            PointsNeeded = pointsNeeded;
         }
 
         public void UnlockAbility()

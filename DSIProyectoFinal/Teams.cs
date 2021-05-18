@@ -26,8 +26,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              ),
             new Knight(
                 "Knight",
@@ -45,8 +45,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              ),
             new Knight(
                 "Knight",
@@ -64,8 +64,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              ),
             new Knight(
                 "Knight",
@@ -83,8 +83,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              ),
             new Knight(
                 "Knight",
@@ -102,8 +102,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              ),
             new Knight(
                 "Knight",
@@ -121,8 +121,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              ),
             new Knight(
                 "Knight",
@@ -140,8 +140,8 @@ namespace DSIProyectoFinal
                 210,
                 420,
                 21,
-                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                
              )
           };
 
@@ -163,8 +163,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Knight 2",
@@ -182,8 +182,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Drak",
@@ -201,8 +201,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Ukeo",
@@ -220,8 +220,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Florida",
@@ -239,8 +239,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Pocahontas",
@@ -258,8 +258,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Lil",
@@ -277,8 +277,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Pocoyo",
@@ -296,8 +296,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 )
         };
         static public List<Knight> Team2 { get; set; } = new List<Knight>()
@@ -318,8 +318,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Knight 2",
@@ -337,8 +337,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Drak",
@@ -356,8 +356,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Ukeo",
@@ -375,8 +375,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Florida",
@@ -394,8 +394,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Pocahontas",
@@ -413,8 +413,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Lil",
@@ -432,8 +432,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Pocoyo",
@@ -451,8 +451,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 )
         };
         static public List<Knight> Team3 { get; set; } = new List<Knight>()
@@ -473,8 +473,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Knight 2",
@@ -492,8 +492,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Drak",
@@ -511,8 +511,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Ukeo",
@@ -530,8 +530,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Florida",
@@ -549,8 +549,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Pocahontas",
@@ -568,8 +568,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Lil",
@@ -587,8 +587,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 ),
             new Knight(
                     "Pocoyo",
@@ -606,8 +606,8 @@ namespace DSIProyectoFinal
                     210,
                     420,
                     21,
-                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)},
-                    new int[8]{ 1, 2, 3, 4, 5, 6, 7, 8 }
+                    new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+                    
                 )
         };
 

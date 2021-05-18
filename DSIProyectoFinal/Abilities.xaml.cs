@@ -28,9 +28,11 @@ namespace DSIProyectoFinal
     {
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
         private ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
+        private ObservableCollection<Skill> SelectedSkills { get; set; } = new ObservableCollection<Skill>();
 
         //Knight selectedKnight;
         private ObservableCollection<Knight> selectedKnight { get; set; } = new ObservableCollection<Knight>();
+
         public Abilities()
         {
             this.InitializeComponent();
@@ -47,8 +49,9 @@ namespace DSIProyectoFinal
             //// Remove this when replaced with XAML bindings
             //GridSelect.ItemsSource = Knights;
 
-            selectedKnight.Add(Knights[2]);
-
+            selectedKnight.Add(Knights[0]);
+            SelectKnight(selectedKnight[0]);
+            UpdateSelectedSkills();
             base.OnNavigatedTo(e);
         }
 
@@ -90,12 +93,18 @@ namespace DSIProyectoFinal
         private void KnightSelection(object sender, ItemClickEventArgs e)
         {
             Knight k = e.ClickedItem as Knight;
+            SelectKnight(k);
+        }
+
+        private void SelectKnight(Knight knight)
+        {
             Skills.Clear();
-            foreach (Skill skill in k.Abilities)
+            foreach (Skill skill in knight.Abilities)
             {
                 Skills.Add(skill);
             }
-            selectedKnight[0] = k;            
+            selectedKnight[0] = knight;
+            UpdateSelectedSkills();
         }
 
         private void AbilitySelection(object sender, ItemClickEventArgs e)
@@ -106,17 +115,51 @@ namespace DSIProyectoFinal
             int index = Skills.IndexOf(skill);
             GridSkills.SelectedIndex = index;
 
-            if (!skill.IsUnlocked) UnlockAbility(skill, index);
+            //se obtiene el gridViewItem
+            GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
+            //de momento la plantilla solo tiene imagen
+            Image image = null;
+            if (gridViewItem != null) image = (FindByName("skillImage", gridViewItem) as Image);
+            
+
+            if (!skill.IsUnlocked) UnlockAbility(skill, index, image);
+            else
+            {
+                //EQUIPADA?
+                if (skill.IsActive) UnequipAbility(skill, index, image);
+                //NO EQUIPADA
+                else EquipAbility(skill, index, image);
+            }
         }
 
-        private void UnlockAbility(Skill skill, int index)
+        private void UnlockAbility(Skill skill, int index, Image image)
         {
+            //se actualiza el source
             skill.UnlockAbility();
             //buscarla y cargarla
-            GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
-            if (gridViewItem != null)
+            //se carga el source
+            image.Source = new BitmapImage(new Uri(skill.ImageSource)); ;
+            selectedKnight[0].PointsAvailable -= skill.PointsNeeded;
+            AvailablePoints.Text = selectedKnight[0].PointsAvailable.ToString();
+        }
+
+        private void EquipAbility(Skill skill, int index, Image image)
+        {
+
+        }
+
+
+        private void UnequipAbility(Skill skill, int index, Image image)
+        {
+
+        }
+
+        private void UpdateSelectedSkills()
+        {
+            SelectedSkills = new ObservableCollection<Skill>();
+            foreach (Skill skill in selectedKnight[0].EquipedAbilities)
             {
-                (FindByName("skillImage", gridViewItem) as Image).Source = new BitmapImage(new Uri(skill.ImageSource)); ;
+                SelectedSkills.Add(skill);
             }
         }
 

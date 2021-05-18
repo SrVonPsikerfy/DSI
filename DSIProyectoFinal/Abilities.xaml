@@ -254,13 +254,13 @@
                        HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black" SelectionChanged="TextBlock_SelectionChanged"/>
 
                     <Button Background="Transparent">
-                        <Image Source="/Assets/unequipedSkill.png"/>
+                        <Image Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
                     </Button>
                     <Button Background="Transparent">
-                        <Image Source="/Assets/unequipedSkill.png"/>
+                        <Image Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}"/>
                     </Button>
                     <Button Background="Transparent">
-                        <Image Source="/Assets/unequipedSkill.png"/>
+                        <Image Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}"/>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -364,7 +364,7 @@
                    FontWeight="Bold"
                    HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
                 <TextBlock x:Name="AvailablePoints"
-                   Text="{x:Bind selectedKnight[0].PointsAvailable, Mode=TwoWay}"
+                   Text="{x:Bind selectedKnight[0].PointsAvailable, Mode=OneWay}"
                    Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
