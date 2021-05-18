@@ -54,7 +54,7 @@
         </Style>
         <Style x:Key="BlueFlagTextStyle" TargetType="TextBlock">
             <Setter Property="IsTextScaleFactorEnabled" Value="True"/>
-            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontSize" Value="50"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
