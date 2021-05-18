@@ -44,7 +44,8 @@ namespace DSIProyectoFinal
             //aqui no se sabe que menu es el anterior
             //lo que dijo aaron de hacer el pausa no en otra pagina sino en la misma
             //habria que cambiar el resume entonces
-            this.Frame.Navigate(typeof(MainMenu));
+            while (this.Frame.CanGoBack)
+                Frame.GoBack();
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)

@@ -41,7 +41,8 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainMenu));
+            while (this.Frame.CanGoBack)
+                Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)

@@ -65,7 +65,8 @@ namespace DSIProyectoFinal
         {
             StoreKnights.UpdateStoreKnights(Knights.ToList());
             StoreKnights.Prize = int.Parse(Money.Text);
-            Frame.GoBack();
+            while (this.Frame.CanGoBack)
+                Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
