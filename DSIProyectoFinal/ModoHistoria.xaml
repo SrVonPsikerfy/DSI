@@ -9,6 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
+        <DataTemplate x:Key="ChaptersTemplate"
+                      x:DataType="local:Chapter">
+            <Grid Background="Transparent"  MaxHeight="300" MaxWidth="300">
+                <Image Source="/Assets/circle.png"/>
+                <TextBlock Text="{x:Bind numChapter}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                           FontSize="160" FontFamily="Abril Fatface"/>
+            </Grid>
+        </DataTemplate>
+
+        <ItemsPanelTemplate x:Name="ListPanelTemplate">
+            <StackPanel Background="Transparent" Orientation="Horizontal" />
+        </ItemsPanelTemplate>
+
         <!--BACK BUTTON-->
         <Style x:Key="BackButtonStyle" TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -142,58 +155,20 @@
             <Image Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="6"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-            
+
             <ListView Grid.Row="1" Grid.ColumnSpan="6"
-                           ShowsScrollingPlaceholders="True"
-                           ScrollViewer.VerticalScrollBarVisibility="Disabled" 
-                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                           ScrollViewer.HorizontalScrollMode="Enabled" 
-                           ScrollViewer.VerticalScrollMode="Disabled"
+                      Height="200"
+                      ShowsScrollingPlaceholders="True"
+                      ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollMode="Enabled" 
+                      ScrollViewer.VerticalScrollMode="Disabled"
+                      ItemTemplate="{StaticResource ChaptersTemplate}"
+                      ItemsPanel="{StaticResource ListPanelTemplate}"
+                      ItemsSource="{x:Bind Chpt}"
                       ItemClick="ChangeToChapterSelection"
-                      IsItemClickEnabled="True">
+                      IsItemClickEnabled="True"/>
 
-
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Background="Transparent" Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-
-                <ListViewItem Background="Transparent"  MaxHeight="300" MaxWidth="300"
-                    x:Name="level1">
-                    <Image Source="/Assets/circle1.png"/>
-                </ListViewItem>
-
-                <ListViewItem Background="Transparent"  MaxHeight="300" MaxWidth="300"
-                    x:Name="level2" >
-                    <Image Source="/Assets/circle2.png"/>
-                </ListViewItem>
-
-                <ListViewItem  Background="Transparent" MaxHeight="300" MaxWidth="300"
-                    x:Name="level3" >
-                    <Image Source="/Assets/circle3.png"/>
-                </ListViewItem>
-            </ListView>
-
-
-
-
-
-
-
-            <!--<Button Grid.Column="7" Grid.Row="0" Background="Transparent" MaxHeight="300" MaxWidth="300"
-                    x:Name="level4" Click="ChangeToChapterSelection">
-                <Image Source="/Assets/circle4.png"/>
-            </Button>
-
-            <Button Grid.Column="10" Grid.Row="1" Background="Transparent" MaxHeight="300" MaxWidth="300"
-                    x:Name="level5" Click="ChangeToChapterSelection">
-                <Image Source="/Assets/circle5.png"/>
-            </Button>
-
-            <Button Grid.Column="7" Grid.Row="2" Background="Transparent" MaxHeight="300" MaxWidth="300" IsEnabled="False">
-                <Image Source="/Assets/circle.png"/>
-            </Button>-->
 
         </Grid>
     </Grid>
