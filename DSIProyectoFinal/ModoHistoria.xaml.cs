@@ -22,10 +22,24 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class ModoHistoria : Page
     {
+
+        public List<Chapter> Chpt = new List<Chapter>() {
+            new Chapter('1'),
+            new Chapter('2'),
+            new Chapter('3'),
+            new Chapter('4'),
+            new Chapter('5'),
+            new Chapter('6'),
+            new Chapter('7'),
+            new Chapter('8'),
+            new Chapter('9'),
+        };
+
         public ModoHistoria()
         {
             this.InitializeComponent();
         }
+
         private void GoBack(object sender, RoutedEventArgs e)
         {
             if (this.Frame.CanGoBack)
@@ -36,7 +50,7 @@ namespace DSIProyectoFinal
 
         private void GoToPlay(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Defensa));
+            this.Frame.Navigate(typeof(TeamSelect));
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
@@ -50,12 +64,9 @@ namespace DSIProyectoFinal
             Frame.Navigate(typeof(Opciones));
         }
 
-
         private void ChangeToChapterSelection(object sender, ItemClickEventArgs e)
         {
-            //Image b = e.OriginalSource as Image;
-            //string s = b.Name;
-            //Frame.Navigate(typeof(SelectorCapitulo), s[5]);
+            Frame.Navigate(typeof(SelectorCapitulo), ((Chapter)e.ClickedItem).numChapter);
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)

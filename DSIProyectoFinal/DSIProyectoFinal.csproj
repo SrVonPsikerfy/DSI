@@ -126,6 +126,7 @@
       <DependentUpon>Ataque.xaml</DependentUpon>
     </Compile>
     <Compile Include="AvailableKnights.cs" />
+    <Compile Include="Chapter.cs" />
     <Compile Include="Defensa.xaml.cs">
       <DependentUpon>Defensa.xaml</DependentUpon>
     </Compile>

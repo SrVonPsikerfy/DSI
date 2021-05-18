@@ -27,14 +27,6 @@ namespace DSIProyectoFinal
             this.InitializeComponent();
         }
 
-        private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (((Frame)Window.Current.Content).ActualHeight > 540 && ((Frame)Window.Current.Content).ActualWidth > 960)
-                (sender as TextBlock).FontSize = 100;
-            else
-                (sender as TextBlock).FontSize = 40;
-        }
-
         private void GoBack(object sender, RoutedEventArgs e)
         {
             if (this.Frame.CanGoBack)
@@ -61,8 +53,6 @@ namespace DSIProyectoFinal
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            
-            base.OnNavigatedTo(e);
             char s = (Char)e.Parameter;
             LevelText.Text = s.ToString();
 
@@ -72,6 +62,9 @@ namespace DSIProyectoFinal
             Zone3.Content = "Page " + s.ToString() + " - 3";
             Zone4.Content = "Page " + s.ToString() + " - 4";
             Zone5.Content = "Page " + s.ToString() + " - 5";
+
+            chapter.Text = "CHAPTER " + s;
+            base.OnNavigatedTo(e);
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
