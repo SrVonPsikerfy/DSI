@@ -31,7 +31,7 @@
         <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/attack.png" MaxHeight="87" MaxWidth="87" />
         
         <!--Timer-->
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" FontFamily="Abril Fatface" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
         <!--Boton de pausa-->
         <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 Click="GoToPause">
@@ -105,7 +105,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="2/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="Abril Fatface" Text="2/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 
                     <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
@@ -123,7 +123,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="2/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="Abril Fatface" Text="2/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 
                     <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
@@ -141,7 +141,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="1/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="Abril Fatface" Text="1/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 
                     <Image Grid.Row="0" Grid.Column="1" Source="./Assets/support_class_icon.png"/>
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
@@ -158,7 +158,7 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="3/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="Abril Fatface" Text="3/3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 
                     <Image Grid.Row="0" Grid.Column="1" Source="./Assets/sniper_class_icon.png"/>
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>

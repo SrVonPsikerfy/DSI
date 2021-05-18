@@ -24,7 +24,7 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
                     <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}"/>
+                               Style="{StaticResource SubtitleTextBlockStyle}" FontFamily="Abril Fatface"/>
                     <Image x:Name="Image" Source="{x:Bind RoleLocation}" HorizontalAlignment="Stretch"
                         AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                 </StackPanel>

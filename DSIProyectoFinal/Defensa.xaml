@@ -34,10 +34,10 @@
             <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/defense.png" MaxHeight="87" MaxWidth="87" />
 
             <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Grid.Row="0" Grid.Column="2" Text="200" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center" Foreground="blue" FontWeight="Bold"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" FontSize="30" Text="200" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center" Foreground="blue" FontWeight="Bold"/>
                 <Image Source="./Assets/mana_icon.png" MaxHeight="60" MaxWidth="87" Margin="0,0,20,0"/>
 
-                <TextBlock Grid.Row="0" Grid.Column="2" Text="10/45" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="10/45" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
                 <Image Source="./Assets/enemy_icon.png" MaxHeight="60" MaxWidth="87" VerticalAlignment="Center"/>
             </StackPanel>
             <!--Boton de pausa-->
@@ -112,7 +112,7 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
@@ -133,7 +133,7 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                        <TextBlock Text="20" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
                             
                         </StackPanel>
@@ -154,7 +154,7 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="30" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="30" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
@@ -175,7 +175,7 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="25" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="25" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
@@ -195,7 +195,7 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>

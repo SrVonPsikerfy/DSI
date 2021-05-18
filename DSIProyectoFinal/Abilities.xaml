@@ -24,7 +24,7 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
                     <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}"/>
+                               Style="{StaticResource SubtitleTextBlockStyle}" FontFamily="Abril Fatface"/>
                     <Image x:Name="Image" Source="{x:Bind RoleLocation}" HorizontalAlignment="Stretch"
                         AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                 </StackPanel>
@@ -251,7 +251,7 @@
                        FontSize="60"
                        IsColorFontEnabled="True"
                        Foreground="Black"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black" SelectionChanged="TextBlock_SelectionChanged"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface" SelectionChanged="TextBlock_SelectionChanged"/>
 
                     <Button Background="Transparent">
                         <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
@@ -362,13 +362,13 @@
                    Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
-                   HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                   HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
                 <TextBlock x:Name="AvailablePoints"
                    Text="{x:Bind selectedKnight[0].PointsAvailable, Mode=OneWay}"
                    Foreground="Black"
                    FontSize="30"
                    FontWeight="Bold"
-                   HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                   HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
             </StackPanel>
         </Viewbox>
         
@@ -393,7 +393,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Foreground="Black"
-                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
+                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="1"
                        Text="DEF (MAG)"
@@ -401,7 +401,7 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
+                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="2"
                        Text="RANGE"
@@ -409,14 +409,14 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
+                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Column="1"
                        Text="{x:Bind selectedKnight[0].DefPhy, Mode=OneWay}"
                        FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="1"
@@ -424,7 +424,7 @@
                        FontSize="10"
                        Foreground="Black"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="2"
@@ -432,7 +432,7 @@
                        Foreground="Black"
                        FontSize="10"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
             </Grid>
         </Viewbox>
@@ -457,7 +457,7 @@
                        VerticalAlignment="Center"
                        Foreground="Black"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontFamily="Helvetica LT Std Black" FontWeight="Bold"/>
+                       FontStyle="Italic" FontFamily="Abril Fatface" FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="1"
                        Text="ATK (MAG)"
@@ -465,7 +465,7 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
+                       FontStyle="Italic" FontWeight="Bold" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Row="2"
                        Text="MANA"
@@ -473,14 +473,14 @@
                        Foreground="Black"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontStyle="Italic" FontWeight="Bold" FontFamily="Helvetica LT Std Black"/>
+                       FontStyle="Italic" FontWeight="Bold" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
                        Text="{x:Bind selectedKnight[0].AtkPhy, Mode=OneWay}"
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="1"
@@ -488,7 +488,7 @@
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
                        Grid.Row="2"
@@ -496,7 +496,7 @@
                        FontSize="20"
                        Foreground="Black"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
             </Grid>
         </Viewbox>
@@ -511,7 +511,7 @@
                    FontSize="25"
                    Foreground="Black"
                    FontWeight="Bold"
-                   FontStyle="Italic" FontFamily="Helvetica LT Std Black"/>
+                   FontStyle="Italic" FontFamily="Abril Fatface"/>
             </Grid>
         </Viewbox>
 
@@ -531,13 +531,13 @@
                        Foreground="Black"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Stretch" FontFamily="Helvetica LT Std Black"/>
+                       HorizontalAlignment="Stretch" FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Row="1"
                        Text="Exp. 210/420"
                        Foreground="Black"
                        FontSize="15"
-                       VerticalAlignment="Center" FontFamily="Helvetica LT Std Black"/>
+                       VerticalAlignment="Center" FontFamily="Abril Fatface"/>
 
                 <ProgressBar Grid.Row="2"
                          Width="130"
@@ -547,8 +547,5 @@
 
             </Grid>
         </Viewbox>
-        
-
-
     </Grid>
 </Page>

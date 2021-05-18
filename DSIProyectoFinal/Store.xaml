@@ -202,11 +202,11 @@
         </Viewbox>
 
 
-        <!--Dropdown de para ordenar el GridView-->
+        <!--Dropdown para ordenar el GridView-->
         <Viewbox Grid.Column="2" Grid.Row="0">
             <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
                       Height="50" Width="Auto"
-                      FontSize="20"
+                      FontSize="20" FontFamily="Abril Fatface"
                       PlaceholderText="Order by ..."
                       SelectionChanged="ComboBox_SelectionChanged">
                 <x:String>Order by None</x:String>
