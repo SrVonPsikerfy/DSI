@@ -389,10 +389,14 @@
 
 
 
+        <Viewbox Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"  VerticalAlignment="Top" HorizontalAlignment="Center">
+            
         <!--BOTON GO-->
-        <Button Content="GO!" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
-                VerticalAlignment="Top" HorizontalAlignment="Stretch"
-                FontSize="30" FontWeight="Bold" MaxWidth="450" FontFamily="Abril Fatface"/>
+        <Button Content="GO!" 
+                FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"
+                 BorderThickness="7"
+                 BorderBrush="Black"/>
+        </Viewbox>
 
         <!--BOTON HOME Y OPCIONES-->
         <Viewbox Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" HorizontalAlignment="Left"  MaxWidth="200" MaxHeight="200">

@@ -105,12 +105,12 @@
             <RowDefinition Height="13*"/>
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
-        
+
         <!--Fondo-->
         <Image Grid.ColumnSpan ="5" Grid.RowSpan="4"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Viewbox Grid.ColumnSpan="2">
             <Grid>
@@ -311,7 +311,7 @@
                     VerticalAlignment="Top" x:Name="TeamMemberIcon7"/>
 
             </Grid>
-            
+
             <!--MIEMBRO 8-->
             <Grid Grid.Row="1" Grid.Column="4">
                 <Grid.RowDefinitions>
@@ -333,9 +333,9 @@
                     VerticalAlignment="Top" x:Name="TeamMemberIcon8"/>
 
             </Grid>
-            
+
         </Grid>
-        
+
         <!--Lista de Caballeros-->
         <GridView x:Name="GridSelect"
                   ItemTemplate="{StaticResource KnightsTemplate}"
@@ -349,9 +349,13 @@
         </GridView>
 
         <!--BOTON SAVE-->
-        <Button Content="SAVE" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"
-                VerticalAlignment="Top" HorizontalAlignment="Center"
-                FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"/>
+        <Viewbox  Grid.Column="1"  Grid.Row="2" Grid.ColumnSpan="2"   VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            
+        <Button Content="SAVE"              
+                FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"
+                 BorderThickness="7"
+                 BorderBrush="Black" Margin="0,0,0,92"/>
+        </Viewbox>
 
         <!--BOTON HOME Y OPCIONES-->
         <Viewbox Grid.Row="3"
@@ -386,24 +390,21 @@
         </Viewbox>
 
         <!--BOTONES DE SELECCION DE EQUIPO-->
-        <Viewbox Grid.Row="0" Grid.Column="2"
+        <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
                  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Grid>
+            <Grid HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Select1" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam1">
+                        <TextBlock Text="1" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
+                    </Button>
 
-                        <Button x:Name="Select1" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam1">
-                            <TextBlock Text="1" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
-                        </Button>
+                    <Button x:Name="Select2" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam2">
+                        <TextBlock Text="2" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
+                    </Button>
 
-                        <Button x:Name="Select2" Grid.Column="2" Grid.Row="0" Background="#FF6A6969" Click="SelectTeam2">
-                            <TextBlock Text="2" FontSize="80" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
-                        </Button>
-
-                        <Button x:Name="Select3" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam3">
-                            <TextBlock Text="3" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
-                        </Button>
-                    </StackPanel>
+                    <Button x:Name="Select3" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam3">
+                        <TextBlock Text="3" FontSize="70" Width="Auto" Height="Auto" FontFamily="Abril Fatface"/>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Viewbox>

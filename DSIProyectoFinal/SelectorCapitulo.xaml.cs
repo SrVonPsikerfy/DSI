@@ -77,5 +77,10 @@ namespace DSIProyectoFinal
                 }
             }
         }
+
+        private void PageClick(object sender, RoutedEventArgs e)
+        {
+            PlayButton.Visibility = Visibility.Visible;
+        }
     }
 }

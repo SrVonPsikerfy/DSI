@@ -62,13 +62,13 @@
             <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid KeyDown="Grid_KeyDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
@@ -85,7 +85,7 @@
         <Image Grid.ColumnSpan ="4" Grid.RowSpan="8"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
@@ -107,19 +107,27 @@
                     <TextBlock Style="{StaticResource KotFStyle}"/>
 
                     <Grid>
-                        <Image Style="{StaticResource BlueFlagImage}"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="112*"/>
+                            <ColumnDefinition Width="373*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Style="{StaticResource BlueFlagImage}" Grid.ColumnSpan="2"/>
                         <TextBlock x:Name="chapter" Text="CHAPTER 1"
-                           Style="{StaticResource BlueFlagTextStyle}"/>
+                           Style="{StaticResource BlueFlagTextStyle}" Grid.Column="1" HorizontalAlignment="Left" Margin="100,0,0,0"/>
                     </Grid>
                 </StackPanel>
             </Grid>
         </Viewbox>
-        
+
         <!--<StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
-            --><!--Titulo--><!--
+            -->
+        <!--Titulo-->
+        <!--
             <TextBlock Grid.Row="0" Grid.Column="4" Text="KotF" FontFamily='Abril Fatface' SizeChanged="TextBlock_SizeChanged" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,0"/>
 
-            --><!--Nombre de la pantalla en la que estamos--><!--
+            -->
+        <!--Nombre de la pantalla en la que estamos-->
+        <!--
             <TextBlock Grid.Row="0" Grid.Column="4" Text="CHAPTER 1" FontFamily='Abril Fatface' FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin=" 5,5"/>
             
         </StackPanel>-->
@@ -130,7 +138,7 @@
 
         <TextBlock x:Name="LevelText" Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" Text="3"
                    HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="160" FontFamily="Abril Fatface"></TextBlock>
-        
+
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->
             <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
@@ -145,32 +153,40 @@
             </Button>
         </StackPanel>
 
+        <Viewbox  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  >
 
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" >
+            <Button x:Name="Zone1" Foreground="White" FontFamily="Abril Fatface" BorderThickness="3"
+                 BorderBrush="White" Content="Page 1 - 1"  Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="800" Margin="0,5" HorizontalAlignment="Right" Click="PageClick"/>
+        </Viewbox>
 
-            <!--Selector de zona-->
-            <Image Grid.Row="1" Grid.Column="2" Source="/Assets/check.png" Width="96" Height="96"/>
-            <Button x:Name="Zone1" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Abril Fatface" Content="Page 1 - 1" HorizontalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580"  Height="87" Margin="0,5"/>
+        <Viewbox  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button x:Name="Zone2" Foreground="White" FontFamily="Abril Fatface"  BorderThickness="3"
+                 BorderBrush="White" Content="Page 1 - 2" HorizontalAlignment="Right" Width="800" Style="{StaticResource AccentButtonStyle}" FontSize="44" Margin="0,5" Click="PageClick"/>
+        </Viewbox>
 
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" >
+        <Viewbox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" >
+            <Button x:Name="Zone3" FontFamily="Abril Fatface" HorizontalAlignment="Right"  BorderThickness="3"
+                 BorderBrush="White" Content="Page 1 - 3" Width="800" Style="{StaticResource AccentButtonStyle}" Foreground="White" FontSize="44" MaxWidth="800" Click="PageClick" />
+        </Viewbox>
 
-            <Image Grid.Row="2" Grid.Column="2" Source="/Assets/check.png" Width="96" Height="96" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Viewbox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button x:Name="Zone4" FontFamily="Abril Fatface"   HorizontalAlignment="Right"  BorderThickness="3"
+                 BorderBrush="White" Content="Page 1 - 4" Width="800" Style="{StaticResource AccentButtonStyle}" Foreground="White" FontSize="44"  Margin="0,5" Click="PageClick"/>
+        </Viewbox>
 
-            <Button x:Name="Zone2" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Abril Fatface" Content="Page 1 - 2" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580" Height="87" Margin="0,5"/>
-        </StackPanel>
-        <!--Nivel Seleccionado-->
-        <Button x:Name="Zone3" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Abril Fatface" Content="Page 1 - 3" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="72" Width="800" Height="132" Margin="0,5"/>
-
-        <Button x:Name="Zone4" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Abril Fatface" Content="Page 1 - 4" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580" Height="87" Margin="0,5"/>
-        <Button x:Name="Zone5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Abril Fatface" Content="Page 1 - 5" HorizontalAlignment="Right" Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="580" Height="87" Margin="0,5"/>
-
+        <Viewbox  Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button x:Name="Zone5"  FontFamily="Abril Fatface"  HorizontalAlignment="Right"  BorderThickness="3"
+                 BorderBrush="White" Content="Page 1 - 5" Width="800" Style="{StaticResource AccentButtonStyle}" Foreground="White" FontSize="44" Margin="0,5" Click="PageClick"/>
+        </Viewbox>
 
         <!--Boton de play-->
-        <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" x:Name="PlayButton" Content="Go to Select Team" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="700" MaxHeight="200" FontFamily="Abril Fatface"
-                Click="GoToPlay"/>
+        <Viewbox  Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button x:Name="PlayButton" Content="Go to Select Team" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource ButtonRevealStyle}" FontSize="70" MaxWidth="700" MaxHeight="200" FontFamily="Abril Fatface"
+                Click="GoToPlay" Visibility="Collapsed" BorderThickness="7"
+                 BorderBrush="Black"/>
+        </Viewbox>
 
-       
+
     </Grid>
 </Page>

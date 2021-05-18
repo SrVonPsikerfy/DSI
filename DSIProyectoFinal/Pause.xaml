@@ -55,7 +55,8 @@
                 </Viewbox>
 
                 <!-- Botones !-->
-                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344" Click="Resume">
+                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344" Click="Resume" BorderThickness="7"
+                 BorderBrush="Black">
                     <!--Resume-->
                     <Viewbox>
                         <StackPanel>
@@ -67,7 +68,8 @@
                 </Button>
 
                 <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
-                    Click="GoToSettings">
+                    Click="GoToSettings" BorderThickness="7"
+                 BorderBrush="Black">
                     <Viewbox>
 
                         <!--Options-->
@@ -81,7 +83,8 @@
                 </Button>
 
                 <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight="144" MaxWidth="344"
-                    Click="GoToPreviousMenu">
+                    Click="GoToPreviousMenu" BorderThickness="7"
+                 BorderBrush="Black">
                     <Viewbox>
 
                         <!--Exit Level-->

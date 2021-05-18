@@ -27,14 +27,7 @@ namespace DSIProyectoFinal
             this.InitializeComponent();
         }
 
-        private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (((Frame)Window.Current.Content).ActualHeight > 600 && ((Frame)Window.Current.Content).ActualWidth > 600)
-                (sender as TextBlock).FontSize = 80;
-            else
-                (sender as TextBlock).FontSize = 40;
-        }
-
+       
         private void GoToTeams(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(TeamSelect));

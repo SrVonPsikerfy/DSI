@@ -127,8 +127,10 @@
 
         <!--Titulo-->
         <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" MaxWidth="1000">
-            <TextBlock 
-                   Text="KNIGHT of the FALLEN"
+            <Grid>
+                <Rectangle Fill="Azure" Stroke="DarkBlue"/>
+                <TextBlock 
+                   Text="~KNIGHT of the FALLEN~"
                    FontSize="100"
                    FontWeight="Bold"
                    VerticalAlignment="Center"
@@ -136,7 +138,9 @@
                    TextAlignment="Left"
                    TextWrapping="WrapWholeWords"
                    FontStretch="Expanded"
-                   FontFamily="Abril Fatface"/>
+                   FontFamily="Abril Fatface"
+                   />
+            </Grid>
 
         </Viewbox>
 
