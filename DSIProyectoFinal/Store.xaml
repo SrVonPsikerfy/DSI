@@ -160,20 +160,21 @@
             <Image Source="/Assets/storeIcons.png" />
         </Viewbox>
 
-        <Viewbox Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Bottom">
-            <StackPanel Orientation="Horizontal">
-                <!--HomeButton-->
-                <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+        <Viewbox  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            
+        <StackPanel Orientation="Horizontal"  >
+            <!--HomeButton-->
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
                     Click="GoToMainMenu">
-                    <Image Source="/Assets/homeButton.png" MaxWidth="70" MaxHeight="70"/>
-                </Button>
+                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
 
-                <!--SettingsButton-->
-                <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+            <!--SettingsButton-->
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
                     Click="GoToSettings">
-                    <Image Source="/Assets/settingsButton.png" MaxWidth="70" MaxHeight="70"/>
-                </Button>
-            </StackPanel>
+                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+        </StackPanel>
         </Viewbox>
 
 

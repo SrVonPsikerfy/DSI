@@ -399,24 +399,20 @@
                     Click="Go"/>
         </Viewbox>
 
-        <!--BOTON HOME Y OPCIONES-->
-        <Viewbox Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" HorizontalAlignment="Left"  MaxWidth="200" MaxHeight="200">
-            <Grid>
-                <StackPanel Orientation="Horizontal">
-                    <!--HomeButton-->
-                    <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
-                    Click="GoToMainMenu">
-                        <Image Source="/Assets/homeButton.png"/>
-                    </Button>
 
-                    <!--SettingsButton-->
-                    <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2">
+            <!--HomeButton-->
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+                    Click="GoToMainMenu">
+                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+
+            <!--SettingsButton-->
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
                     Click="GoToSettings">
-                        <Image Source="/Assets/settingsButton.png" MaxWidth="50" MaxHeight="50"/>
-                    </Button>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
+                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+        </StackPanel>
 
         <!--BOTON A LA PESTAÑA TEAMS-->
         <Viewbox Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,0,20">

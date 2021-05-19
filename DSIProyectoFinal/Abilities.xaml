@@ -226,34 +226,23 @@
                   IsItemClickEnabled="True"
                   ItemClick="AbilitySelection">
         </GridView>-->
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4">
+            <!--HomeButton-->
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+                    Click="GoToMainMenu">
+                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+
+            <!--SettingsButton-->
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+                    Click="GoToSettings">
+                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+        </StackPanel>
         
-        <Viewbox Grid.Row="4" HorizontalAlignment="Left">
-            <Grid>
-                <StackPanel VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"
-                    Orientation="Horizontal">
-                    <Button Grid.Row="2" Click="GoToMainMenu" Background="Transparent">
-                        <Image Source="/Assets/homeButton.png"
-                   Height="50"
-                   Width="50"
-                   Margin="0,0,0,10"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Left"
-                   Stretch="Uniform"/>
-                    </Button>
-                    <Button Grid.Row="2" Click="GoToSettings" Background="Transparent">
-                        <Image Source="/Assets/settingsButton.png"
-               Grid.Row="2"
-               Height="50"
-               Width="50"
-               Margin="0,0,0,5"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left"
-               Stretch="Uniform"/>
-                    </Button>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
+     
         
 
         <Viewbox Grid.Row="1"

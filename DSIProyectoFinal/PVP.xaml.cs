@@ -56,7 +56,7 @@ namespace DSIProyectoFinal
         private void EnterClick(object sender, RoutedEventArgs e)
         {
             if(isAtacking) this.Frame.Navigate(typeof(Ataque));
-            else this.Frame.Navigate(typeof(Defensa));
+            else this.Frame.Navigate(typeof(TeamSelect));
         }
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {

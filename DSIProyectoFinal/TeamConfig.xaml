@@ -386,38 +386,21 @@
                 Click="SaveTeam"/>
         </Viewbox>
 
-        <!--BOTON HOME Y OPCIONES-->
-        <Viewbox Grid.Row="3"
-                 Grid.ColumnSpan="3"
-                 VerticalAlignment="Bottom"
-                 HorizontalAlignment="Left">
-            <Grid>
-                <StackPanel Orientation="Horizontal">
-                    <Button Background="Transparent" BorderThickness="2"
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
+            <!--HomeButton-->
+            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
                     Click="GoToMainMenu">
-                        <Image Source="/Assets/homeButton.png"
-                       Grid.Row="2"
-                       MaxHeight="50"
-                       MaxWidth="50"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Stretch="Uniform"/>
-                    </Button>
-                    <Button Background="Transparent" BorderThickness="2"
-                    Click="GoToSettings">
-                        <Image Source="/Assets/settingsButton.png"
-                       Grid.Row="2"
-                       MaxHeight="50"
-                       MaxWidth="50"
-                       Margin="0,0,0,5"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Stretch="Uniform"/>
-                    </Button>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
+                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
 
+            <!--SettingsButton-->
+            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+                    Click="GoToSettings">
+                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+            </Button>
+        </StackPanel>
+        
+     
         <!--BOTONES DE SELECCION DE EQUIPO-->
         <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
                  HorizontalAlignment="Center" VerticalAlignment="Top">
