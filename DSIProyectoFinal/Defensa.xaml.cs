@@ -113,17 +113,15 @@ namespace DSIProyectoFinal
             if(MemberSelected != null)
             {
                 ContentControl cell = sender as ContentControl;
-                string cellName = cell.Name;
                 //pillo la imagen por su nombre
-                int posicion = int.Parse(cellName[7].ToString()) * 8 + int.Parse(cellName[8].ToString()); //8??
-                KnightsOnGrid[posicion] = SelectedTeam[IndexOfSelectedKnight];
-                //Image icono = cell.FindName("gridImage" + cellName[7] + cellName[8]);
-
-                //car.GetType().GetProperty(propertyName).GetValue(car, null);
-                //MAAAAAAAAL
-                //cell.Content = (new BitmapImage(new Uri("ms-appx:///Assets/Knights/stickman1.png")));
-
-                //index = int.Parse((sender as Button).Name[1].ToString()) - 1; content01 7 y 8
+                int posicion = int.Parse(cell.Name[7].ToString()) * 8 + int.Parse(cell.Name[8].ToString()); //8??
+                if(KnightsOnGrid[posicion] == null)
+                {
+                    KnightsOnGrid[posicion] = SelectedTeam[IndexOfSelectedKnight];
+                    //se esconde el caballero seleccionado
+                    MemberSelected.Visibility = Visibility.Collapsed;
+                    MemberSelected = null;
+                }
             }
         }
     }
