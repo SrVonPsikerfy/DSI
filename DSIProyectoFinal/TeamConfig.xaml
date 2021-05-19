@@ -145,6 +145,8 @@
             </Grid>
         </Viewbox>
 
+        <!--<Button DataTemplate="KnightsTemplate"></Button>-->
+        
         <!--GRID CON LOS MIEMBROS DEL EQUIPO-->
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Margin="20" ColumnSpacing="20" RowSpacing="20">
             <!--Definicion de filas y columnas-->
@@ -380,7 +382,8 @@
         <Button Content="SAVE"              
                 FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"
                  BorderThickness="7"
-                 BorderBrush="Black" Margin="0,0,0,92"/>
+                 BorderBrush="Black" Margin="0,0,0,92"
+                Click="SaveTeam"/>
         </Viewbox>
 
         <!--BOTON HOME Y OPCIONES-->

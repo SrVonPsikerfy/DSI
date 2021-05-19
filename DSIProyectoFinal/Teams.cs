@@ -31,5 +31,20 @@ namespace DSIProyectoFinal
         };
 
         static private IList<Knight> teamSelected;
+        static public void SaveList(List<Knight> newList, int selectedTeamIndex)
+        {
+            switch (selectedTeamIndex)
+            {
+                case 0:
+                    Team1 = newList;
+                    break;
+                case 1:
+                    Team2 = newList;
+                    break;
+                case 2:
+                    Team3 = newList;
+                    break;
+            }
+        }
     }
 }

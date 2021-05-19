@@ -58,6 +58,7 @@ namespace DSIProyectoFinal
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
@@ -73,12 +74,14 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             Frame.Navigate(typeof(Opciones));
         }
 

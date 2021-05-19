@@ -104,7 +104,7 @@ namespace DSIProyectoFinal
 
         private void UpdateKnights(List<Knight> selectedTeam)
         {
-            auxTeam = selectedTeam;
+            auxTeam = new List<Knight>(selectedTeam);
 
             for (int i = 0; i < iconKnightList.Count(); i++)
             {
@@ -143,9 +143,18 @@ namespace DSIProyectoFinal
             }
         }
 
+        private bool ContainsKnight(Knight gridKnight)
+        {
+            foreach (Knight knight in auxTeam)
+            {
+                if (knight.Name == gridKnight.Name) return true;
+            }
+            return false;
+        }
+
         private void ChangeChar()
         {
-            if (selectedKnight != gridKnight && !auxTeam.Contains(gridKnight))
+            if (selectedKnight.Name != gridKnight.Name && !ContainsKnight(gridKnight))
             {
                 auxTeam[index] = gridKnight;
                 imageKnightList[index].Source = new BitmapImage(new Uri(auxTeam[index].ImageLocation));
@@ -178,6 +187,12 @@ namespace DSIProyectoFinal
                     this.Frame.GoBack();
                 }
             }
+        }
+
+        private void SaveTeam(object sender, RoutedEventArgs e)
+        {
+            Teams.SaveList(auxTeam, SelectedTeamIndex);
+            teamList[SelectedTeamIndex] = new List<Knight>(auxTeam);
         }
     }
 }
