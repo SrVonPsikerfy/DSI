@@ -32,7 +32,9 @@ namespace DSIProyectoFinal
         public List<ContentControl> Members;
         ContentControl MemberSelected = null;
         public ObservableCollection<Knight> SelectedTeam = new ObservableCollection<Knight>();
-
+        //filas 0->3, cols 0->7
+        public ObservableCollection<Knight> KnightsOnGrid = new ObservableCollection<Knight>();
+        int IndexOfSelectedKnight = -1;
 
         private string nameCart;
         bool clicked = false;
@@ -51,6 +53,8 @@ namespace DSIProyectoFinal
             {
                 SelectedTeam.Add(new Knight(knight));
             }
+
+            for (int i = 0; i < 32; i++) KnightsOnGrid.Add(null);
             base.OnNavigatedTo(e);
         }
 
@@ -89,6 +93,7 @@ namespace DSIProyectoFinal
             {
                 MemberSelected = null;
                 contentGrid.Opacity = 1;
+                IndexOfSelectedKnight = -1;
             }
             else //Si es distinto...
             {
@@ -96,6 +101,7 @@ namespace DSIProyectoFinal
                 if(MemberSelected == null)
                 {
                     MemberSelected = sender as ContentControl;
+                    IndexOfSelectedKnight = int.Parse(MemberSelected.Name[10].ToString()) - 1;
                     contentGrid.Opacity = 0.5;
                 }
                 //else //si habia uno ya seleccionado y es distinto no hago nada
@@ -107,8 +113,17 @@ namespace DSIProyectoFinal
             if(MemberSelected != null)
             {
                 ContentControl cell = sender as ContentControl;
+                string cellName = cell.Name;
+                //pillo la imagen por su nombre
+                int posicion = int.Parse(cellName[7].ToString()) * 8 + int.Parse(cellName[8].ToString()); //8??
+                KnightsOnGrid[posicion] = SelectedTeam[IndexOfSelectedKnight];
+                //Image icono = cell.FindName("gridImage" + cellName[7] + cellName[8]);
+
+                //car.GetType().GetProperty(propertyName).GetValue(car, null);
                 //MAAAAAAAAL
-                cell.Content = (new BitmapImage(new Uri("ms-appx:///Assets/Knights/stickman1.png")));
+                //cell.Content = (new BitmapImage(new Uri("ms-appx:///Assets/Knights/stickman1.png")));
+
+                //index = int.Parse((sender as Button).Name[1].ToString()) - 1; content01 7 y 8
             }
         }
     }
