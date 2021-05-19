@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using Windows.UI.Xaml;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
+
 
 namespace DSIProyectoFinal
 {
@@ -41,6 +44,8 @@ namespace DSIProyectoFinal
         public Skill[] Abilities { get; set; }
         public List<Skill> EquipedAbilities { get; set; }
 
+        public SolidColorBrush BackgroundColor { get; set; }
+
         public Knight(string name, string imageLocation, Rol role, int shopCost, int cost, int atkPhy, int atkMag, int mana, int defPhy, int defMag,
             int range, int lvl, int currentExp, int maxExp, int pointsAvailable, Skill[] abilities, Visibility visibility = Visibility.Collapsed)
         {
@@ -76,6 +81,35 @@ namespace DSIProyectoFinal
                 //NO METER MAS DE 3
                 if (EquipedAbilities.Count >= 3) break;
             }
+
+            //escoger color segun la clase para la pantalla de juego
+            ColorSelect();
+        }
+
+        private void ColorSelect()
+        {
+            switch (Role)
+            {
+                case Rol.Defender:
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 163, 23, 232));
+                    break;
+
+                case Rol.Healer:
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 116, 232, 50));
+                    break;
+
+                case Rol.Support:
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 201, 232, 23));
+                    break;
+
+                case Rol.Melee:
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 223, 138, 29));
+                    break;
+
+                case Rol.Sniper:
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 29, 132, 223));
+                    break;
+            }
         }
 
         public Knight(Knight knight_)
@@ -102,6 +136,7 @@ namespace DSIProyectoFinal
             PointsAvailable = knight_.PointsAvailable;
             Abilities = knight_.Abilities;
             EquipedAbilities = knight_.EquipedAbilities;
+            BackgroundColor = knight_.BackgroundColor;
         }
     }
 

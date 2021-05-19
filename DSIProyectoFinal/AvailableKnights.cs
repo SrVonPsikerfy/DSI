@@ -33,7 +33,7 @@ namespace DSIProyectoFinal
             new Knight(
                 "Capunta",
                 "ms-appx:///Assets/Knights/stickman2.png",
-                Knight.Rol.Defender,
+                Knight.Rol.Support,
                     100,
                 60,
                 6,
