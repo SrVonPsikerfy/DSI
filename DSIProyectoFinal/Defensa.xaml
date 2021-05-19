@@ -96,6 +96,46 @@
                 <Rectangle Grid.Column="7" Grid.RowSpan="4" 
                 Fill="Black" Width="5" HorizontalAlignment="Left"/>
 
+                
+                <!--dasdasdasdak-->
+                <ContentControl Grid.Row="0" Grid.Column="1" x:Name="content01" PointerPressed="MovingCard" HorizontalAlignment="Center">
+                    <Image x:Name="gridImage1"></Image>
+                </ContentControl>
+                <ContentControl Grid.Row="0" Grid.Column="2" x:Name="content02" PointerPressed="MovingCard" HorizontalAlignment="Center">
+                    <Image x:Name="gridImage2" Source="ms-appx:///Assets/Knights/stickman1.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Image>
+                </ContentControl>
+                <ContentControl Grid.Row="0" Grid.Column="3" x:Name="content03" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="0" Grid.Column="4" x:Name="content04" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="0" Grid.Column="5" x:Name="content05" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="0" Grid.Column="6" x:Name="content06" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="0" Grid.Column="7" x:Name="content07" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+
+                <ContentControl Grid.Row="1" Grid.Column="0" x:Name="content10" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="1" x:Name="content11" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="2" x:Name="content12" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="3" x:Name="content13" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="4" x:Name="content14" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="5" x:Name="content15" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="6" x:Name="content16" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="1" Grid.Column="7" x:Name="content17" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+
+                <ContentControl Grid.Row="2" Grid.Column="0" x:Name="content20" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="1" x:Name="content21" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="2" x:Name="content22" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="3" x:Name="content23" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="4" x:Name="content24" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="5" x:Name="content25" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="6" x:Name="content26" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="2" Grid.Column="7" x:Name="content27" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+
+                <ContentControl Grid.Row="3" Grid.Column="0" x:Name="content30" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="1" x:Name="content31" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="2" x:Name="content32" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="3" x:Name="content33" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="4" x:Name="content34" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="5" x:Name="content35" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="6" x:Name="content36" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
+                <ContentControl Grid.Row="3" Grid.Column="7" x:Name="content37" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
             </Grid>
 
             <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch">

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -12,8 +11,14 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Collections.ObjectModel;
+using System.Reflection;
+using System.ComponentModel;
+
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,7 +30,14 @@ namespace DSIProyectoFinal
     public sealed partial class Defensa : Page
     {
         public List<ContentControl> Members;
+        ContentControl MemberSelected = null;
         public ObservableCollection<Knight> SelectedTeam = new ObservableCollection<Knight>();
+
+
+        private string nameCart;
+        bool clicked = false;
+
+        private ContentControl carta;
         public Defensa()
         {
             this.InitializeComponent();
@@ -69,6 +81,35 @@ namespace DSIProyectoFinal
         private void ContentControl_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
 
+            //Cojo el grid de dentro
+            Grid contentGrid = ((sender as ContentControl).Content as Grid);
+
+            //Si es el mismo, deselecciono
+            if (MemberSelected == sender as ContentControl)
+            {
+                MemberSelected = null;
+                contentGrid.Opacity = 1;
+            }
+            else //Si es distinto...
+            {
+                //si no habia ninguno seleccionado, lo selecciono
+                if(MemberSelected == null)
+                {
+                    MemberSelected = sender as ContentControl;
+                    contentGrid.Opacity = 0.5;
+                }
+                //else //si habia uno ya seleccionado y es distinto no hago nada
+            }
+        }
+
+         private void MovingCard(object sender, PointerRoutedEventArgs e)
+        {
+            if(MemberSelected != null)
+            {
+                ContentControl cell = sender as ContentControl;
+                //MAAAAAAAAL
+                cell.Content = (new BitmapImage(new Uri("ms-appx:///Assets/Knights/stickman1.png")));
+            }
         }
     }
 }
