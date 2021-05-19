@@ -24,20 +24,25 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class TeamConfig : Page
     {
+        //CABALLEROS DISPONIBLES DEL GRID DERECHO
         private ObservableCollection<Knight> Knights { get; set; } = new ObservableCollection<Knight>();
 
-        private List<Knight> t1 = new List<Knight>(),
-            t2 = new List<Knight>(),
-            t3 = new List<Knight>(),
-            tAux = null;
 
+        //ICONOS
         private List<Image> iconKnightList { get; set; } = null;
         private List<Image> imageKnightList { get; set; } = null;
+        private List<Button> buttonKnightList { get; set; } = null;
 
+        //CABALLERO SELECCIONADO Y DEL GRID
         private Knight selectedKnight = null;
         private Knight gridKnight = null;
         int index = -1;
 
+        int SelectedTeamIndex = 1;
+        //EQUIPOS CONFIGURABLES
+        private List<List<Knight>> teamList = new List<List<Knight>>();
+        //EQUIPO TEMPORAL QUE SE VA CREANDO
+        private List<Knight> auxTeam = new List<Knight>();
 
         public TeamConfig()
         {
@@ -52,9 +57,9 @@ namespace DSIProyectoFinal
                     Knights.Add(new Knight(knight));
                 }
 
-            t1 = new List<Knight>(Teams.Team1);
-            t2 = new List<Knight>(Teams.Team2);
-            t3 = new List<Knight>(Teams.Team3);
+            teamList.Add(new List<Knight>(Teams.Team1));
+            teamList.Add(new List<Knight>(Teams.Team2));
+            teamList.Add(new List<Knight>(Teams.Team3));
 
             iconKnightList = new List<Image>() { TeamMemberIcon1, TeamMemberIcon2, TeamMemberIcon3,
                 TeamMemberIcon4, TeamMemberIcon5, TeamMemberIcon6, TeamMemberIcon7, TeamMemberIcon8 };
@@ -62,7 +67,10 @@ namespace DSIProyectoFinal
             imageKnightList = new List<Image>() { TeamMemberImage1, TeamMemberImage2, TeamMemberImage3, TeamMemberImage4,
                 TeamMemberImage5, TeamMemberImage6, TeamMemberImage7, TeamMemberImage8 };
 
-            UpdateKnight(t1);
+            buttonKnightList = new List<Button>() { b1, b2, b3, b4, b5, b6, b7, b8 };
+
+            SelectedTeamIndex = 0;
+            UpdateKnights(teamList[SelectedTeamIndex]);
 
             base.OnNavigatedTo(e);
         }
@@ -72,7 +80,8 @@ namespace DSIProyectoFinal
             Select1.BorderThickness = new Thickness(7);
             Select2.BorderThickness = new Thickness(2);
             Select3.BorderThickness = new Thickness(2);
-            UpdateKnight(t1);
+            SelectedTeamIndex = 0;
+            UpdateKnights(teamList[SelectedTeamIndex]);
         }
 
         private void SelectTeam2(object sender, RoutedEventArgs e)
@@ -80,7 +89,8 @@ namespace DSIProyectoFinal
             Select1.BorderThickness = new Thickness(2);
             Select2.BorderThickness = new Thickness(7);
             Select3.BorderThickness = new Thickness(2);
-            UpdateKnight(t2);
+            SelectedTeamIndex = 1;
+            UpdateKnights(teamList[SelectedTeamIndex]);
         }
 
         private void SelectTeam3(object sender, RoutedEventArgs e)
@@ -88,12 +98,13 @@ namespace DSIProyectoFinal
             Select1.BorderThickness = new Thickness(2);
             Select2.BorderThickness = new Thickness(2);
             Select3.BorderThickness = new Thickness(7);
-            UpdateKnight(t3);
+            SelectedTeamIndex = 2;
+            UpdateKnights(teamList[SelectedTeamIndex]);
         }
 
-        private void UpdateKnight(List<Knight> selectedTeam)
+        private void UpdateKnights(List<Knight> selectedTeam)
         {
-            tAux = selectedTeam;
+            auxTeam = selectedTeam;
 
             for (int i = 0; i < iconKnightList.Count(); i++)
             {
@@ -114,7 +125,8 @@ namespace DSIProyectoFinal
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             index = int.Parse((sender as Button).Name[1].ToString()) - 1;
-            selectedKnight = Knights[index];
+            selectedKnight = auxTeam[index];
+            //me parece muy lioso hacer que en ambos se cambie el personaje, y me da problemas
             if (gridKnight != null)
             {
                 ChangeChar();
@@ -133,11 +145,11 @@ namespace DSIProyectoFinal
 
         private void ChangeChar()
         {
-            if (selectedKnight != gridKnight && !tAux.Contains(gridKnight))
+            if (selectedKnight != gridKnight && !auxTeam.Contains(gridKnight))
             {
-                tAux[index] = gridKnight;
-                imageKnightList[index].Source = new BitmapImage(new Uri(tAux[index].ImageLocation));
-                iconKnightList[index].Source = new BitmapImage(new Uri(tAux[index].RoleLocation));
+                auxTeam[index] = gridKnight;
+                imageKnightList[index].Source = new BitmapImage(new Uri(auxTeam[index].ImageLocation));
+                iconKnightList[index].Source = new BitmapImage(new Uri(auxTeam[index].RoleLocation));
             }
 
             index = -1;

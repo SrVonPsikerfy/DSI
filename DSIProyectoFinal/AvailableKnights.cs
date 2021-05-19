@@ -15,12 +15,12 @@ namespace DSIProyectoFinal
                 "ms-appx:///Assets/Knights/stickman1.png",
                 Knight.Rol.Healer,
                     100,
-                50,
-                6,
-                7,
-                8,
-                9,
-                10,
+                100,
+                100,
+                100,
+                20,
+                100,
+                100,
                 1,
                 69,
                 210,
@@ -143,6 +143,64 @@ namespace DSIProyectoFinal
                 21,
                 new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
                 
+             ),
+             new Knight(
+                "Paco",
+                "ms-appx:///Assets/Knights/stickman6.png",
+               Knight.Rol.Defender,
+                    100,
+                400,
+                6,
+                7,
+                8,
+                9,
+                400,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+
+             ),
+              new Knight(
+                "Sanz",
+                "ms-appx:///Assets/Knights/stickman6.png",
+               Knight.Rol.Healer,
+                    100,
+                600,
+                600,
+                7,
+                8,
+                9,
+                10,
+                1,
+                69,
+                210,
+                420,
+                21,
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+
+             ),
+
+              new Knight(
+                "Astolfo",
+                "ms-appx:///Assets/Knights/stickman6.png",
+               Knight.Rol.Healer,
+                    100,
+                600,
+                999,
+                7,
+                8,
+                9,
+                99,
+                1,
+                99,
+                210,
+                420,
+                21,
+                new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
+
              )
           };
 
