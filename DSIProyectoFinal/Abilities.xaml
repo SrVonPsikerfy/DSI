@@ -257,11 +257,11 @@
                        Foreground="Black"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
-                    <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}" Margin="4,4,4,4"/>
+                    <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
 
-                    <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}" Margin="4,4,4,4"/>
+                    <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
 
-                    <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}" Margin="4,4,4,4"/>
+                    <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
