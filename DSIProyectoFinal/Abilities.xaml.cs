@@ -31,7 +31,10 @@ namespace DSIProyectoFinal
         private List<Skill> SelectedSkills { get; set; } = new List<Skill>();
         private List<Image> SelectedSkillsImages { get; set; } = new List<Image>();
 
-        //Knight selectedKnight;
+        Skill skill = null;
+        Image image = null;
+        int index = -1;
+
         private ObservableCollection<Knight> selectedKnight { get; set; } = new ObservableCollection<Knight>();
 
         public Abilities()
@@ -96,11 +99,6 @@ namespace DSIProyectoFinal
             }
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void KnightSelection(object sender, ItemClickEventArgs e)
         {
             Knight k = e.ClickedItem as Knight;
@@ -120,32 +118,45 @@ namespace DSIProyectoFinal
 
         private void AbilitySelection(object sender, ItemClickEventArgs e)
         {
-            Skill skill = e.ClickedItem as Skill;
+            skill = e.ClickedItem as Skill;
 
             //actualizar imagen desbloqueada
-            int index = Skills.IndexOf(skill);
+            index = Skills.IndexOf(skill);
             GridSkills.SelectedIndex = index;
 
             //se obtiene el gridViewItem
             GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
-            //de momento la plantilla solo tiene imagen
-            Image image = null;
-            if (gridViewItem != null) image = (FindByName("skillImage", gridViewItem) as Image);
-            
 
-            if (!skill.IsUnlocked) UnlockAbility(skill, index, image);
-            else
+            if (gridViewItem != null) image = (FindByName("skillImage", gridViewItem) as Image);
+
+            if (!skill.IsUnlocked)
+            {
+                FalseBackground.Visibility = Visibility.Visible;
+                ConfirmBox.Visibility = Visibility.Visible;
+                TextConfirm.Text = "Buy skill?";
+            }
+            else 
             {
                 //EQUIPADA?
-                if (skill.IsActive) UnequipAbility(skill, index, image);
+                if (skill.IsActive)
+                {
+                    FalseBackground.Visibility = Visibility.Visible;
+                    ConfirmBox.Visibility = Visibility.Visible;
+                    TextConfirm.Text = "Unequip skill?";
+                }
                 //NO EQUIPADA
-                else EquipAbility(skill, index, image);
+                else if (selectedKnight[0].EquipedAbilities.Count() < 3)
+                {
+                    FalseBackground.Visibility = Visibility.Visible;
+                    ConfirmBox.Visibility = Visibility.Visible;
+                    TextConfirm.Text = "Equip skill?";
+                }
             }
         }
 
         private void UnlockAbility(Skill skill, int index, Image image)
         {
-            if(selectedKnight[0].PointsAvailable >= skill.PointsNeeded)
+            if (selectedKnight[0].PointsAvailable >= skill.PointsNeeded)
             {
                 //se actualiza el source
                 skill.UnlockAbility();
@@ -159,14 +170,14 @@ namespace DSIProyectoFinal
 
                 GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
                 if (gridViewItem != null) (FindByName("skillCircleOfPoint", gridViewItem) as Image).Visibility = Visibility.Collapsed;
-                
+
 
                 gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
                 if (gridViewItem != null) (FindByName("skillPointsNeeded", gridViewItem) as TextBlock).Visibility = Visibility.Collapsed;
             }
         }
 
-        private void EquipAbility(Skill skill, int index, Image image)
+        private void EquipAbility(Skill skill, Image image)
         {
             if (selectedKnight[0].EquipedAbilities.Count < 3)
             {
@@ -182,9 +193,9 @@ namespace DSIProyectoFinal
         }
 
 
-        private void UnequipAbility(Skill skill, int index, Image image)
+        private void UnequipAbility(Skill skill, Image image)
         {
-            for(int i = 0; i < selectedKnight[0].EquipedAbilities.Count; i++)
+            for (int i = 0; i < selectedKnight[0].EquipedAbilities.Count; i++)
             {
                 if (SelectedSkills[i] == skill)
                 {
@@ -212,19 +223,37 @@ namespace DSIProyectoFinal
                 i++;
             }
             //se meten imagenes de relleno para el resto que no tienen mas habilidades equipadas
-            while(i < 3)
+            while (i < 3)
             {
                 SelectedSkillsImages[i].Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_not_used.png"));
                 i++;
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void No_Click(object sender, RoutedEventArgs e)
         {
-            
-
+            FalseBackground.Visibility = Visibility.Collapsed;
+            ConfirmBox.Visibility = Visibility.Collapsed;
         }
 
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            if (!skill.IsUnlocked) UnlockAbility(skill, index, image);
+            else
+            {
+                //EQUIPADA?
+                if (skill.IsActive) UnequipAbility(skill, image);
+                //NO EQUIPADA
+                else EquipAbility(skill, image);
+            }
+
+            skill = null;
+            image = null;
+            index = -1;
+
+            FalseBackground.Visibility = Visibility.Collapsed;
+            ConfirmBox.Visibility = Visibility.Collapsed;
+        }
 
         private FrameworkElement FindByName(string name, FrameworkElement root)
         {

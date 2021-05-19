@@ -50,10 +50,10 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                    <Image x:Name="skillImage" Grid.Column="0" Grid.Row="0"
+                <Image x:Name="skillImage" Grid.Column="0" Grid.Row="0"
                            Grid.ColumnSpan="2" Grid.RowSpan="2"
                 Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform">
-                    </Image>
+                </Image>
 
                 <Image x:Name="skillCircleOfPoint" Grid.Column="1" Grid.Row="1"
                 Source="ms-appx:///Assets/skills/skill_points.png" Stretch="Uniform"
@@ -129,7 +129,7 @@
         </Style>
 
     </Page.Resources>
-    
+
     <Grid KeyDown="Grid_KeyDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -152,7 +152,7 @@
         <Image Grid.ColumnSpan ="6" Grid.RowSpan="5"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Viewbox>
             <Grid>
@@ -186,7 +186,7 @@
                 </StackPanel>
             </Grid>
         </Viewbox>
-        
+
 
         <!--Lista de Caballeros-->
         <GridView x:Name="GridSelect"
@@ -241,9 +241,9 @@
                 <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
             </Button>
         </StackPanel>
-        
-     
-        
+
+
+
 
         <Viewbox Grid.Row="1"
                  Grid.Column="2">
@@ -255,106 +255,16 @@
                        FontSize="60"
                        IsColorFontEnabled="True"
                        Foreground="Black"
-                       HorizontalAlignment="Center" FontFamily="Abril Fatface" SelectionChanged="TextBlock_SelectionChanged"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
-                    <Button Background="Transparent">
-                        <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
-                    </Button>
-                    <Button Background="Transparent">
-                        <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}"/>
-                    </Button>
-                    <Button Background="Transparent">
-                        <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}"/>
-                    </Button>
+                    <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
+
+                    <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
+
+                    <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
-        
-        <!--<Grid Grid.Row="1"
-              Grid.Column="3"
-              Grid.ColumnSpan="3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="20*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="1">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="3">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="4">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="5">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    Grid.ColumnSpan="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    Grid.Column="4"
-                    Grid.ColumnSpan="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-        </Grid>-->
-
 
         <Viewbox Grid.Row="2"
                  Grid.Column="2"
@@ -376,7 +286,7 @@
                    HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
             </StackPanel>
         </Viewbox>
-        
+
 
         <Viewbox Grid.Row="3"
               Grid.Column="3"
@@ -585,7 +495,7 @@
                        Foreground="Black"
                        FontSize="15"
                        FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
-                        
+
                         <TextBlock
                        Text="{x:Bind selectedKnight[0].MaxExp, Mode=OneWay}"
                        Foreground="Black"
@@ -593,13 +503,43 @@
                        FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
                     </StackPanel>
                 </StackPanel>
-               
+
                 <ProgressBar Grid.Row="2"
                          Width="130"
                          Value="30"
                          HorizontalAlignment="Stretch"
                          VerticalAlignment="Center" Background="White"/>
 
+            </Grid>
+        </Viewbox>
+
+        <!--Menu confirmacion-->
+        <Image x:Name="FalseBackground" Grid.ColumnSpan="5" Grid.RowSpan="3"
+               Source="./Assets/castle.jpg"
+               Stretch="Fill"
+               Opacity="0"
+               Visibility="Collapsed"/>
+
+        <Viewbox x:Name="ConfirmBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Rectangle Fill="DarkCyan" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                
+                <TextBlock x:Name="TextConfirm" Grid.Row="0" Grid.ColumnSpan="2" Text="" FontFamily="Abril Fatface"/>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.RowSpan="2"  >
+
+                    <Button  Content="Yes" Click="Confirm_Click" FontFamily="Abril Fatface"/>
+                    <Button Content="No" Click="No_Click" FontFamily="Abril Fatface" />
+                </StackPanel>
             </Grid>
         </Viewbox>
     </Grid>
