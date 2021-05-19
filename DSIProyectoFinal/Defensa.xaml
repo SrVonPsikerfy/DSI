@@ -101,7 +101,7 @@
             <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch">
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[0].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -122,7 +122,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember2">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -143,7 +143,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="CornflowerBlue">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -164,7 +164,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="SandyBrown">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -185,7 +185,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember5">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[4].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -206,7 +206,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember6">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[5].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -227,7 +227,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember7">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[6].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
@@ -248,7 +248,7 @@
                 </ContentControl>
 
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember8">
-                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[7].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="3*"/>
