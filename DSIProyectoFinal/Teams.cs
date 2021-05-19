@@ -30,7 +30,7 @@ namespace DSIProyectoFinal
             AvailableKnights.GetAvailableKnights()[1], AvailableKnights.GetAvailableKnights()[0]
         };
 
-        static public IList<Knight> teamSelected;
+        static public List<Knight> teamSelected;
         static public void SaveList(List<Knight> newList, int selectedTeamIndex)
         {
             switch (selectedTeamIndex)

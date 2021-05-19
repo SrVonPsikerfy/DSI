@@ -100,7 +100,7 @@
 
             <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch">
 
-                <ContentControl>
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -121,7 +121,7 @@
                     </Grid>
                 </ContentControl>
 
-                <ContentControl>
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember2">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -142,7 +142,7 @@
                     </Grid>
                 </ContentControl>
 
-                <ContentControl>
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="CornflowerBlue">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -163,7 +163,7 @@
                     </Grid>
                 </ContentControl>
 
-                <ContentControl>
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="SandyBrown">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -183,7 +183,8 @@
                         <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
                     </Grid>
                 </ContentControl>
-                <ContentControl>
+
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember5">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="IndianRed">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -200,6 +201,69 @@
 
                         </StackPanel>
                         <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember6">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember7">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                    </Grid>
+                </ContentControl>
+
+                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember8">
+                    <Grid BorderThickness="3" BorderBrush="Black" Background="LightGreen">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
+                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
+
+                        </StackPanel>
+                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
                         <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
                     </Grid>
                 </ContentControl>
