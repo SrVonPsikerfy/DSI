@@ -19,20 +19,21 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="32*" />
+                <ColumnDefinition Width="27*" />
+                <ColumnDefinition Width="5*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
             <!--Fondo-->
-            <Image Grid.ColumnSpan ="5" Grid.RowSpan="3"
+            <Image Grid.ColumnSpan ="6" Grid.RowSpan="3"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
             
             <!--Icono de Defensa-->
             <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/defense.png" MaxHeight="87" MaxWidth="87" />
 
-            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" FontSize="30" Text="200" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center" Foreground="blue" FontWeight="Bold"/>
                 <Image Source="./Assets/mana_icon.png" MaxHeight="60" MaxWidth="87" Margin="0,0,20,0"/>
 
@@ -41,12 +42,12 @@
             </StackPanel>
             
             <!--Boton de pausa-->
-            <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            <Button Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Click="GoToPause">
                 <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
             </Button>
 
-            <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">
+            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" BorderThickness="5" BorderBrush="Black" Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -462,6 +463,12 @@
             <Canvas Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
             </Canvas>
+
+            <!--Auto Win-->
+            <Viewbox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Left">
+                <Button Background="#BDBDBD" BorderBrush="Black" x:Name="AutoWin"
+                Content="AUTO WIN" FontSize="30" FontFamily="Abril Fatface" Click="AutoWin_Click"/>
+            </Viewbox>
 
         </Grid>
     </Grid>
