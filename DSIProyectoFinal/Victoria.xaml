@@ -10,13 +10,13 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="12.5*"></RowDefinition>
-            <RowDefinition Height="12.5*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="15*"></RowDefinition>
             <RowDefinition Height="12.5*"></RowDefinition>
             <RowDefinition Height="7.3*"></RowDefinition>
             <RowDefinition Height="17.6*"></RowDefinition>
             <RowDefinition Height="12.5*"></RowDefinition>
-            <RowDefinition Height="12.5*"></RowDefinition>
+            <RowDefinition Height="15*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -51,10 +51,13 @@
         </Viewbox>
 
         <!--Texto de victoria-->
-        <Rectangle Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Fill="DarkGreen" MaxWidth="800" MaxHeight="150" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Viewbox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+        <Grid  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
+            
+        <Rectangle Fill="DarkGreen" MaxWidth="900"  HorizontalAlignment="Stretch"/>
+        <Viewbox VerticalAlignment="Bottom">
             <TextBlock Text="Victory!" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Abril Fatface"/>
         </Viewbox>
+        </Grid>
 
         <Viewbox  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
             
