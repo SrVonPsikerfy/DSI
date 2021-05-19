@@ -91,23 +91,23 @@ namespace DSIProyectoFinal
             switch (Role)
             {
                 case Rol.Defender:
-                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 0, 255, 255));
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 163, 23, 232));
                     break;
 
                 case Rol.Healer:
-                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 255, 0, 255));
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 116, 232, 50));
                     break;
 
                 case Rol.Support:
-                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 255, 255, 0));
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 201, 232, 23));
                     break;
 
                 case Rol.Melee:
-                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 255, 255, 255));
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 223, 138, 29));
                     break;
 
                 case Rol.Sniper:
-                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 0, 255, 255));
+                    BackgroundColor = new SolidColorBrush(ColorHelper.FromArgb(255, 29, 132, 223));
                     break;
             }
         }

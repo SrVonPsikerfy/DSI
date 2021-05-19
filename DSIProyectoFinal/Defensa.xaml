@@ -112,12 +112,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[0].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[0].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[0].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -133,12 +133,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[1].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
-                            
+
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[1].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[1].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -154,12 +154,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="30" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[2].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/support_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[2].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[2].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -175,12 +175,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="25" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[3].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/sniper_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[3].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[3].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -196,12 +196,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[4].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/melee_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[4].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[4].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -217,12 +217,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[5].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[5].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[5].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -238,12 +238,12 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[6].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[6].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[6].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
 
@@ -259,15 +259,14 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                            <TextBlock Text="20" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="{x:Bind SelectedTeam[7].Mana, Mode=OneWay}" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
                             <Image Grid.Row="0" Grid.Column="1" Source="./Assets/mana_icon.png" MaxHeight="30" MaxWidth="30"/>
 
                         </StackPanel>
-                        <Image Grid.Row="0" Grid.Column="1" Source="./Assets/healer_class_icon.png"/>
-                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="./Assets/stick-man-hi-small.png"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[7].RoleLocation, Mode=OneWay}"/>
+                        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[7].ImageLocation, Mode=OneWay}"/>
                     </Grid>
                 </ContentControl>
-
             </StackPanel>
 
 
