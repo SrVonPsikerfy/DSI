@@ -17,13 +17,14 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="32*" />
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
         <!--Fondo-->
-        <Image Grid.ColumnSpan ="5" Grid.RowSpan="3"
+        <Image Grid.ColumnSpan ="6" Grid.RowSpan="3"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
 
@@ -31,16 +32,16 @@
         <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/attack.png" MaxHeight="87" MaxWidth="87" />
 
         <!--Timer-->
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
         
         <!--Boton de pausa-->
-        <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+        <Button Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 Click="GoToPause">
             <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
         </Button>
 
 
-        <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">
+        <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" BorderThickness="5" BorderBrush="Black" Background="White">
             
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -147,7 +148,7 @@
             <ContentControl Grid.Row="3" Grid.Column="7" x:Name="content37" PointerPressed="MovingCard" HorizontalAlignment="Center"/>
         </Grid>
 
-        <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+        <StackPanel  Grid.Row="2" Grid.Column="3"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
 
 
             <ContentControl PointerPressed="MovingCard" Name="cartUNO" >
@@ -223,6 +224,11 @@
             </ContentControl>
 
         </StackPanel>
-
+        
+        <!--Auto Win-->
+        <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left">
+            <Button Background="#BDBDBD" BorderBrush="Black" x:Name="AutoWin"
+                Content="AUTO WIN" FontSize="30" FontFamily="Abril Fatface" Click="AutoWin_Click"/>
+        </Viewbox>
     </Grid>
 </Page>
