@@ -37,7 +37,7 @@ namespace DSIProyectoFinal
 
         private void GoToPlay(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Defensa));
+            this.Frame.Navigate(typeof(TeamSelect));
         }
         
         private void GoToMainMenu(object sender, RoutedEventArgs e)
