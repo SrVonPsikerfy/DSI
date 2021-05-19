@@ -556,19 +556,55 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="LVL 69"
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock Text="LVL "
+                       FontSize="25*"
+                       Foreground="Black"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right" FontFamily="Abril Fatface"
+                       Margin="0,0,2,0"/>
+
+                    <TextBlock Text="{x:Bind selectedKnight[0].Lvl, Mode=OneWay}"
                        FontSize="25*"
                        Foreground="Black"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Right" FontFamily="Abril Fatface"/>
+                </StackPanel>
 
-                <TextBlock Grid.Row="1"
-                       Text="Exp. 210/420"
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                >
+                        <TextBlock
+                       Text="Exp. "
                        Foreground="Black"
                        FontSize="15"
-                       VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Abril Fatface"/>
+                       FontFamily="Abril Fatface" HorizontalAlignment="Right"
+                       Margin="0,0,2,0"/>
 
+                        <TextBlock
+                       Text="{x:Bind selectedKnight[0].CurrentExp, Mode=OneWay}"
+                       Foreground="Black"
+                       FontSize="15"
+                       FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <TextBlock Grid.Row="1"
+                       Text="/"
+                       Foreground="Black"
+                       FontSize="15"
+                       FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
+                        
+                        <TextBlock
+                       Text="{x:Bind selectedKnight[0].MaxExp, Mode=OneWay}"
+                       Foreground="Black"
+                       FontSize="15"
+                       FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </StackPanel>
+               
                 <ProgressBar Grid.Row="2"
                          Width="130"
                          Value="30"

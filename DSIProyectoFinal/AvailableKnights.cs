@@ -176,8 +176,8 @@ namespace DSIProyectoFinal
                 10,
                 1,
                 69,
-                210,
-                420,
+                100,
+                200,
                 21,
                 new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
 
@@ -196,8 +196,8 @@ namespace DSIProyectoFinal
                 99,
                 1,
                 99,
-                210,
                 420,
+                690,
                 21,
                 new Skill[3]{ new Skill("skill1", 1, false, false), new Skill("skill2", 1, false, false), new Skill("skill3", 1, false, false)}
 
