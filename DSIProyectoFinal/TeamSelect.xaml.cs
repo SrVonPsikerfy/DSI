@@ -25,7 +25,7 @@ namespace DSIProyectoFinal
     /// </summary>
     public sealed partial class TeamSelect : Page
     {
-        private IList<Knight> selectedTeam = null;
+        private List<Knight> selectedTeam = null;
         private List<Image> iconKnightList { get; set; } = null;
         private List<Image> imageKnightList { get; set; } = null;
 
@@ -50,6 +50,8 @@ namespace DSIProyectoFinal
                 TeamMemberImage5, TeamMemberImage6, TeamMemberImage7, TeamMemberImage8 };
 
             UpdateKnight(Teams.Team1);
+
+            selectedTeam = Teams.Team1;
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
