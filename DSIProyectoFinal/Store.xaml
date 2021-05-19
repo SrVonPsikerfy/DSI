@@ -236,7 +236,7 @@
                 
                 <Rectangle Fill="RosyBrown" Grid.RowSpan="2"/>
                 <StackPanel Orientation="Vertical" Grid.RowSpan="2">
-                    <TextBlock Text="Are you sure?" FontFamily="Abril Fatface"/>
+                    <TextBlock Text="Buy knight?" FontFamily="Abril Fatface"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>

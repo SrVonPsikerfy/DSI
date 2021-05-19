@@ -255,7 +255,7 @@
                        FontSize="60"
                        IsColorFontEnabled="True"
                        Foreground="Black"
-                       HorizontalAlignment="Center" FontFamily="Abril Fatface" SelectionChanged="TextBlock_SelectionChanged"/>
+                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
                     <Button Background="Transparent">
                         <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
@@ -600,6 +600,35 @@
                          HorizontalAlignment="Stretch"
                          VerticalAlignment="Center" Background="White"/>
 
+            </Grid>
+        </Viewbox>
+
+        <!--Menu confirmacion-->
+        <Image x:Name="FalseBackground" Grid.ColumnSpan="5" Grid.RowSpan="3"
+               Source="./Assets/castle.jpg"
+               Stretch="Fill"
+               Opacity="0"
+               Visibility="Collapsed"/>
+
+        <Viewbox x:Name="ConfirmBox" Grid.RowSpan="3" Grid.ColumnSpan="5"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Rectangle Fill="DarkCyan" Grid.RowSpan="2"/>
+                <StackPanel Orientation="Vertical" Grid.RowSpan="2">
+                    <TextBlock x:Name="TextConfirm" Text="" FontFamily="Abril Fatface"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Content="Yes" Click="Confirm_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch"/>
+                        <Button Grid.Column ="1" Content="No" Click="No_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch" />
+                    </Grid>
+                </StackPanel>
             </Grid>
         </Viewbox>
     </Grid>
