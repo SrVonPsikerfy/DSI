@@ -27,7 +27,7 @@ namespace DSIProyectoFinal
                 420,
                 21,
                 new Skill[6]{ new Skill("skill1", 1, false, false), new Skill("skill6", 6, false, false), new Skill("skill8", 8, false, false),
-                             new Skill("skill1", 1, true, true), new Skill("skill6", 6, true, true), new Skill("skill8", 8, true, true)}
+                             new Skill("skill2", 1, true, true), new Skill("skill6", 3, true, true), new Skill("skill4", 8, true, true)}
 
              ),
             new Knight(
