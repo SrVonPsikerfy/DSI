@@ -99,7 +99,26 @@
                 
                 <!--dasdasdasdak-->
                 <ContentControl Grid.Row="0" Grid.Column="1" x:Name="content01" PointerPressed="MovingCard" HorizontalAlignment="Center">
-                    <Image x:Name="gridImage1"></Image>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--CLICKABLE CUTRE-->
+                        <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
+                        
+                        <Image x:Name="gridImage1" Source="{x:Bind KnightsOnGrid[1].ImageLocation, Mode=OneWay}"
+                               Grid.Column="0" Grid.Row="0"></Image>
+                        <Image x:Name="gridImageIcon1" Source="{x:Bind KnightsOnGrid[1].RoleLocation, Mode=OneWay}"
+                               Grid.Column="1" Grid.Row="1"></Image>
+                    </Grid>
+                   
                 </ContentControl>
                 <ContentControl Grid.Row="0" Grid.Column="2" x:Name="content02" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Image x:Name="gridImage2" Source="ms-appx:///Assets/Knights/stickman1.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Image>
