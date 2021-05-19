@@ -24,6 +24,7 @@ namespace DSIProyectoFinal
     public sealed partial class PVP : Page
     {
         bool isAtacking = false;
+
         public PVP()
         {
             this.InitializeComponent();
@@ -58,6 +59,7 @@ namespace DSIProyectoFinal
             if(isAtacking) this.Frame.Navigate(typeof(Ataque));
             else this.Frame.Navigate(typeof(TeamSelect));
         }
+
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
             while (this.Frame.CanGoBack)
