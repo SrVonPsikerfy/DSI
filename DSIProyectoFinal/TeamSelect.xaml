@@ -395,7 +395,8 @@
         <Button Content="GO!" 
                 FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"
                  BorderThickness="7"
-                 BorderBrush="Black"/>
+                 BorderBrush="Black"
+                Click="Go"/>
         </Viewbox>
 
         <!--BOTON HOME Y OPCIONES-->
