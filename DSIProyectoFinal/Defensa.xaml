@@ -105,21 +105,21 @@
                         </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="4*"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
                         <!--CLICKABLE CUTRE-->
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image x:Name="gridImage1" Source="{x:Bind KnightsOnGrid[1].ImageLocation, Mode=OneWay}"
-                               Grid.Column="0" Grid.Row="0" ></Image>
+                               Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" ></Image>
                         <Image x:Name="gridImageIcon1" Source="{x:Bind KnightsOnGrid[1].RoleLocation, Mode=OneWay}"
-                               Grid.Column="1" Grid.Row="1"></Image>
+                               Grid.Column="1" Grid.Row="0"></Image>
                         
-                        <Viewbox Grid.Row="0" Grid.Column="1">
+                        <Viewbox Grid.Row="1" Grid.Column="1">
                             <Grid Background="#FF8B5555">
-                                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel x:Name="panel01" Orientation="Vertical" VerticalAlignment="Center">
                                     
 
                                     <!--<Image x:Name="SelectedSkillImage1" Source="{x:Bind KnightsOnGrid[1].EquipedAbilities[0].ImageSource, Mode=OneWay}"/>

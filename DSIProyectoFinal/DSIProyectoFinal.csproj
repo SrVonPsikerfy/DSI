@@ -270,6 +270,7 @@
     <Content Include="Assets\skills\skill9_icon_active.png" />
     <Content Include="Assets\skills\skill9_icon_unlocked.png" />
     <Content Include="Assets\skills\skill_border.png" />
+    <Content Include="Assets\skills\skill_locked.png" />
     <Content Include="Assets\skills\skill_not_used.png" />
     <Content Include="Assets\skills\skill_points.png" />
     <Content Include="Assets\sniper_class_icon.png" />

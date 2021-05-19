@@ -121,6 +121,27 @@ namespace DSIProyectoFinal
                     //se esconde el caballero seleccionado
                     MemberSelected.Visibility = Visibility.Collapsed;
                     MemberSelected = null;
+
+                    //HABILIDADES
+                    StackPanel skillStackPanel = cell.FindName("panel" + cell.Name[7].ToString() + cell.Name[8].ToString()) as StackPanel;
+                    if(skillStackPanel != null)
+                    {
+                        int i = 0;
+                        foreach (Skill skill in KnightsOnGrid[posicion].EquipedAbilities)
+                        {
+                            Image image = new Image();
+                            image.Source = new BitmapImage(new Uri(skill.ImageSource));
+                            skillStackPanel.Children.Add(image);
+                            i++;
+                        }
+                        while (i < 3)
+                        {
+                            Image image = new Image();
+                            image.Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_locked.png"));
+                            skillStackPanel.Children.Add(image);
+                            i++;
+                        }
+                    }
                 }
             }
         }
