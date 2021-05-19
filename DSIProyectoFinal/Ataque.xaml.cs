@@ -109,5 +109,10 @@ namespace DSIProyectoFinal
             //carta.IsEnabled = false;
 
         }
+
+        private void AutoWin_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Victoria));
+        }
     }
 }

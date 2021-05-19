@@ -31,12 +31,13 @@ namespace DSIProyectoFinal
         {
             StoreKnights.Prize += int.Parse(iridiumCount.Text);
 
-            foreach (Knight knight in Teams.teamSelected)
-            {
-                knight.CurrentExp += int.Parse(expCount.Text);
-                if (knight.CurrentExp >= knight.MaxExp)
-                    knight.CurrentExp -= knight.MaxExp;
-            }
+            if (Teams.teamSelected != null)
+                foreach (Knight knight in Teams.teamSelected)
+                {
+                    knight.CurrentExp += int.Parse(expCount.Text);
+                    if (knight.CurrentExp >= knight.MaxExp)
+                        knight.CurrentExp -= knight.MaxExp;
+                }
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)

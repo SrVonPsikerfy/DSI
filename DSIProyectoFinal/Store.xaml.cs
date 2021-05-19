@@ -90,12 +90,6 @@ namespace DSIProyectoFinal
 
                 GridViewItem gridViewItem = (GridViewItem)this.GridPurchase.ContainerFromIndex(index);
                 if (gridViewItem != null) imageSoldReference = (FindByName("Sold", gridViewItem) as Image);
-                //guardacion de la casilla
-                //se obtiene el gridViewItem
-                //GridViewItem gridViewItem = (GridViewItem)this.GridSkills.ContainerFromIndex(index);
-                ////de momento la plantilla solo tiene imagen
-                //Image image = null;
-                //if (gridViewItem != null) image = (FindByName("skillImage", gridViewItem) as Image);
             }
         }
 
@@ -109,13 +103,13 @@ namespace DSIProyectoFinal
 
             switch (selectedItem)
             {
-                case "Order by Price":
-                    object x = new ObservableCollection<Knight>(Knights.OrderBy(s => s.ShopCost).ToList());
-                    Knights = x as ObservableCollection<Knight>;
-                    break;
-                case "Order by Alphabetical":
-                    Knights = new ObservableCollection<Knight>(Knights.OrderBy(s => s.Name).ToList());
-                    break;
+                //case "Order by Price":
+                //    object x = new ObservableCollection<Knight>(Knights.OrderBy(s => s.ShopCost).ToList());
+                //    Knights = x as ObservableCollection<Knight>;
+                //    break;
+                //case "Order by Alphabetical":
+                //    Knights = new ObservableCollection<Knight>(Knights.OrderBy(s => s.Name).ToList());
+                //    break;
                 default:
                     break;
             }
@@ -133,10 +127,6 @@ namespace DSIProyectoFinal
             AvailableKnights.AddAvailableKnight(Knights[index]);
             Buyable[index] = false;
             if (imageSoldReference != null) imageSoldReference.Visibility = Visibility.Visible;
-
-
-
-
 
             index = -1;
         }
