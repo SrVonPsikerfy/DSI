@@ -257,104 +257,14 @@
                        Foreground="Black"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
-                    <Button Background="Transparent">
-                        <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}"/>
-                    </Button>
-                    <Button Background="Transparent">
-                        <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}"/>
-                    </Button>
-                    <Button Background="Transparent">
-                        <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}"/>
-                    </Button>
+                    <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}" Margin="4,4,4,4"/>
+
+                    <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}" Margin="4,4,4,4"/>
+
+                    <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}" Margin="4,4,4,4"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
-
-        <!--<Grid Grid.Row="1"
-              Grid.Column="3"
-              Grid.ColumnSpan="3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="20*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="1">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="3">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="4">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Column="5">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    Grid.ColumnSpan="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-            <Button Background="Transparent"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    Grid.Column="4"
-                    Grid.ColumnSpan="2">
-                <Image Source="/Assets/unequipedSkill.png"/>
-            </Button>
-
-        </Grid>-->
-
 
         <Viewbox Grid.Row="2"
                  Grid.Column="2"
