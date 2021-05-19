@@ -152,10 +152,6 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="6"
-               Source="./Assets/Backgrounds/mainMenu.jpg"
-               Stretch="Fill"/>
-
             <ListView Grid.Row="1" Grid.ColumnSpan="6"
                       Height="200"
                       ShowsScrollingPlaceholders="True"
@@ -167,7 +163,8 @@
                       ItemsPanel="{StaticResource ListPanelTemplate}"
                       ItemsSource="{x:Bind Chpt}"
                       ItemClick="ChangeToChapterSelection"
-                      IsItemClickEnabled="True"/>
+                      IsItemClickEnabled="True" Background="Beige" BorderThickness="3"
+                      BorderBrush="SandyBrown"/>
 
 
         </Grid>
