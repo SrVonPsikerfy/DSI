@@ -390,13 +390,13 @@
 
 
         <Viewbox Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"  VerticalAlignment="Top" HorizontalAlignment="Center">
-            
-        <!--BOTON GO-->
-        <Button Content="GO!" 
-                FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"
+
+            <!--BOTON GO-->
+            <Button Content="GO!" 
+                FontSize="30" FontWeight="Bold" Width="800" FontFamily="Abril Fatface"
                  BorderThickness="7"
                  BorderBrush="Black"
-                Click="Go"/>
+                    Click="Go"/>
         </Viewbox>
 
         <!--BOTON HOME Y OPCIONES-->
@@ -419,16 +419,18 @@
         </Viewbox>
 
         <!--BOTON A LA PESTAÑA TEAMS-->
-        <Viewbox Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2">
+        <Viewbox Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,0,20">
             <Grid>
-                <Button Background="DodgerBlue"
-                Width="Auto"
+                <Button Background="Transparent"
                 HorizontalAlignment="Stretch"
                 Click="GoToTeamConfig">
-                    <TextBlock Text="TEAMS"
-                       FontSize="30"
-                       Width="Auto"
-                       FontFamily="Abril Fatface"/>
+                    <Grid>
+                        <Image Style="{StaticResource BlueFlagImage}"/>
+                        <TextBlock Text="TEAM CONFIG"
+                                   Margin="0,0,20,0"
+                                   Style="{StaticResource BlueFlagTextStyle}"/>
+                    </Grid>
+
                 </Button>
             </Grid>
         </Viewbox>
