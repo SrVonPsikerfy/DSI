@@ -50,10 +50,10 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                    <Image x:Name="skillImage" Grid.Column="0" Grid.Row="0"
+                <Image x:Name="skillImage" Grid.Column="0" Grid.Row="0"
                            Grid.ColumnSpan="2" Grid.RowSpan="2"
                 Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform">
-                    </Image>
+                </Image>
 
                 <Image x:Name="skillCircleOfPoint" Grid.Column="1" Grid.Row="1"
                 Source="ms-appx:///Assets/skills/skill_points.png" Stretch="Uniform"
@@ -129,7 +129,7 @@
         </Style>
 
     </Page.Resources>
-    
+
     <Grid KeyDown="Grid_KeyDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -152,7 +152,7 @@
         <Image Grid.ColumnSpan ="6" Grid.RowSpan="5"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Viewbox>
             <Grid>
@@ -186,7 +186,7 @@
                 </StackPanel>
             </Grid>
         </Viewbox>
-        
+
 
         <!--Lista de Caballeros-->
         <GridView x:Name="GridSelect"
@@ -241,9 +241,9 @@
                 <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
             </Button>
         </StackPanel>
-        
-     
-        
+
+
+
 
         <Viewbox Grid.Row="1"
                  Grid.Column="2">
@@ -269,7 +269,7 @@
                 </StackPanel>
             </Grid>
         </Viewbox>
-        
+
         <!--<Grid Grid.Row="1"
               Grid.Column="3"
               Grid.ColumnSpan="3">
@@ -376,7 +376,7 @@
                    HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
             </StackPanel>
         </Viewbox>
-        
+
 
         <Viewbox Grid.Row="3"
               Grid.Column="3"
@@ -585,7 +585,7 @@
                        Foreground="Black"
                        FontSize="15"
                        FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
-                        
+
                         <TextBlock
                        Text="{x:Bind selectedKnight[0].MaxExp, Mode=OneWay}"
                        Foreground="Black"
@@ -593,7 +593,7 @@
                        FontFamily="Abril Fatface" HorizontalAlignment="Right"/>
                     </StackPanel>
                 </StackPanel>
-               
+
                 <ProgressBar Grid.Row="2"
                          Width="130"
                          Value="30"
@@ -610,24 +610,25 @@
                Opacity="0"
                Visibility="Collapsed"/>
 
-        <Viewbox x:Name="ConfirmBox" Grid.RowSpan="3" Grid.ColumnSpan="5"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
+        <Viewbox x:Name="ConfirmBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Rectangle Fill="DarkCyan" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                
+                <TextBlock x:Name="TextConfirm" Grid.Row="0" Grid.ColumnSpan="2" Text="" FontFamily="Abril Fatface"/>
 
-                <Rectangle Fill="DarkCyan" Grid.RowSpan="2"/>
-                <StackPanel Orientation="Vertical" Grid.RowSpan="2">
-                    <TextBlock x:Name="TextConfirm" Text="" FontFamily="Abril Fatface"/>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Content="Yes" Click="Confirm_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch"/>
-                        <Button Grid.Column ="1" Content="No" Click="No_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch" />
-                    </Grid>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.RowSpan="2"  >
+
+                    <Button  Content="Yes" Click="Confirm_Click" FontFamily="Abril Fatface"/>
+                    <Button Content="No" Click="No_Click" FontFamily="Abril Fatface" />
                 </StackPanel>
             </Grid>
         </Viewbox>

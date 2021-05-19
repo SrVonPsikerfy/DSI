@@ -227,7 +227,7 @@
                Opacity="0"
                Visibility="Collapsed"/>
         
-        <Viewbox x:Name="ConfirmBox" Grid.RowSpan="3" Grid.ColumnSpan="5"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
+        <Viewbox x:Name="ConfirmBox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
