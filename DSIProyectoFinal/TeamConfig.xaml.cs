@@ -32,6 +32,7 @@ namespace DSIProyectoFinal
         private List<Image> iconKnightList { get; set; } = null;
         private List<Image> imageKnightList { get; set; } = null;
         private List<Button> buttonKnightList { get; set; } = null;
+        private List<TextBlock> nameKnightList { get; set; } = null;
 
         //CABALLERO SELECCIONADO Y DEL GRID
         private Knight selectedKnight = null;
@@ -68,6 +69,9 @@ namespace DSIProyectoFinal
                 TeamMemberImage5, TeamMemberImage6, TeamMemberImage7, TeamMemberImage8 };
 
             buttonKnightList = new List<Button>() { b1, b2, b3, b4, b5, b6, b7, b8 };
+
+            nameKnightList = new List<TextBlock>() { TeamMemberName1, TeamMemberName2, TeamMemberName3, TeamMemberName4,
+                TeamMemberName5, TeamMemberName6, TeamMemberName7, TeamMemberName8 };
 
             SelectedTeamIndex = 0;
             UpdateKnights(teamList[SelectedTeamIndex]);
@@ -111,6 +115,7 @@ namespace DSIProyectoFinal
                 string stringUrl = selectedTeam[i].RoleLocation;
                 iconKnightList[i].Source = new BitmapImage(new Uri(stringUrl)); //"ms-appx:///Assets/atacanteSelectedIcon.png"
                 imageKnightList[i].Source = new BitmapImage(new Uri(selectedTeam[i].ImageLocation));
+                nameKnightList[i].Text = selectedTeam[i].Name;
             }
         }
 
@@ -159,6 +164,7 @@ namespace DSIProyectoFinal
                 auxTeam[index] = gridKnight;
                 imageKnightList[index].Source = new BitmapImage(new Uri(auxTeam[index].ImageLocation));
                 iconKnightList[index].Source = new BitmapImage(new Uri(auxTeam[index].RoleLocation));
+                nameKnightList[index].Text = auxTeam[index].Name;
             }
 
             index = -1;
