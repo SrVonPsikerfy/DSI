@@ -163,201 +163,264 @@
 
             <!--MIEMBRO 1-->
             <Grid Grid.Row="0" Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b1" Grid.ColumnSpan="2"  Grid.RowSpan="2"
+                <Button x:Name="b1" Grid.ColumnSpan="2"  Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage1"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage1"
+                       Grid.ColumnSpan="2"  Grid.RowSpan="2"/>
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon1"/>
 
+                        <TextBlock x:Name="TeamMemberName1" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 2-->
             <Grid Grid.Row="0" Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b2" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Button x:Name="b2" Grid.ColumnSpan="2" Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage2"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage2"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon2"/>
+
+                        <TextBlock x:Name="TeamMemberName2" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 3-->
             <Grid Grid.Row="0" Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b3" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                <Button x:Name="b3" Grid.ColumnSpan="2" Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage3"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage3"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon3"/>
 
+                        <TextBlock x:Name="TeamMemberName3" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 4-->
             <Grid Grid.Row="0" Grid.Column="4">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b4" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                <Button x:Name="b4" Grid.ColumnSpan="2" Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage4"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage4"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon4"/>
 
+
+                        <TextBlock x:Name="TeamMemberName4" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 5-->
             <Grid Grid.Row="1" Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b5" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                <Button x:Name="b5" Grid.ColumnSpan="2" Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage5"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage5"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon5"/>
 
+                        <TextBlock x:Name="TeamMemberName5" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 6-->
             <Grid Grid.Row="1" Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
 
-                <Button x:Name="b6" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+
+                <Button x:Name="b6" Grid.ColumnSpan="2" Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage6"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage6"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon6"/>
 
+                        <TextBlock x:Name="TeamMemberName6" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 7-->
             <Grid Grid.Row="1" Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b7" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Button x:Name="b7" Grid.ColumnSpan="2" Grid.RowSpan="3" 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage7"/>
-                </Button>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage7"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon7"/>
 
+                        <TextBlock x:Name="TeamMemberName7" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
             <!--MIEMBRO 8-->
             <Grid Grid.Row="1" Grid.Column="4">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button x:Name="b8" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                <Button
+                        x:Name="b8"
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch"
                         Click="Button_Click">
-                    <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage8"/>
-                </Button>
 
-                <Image Grid.Column="1" Grid.Row="0" 
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage8"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+                        <Image Grid.Column="1" Grid.Row="0" 
                    Source="./Assets/defender_class_icon.png"
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top" x:Name="TeamMemberIcon8"/>
 
+                        <TextBlock x:Name="TeamMemberName8" Grid.Row="2" Grid.ColumnSpan="3"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+                    </Grid>
+                </Button>
             </Grid>
 
         </Grid>
