@@ -1029,7 +1029,7 @@
             <!--Auto Win-->
             <Viewbox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Left">
                 <Button Background="#BDBDBD" BorderBrush="Black" x:Name="AutoWin"
-                Content="AUTO WIN" FontSize="30" FontFamily="Abril Fatface" Click="AutoWin_Click"/>
+                Content="DEFEND" FontSize="30" FontFamily="Abril Fatface" Click="AutoWin_Click"/>
             </Viewbox>
 
         </Grid>
