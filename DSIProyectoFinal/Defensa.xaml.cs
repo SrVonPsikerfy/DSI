@@ -35,6 +35,7 @@ namespace DSIProyectoFinal
         //filas 0->3, cols 0->7
         public ObservableCollection<Knight> KnightsOnGrid = new ObservableCollection<Knight>();
         int IndexOfSelectedKnight = -1;
+        int ManaPoints = 200;
 
         private string nameCart;
         bool clicked = false;
@@ -121,7 +122,9 @@ namespace DSIProyectoFinal
                     //se esconde el caballero seleccionado
                     MemberSelected.Visibility = Visibility.Collapsed;
                     MemberSelected = null;
-
+                    //gastar puntos
+                    ManaPoints -= KnightsOnGrid[posicion].Mana;
+                    manaPointsText.Text = ManaPoints.ToString();
                     //HABILIDADES
                     StackPanel skillStackPanel = cell.FindName("panel" + cell.Name[7].ToString() + cell.Name[8].ToString()) as StackPanel;
                     if(skillStackPanel != null)
