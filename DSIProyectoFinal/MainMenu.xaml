@@ -37,7 +37,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid Background="#FFB8C0CD">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height="*"/>
@@ -56,7 +56,7 @@
                Source="./Assets/Backgrounds/OficialMenu1.jpg"
                Stretch="Fill"/>
 
-        <!--Titulo-->
+        <!--Titulo del juego-->
         <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" MaxWidth="1000">
             <Grid>
                 <Rectangle Fill="Azure" Stroke="DarkBlue"/>
@@ -72,7 +72,6 @@
                    FontFamily="Abril Fatface"
                    />
             </Grid>
-
         </Viewbox>
 
         <!--Boton Campaña-->
@@ -86,17 +85,14 @@
                         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                             <Image Source="/Assets/book_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
                             <TextBlock Text="CAMPAIGN" 
-                           VerticalAlignment="Center"
-                           FontFamily="Abril Fatface"
-                           FontSize="50"
-                           FontWeight="Bold"/>
+                                       VerticalAlignment="Center"
+                                       FontFamily="Abril Fatface"
+                                       FontSize="50"
+                                       FontWeight="Bold"/>
                         </StackPanel>
                     </Grid>
                 </Button>
-
-
             </Grid>
-
         </Viewbox>
 
         <!--PVP-->
@@ -104,26 +100,24 @@
             <Grid>
                 <Button Grid.Row="2"
                         Grid.Column="1"
-                       Background="Transparent"
+                        Background="Transparent"
                         Click="GoToPvp">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
                         <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Image Source="/Assets/pvp_black_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
                             <TextBlock Text="PVP" 
-                           VerticalAlignment="Center"
-                           FontFamily="Abril Fatface"
-                           FontSize="60"
-                           FontWeight="Bold"/>
+                                       VerticalAlignment="Center"
+                                       FontFamily="Abril Fatface"
+                                       FontSize="60"
+                                       FontWeight="Bold"/>
                         </StackPanel>
                     </Grid>
                 </Button>
             </Grid>
         </Viewbox>
 
-
-
-        <!--Botones modos extra-->
+        <!--Botones Teams y Knights-->
         <Grid Grid.Row="3" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -132,45 +126,43 @@
 
             <!--TeamsButton-->
             <Viewbox Grid.Row="0" Grid.Column="0">
-                <Button
-                Click="GoToTeams"
-                Background="Transparent">
+                <Button Click="GoToTeams"
+                        Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
                         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                             <Image Source="/Assets/book_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
                             <TextBlock Text="TEAMS" 
-                           VerticalAlignment="Center"
-                           FontFamily="Abril Fatface"
-                           FontSize="70"
-                           FontWeight="Bold"/>
+                                       VerticalAlignment="Center"
+                                       FontFamily="Abril Fatface"
+                                       FontSize="70"
+                                       FontWeight="Bold"/>
                         </StackPanel>
                     </Grid>
                 </Button>
             </Viewbox>
 
-            <!--TeamsButton-->
+            <!--Knights Button-->
             <Viewbox Grid.Row="0" Grid.Column="1">
                 <Button Grid.Row="0" Grid.Column ="0"
-                Click="GoToKnights"
-                Background="Transparent">
+                        Click="GoToKnights"
+                        Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
                         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                             <Image Source="/Assets/knight_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
                             <TextBlock Text="KNIGHTS" 
-                           VerticalAlignment="Center"
-                           FontFamily="Abril Fatface"
-                           FontSize="70"
-                           FontWeight="Bold"/>
+                                       VerticalAlignment="Center"
+                                       FontFamily="Abril Fatface"
+                                       FontSize="70"
+                                       FontWeight="Bold"/>
                         </StackPanel>
                     </Grid>
                 </Button>
             </Viewbox>
-
         </Grid>
-        
-        <!--Boton de Tienda-->
+
+        <!--Store Button-->
         <Button Grid.Row="4"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Left"
@@ -180,19 +172,21 @@
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
 
-        <!--Opciones-->
-        
+
+        <!--Settings and Exit Button-->
         <StackPanel Grid.Row="4" Grid.Column="2"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
-            
+            <!--Exit Button-->
             <Button Background="Transparent" Click="Exit">
                 <Image Source="/Assets/exit_icon.png"
                        MaxHeight="60"
                        MaxWidth="60"
                        Stretch="Uniform"/>
             </Button>
+
+            <!--Settings Button-->
             <Button Background="Transparent" Click="GoToSettings">
                 <Image Source="/Assets/settingsButton.png"
                        MaxHeight="60"

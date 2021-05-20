@@ -31,8 +31,8 @@
         <Image Grid.ColumnSpan="6" Grid.RowSpan="7"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
-        <!--Color de fondo-->
+
+        <!--Panel Verde de Victoria-->
         <Rectangle Grid.Row="2"
                    Grid.RowSpan="4"
                    Grid.Column="1"
@@ -40,35 +40,70 @@
                    Fill="LightGreen" 
                    HorizontalAlignment="Stretch">
         </Rectangle>
+
+        <!--Iridium Obtenido-->
         <Image Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Source="/Assets/moneda.png" MaxHeight="300" MaxWidth="300" />
-        <Viewbox Grid.Row="4" Grid.Column="2" MaxWidth="300" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBlock x:Name="iridiumCount" Text="3000" FontFamily="Abril Fatface" FontWeight="Bold" Foreground="DeepPink"/>
+        <Viewbox Grid.Row="4" Grid.Column="2" 
+                 MaxWidth="300" 
+                 HorizontalAlignment="Left" 
+                 VerticalAlignment="Top">
+            <TextBlock x:Name="iridiumCount" 
+                       Text="3000" 
+                       FontFamily="Abril Fatface" 
+                       FontWeight="Bold" 
+                       Foreground="DeepPink"/>
         </Viewbox>
 
+        <!--Experiencia Obtenida-->
         <Image Grid.Row="3"  Grid.RowSpan="2" Grid.Column="3" Source="/Assets/exp.png"/>
-        <Viewbox  Grid.Row="4" Grid.Column="4"  MaxWidth="150" HorizontalAlignment="Left" VerticalAlignment="Top">            
-        <TextBlock x:Name="expCount" Text="30" FontFamily="Abril Fatface" FontWeight="Bold" Foreground="Yellow" />
+        <Viewbox  Grid.Row="4" Grid.Column="4"  MaxWidth="150" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Text="30" 
+                       x:Name="expCount"                                  
+                       FontWeight="Bold" 
+                       Foreground="Yellow" 
+                       FontFamily="Abril Fatface" />
         </Viewbox>
 
         <!--Texto de victoria-->
         <Grid  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
-            
-        <Rectangle Fill="DarkGreen" MaxWidth="900"  HorizontalAlignment="Stretch"/>
-        <Viewbox VerticalAlignment="Bottom">
-            <TextBlock Text="Victory!" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Abril Fatface"/>
-        </Viewbox>
+            <Rectangle Fill="DarkGreen" 
+                   MaxWidth="900"  
+                   HorizontalAlignment="Stretch"/>
+            <Viewbox VerticalAlignment="Bottom">
+                <TextBlock Text="Victory!" 
+                       Foreground="White" 
+                       VerticalAlignment="Center"                        
+                       FontFamily="Abril Fatface"
+                       HorizontalAlignment="Center" />
+            </Viewbox>
         </Grid>
 
+        <!--Modo Historia Button-->
         <Viewbox  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-            
-        <Button  Content="CHAPTER SELECT" HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black"  Style="{StaticResource AccentButtonStyle}" Margin="0,5,0,5" Background="ForestGreen"
-                Click="GoToLevelSelect" FontFamily="Abril Fatface"></Button>
+            <Button  Margin="0,5,0,5" 
+                     BorderThickness="1" 
+                     BorderBrush="Black"  
+                     Click="GoToLevelSelect" 
+                     Content="CHAPTER SELECT" 
+                     FontFamily="Abril Fatface"
+                     Background="ForestGreen"
+                     HorizontalContentAlignment="Center" 
+                     Style="{StaticResource AccentButtonStyle}">
+            </Button>
         </Viewbox>
 
+        <!--Menu Button-->
         <Viewbox  Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Center">
-            <Button Content="MAIN MENU" HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" FontFamily="Abril Fatface" Style="{StaticResource AccentButtonStyle}" Margin="0,5,0,5" Background="ForestGreen"
-                Click="GoToMainMenu"></Button>
+            <Button Margin="0,5,0,5" 
+                    BorderThickness="1" 
+                    Content="MAIN MENU"                     
+                    Click="GoToMainMenu"
+                    BorderBrush="Black" 
+                    FontFamily="Abril Fatface" 
+                    Background="ForestGreen"
+                    HorizontalContentAlignment="Center" 
+                    Style="{StaticResource AccentButtonStyle}">
+            </Button>
         </Viewbox>
-
     </Grid>
 </Page>

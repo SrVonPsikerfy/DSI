@@ -62,7 +62,7 @@
             <Setter Property="FontFamily" Value="Abril Fatface"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid KeyDown="Grid_KeyDown">
         <!--Definicion de filas y columnas-->
         <Grid.ColumnDefinitions>
@@ -84,7 +84,7 @@
         <Image Grid.ColumnSpan="5" Grid.RowSpan="4"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack" Grid.ColumnSpan="2">
@@ -125,21 +125,32 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
+                <!--Fondo Gris-->
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
-                <Image x:Name="TeamMemberImage1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                           Source="./Assets/stick-man-hi.png"/>
+                <!--StickMan-->
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                       x:Name="TeamMemberImage1"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch" 
+                       Source="./Assets/stick-man-hi.png"/>
 
+                <!--Icono de clase-->
+                <Image Grid.Column="1" Grid.Row="0"                       
+                       MaxHeight="70" 
+                       MaxWidth="70"
+                       VerticalAlignment="Top"
+                       x:Name="TeamMemberIcon1"
+                       HorizontalAlignment="Right" 
+                       Source="./Assets/defender_class_icon.png"/>
 
-                <Image x:Name="TeamMemberIcon1" Grid.Column="1" Grid.Row="0" 
-                       Source="./Assets/defender_class_icon.png"
-                       HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                       VerticalAlignment="Top"/>
-
-                <TextBlock x:Name="TeamMemberName1" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="2"
+                           FontSize="20"
+                           TextAlignment="Center"
+                           x:Name="TeamMemberName1"                           
+                           FontFamily="Abril FatFace" 
+                           HorizontalAlignment="Center" />
 
             </Grid>
 
@@ -157,19 +168,26 @@
 
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
-                
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                           Source="./Assets/stick-man-hi.png"
+
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch"
+                       Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage2"/>
 
                 <Image x:Name="TeamMemberIcon2" Grid.Column="1" Grid.Row="0" 
                        Source="./Assets/defender_class_icon.png"
-                       HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
+                       HorizontalAlignment="Right"
+                       MaxHeight="70"
+                       MaxWidth="70"
                        VerticalAlignment="Top"/>
 
-                <TextBlock x:Name="TeamMemberName2" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="2"
+                           x:Name="TeamMemberName2" 
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace"
+                           FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 3-->
@@ -186,20 +204,25 @@
 
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
-                
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                           Source="./Assets/stick-man-hi.png"
+
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch"
+                       Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage3"/>
 
                 <Image Grid.Column="1" Grid.Row="0" 
                        Source="./Assets/defender_class_icon.png"
-                       HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
+                       HorizontalAlignment="Right" 
+                       MaxHeight="70" MaxWidth="70"
                        VerticalAlignment="Top"
                        x:Name="TeamMemberIcon3"/>
 
                 <TextBlock x:Name="TeamMemberName3" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace"
+                           FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 4-->
@@ -216,19 +239,25 @@
 
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                           Source="./Assets/stick-man-hi.png"
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2"
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" 
+                       Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage4"/>
 
                 <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right"
+                       MaxHeight="70"
+                       MaxWidth="70"
+                       VerticalAlignment="Top"
                        x:Name="TeamMemberIcon4"/>
-                
+
                 <TextBlock x:Name="TeamMemberName4" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace" 
+                           FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 5-->
@@ -246,22 +275,26 @@
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                           Source="./Assets/stick-man-hi.png"
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" 
+                       Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage5">
-
                 </Image>
 
                 <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right" 
+                       MaxHeight="70" 
+                       MaxWidth="70"
+                       VerticalAlignment="Top"
                        x:Name="TeamMemberIcon5"/>
 
                 <TextBlock x:Name="TeamMemberName5" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
-
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace" 
+                           FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 6-->
@@ -278,20 +311,26 @@
 
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
-                
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                           Source="./Assets/stick-man-hi.png"
+
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" 
+                       Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage6"/>
 
                 <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right" 
+                       MaxHeight="70"
+                       MaxWidth="70"
+                       VerticalAlignment="Top"
                        x:Name="TeamMemberIcon6"/>
 
                 <TextBlock x:Name="TeamMemberName6" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace" 
+                           FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 7-->
@@ -309,20 +348,26 @@
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                           Source="./Assets/stick-man-hi.png"
+                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" 
+                       Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage7"/>
 
 
                 <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right" 
+                       MaxHeight="70" 
+                       MaxWidth="70"
+                       VerticalAlignment="Top"
                        x:Name="TeamMemberIcon7"/>
 
                 <TextBlock x:Name="TeamMemberName7" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace" 
+                           FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 8-->
@@ -340,20 +385,25 @@
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
-                <Image  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                            Source="./Assets/stick-man-hi.png"
+                <Image  Grid.ColumnSpan="2" Grid.RowSpan="2"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch" 
+                        Source="./Assets/stick-man-hi.png"
                         x:Name="TeamMemberImage8"/>
 
 
                 <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right"
+                       MaxHeight="70" MaxWidth="70"
+                       VerticalAlignment="Top"
                        x:Name="TeamMemberIcon8"/>
 
                 <TextBlock x:Name="TeamMemberName8" Grid.Row="2" Grid.ColumnSpan="3"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontFamily="Abril FatFace" 
+                           FontSize="20"/>
             </Grid>
 
         </Grid>
@@ -365,7 +415,6 @@
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
                     <TextBlock Style="{StaticResource KotFStyle}"/>
-
                     <Grid>
                         <Image Style="{StaticResource BlueFlagImage}"/>
                         <TextBlock Text="TEAM SELECT"
@@ -383,38 +432,37 @@
             <Grid>
                 <StackPanel>
                     <Button x:Name="TeamSelect1" Click="SelectTeam1"
-                        Content="Equipo 1"
-                    FontSize="30"
-                    FontWeight="Bold"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"
-                    BorderThickness="7"
-                    BorderBrush="Black"
-                    FontFamily="Abril Fatface"/>
-
+                            Content="Equipo 1"
+                            FontSize="30"
+                            FontWeight="Bold"
+                            Width="Auto"
+                            Height="Auto"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            BorderThickness="7"
+                            BorderBrush="Black"
+                            FontFamily="Abril Fatface"/>
                     <Button x:Name="TeamSelect2" Click="SelectTeam2" 
-                        Content="Equipo 2"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"
-                    BorderBrush="Black" Margin="0,10,0,0"
-                    FontSize="30"
-                    FontWeight="Bold"
-                    FontFamily="Abril Fatface"/>
+                            Content="Equipo 2"
+                            Width="Auto"
+                            Height="Auto"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            BorderBrush="Black" Margin="0,10,0,0"
+                            FontSize="30"
+                            FontWeight="Bold"
+                            FontFamily="Abril Fatface"/>
 
                     <Button x:Name="TeamSelect3" Click="SelectTeam3" 
-                        Content="Equipo 3"
-                    Width="Auto"
-                    Height="Auto"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"
-                    BorderBrush="Black" Margin="0,10,0,0"
-                    FontSize="30"
-                    FontWeight="Bold"
-                    FontFamily="Abril Fatface"/>
+                            Content="Equipo 3"
+                            Width="Auto"
+                            Height="Auto"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            BorderBrush="Black" Margin="0,10,0,0"
+                            FontSize="30"
+                            FontWeight="Bold"
+                            FontFamily="Abril Fatface"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
@@ -425,29 +473,43 @@
 
             <!--BOTON GO-->
             <Button Content="GO!" 
-                FontSize="30" FontWeight="Bold" Width="800" FontFamily="Abril Fatface"
-                 BorderThickness="7"
-                 BorderBrush="Black"
+                    FontSize="30" 
+                    FontWeight="Bold" 
+                    Width="800" 
+                    FontFamily="Abril Fatface"
+                    BorderThickness="7"
+                    BorderBrush="Black"
                     Click="Go"/>
         </Viewbox>
 
-
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->
-            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+            <Button x:Name="HomeButton" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Bottom" 
+                    Background="Transparent"
                     Click="GoToMainMenu">
-                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+                <Image Source="/Assets/homeButton.png"
+                       MaxWidth="144" 
+                       MaxHeight="144"/>
             </Button>
 
             <!--SettingsButton-->
-            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+            <Button x:Name="SettingsButton" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"  
+                    Background="Transparent"
                     Click="GoToSettings">
-                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+                <Image Source="/Assets/settingsButton.png" 
+                       MaxWidth="144" 
+                       MaxHeight="144"/>
             </Button>
         </StackPanel>
 
         <!--BOTON A LA PESTAÑA TEAMS-->
-        <Viewbox Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,0,20">
+        <Viewbox Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" 
+                 HorizontalAlignment="Right" 
+                 Margin="0,0,0,20">
             <Grid>
                 <Button Background="Transparent"
                 HorizontalAlignment="Stretch"
@@ -458,7 +520,6 @@
                                    Margin="0,0,20,0"
                                    Style="{StaticResource BlueFlagTextStyle}"/>
                     </Grid>
-
                 </Button>
             </Grid>
         </Viewbox>

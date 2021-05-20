@@ -19,14 +19,25 @@
                 </Grid.RowDefinitions>
 
                 <!--Imagen-->
-                <Image x:Name="KnightImage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       Source="{x:Bind ImageLocation}" Stretch="Uniform"/>
+                <Image x:Name="KnightImage" Grid.Row="1" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Source="{x:Bind ImageLocation}" 
+                       Stretch="Uniform"/>
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
-                    <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}" FontFamily="Abril Fatface"/>
-                    <Image x:Name="Image" Source="{x:Bind RoleLocation}" HorizontalAlignment="Stretch"
-                        AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    <TextBlock x:Name="Prize" Text="{x:Bind Name}" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"
+                               Style="{StaticResource SubtitleTextBlockStyle}" 
+                               FontFamily="Abril Fatface"/>
+                    <Image x:Name="Image" 
+                           Source="{x:Bind RoleLocation}" 
+                           HorizontalAlignment="Stretch"
+                           AutomationProperties.Name="Atack"  
+                           RenderTransformOrigin="0.5,0.5" 
+                           Height="52" 
+                           Width="52" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -135,7 +146,6 @@
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
                     <TextBlock Style="{StaticResource KotFStyle}"/>
-
                     <Grid>
                         <Image Style="{StaticResource BlueFlagImage}"/>
                         <TextBlock Text="TEAM CONFIG"
@@ -182,13 +192,18 @@
                        Grid.ColumnSpan="2"  Grid.RowSpan="2"/>
 
                         <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top" x:Name="TeamMemberIcon1"/>
+                               Source="./Assets/defender_class_icon.png"
+                               HorizontalAlignment="Right"
+                               MaxHeight="70" 
+                               MaxWidth="70"
+                               VerticalAlignment="Top" 
+                               x:Name="TeamMemberIcon1"/>
 
                         <TextBlock x:Name="TeamMemberName1" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                                   HorizontalAlignment="Center" 
+                                   TextAlignment="Center"
+                                   FontFamily="Abril FatFace" 
+                                   FontSize="20"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -214,13 +229,18 @@
                        Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
                         <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top" x:Name="TeamMemberIcon2"/>
+                               Source="./Assets/defender_class_icon.png"
+                               HorizontalAlignment="Right" 
+                               MaxHeight="70" 
+                               MaxWidth="70"
+                               VerticalAlignment="Top" 
+                               x:Name="TeamMemberIcon2"/>
 
                         <TextBlock x:Name="TeamMemberName2" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                                   HorizontalAlignment="Center" 
+                                   TextAlignment="Center"
+                                   FontFamily="Abril FatFace" 
+                                   FontSize="20"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -242,13 +262,17 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage3"
-                       Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                        <Image Source="./Assets/stick-man-hi.png" 
+                               x:Name="TeamMemberImage3"
+                               Grid.ColumnSpan="2" 
+                               Grid.RowSpan="2"/>
 
-                        <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top" x:Name="TeamMemberIcon3"/>
+                        <Image Grid.Column="1" Grid.Row="0"                    
+                               Source="./Assets/defender_class_icon.png"                   
+                               HorizontalAlignment="Right" 
+                               MaxHeight="70" MaxWidth="70"                    
+                               VerticalAlignment="Top" 
+                               x:Name="TeamMemberIcon3"/>
 
                         <TextBlock x:Name="TeamMemberName3" Grid.Row="2" Grid.ColumnSpan="2"
                            HorizontalAlignment="Center" TextAlignment="Center"
@@ -274,18 +298,23 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Image Source="./Assets/stick-man-hi.png" x:Name="TeamMemberImage4"
-                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                        <Image Source="./Assets/stick-man-hi.png" 
+                               x:Name="TeamMemberImage4"                       
+                               Grid.ColumnSpan="2" 
+                               Grid.RowSpan="2" />
 
-                        <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top" x:Name="TeamMemberIcon4"/>
+                        <Image Grid.Column="1" Grid.Row="0"                   
+                               Source="./Assets/defender_class_icon.png"                   
+                               HorizontalAlignment="Right" 
+                               MaxHeight="70" MaxWidth="70"                    
+                               VerticalAlignment="Top" 
+                               x:Name="TeamMemberIcon4"/>
 
-
-                        <TextBlock x:Name="TeamMemberName4" Grid.Row="2" Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center" TextAlignment="Center"
-                           FontFamily="Abril FatFace" FontSize="20"/>
+                        <TextBlock x:Name="TeamMemberName4" Grid.Row="2" Grid.ColumnSpan="2"                           
+                                   HorizontalAlignment="Center" 
+                                   TextAlignment="Center"                           
+                                   FontFamily="Abril FatFace" 
+                                   FontSize="20"/>
                     </Grid>
                 </Button>
             </Grid>
