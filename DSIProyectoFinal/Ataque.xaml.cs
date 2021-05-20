@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,6 +12,12 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Collections.ObjectModel;
+using System.Reflection;
+using System.ComponentModel;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,15 +29,33 @@ namespace DSIProyectoFinal
 
     public sealed partial class Ataque : Page
     {
+        public List<ContentControl> Members;
+        ContentControl MemberSelected = null;
+        public ObservableCollection<Knight> SelectedTeam;
+        //filas 0->3, cols 0->7
+        public ObservableCollection<Knight> KnightsOnGrid = new ObservableCollection<Knight>();
+        int IndexOfSelectedKnight = -1;
 
-
-        private string nameCart;
-        bool clicked = false;
-
-        private ContentControl carta;
+        int ManaPoints = 200;
+        int EnemyTotal = 10;
+        int EnemyCounter = 0;
         public Ataque()
         {
             this.InitializeComponent();
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Members = new List<ContentControl>() { TeamMember1, TeamMember2, TeamMember3, TeamMember4 };
+            //meter los caballeros
+            SelectedTeam = new ObservableCollection<Knight>()
+            {
+                AvailableKnights.GetAvailableKnights()[0], AvailableKnights.GetAvailableKnights()[1],
+                AvailableKnights.GetAvailableKnights()[2], AvailableKnights.GetAvailableKnights()[3]
+            };
+
+            for (int i = 0; i < 32; i++) KnightsOnGrid.Add(null);
+            base.OnNavigatedTo(e);
         }
 
         private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -59,55 +82,72 @@ namespace DSIProyectoFinal
             }
         }
 
-        private void MovingCard(object sender, PointerRoutedEventArgs e)
+
+
+        private void ContentControl_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            //Si estoy pulsando una carta distinta...
-            if (nameCart != (sender as ContentControl).Name)
+
+            //Cojo el grid de dentro
+            Grid contentGrid = ((sender as ContentControl).Content as Grid);
+
+            //Si es el mismo, deselecciono
+            if (MemberSelected == sender as ContentControl)
             {
-                //Guardamos el nombre de la carta nueva
-                nameCart = (sender as ContentControl).Name;
-
-                if (carta != null)
-                    //Dejamos la otra con su opacidad al maximo
-                    (carta.Content as Grid).Opacity = 1;
-
-                //Guardamos el contentControl
-                carta = (sender as ContentControl);
-
-                //Cojo el grid de dentro
-                Grid aux = (carta.Content as Grid);
-
-                //Y cambio su opacidad
-                if (aux.Opacity == 1)
-                    aux.Opacity = 0.5;
-                else
-                    aux.Opacity = 1;
-
+                MemberSelected = null;
+                contentGrid.Opacity = 1;
+                IndexOfSelectedKnight = -1;
             }
-            else
+            else //Si es distinto...
             {
-                //Cojo el grid de dentro
-                Grid aux = (carta.Content as Grid);
-
-                //Y cambio su opacidad
-                if (aux.Opacity == 1)
-                    aux.Opacity = 0.5;
-                else
-                    aux.Opacity = 1;
-
-                carta = null;
-                nameCart = "";
+                //si no habia ninguno seleccionado, lo selecciono
+                if (MemberSelected == null)
+                {
+                    MemberSelected = sender as ContentControl;
+                    IndexOfSelectedKnight = int.Parse(MemberSelected.Name[10].ToString()) - 1;
+                    contentGrid.Opacity = 0.5;
+                }
+                //else //si habia uno ya seleccionado y es distinto no hago nada
             }
         }
 
-        private void PuttingCard(object sender, PointerRoutedEventArgs e)
+        private void MovingCard(object sender, PointerRoutedEventArgs e)
         {
-            //Grid aux = ((sender as ContentControl).Content as Grid);
-            //aux = (carta.Content as Grid);
-
-            (sender as ContentControl).Content = carta.Content;
-            //carta.IsEnabled = false;
-
+            if (MemberSelected != null)
+            {
+                ContentControl cell = sender as ContentControl;
+                //pillo la imagen por su nombre
+                int posicion = int.Parse(cell.Name[7].ToString()) * 8 + int.Parse(cell.Name[8].ToString()); //8??
+                if (KnightsOnGrid[posicion] == null)
+                {
+                    KnightsOnGrid[posicion] = SelectedTeam[IndexOfSelectedKnight];
+                    //se esconde el caballero seleccionado
+                    MemberSelected.Visibility = Visibility.Collapsed;
+                    MemberSelected = null;
+                    //gastar puntos
+                    ManaPoints -= KnightsOnGrid[posicion].Mana;
+                    //manaPointsText.Text = ManaPoints.ToString();
+                    //HABILIDADES
+                    StackPanel skillStackPanel = cell.FindName("panel" + cell.Name[7].ToString() + cell.Name[8].ToString()) as StackPanel;
+                    if (skillStackPanel != null)
+                    {
+                        int i = 0;
+                        foreach (Skill skill in KnightsOnGrid[posicion].EquipedAbilities)
+                        {
+                            Image image = new Image();
+                            image.Source = new BitmapImage(new Uri(skill.ImageSource));
+                            skillStackPanel.Children.Add(image);
+                            i++;
+                        }
+                        while (i < 3)
+                        {
+                            Image image = new Image();
+                            image.Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_locked.png"));
+                            skillStackPanel.Children.Add(image);
+                            i++;
+                        }
+                    }
+                }
+            }
         }
 
         private void AutoWin_Click(object sender, RoutedEventArgs e)

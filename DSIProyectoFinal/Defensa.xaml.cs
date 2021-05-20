@@ -39,9 +39,6 @@ namespace DSIProyectoFinal
         int ManaPoints = 200;
         int EnemyTotal = 10;
         int EnemyCounter = 0;
-
-
-        private ContentControl carta;
         public Defensa()
         {
             this.InitializeComponent();
