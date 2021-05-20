@@ -35,10 +35,11 @@ namespace DSIProyectoFinal
         //filas 0->3, cols 0->7
         public ObservableCollection<Knight> KnightsOnGrid = new ObservableCollection<Knight>();
         int IndexOfSelectedKnight = -1;
-        int ManaPoints = 200;
 
-        private string nameCart;
-        bool clicked = false;
+        int ManaPoints = 200;
+        int EnemyTotal = 10;
+        int EnemyCounter = 0;
+
 
         private ContentControl carta;
         public Defensa()
@@ -150,7 +151,16 @@ namespace DSIProyectoFinal
         }
         private void AutoWin_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Victoria));
+            EnemyCounter++;
+            enemyProgressBar.Value = ((float)EnemyCounter / (float)EnemyTotal) * 100;
+            enemyCounterText.Text = EnemyCounter.ToString();
+            enemyTotalText.Text = EnemyTotal.ToString();
+            
+            if(EnemyCounter >= EnemyTotal)
+            {
+                this.Frame.Navigate(typeof(Victoria));
+            }
+            
         }
     }
 }

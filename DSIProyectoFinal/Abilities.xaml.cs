@@ -114,6 +114,12 @@ namespace DSIProyectoFinal
             }
             selectedKnight[0] = knight;
             UpdateSelectedSkills();
+            UpdateExpProgressBar();
+        }
+
+        private void UpdateExpProgressBar()
+        {
+           progressBar.Value = ((float) selectedKnight[0].CurrentExp / (float) selectedKnight[0].MaxExp) * 100;
         }
 
         private void AbilitySelection(object sender, ItemClickEventArgs e)

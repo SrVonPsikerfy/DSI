@@ -38,10 +38,14 @@
                            FontWeight="Bold" x:Name="manaPointsText"/>
                 <Image Source="./Assets/mana_icon.png" MaxHeight="60" MaxWidth="87" Margin="0,0,20,0"/>
 
-                <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="10/45" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
+                <TextBlock x:Name="enemyCounterText" Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="{x:Bind EnemyCounter, Mode=OneWay}" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="/" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
+                <TextBlock x:Name="enemyTotalText" Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="{x:Bind EnemyTotal, Mode=OneWay}" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
                 <Image Source="./Assets/enemy_icon.png" MaxHeight="60" MaxWidth="87" VerticalAlignment="Center"/>
+                <ProgressBar x:Name="enemyProgressBar" Value="0" Background="White" Width="250" Height="20" Margin="30,0,0,0"/>
+
             </StackPanel>
-            
+
             <!--Boton de pausa-->
             <Button Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Click="GoToPause">

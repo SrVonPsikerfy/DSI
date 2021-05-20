@@ -504,7 +504,8 @@
                     </StackPanel>
                 </StackPanel>
 
-                <ProgressBar Grid.Row="2"
+                <ProgressBar x:Name="progressBar"
+                    Grid.Row="2"
                          Width="130"
                          Value="30"
                          HorizontalAlignment="Stretch"
