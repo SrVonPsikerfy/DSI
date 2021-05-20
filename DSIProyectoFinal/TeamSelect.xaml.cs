@@ -28,6 +28,7 @@ namespace DSIProyectoFinal
         private List<Knight> selectedTeam = null;
         private List<Image> iconKnightList { get; set; } = null;
         private List<Image> imageKnightList { get; set; } = null;
+        private List<TextBlock> nameKnightList { get; set; } = null;
 
         public TeamSelect()
         {
@@ -48,6 +49,9 @@ namespace DSIProyectoFinal
 
             imageKnightList = new List<Image>() { TeamMemberImage1, TeamMemberImage2, TeamMemberImage3, TeamMemberImage4,
                 TeamMemberImage5, TeamMemberImage6, TeamMemberImage7, TeamMemberImage8 };
+
+            nameKnightList = new List<TextBlock>() { TeamMemberName1, TeamMemberName2, TeamMemberName3, TeamMemberName4,
+                TeamMemberName5, TeamMemberName6, TeamMemberName7, TeamMemberName8 };
 
             UpdateKnight(Teams.Team1);
 
@@ -115,6 +119,7 @@ namespace DSIProyectoFinal
                 string stringUrl = selectedTeam[i].RoleLocation;
                 iconKnightList[i].Source = new BitmapImage(new Uri(stringUrl)); //"ms-appx:///Assets/atacanteSelectedIcon.png"
                 imageKnightList[i].Source = new BitmapImage(new Uri(selectedTeam[i].ImageLocation));
+                nameKnightList[i].Text = selectedTeam[i].Name;
             }
         }
 
