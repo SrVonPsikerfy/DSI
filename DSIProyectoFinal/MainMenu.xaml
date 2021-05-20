@@ -169,55 +169,7 @@
             </Viewbox>
 
         </Grid>
-        <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1"
-                        VerticalAlignment="Center">
-            <Border Background="Red" VerticalAlignment="Top"
-                    BorderBrush="Black" BorderThickness="3">
-                <TextBlock Text="EXTRA MODES"
-                   TextAlignment="Center"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   TextWrapping="WrapWholeWords"
-                   FontStretch="Expanded" MaxHeight="30" Width="578"/>
-            </Border>
-
-            <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Center">
-                <Button 
-                        BorderThickness="3"
-                        Content="PVP"
-                        FontFamily="Segoe UI"
-                        HorizontalAlignment="Stretch"
-                        FontSize="30"
-                        FontStretch="ExtraCondensed"
-                    HorizontalContentAlignment="Stretch"
-                    MaxWidth="250"
-                        Background="RosyBrown"
-                        BorderBrush="Black" FontWeight="Bold"/>
-                <Button 
-                        BorderThickness="3"
-                        Content="GAUNTLET"
-                        FontFamily="Segoe UI"
-                        HorizontalAlignment="Stretch"
-                        FontSize="30"
-                    MaxWidth="250"
-                    HorizontalContentAlignment="Stretch"
-                        Background="RosyBrown"
-                        BorderBrush="Black" FontWeight="Bold"/>
-                <Button
-                        BorderThickness="3"
-                        Content="SWARM"
-                        FontFamily="Segoe UI"
-                        HorizontalAlignment="Stretch"
-                        FontSize="30"
-                    MaxWidth="250"
-                    HorizontalContentAlignment="Stretch"
-                    
-                        Background="RosyBrown"
-                        BorderBrush="Black" FontWeight="Bold"/>
-            </StackPanel>
-        </StackPanel>-->
-
+        
         <!--Boton de Tienda-->
         <Button Grid.Row="4"
                 VerticalAlignment="Stretch"
@@ -227,42 +179,6 @@
                 Click="GoToStore">
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
-
-        <!--<StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
-            --><!--Boton de Equipos--><!--
-            <Button BorderThickness="3"
-                    MaxWidth="300"
-                    Background="RosyBrown"
-                    BorderBrush="Black"
-                    Click="GoToTeams">
-                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Image Source="/Assets/knight_icon.png" MaxWidth="40" MaxHeight="70" />
-                    <TextBlock Text="TEAMS" 
-                           VerticalAlignment="Center"
-                           FontFamily="Segoe UI"
-                           FontSize="30"
-                           FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-
-            --><!--Boton de Caballeros--><!--
-            <Button            
-                MaxWidth="300"
-                Background="RosyBrown"
-                BorderBrush="Black"
-                BorderThickness="3" 
-                Click="GoToKnights">
-                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Image Source="/Assets/knight_icon.png" MaxWidth="40" MaxHeight="70" />
-                    <TextBlock Text="KNIGHTS" 
-                           VerticalAlignment="Center"
-                           FontFamily="Segoe UI"
-                           FontSize="30"
-                           FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-        </StackPanel>-->
-
 
         <!--Opciones-->
         
