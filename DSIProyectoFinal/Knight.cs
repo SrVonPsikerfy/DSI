@@ -8,6 +8,9 @@ namespace DSIProyectoFinal
 {
     public class Knight
     {
+        //Constante de habilidades maximas que puede equipar un caballero
+        public const int MAX_HABILITES = 3;
+
         public enum Rol { Defender, Melee, Sniper, Support, Healer }
 
         private static string[] roleLocation { get; set; } = new string[5]

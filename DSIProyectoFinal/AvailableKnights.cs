@@ -126,7 +126,7 @@ namespace DSIProyectoFinal
                 
              ),
             new Knight(
-                "Ginon",
+                "Jones",
                 "ms-appx:///Assets/Knights/stickman6.png",
                Knight.Rol.Healer,
                     100,
