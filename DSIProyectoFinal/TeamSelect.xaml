@@ -117,6 +117,7 @@
             <Grid Grid.Row="0" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -124,19 +125,21 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
-                <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                           Source="./Assets/stick-man-hi.png"
-                       x:Name="TeamMemberImage1"/>
+                <Image x:Name="TeamMemberImage1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                           Source="./Assets/stick-man-hi.png"/>
 
 
-                <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
-                       x:Name="TeamMemberIcon1"/>
+                <Image x:Name="TeamMemberIcon1" Grid.Column="1" Grid.Row="0" 
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
+                       VerticalAlignment="Top"/>
+
+                <TextBlock x:Name="TeamMemberName1" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
 
             </Grid>
 
@@ -144,6 +147,7 @@
             <Grid Grid.Row="0" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -151,24 +155,28 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
                 
                 <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                            Source="./Assets/stick-man-hi.png"
                        x:Name="TeamMemberImage2"/>
 
-                <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
-                       x:Name="TeamMemberIcon2"/>
+                <Image x:Name="TeamMemberIcon2" Grid.Column="1" Grid.Row="0" 
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
+                       VerticalAlignment="Top"/>
+
+                <TextBlock x:Name="TeamMemberName2" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 3-->
             <Grid Grid.Row="0" Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -176,7 +184,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
                 
                 <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -184,17 +192,21 @@
                        x:Name="TeamMemberImage3"/>
 
                 <Image Grid.Column="1" Grid.Row="0" 
-                   Source="./Assets/defender_class_icon.png"
-                   HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
-                    VerticalAlignment="Top"
+                       Source="./Assets/defender_class_icon.png"
+                       HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
+                       VerticalAlignment="Top"
                        x:Name="TeamMemberIcon3"/>
 
+                <TextBlock x:Name="TeamMemberName3" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 4-->
             <Grid Grid.Row="0" Grid.Column="4">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -202,7 +214,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
                 <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                            Source="./Assets/stick-man-hi.png"
@@ -213,13 +225,17 @@
                    HorizontalAlignment="Right" MaxHeight="70" MaxWidth="70"
                     VerticalAlignment="Top"
                        x:Name="TeamMemberIcon4"/>
-
+                
+                <TextBlock x:Name="TeamMemberName4" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 5-->
             <Grid Grid.Row="1" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -227,7 +243,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
                 <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
@@ -242,12 +258,17 @@
                     VerticalAlignment="Top"
                        x:Name="TeamMemberIcon5"/>
 
+                <TextBlock x:Name="TeamMemberName5" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
+
             </Grid>
 
             <!--MIEMBRO 6-->
             <Grid Grid.Row="1" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -255,7 +276,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
                 
                 <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
@@ -268,12 +289,16 @@
                     VerticalAlignment="Top"
                        x:Name="TeamMemberIcon6"/>
 
+                <TextBlock x:Name="TeamMemberName6" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 7-->
             <Grid Grid.Row="1" Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -281,7 +306,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
                 <Image Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
@@ -295,12 +320,16 @@
                     VerticalAlignment="Top"
                        x:Name="TeamMemberIcon7"/>
 
+                <TextBlock x:Name="TeamMemberName7" Grid.Row="2" Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
             </Grid>
 
             <!--MIEMBRO 8-->
             <Grid Grid.Row="1" Grid.Column="4">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -308,7 +337,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
                         Background="Gray"/>
 
                 <Image  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
@@ -322,6 +351,9 @@
                     VerticalAlignment="Top"
                        x:Name="TeamMemberIcon8"/>
 
+                <TextBlock x:Name="TeamMemberName8" Grid.Row="2" Grid.ColumnSpan="3"
+                           HorizontalAlignment="Center" TextAlignment="Center"
+                           FontFamily="Abril FatFace" FontSize="20"/>
             </Grid>
 
         </Grid>
