@@ -33,11 +33,14 @@
             <!--Icono de Defensa-->
             <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/defense.png" MaxHeight="87" MaxWidth="87" />
 
+            <!--Energia y contador de enemigos necesarios-->
             <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <!--Energia-->
                 <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" FontSize="30" Text="{x:Bind ManaPoints}" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center" Foreground="blue"
                            FontWeight="Bold" x:Name="manaPointsText"/>
                 <Image Source="./Assets/mana_icon.png" MaxHeight="60" MaxWidth="87" Margin="0,0,20,0"/>
 
+                <!--Barra de progreso y contador de enemigos necesarios-->
                 <TextBlock x:Name="enemyCounterText" Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="{x:Bind EnemyCounter, Mode=OneWay}" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
                 <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="/" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
                 <TextBlock x:Name="enemyTotalText" Grid.Row="0" Grid.Column="2" FontFamily="Abril Fatface" Text="{x:Bind EnemyTotal, Mode=OneWay}" SizeChanged="TextBlock_SizeChanged" VerticalAlignment="Center"  Foreground="LightPink" FontWeight="Bold" Margin="0,0,10,0"/>
@@ -52,6 +55,7 @@
                 <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
             </Button>
 
+            <!--Casillas de juego-->
             <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" BorderThickness="5" BorderBrush="Black" Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -78,7 +82,7 @@
                 <Border Grid.Row="2" Grid.Column="7" Background="OrangeRed"/>
                 <Border Grid.Row="3" Grid.Column="7" Background="OrangeRed"/>
 
-                <!--Columnas-->
+                <!--Filas-->
                 <Rectangle Grid.Row="1" Grid.ColumnSpan="8" 
                 Fill="Black" Height="5" VerticalAlignment="Top"/>
                 <Rectangle Grid.Row="2" Grid.ColumnSpan="8" 
@@ -102,7 +106,7 @@
                 <Rectangle Grid.Column="7" Grid.RowSpan="4" 
                 Fill="Black" Width="5" HorizontalAlignment="Left"/>
 
-                
+                <!--Casilla pulsable 1-->
                 <ContentControl Grid.Row="0" Grid.Column="1" x:Name="content01" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -115,7 +119,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[1].ImageLocation, Mode=OneWay}"
@@ -130,6 +134,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 2-->
                 <ContentControl Grid.Row="0" Grid.Column="2" x:Name="content02" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -156,6 +161,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 3-->
                 <ContentControl Grid.Row="0" Grid.Column="3" x:Name="content03" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -182,6 +188,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 4-->
                 <ContentControl Grid.Row="0" Grid.Column="4" x:Name="content04" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -194,7 +201,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[4].ImageLocation, Mode=OneWay}"
@@ -209,6 +216,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 5-->
                 <ContentControl Grid.Row="0" Grid.Column="5" x:Name="content05" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -221,7 +229,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image x:Name="gridImage5" Source="{x:Bind KnightsOnGrid[5].ImageLocation, Mode=OneWay}"
@@ -236,6 +244,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 6-->
                 <ContentControl Grid.Row="0" Grid.Column="6" x:Name="content06" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -248,7 +257,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image x:Name="gridImage6" Source="{x:Bind KnightsOnGrid[6].ImageLocation, Mode=OneWay}"
@@ -263,6 +272,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 7-->
                 <ContentControl Grid.Row="0" Grid.Column="7" x:Name="content07" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -275,7 +285,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image x:Name="gridImage7" Source="{x:Bind KnightsOnGrid[7].ImageLocation, Mode=OneWay}"
@@ -291,7 +301,7 @@
                     </Grid>
                 </ContentControl>
 
-                
+                <!--Casilla pulsable 8-->
                 <ContentControl Grid.Row="1" Grid.Column="1" x:Name="content11" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -304,7 +314,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[9].ImageLocation, Mode=OneWay}"
@@ -319,6 +329,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 9-->
                 <ContentControl Grid.Row="1" Grid.Column="2" x:Name="content12" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -331,7 +342,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[10].ImageLocation, Mode=OneWay}"
@@ -346,6 +357,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 10-->
                 <ContentControl Grid.Row="1" Grid.Column="3" x:Name="content13" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -358,7 +370,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[11].ImageLocation, Mode=OneWay}"
@@ -373,6 +385,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 11-->
                 <ContentControl Grid.Row="1" Grid.Column="4" x:Name="content14" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -385,7 +398,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[12].ImageLocation, Mode=OneWay}"
@@ -400,6 +413,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 12-->
                 <ContentControl Grid.Row="1" Grid.Column="5" x:Name="content15" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -412,7 +426,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[13].ImageLocation, Mode=OneWay}"
@@ -427,6 +441,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 13-->
                 <ContentControl Grid.Row="1" Grid.Column="6" x:Name="content16" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -439,7 +454,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[14].ImageLocation, Mode=OneWay}"
@@ -454,6 +469,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 14-->
                 <ContentControl Grid.Row="1" Grid.Column="7" x:Name="content17" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -466,7 +482,7 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
 
-                        <!--CLICKABLE CUTRE-->
+                        
                         <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                         <Image Source="{x:Bind KnightsOnGrid[15].ImageLocation, Mode=OneWay}"
@@ -482,6 +498,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Casilla pulsable 15-->
                 <ContentControl Grid.Row="2" Grid.Column="0" x:Name="content20" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -508,6 +525,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 16-->
                 <ContentControl Grid.Row="2" Grid.Column="1" x:Name="content21" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -534,6 +552,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 17-->
                 <ContentControl Grid.Row="2" Grid.Column="2" x:Name="content22" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -560,6 +579,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 18-->
                 <ContentControl Grid.Row="2" Grid.Column="3" x:Name="content23" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -586,6 +606,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 19-->
                 <ContentControl Grid.Row="2" Grid.Column="4" x:Name="content24" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -612,6 +633,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 20-->
                 <ContentControl Grid.Row="2" Grid.Column="5" x:Name="content25" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -638,6 +660,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 21-->
                 <ContentControl Grid.Row="2" Grid.Column="6" x:Name="content26" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -665,6 +688,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Casilla pulsable 22-->
                 <ContentControl Grid.Row="3" Grid.Column="0" x:Name="content30" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -691,6 +715,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 23-->
                 <ContentControl Grid.Row="3" Grid.Column="1" x:Name="content31" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -717,6 +742,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 24-->
                 <ContentControl Grid.Row="3" Grid.Column="2" x:Name="content32" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -743,6 +769,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 25-->
                 <ContentControl Grid.Row="3" Grid.Column="3" x:Name="content33" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -769,6 +796,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 26-->
                 <ContentControl Grid.Row="3" Grid.Column="4" x:Name="content34" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -795,6 +823,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 27-->
                 <ContentControl Grid.Row="3" Grid.Column="5" x:Name="content35" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -821,6 +850,7 @@
                         </Viewbox>
                     </Grid>
                 </ContentControl>
+                <!--Casilla pulsable 28-->
                 <ContentControl Grid.Row="3" Grid.Column="6" x:Name="content36" PointerPressed="MovingCard" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -850,8 +880,9 @@
 
             </Grid>
 
+            <!--Mazo-->
             <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch">
-
+                <!--Caballero 1-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[0].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -873,6 +904,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 2-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember2">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -894,6 +926,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 3-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -915,6 +948,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 4-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -936,6 +970,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 5-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember5">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[4].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -957,6 +992,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 6-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember6">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[5].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -978,6 +1014,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 7-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember7">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[6].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
@@ -999,6 +1036,7 @@
                     </Grid>
                 </ContentControl>
 
+                <!--Caballero 8-->
                 <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember8">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[7].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>

@@ -127,6 +127,7 @@
         </Viewbox>
 
 
+        <!--Opciones del juego-->
         <Grid Grid.Column="1" Grid.Row="1">
             <!-- Definicion de columnas !-->
             <Grid.ColumnDefinitions>

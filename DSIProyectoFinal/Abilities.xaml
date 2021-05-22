@@ -10,6 +10,7 @@
     RequestedTheme="Light">
 
     <Page.Resources>
+        <!--Estructura utilizada en el GridView-->
         <DataTemplate x:Key="KnightsTemplate"
                       x:DataType="local:Knight">
             <Grid Height="150" Width="150" Margin="8">
@@ -18,13 +19,15 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <!--Imagen-->
+                <!--Imagen del caballero-->
                 <Image x:Name="KnightImage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                        Source="{x:Bind ImageLocation}" Stretch="Uniform"/>
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+                    <!--Nombre del caballero-->
                     <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
                                Style="{StaticResource SubtitleTextBlockStyle}" FontFamily="Abril Fatface"/>
+                    <!--Imagen del Rol-->
                     <Image x:Name="Image" Source="{x:Bind RoleLocation}" HorizontalAlignment="Stretch"
                         AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
                 </StackPanel>
@@ -37,7 +40,7 @@
         </ItemsPanelTemplate>
 
 
-        <!--Template-->
+        <!--Template de habilidades-->
         <DataTemplate x:Key="SkillTemplate"
                       x:DataType="local:Skill">
             <Grid Height="180" Width="180" Margin="8">
@@ -50,16 +53,19 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
+                <!--Imagen de la habilidad (ya sea desbloqueada o no)-->
                 <Image x:Name="skillImage" Grid.Column="0" Grid.Row="0"
                            Grid.ColumnSpan="2" Grid.RowSpan="2"
                 Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform">
                 </Image>
 
+                <!--Círculo que aparece si la habilidad esta equipada-->
                 <Image x:Name="skillCircleOfPoint" Grid.Column="1" Grid.Row="1"
                 Source="ms-appx:///Assets/skills/skill_points.png" Stretch="Uniform"
                        Visibility="{x:Bind CostVisibility}">
                 </Image>
 
+                <!--Puntos necesarios para desbloquear-->
                 <TextBlock x:Name="skillPointsNeeded" Grid.Column="1" Grid.Row="1"
                            HorizontalAlignment="Center" VerticalAlignment="Center"
                            Visibility="{x:Bind CostVisibility}"
@@ -170,7 +176,7 @@
             </Grid>
         </Viewbox>
 
-
+        <!--Logo y etiqueta azul-->
         <Viewbox Grid.Column="5" VerticalAlignment="Top">
             <Grid>
                 <StackPanel 
@@ -202,6 +208,7 @@
                   >
         </GridView>
 
+        <!--Lista de habilidades-->
         <GridView x:Name="GridSkills"
                   ItemTemplate="{StaticResource SkillTemplate}"
                   ItemsPanel="{StaticResource SkillPanel}"
@@ -228,6 +235,7 @@
         </GridView>-->
 
 
+        <!--Botones de menu y ajustes-->
         <StackPanel Orientation="Horizontal" Grid.Row="4">
             <!--HomeButton-->
             <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
@@ -244,7 +252,7 @@
 
 
 
-
+        <!--Habilidades equipadas-->
         <Viewbox Grid.Row="1"
                  Grid.Column="2">
             <Grid Background="#FF8B5555">
@@ -257,15 +265,19 @@
                        Foreground="Black"
                        HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
 
+                    <!--Habilidad 1-->
                     <Image x:Name="SelectedSkillImage1" Source="{x:Bind SelectedSkills[0].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
 
+                    <!--Habilidad 2-->
                     <Image x:Name="SelectedSkillImage2" Source="{x:Bind SelectedSkills[1].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
 
+                    <!--Habilidad 3-->
                     <Image x:Name="SelectedSkillImage3" Source="{x:Bind SelectedSkills[2].ImageSource, Mode=OneWay}" Margin="8,8,8,8"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
 
+        <!--Informacion del caballero-->
         <Viewbox Grid.Row="2"
                  Grid.Column="2"
                  Grid.ColumnSpan="2"
@@ -286,8 +298,7 @@
                    HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
             </StackPanel>
         </Viewbox>
-
-
+        
         <Viewbox Grid.Row="3"
               Grid.Column="3"
                  x:Name="KnightStats2">
@@ -421,8 +432,7 @@
 
             </Grid>
         </Viewbox>
-
-
+        <!--Nombre-->
         <Viewbox Grid.Row="2"
                  Grid.Column="4"
                  Grid.ColumnSpan="2"
@@ -440,8 +450,7 @@
                    FontStyle="Normal" TextDecorations="Underline" FontFamily="Abril Fatface"/>
             </Grid>
         </Viewbox>
-
-
+        <!--Lvl-->
         <Viewbox Grid.Row="3"
                  Grid.Column="4"
                  Grid.ColumnSpan="2"

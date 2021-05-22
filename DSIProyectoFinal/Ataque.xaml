@@ -40,7 +40,7 @@
             <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
         </Button>
 
-
+        <!--Casillas de juego-->
         <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">
             
             <Grid.RowDefinitions>
@@ -72,7 +72,7 @@
             <Border Grid.Row="3" Grid.Column="6" Background="OrangeRed"/>
             <Border Grid.Row="3" Grid.Column="7" Background="OrangeRed"/>
 
-            <!--Columnas-->
+            <!--Filas-->
             <Rectangle Grid.Row="1" Grid.ColumnSpan="8" 
                 Fill="Black" Height="5" VerticalAlignment="Top"/>
             <Rectangle Grid.Row="2" Grid.ColumnSpan="8" 
@@ -96,7 +96,7 @@
             <Rectangle Grid.Column="7" Grid.RowSpan="4" 
                 Fill="Black" Width="5" HorizontalAlignment="Left"/>
 
-
+            <!--Casilla de ataque 1-->
             <ContentControl Grid.Row="2" Grid.Column="6" x:Name="content26" PointerPressed="MovingCard" HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -109,6 +109,7 @@
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
 
+                    <!--Imagen del caballero-->
                     <Image Source="ms-appx:///Assets/Knights/stickman1.png" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
 
                     <Image Source="{x:Bind KnightsOnGrid[22].ImageLocation, Mode=OneWay}"
@@ -123,6 +124,7 @@
                     </Viewbox>
                 </Grid>
             </ContentControl>
+            <!--Casilla de ataque 2-->
             <ContentControl Grid.Row="2" Grid.Column="7" x:Name="content27" PointerPressed="MovingCard" HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -149,7 +151,7 @@
                     </Viewbox>
                 </Grid>
             </ContentControl>
-
+            <!--Casilla de ataque 3-->
             <ContentControl Grid.Row="3" Grid.Column="6" x:Name="content36" PointerPressed="MovingCard" HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -176,6 +178,7 @@
                     </Viewbox>
                 </Grid>
             </ContentControl>
+            <!--Casilla de ataque 4-->
             <ContentControl Grid.Row="3" Grid.Column="7" x:Name="content37" PointerPressed="MovingCard" HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -204,9 +207,9 @@
             </ContentControl>
         </Grid>
 
+        <!--Mazo del jugador-->
         <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
-
-
+            <!--Caballero 1-->
             <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[0].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
@@ -227,6 +230,7 @@
                 </Grid>
             </ContentControl>
 
+            <!--Caballero 2-->
             <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember2">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
@@ -248,6 +252,7 @@
                 </Grid>
             </ContentControl>
 
+            <!--Caballero 3-->
             <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
@@ -269,6 +274,7 @@
                 </Grid>
             </ContentControl>
 
+            <!--Caballero 4-->
             <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
@@ -288,7 +294,6 @@
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[3].ImageLocation, Mode=OneWay}"/>
                 </Grid>
             </ContentControl>
-
         </StackPanel>
 
 

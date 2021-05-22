@@ -106,6 +106,7 @@
             </Grid>
         </Button>
 
+        <!--Logo y etiqueta azul-->
         <Viewbox Grid.Column="5" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Grid>
                 <StackPanel 
@@ -122,6 +123,7 @@
             </Grid>
         </Viewbox>
 
+        <!--Botones de menu y ajustes-->
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->
             <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
@@ -152,6 +154,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
+            <!--Lista de niveles-->
             <ListView Grid.Row="1" Grid.ColumnSpan="6"
                       Height="200"
                       ShowsScrollingPlaceholders="True"
