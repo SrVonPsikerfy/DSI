@@ -81,6 +81,7 @@ namespace DSIProyectoFinal
 
         private void SelectTeam1(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Select1.BorderThickness = new Thickness(7);
             Select2.BorderThickness = new Thickness(2);
             Select3.BorderThickness = new Thickness(2);
@@ -90,6 +91,7 @@ namespace DSIProyectoFinal
 
         private void SelectTeam2(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Select1.BorderThickness = new Thickness(2);
             Select2.BorderThickness = new Thickness(7);
             Select3.BorderThickness = new Thickness(2);
@@ -99,6 +101,7 @@ namespace DSIProyectoFinal
 
         private void SelectTeam3(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Select1.BorderThickness = new Thickness(2);
             Select2.BorderThickness = new Thickness(2);
             Select3.BorderThickness = new Thickness(7);
@@ -121,6 +124,7 @@ namespace DSIProyectoFinal
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
@@ -129,6 +133,7 @@ namespace DSIProyectoFinal
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             index = int.Parse((sender as Button).Name[1].ToString()) - 1;
             selectedKnight = auxTeam[index];
             //me parece muy lioso hacer que en ambos se cambie el personaje, y me da problemas
@@ -140,6 +145,8 @@ namespace DSIProyectoFinal
 
         private void Available_Select(object sender, ItemClickEventArgs e)
         {
+            Sounds.playSound("button.wav");
+
             gridKnight = (Knight)e.ClickedItem;
 
             if (selectedKnight != null)
@@ -175,17 +182,20 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Frame.Navigate(typeof(Opciones));
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)
@@ -197,6 +207,7 @@ namespace DSIProyectoFinal
 
         private void SaveTeam(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Teams.SaveList(auxTeam, SelectedTeamIndex);
             teamList[SelectedTeamIndex] = new List<Knight>(auxTeam);
         }

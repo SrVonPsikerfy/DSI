@@ -42,12 +42,14 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void GoToLevelSelect(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Frame.Navigate(typeof(ModoHistoria));
         }
     }

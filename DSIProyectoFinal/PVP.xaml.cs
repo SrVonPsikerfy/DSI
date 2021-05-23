@@ -32,6 +32,7 @@ namespace DSIProyectoFinal
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
@@ -40,6 +41,7 @@ namespace DSIProyectoFinal
 
         private void DefendClick(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             rectangleModeSelection.Fill = (SolidColorBrush)Resources["GreenColor"];
             defenseImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/defensorSelectedIcon.png"));
             attackImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/atacanteIcon.png"));
@@ -48,6 +50,7 @@ namespace DSIProyectoFinal
 
         private void AttackClick(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             rectangleModeSelection.Fill = (SolidColorBrush)Resources["RedColor"];
             attackImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/atacanteSelectedIcon.png"));
             defenseImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/defensorIcon.png"));
@@ -56,23 +59,27 @@ namespace DSIProyectoFinal
 
         private void EnterClick(object sender, RoutedEventArgs e)
         {
-            if(isAtacking) this.Frame.Navigate(typeof(Ataque));
+            Sounds.playSound("button.wav");
+            if (isAtacking) this.Frame.Navigate(typeof(Ataque));
             else this.Frame.Navigate(typeof(TeamSelect));
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Frame.Navigate(typeof(Opciones));
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)

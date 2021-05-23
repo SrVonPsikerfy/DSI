@@ -29,6 +29,7 @@ namespace DSIProyectoFinal
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
@@ -36,6 +37,7 @@ namespace DSIProyectoFinal
         }
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
             //Frame.GoBack();
@@ -43,6 +45,7 @@ namespace DSIProyectoFinal
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)

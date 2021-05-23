@@ -60,6 +60,7 @@ namespace DSIProyectoFinal
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
@@ -68,22 +69,26 @@ namespace DSIProyectoFinal
 
         private void GoToTeamConfig(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(TeamConfig));
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 this.Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(Opciones));
         }
 
         private void SelectTeam1(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             selectedTeam = Teams.Team1;
 
             TeamSelect1.BorderThickness = new Thickness(7);
@@ -94,6 +99,7 @@ namespace DSIProyectoFinal
 
         private void SelectTeam2(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             selectedTeam = Teams.Team2;
 
             TeamSelect1.BorderThickness = new Thickness(2);
@@ -104,6 +110,7 @@ namespace DSIProyectoFinal
 
         private void SelectTeam3(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             selectedTeam = Teams.Team3;
 
             TeamSelect1.BorderThickness = new Thickness(2);
@@ -125,6 +132,7 @@ namespace DSIProyectoFinal
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)
@@ -136,6 +144,7 @@ namespace DSIProyectoFinal
 
         private void Go(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Teams.teamSelected = selectedTeam;
             this.Frame.Navigate(typeof(Defensa));
         }

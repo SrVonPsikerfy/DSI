@@ -54,6 +54,7 @@ namespace DSIProyectoFinal
 
         private void GoBackPage(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (Frame.CanGoBack)
             {
                 StoreKnights.UpdateStoreKnights(Knights.ToList());
@@ -64,6 +65,7 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             StoreKnights.UpdateStoreKnights(Knights.ToList());
             StoreKnights.Prize = int.Parse(Money.Text);
             while (this.Frame.CanGoBack)
@@ -72,6 +74,7 @@ namespace DSIProyectoFinal
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             StoreKnights.UpdateStoreKnights(Knights.ToList());
             StoreKnights.Prize = int.Parse(Money.Text);
             Frame.Navigate(typeof(Opciones));
@@ -79,6 +82,7 @@ namespace DSIProyectoFinal
 
         public void GridPurchase_ItemClick(object sender, ItemClickEventArgs e)
         {
+            Sounds.playSound("button.wav");
             index = Knights.IndexOf((Knight)e.ClickedItem);
 
             if (Buyable[index])
@@ -95,6 +99,8 @@ namespace DSIProyectoFinal
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Sounds.playSound("button.wav");
+
             // Get the instance of ComboBox
             ComboBox comboBox = sender as ComboBox;
 
@@ -117,6 +123,8 @@ namespace DSIProyectoFinal
 
         private void ConfirmBuy_Click(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("confirm_sound.wav");
+
             FalseBackground.Visibility = Visibility.Collapsed;
             ConfirmBox.Visibility = Visibility.Collapsed;
 
@@ -133,6 +141,7 @@ namespace DSIProyectoFinal
 
         private void CancelBuy_Click(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("deny_sound.wav");
             FalseBackground.Visibility = Visibility.Collapsed;
             ConfirmBox.Visibility = Visibility.Collapsed;
 
@@ -141,6 +150,7 @@ namespace DSIProyectoFinal
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)

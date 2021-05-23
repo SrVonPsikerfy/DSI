@@ -29,6 +29,7 @@ namespace DSIProyectoFinal
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (this.Frame.CanGoBack)
             {
                 this.Frame.GoBack();
@@ -37,17 +38,20 @@ namespace DSIProyectoFinal
 
         private void GoToPlay(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(TeamSelect));
         }
         
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Frame.Navigate(typeof(Opciones));
         }
 
@@ -69,6 +73,7 @@ namespace DSIProyectoFinal
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)
@@ -80,6 +85,7 @@ namespace DSIProyectoFinal
 
         private void PageClick(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             PlayButton.Visibility = Visibility.Visible;
         }
     }

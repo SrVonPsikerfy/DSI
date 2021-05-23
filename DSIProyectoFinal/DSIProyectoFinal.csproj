@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="AvailableKnights.cs" />
     <Compile Include="Chapter.cs" />
+    <Compile Include="Sounds.cs" />
     <Compile Include="Defensa.xaml.cs">
       <DependentUpon>Defensa.xaml</DependentUpon>
     </Compile>
@@ -275,6 +276,9 @@
     <Content Include="Assets\skills\skill_points.png" />
     <Content Include="Assets\sniper_class_icon.png" />
     <Content Include="Assets\sold_icon.png" />
+    <Content Include="Assets\Sounds\button.wav" />
+    <Content Include="Assets\Sounds\confirm_sound.wav" />
+    <Content Include="Assets\Sounds\deny_sound.wav" />
     <Content Include="Assets\stick-man-hi-small.png" />
     <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\storeIcons.png" />

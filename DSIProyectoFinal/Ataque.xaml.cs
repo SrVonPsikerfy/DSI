@@ -68,11 +68,13 @@ namespace DSIProyectoFinal
 
         private void GoToPause(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(Pause));
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.OriginalKey != Windows.System.VirtualKey.GamepadB && e.Key == Windows.System.VirtualKey.Escape || e.Key == Windows.System.VirtualKey.GamepadMenu)
             {
                 if (this.Frame.CanGoBack)
@@ -86,7 +88,7 @@ namespace DSIProyectoFinal
 
         private void ContentControl_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-
+            Sounds.playSound("button.wav");
             //Cojo el grid de dentro
             Grid contentGrid = ((sender as ContentControl).Content as Grid);
 
@@ -114,6 +116,7 @@ namespace DSIProyectoFinal
         {
             if (MemberSelected != null)
             {
+                Sounds.playSound("button.wav");
                 ContentControl cell = sender as ContentControl;
                 //pillo la imagen por su nombre
                 int posicion = int.Parse(cell.Name[7].ToString()) * 8 + int.Parse(cell.Name[8].ToString()); //8??

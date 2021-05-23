@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Controls;
+using Windows.Storage;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,36 +32,43 @@ namespace DSIProyectoFinal
        
         private void GoToTeams(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(TeamConfig));
         }
 
         private void GoToKnights(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(Abilities));
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(Opciones));
         }
 
         private void Exit(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Application.Current.Exit();
         }
 
         private void GoToPvp(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(PVP));
         }
 
         private void GoToStore(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(Store));
         }
 
         private void GoToModoHistoria(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(ModoHistoria));
         }
     }

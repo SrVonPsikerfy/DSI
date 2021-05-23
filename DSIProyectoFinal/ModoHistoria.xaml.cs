@@ -50,27 +50,32 @@ namespace DSIProyectoFinal
 
         private void GoToPlay(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             this.Frame.Navigate(typeof(TeamSelect));
         }
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             while (this.Frame.CanGoBack)
                 Frame.GoBack();
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Frame.Navigate(typeof(Opciones));
         }
 
         private void ChangeToChapterSelection(object sender, ItemClickEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Frame.Navigate(typeof(SelectorCapitulo), ((Chapter)e.ClickedItem).numChapter);
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             if (e.Key == Windows.System.VirtualKey.Escape)
             {
                 if (this.Frame.CanGoBack)

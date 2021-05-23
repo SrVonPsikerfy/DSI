@@ -76,12 +76,14 @@ namespace DSIProyectoFinal
 
         private void KnightSelection(object sender, ItemClickEventArgs e)
         {
+            Sounds.playSound("button.wav");
             Knight k = e.ClickedItem as Knight;
             SelectKnight(k);
         }
 
         private void SelectKnight(Knight knight)
         {
+            Sounds.playSound("button.wav");
             Skills.Clear();
             foreach (Skill skill in knight.Abilities)
             {
@@ -99,6 +101,8 @@ namespace DSIProyectoFinal
 
         private void AbilitySelection(object sender, ItemClickEventArgs e)
         {
+            Sounds.playSound("button.wav");
+
             skill = e.ClickedItem as Skill;
 
             //actualizar imagen desbloqueada
@@ -223,6 +227,7 @@ namespace DSIProyectoFinal
         //Metodo llamado cuando se cancela una seleccion en la caja de confirmacion
         private void No_Click(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("deny_sound.wav");
             //Se esconde la caja de confirmacion de seleccion
             FalseBackground.Visibility = Visibility.Collapsed;
             ConfirmBox.Visibility = Visibility.Collapsed;
@@ -232,6 +237,7 @@ namespace DSIProyectoFinal
         //3 casos para la habilidad seleccionada (Bloqueada, Equipada, No equipada)
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("confirm_sound.wav");
             //Bloqueada?
             if (!skill.IsUnlocked) UnlockAbility(skill, index, image);
             else
@@ -280,6 +286,7 @@ namespace DSIProyectoFinal
         //Metodos para salir de la pagina
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             //Actualizamos los Caballeros disponilbes con los nuevos cambios hechos en esta interfaz
             AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             if (this.Frame.CanGoBack)
@@ -290,6 +297,7 @@ namespace DSIProyectoFinal
 
         private void GoToMainMenu(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             //Actualizamos los Caballeros disponilbes con los nuevos cambios hechos en esta interfaz
             AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             while (this.Frame.CanGoBack)
@@ -298,6 +306,7 @@ namespace DSIProyectoFinal
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             //Actualizamos los Caballeros disponilbes con los nuevos cambios hechos en esta interfaz
             AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             Frame.Navigate(typeof(Opciones));
@@ -305,6 +314,7 @@ namespace DSIProyectoFinal
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            Sounds.playSound("button.wav");
             //Actualizamos los Caballeros disponilbes con los nuevos cambios hechos en esta interfaz
             AvailableKnights.UpdateAvailableKnights(Knights.ToList());
             if (e.Key == Windows.System.VirtualKey.Escape)
