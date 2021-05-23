@@ -28,20 +28,44 @@
                Stretch="Fill"/>
 
         <!--Icono de ataque-->
-        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="./Assets/attack.png" MaxHeight="87" MaxWidth="87" />
+        <Image Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               Source="./Assets/attack.png" 
+               MaxHeight="87"
+               MaxWidth="87" />
 
-        <!--Timer-->
-        
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="2:00" SizeChanged="TextBlock_SizeChanged" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="LightPink" FontWeight="Bold"/>
+        <!--Timer-->        
+        <TextBlock Grid.Row="0" 
+                   Grid.Column="2"
+                   Text="2:00" 
+                   SizeChanged="TextBlock_SizeChanged" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Foreground="LightPink" 
+                   FontWeight="Bold"/>
         
         <!--Boton de pausa-->
-        <Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+        <Button Grid.Row="0" 
+                Grid.Column="3" 
+                Grid.ColumnSpan="2"
+                Style="{StaticResource TextBlockButtonStyle}"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
                 Click="GoToPause">
-            <Image Source="./Assets/pause_icon.png" MaxHeight="87" MaxWidth="87"/>
+            <Image Source="./Assets/pause_icon.png"
+                   MaxHeight="87"
+                   MaxWidth="87"/>
         </Button>
 
         <!--Casillas de juego-->
-        <Grid Grid.Row="1" Grid.Column="2" BorderThickness="5" BorderBrush="Black" Background="White">
+        <Grid Grid.Row="1"
+              Grid.Column="2" 
+              BorderThickness="5" 
+              BorderBrush="Black"
+              Background="White">
             
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -60,13 +84,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
-
+            <!--Color de fondo Casillas-->
             <Border Grid.Row="0" Grid.Column="0" Background="CornflowerBlue"/>
             <Border Grid.Row="1" Grid.Column="0" Background="CornflowerBlue"/>
-
             <Border Grid.Row="3" Grid.Column="1" Background="Green"/>
-
             <Border Grid.Row="2" Grid.Column="6" Background="OrangeRed"/>
             <Border Grid.Row="2" Grid.Column="7" Background="OrangeRed"/>
             <Border Grid.Row="3" Grid.Column="6" Background="OrangeRed"/>
@@ -97,7 +118,11 @@
                 Fill="Black" Width="5" HorizontalAlignment="Left"/>
 
             <!--Casilla de ataque 1-->
-            <ContentControl Grid.Row="2" Grid.Column="6" x:Name="content26" PointerPressed="MovingCard" HorizontalAlignment="Center">
+            <ContentControl Grid.Row="2" 
+                            Grid.Column="6"
+                            x:Name="content26" 
+                            PointerPressed="MovingCard" 
+                            HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -124,8 +149,13 @@
                     </Viewbox>
                 </Grid>
             </ContentControl>
+
             <!--Casilla de ataque 2-->
-            <ContentControl Grid.Row="2" Grid.Column="7" x:Name="content27" PointerPressed="MovingCard" HorizontalAlignment="Center">
+            <ContentControl Grid.Row="2" 
+                            Grid.Column="7"
+                            x:Name="content27"
+                            PointerPressed="MovingCard" 
+                            HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -151,8 +181,13 @@
                     </Viewbox>
                 </Grid>
             </ContentControl>
+            
             <!--Casilla de ataque 3-->
-            <ContentControl Grid.Row="3" Grid.Column="6" x:Name="content36" PointerPressed="MovingCard" HorizontalAlignment="Center">
+            <ContentControl Grid.Row="3" 
+                            Grid.Column="6" 
+                            x:Name="content36"
+                            PointerPressed="MovingCard" 
+                            HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -178,8 +213,13 @@
                     </Viewbox>
                 </Grid>
             </ContentControl>
+            
             <!--Casilla de ataque 4-->
-            <ContentControl Grid.Row="3" Grid.Column="7" x:Name="content37" PointerPressed="MovingCard" HorizontalAlignment="Center">
+            <ContentControl Grid.Row="3"
+                            Grid.Column="7"
+                            x:Name="content37"
+                            PointerPressed="MovingCard" 
+                            HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -208,7 +248,11 @@
         </Grid>
 
         <!--Mazo del jugador-->
-        <StackPanel  Grid.Row="2" Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+        <StackPanel  Grid.Row="2" 
+                     Grid.Column="2"  
+                     Orientation="Horizontal" 
+                     HorizontalAlignment="Right" 
+                     VerticalAlignment="Stretch">
             <!--Caballero 1-->
             <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[0].BackgroundColor, Mode=OneWay}">
@@ -221,18 +265,32 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                        <TextBlock Text="3/2" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
-
+                    <StackPanel Orientation="Horizontal" 
+                                Grid.Row="0" 
+                                Grid.Column="0" >
+                        <TextBlock Text="3/2" 
+                                   VerticalAlignment="Center"
+                                   FontFamily="Abril Fatface" 
+                                   FontSize="20" 
+                                   FontWeight="Bold" 
+                                   Margin="10,0,0,0"/>
                     </StackPanel>
-                    <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[0].RoleLocation, Mode=OneWay}"/>
-                    <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[0].ImageLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="0" 
+                           Grid.Column="1"
+                           Source="{x:Bind SelectedTeam[0].RoleLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="1" 
+                           Grid.Column="0" 
+                           Grid.ColumnSpan="2" 
+                           Source="{x:Bind SelectedTeam[0].ImageLocation, Mode=OneWay}"/>
                 </Grid>
             </ContentControl>
 
             <!--Caballero 2-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember2">
-                <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
+            <ContentControl PointerPressed="ContentControl_PointerPressed" 
+                            x:Name="TeamMember2">
+                <Grid BorderThickness="3" 
+                      BorderBrush="Black" 
+                      Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="3*"/>
@@ -242,19 +300,32 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                        <TextBlock Text="4/2" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
-
-
+                    <StackPanel Orientation="Horizontal" 
+                                Grid.Row="0" 
+                                Grid.Column="0" >
+                        <TextBlock Text="4/2" 
+                                   VerticalAlignment="Center"
+                                   FontFamily="Abril Fatface"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Margin="10,0,0,0"/>
                     </StackPanel>
-                    <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[1].RoleLocation, Mode=OneWay}"/>
-                    <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[1].ImageLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="0" 
+                           Grid.Column="1"
+                           Source="{x:Bind SelectedTeam[1].RoleLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Source="{x:Bind SelectedTeam[1].ImageLocation, Mode=OneWay}"/>
                 </Grid>
             </ContentControl>
 
             <!--Caballero 3-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3">
-                <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
+            <ContentControl PointerPressed="ContentControl_PointerPressed"
+                            x:Name="TeamMember3">
+                <Grid BorderThickness="3"
+                      BorderBrush="Black"
+                      Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="3*"/>
@@ -264,19 +335,32 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                        <TextBlock Text="1/2" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
-
-
+                    <StackPanel Orientation="Horizontal" 
+                                Grid.Row="0"
+                                Grid.Column="0" >
+                        <TextBlock Text="1/2" 
+                                   VerticalAlignment="Center" 
+                                   FontFamily="Abril Fatface" 
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Margin="10,0,0,0"/>
                     </StackPanel>
-                    <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[2].RoleLocation, Mode=OneWay}"/>
-                    <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[2].ImageLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="0" 
+                           Grid.Column="1"
+                           Source="{x:Bind SelectedTeam[2].RoleLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="1" 
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Source="{x:Bind SelectedTeam[2].ImageLocation, Mode=OneWay}"/>
                 </Grid>
             </ContentControl>
 
             <!--Caballero 4-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4">
-                <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">
+            <ContentControl PointerPressed="ContentControl_PointerPressed"
+                            x:Name="TeamMember4">
+                <Grid BorderThickness="3" 
+                      BorderBrush="Black" 
+                      Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="3*"/>
@@ -286,22 +370,39 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" >
-                        <TextBlock Text="5/2" VerticalAlignment="Center" FontFamily="Abril Fatface" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
-
+                    <StackPanel Orientation="Horizontal" 
+                                Grid.Row="0" 
+                                Grid.Column="0" >
+                        <TextBlock Text="5/2"
+                                   VerticalAlignment="Center"
+                                   FontFamily="Abril Fatface"
+                                   FontSize="20" 
+                                   FontWeight="Bold" 
+                                   Margin="10,0,0,0"/>
                     </StackPanel>
-                    <Image Grid.Row="0" Grid.Column="1" Source="{x:Bind SelectedTeam[3].RoleLocation, Mode=OneWay}"/>
-                    <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="{x:Bind SelectedTeam[3].ImageLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="0" 
+                           Grid.Column="1" 
+                           Source="{x:Bind SelectedTeam[3].RoleLocation, Mode=OneWay}"/>
+                    <Image Grid.Row="1" 
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Source="{x:Bind SelectedTeam[3].ImageLocation, Mode=OneWay}"/>
                 </Grid>
             </ContentControl>
         </StackPanel>
 
-
         <!--Auto Win-->
-        <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left">
-            <Button Background="#BDBDBD" BorderBrush="Black" x:Name="AutoWin"
-                Content="ATTACK" FontSize="30" FontFamily="Abril Fatface" Click="AutoWin_Click"/>
+        <Viewbox Grid.Row="2" 
+                 Grid.Column="0"
+                 Grid.ColumnSpan="3"
+                 HorizontalAlignment="Left">
+            <Button Background="#BDBDBD"
+                    BorderBrush="Black"
+                    x:Name="AutoWin"
+                    Content="ATTACK" 
+                    FontSize="30"
+                    FontFamily="Abril Fatface"
+                    Click="AutoWin_Click"/>
         </Viewbox>
-
     </Grid>
 </Page>

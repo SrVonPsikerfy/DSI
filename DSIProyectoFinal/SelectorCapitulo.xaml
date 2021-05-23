@@ -82,7 +82,8 @@
         </Grid.ColumnDefinitions>
 
         <!--Fondo-->
-        <Image Grid.ColumnSpan ="4" Grid.RowSpan="8"
+        <Image Grid.ColumnSpan ="4" 
+               Grid.RowSpan="8"
                Source="./Assets/Backgrounds/mainMenu.jpg"
                Stretch="Fill"/>
 
@@ -119,25 +120,26 @@
             </Grid>
         </Viewbox>
 
-        <!--<StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
-            -->
-        <!--Titulo-->
-        <!--
-            <TextBlock Grid.Row="0" Grid.Column="4" Text="KotF" FontFamily='Abril Fatface' SizeChanged="TextBlock_SizeChanged" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,0"/>
-
-            -->
-        <!--Nombre de la pantalla en la que estamos-->
-        <!--
-            <TextBlock Grid.Row="0" Grid.Column="4" Text="CHAPTER 1" FontFamily='Abril Fatface' FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin=" 5,5"/>
-            
-        </StackPanel>-->
-
         <!--Circulo que dice en que nivel estás y numero del nivel-->
-        <Image Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" Source="/Assets/NivelAux.png"
-               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="2"
+               Grid.Column="0"
+               Grid.RowSpan="5" 
+               Grid.ColumnSpan="2" 
+               Source="/Assets/NivelAux.png"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="LevelText" Grid.Row="2" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" Text="3"
-                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="160" FontFamily="Abril Fatface"></TextBlock>
+        <TextBlock x:Name="LevelText" 
+                   Text="3"
+                   Grid.Row="2" 
+                   FontSize="160" 
+                   Grid.Column="0" 
+                   Grid.RowSpan="5"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" 
+                   FontFamily="Abril Fatface">
+        </TextBlock>
 
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->
@@ -154,7 +156,6 @@
         </StackPanel>
 
         <Viewbox  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  >
-
             <Button x:Name="Zone1" Foreground="White" FontFamily="Abril Fatface" BorderThickness="3"
                  BorderBrush="White" Content="Page 1 - 1"  Style="{StaticResource AccentButtonStyle}" FontSize="44" Width="800" Margin="0,5" HorizontalAlignment="Right" Click="PageClick"/>
         </Viewbox>
@@ -163,7 +164,6 @@
             <Button x:Name="Zone2" Foreground="White" FontFamily="Abril Fatface"  BorderThickness="3"
                  BorderBrush="White" Content="Page 1 - 2" HorizontalAlignment="Right" Width="800" Style="{StaticResource AccentButtonStyle}" FontSize="44" Margin="0,5" Click="PageClick"/>
         </Viewbox>
-
 
         <Viewbox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" >
             <Button x:Name="Zone3" FontFamily="Abril Fatface" HorizontalAlignment="Right"  BorderThickness="3"
@@ -186,7 +186,5 @@
                 Click="GoToPlay" Visibility="Collapsed" BorderThickness="7"
                  BorderBrush="Black"/>
         </Viewbox>
-
-
     </Grid>
 </Page>

@@ -156,7 +156,7 @@
         </Viewbox>
 
         <!--<Button DataTemplate="KnightsTemplate"></Button>-->
-        
+
         <!--GRID CON LOS MIEMBROS DEL EQUIPO-->
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Margin="20" ColumnSpacing="20" RowSpacing="20">
             <!--Definicion de filas y columnas-->
@@ -470,32 +470,48 @@
 
         <!--BOTON SAVE-->
         <Viewbox  Grid.Column="1"  Grid.Row="2" Grid.ColumnSpan="2"   VerticalAlignment="Bottom" HorizontalAlignment="Center">
-            
-        <Button Content="SAVE"              
-                FontSize="30" FontWeight="Bold" Width="450" FontFamily="Abril Fatface"
+            <Button Content="SAVE"              
+                Width="450" 
+                FontSize="30" 
+                Margin="0,0,0,92"
+                FontWeight="Bold" 
                  BorderThickness="7"
-                 BorderBrush="Black" Margin="0,0,0,92"
+                 BorderBrush="Black" 
+                FontFamily="Abril Fatface"
                 Click="SaveTeam"/>
         </Viewbox>
 
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
             <!--HomeButton-->
-            <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
+            <Button x:Name="HomeButton" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Bottom" 
+                    Background="Transparent"
                     Click="GoToMainMenu">
-                <Image Source="/Assets/homeButton.png" MaxWidth="144" MaxHeight="144"/>
+                <Image Source="/Assets/homeButton.png" 
+                       MaxWidth="144" 
+                       MaxHeight="144"/>
             </Button>
 
             <!--SettingsButton-->
-            <Button x:Name="SettingsButton" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="Transparent"
+            <Button x:Name="SettingsButton" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"  
+                    Background="Transparent"
                     Click="GoToSettings">
-                <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
+                <Image Source="/Assets/settingsButton.png"
+                       MaxWidth="144"
+                       MaxHeight="144"/>
             </Button>
         </StackPanel>
-        
-     
+
+
         <!--BOTONES DE SELECCION DE EQUIPO-->
-        <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
-                 HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Viewbox Grid.Row="0" 
+                 Grid.Column="0" 
+                 Grid.ColumnSpan="5"
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Top">
             <Grid HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="Select1" Grid.Column="2" Grid.Row="0" Background="#FF9C9C9C" Click="SelectTeam1">

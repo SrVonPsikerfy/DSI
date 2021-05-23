@@ -20,16 +20,29 @@
                 </Grid.RowDefinitions>
 
                 <!--Imagen del caballero-->
-                <Image x:Name="KnightImage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       Source="{x:Bind ImageLocation}" Stretch="Uniform"/>
+                <Image x:Name="KnightImage" 
+                       Grid.Row="1"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Source="{x:Bind ImageLocation}"
+                       Stretch="Uniform"/>
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
                     <!--Nombre del caballero-->
-                    <TextBlock x:Name="Prize" Text="{x:Bind Name}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}" FontFamily="Abril Fatface"/>
+                    <TextBlock x:Name="Prize" Text="{x:Bind Name}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Style="{StaticResource SubtitleTextBlockStyle}" 
+                               FontFamily="Abril Fatface"/>
+                    
                     <!--Imagen del Rol-->
-                    <Image x:Name="Image" Source="{x:Bind RoleLocation}" HorizontalAlignment="Stretch"
-                        AutomationProperties.Name="Atack"  RenderTransformOrigin="0.5,0.5" Height="52" Width="52" />
+                    <Image x:Name="Image" 
+                           Source="{x:Bind RoleLocation}"
+                           HorizontalAlignment="Stretch"
+                           AutomationProperties.Name="Atack" 
+                           RenderTransformOrigin="0.5,0.5"
+                           Height="52" 
+                           Width="52" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -38,7 +51,6 @@
             <ItemsWrapGrid Orientation="Horizontal"
                            HorizontalAlignment="Center" />
         </ItemsPanelTemplate>
-
 
         <!--Template de habilidades-->
         <DataTemplate x:Key="SkillTemplate"
@@ -54,25 +66,35 @@
                 </Grid.RowDefinitions>
 
                 <!--Imagen de la habilidad (ya sea desbloqueada o no)-->
-                <Image x:Name="skillImage" Grid.Column="0" Grid.Row="0"
-                           Grid.ColumnSpan="2" Grid.RowSpan="2"
-                Source="{x:Bind ImageSource, Mode=OneWay}" Stretch="Uniform">
+                <Image x:Name="skillImage" 
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2" 
+                       Grid.RowSpan="2"
+                       Source="{x:Bind ImageSource, Mode=OneWay}"
+                       Stretch="Uniform">
                 </Image>
 
                 <!--Círculo que aparece si la habilidad esta equipada-->
-                <Image x:Name="skillCircleOfPoint" Grid.Column="1" Grid.Row="1"
-                Source="ms-appx:///Assets/skills/skill_points.png" Stretch="Uniform"
+                <Image x:Name="skillCircleOfPoint" 
+                       Grid.Column="1" 
+                       Grid.Row="1"
+                       Source="ms-appx:///Assets/skills/skill_points.png"
+                       Stretch="Uniform"
                        Visibility="{x:Bind CostVisibility}">
                 </Image>
 
                 <!--Puntos necesarios para desbloquear-->
-                <TextBlock x:Name="skillPointsNeeded" Grid.Column="1" Grid.Row="1"
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                <TextBlock x:Name="skillPointsNeeded" 
+                           Grid.Column="1" 
+                           Grid.Row="1"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
                            Visibility="{x:Bind CostVisibility}"
-                Text="{x:Bind PointsNeeded, Mode=OneWay}"
-                           FontSize="35" FontFamily="Abril Fatface">
+                           Text="{x:Bind PointsNeeded, Mode=OneWay}"
+                           FontSize="35"
+                           FontFamily="Abril Fatface">
                 </TextBlock>
-
             </Grid>
         </DataTemplate>
 
@@ -250,8 +272,6 @@
             </Button>
         </StackPanel>
 
-
-
         <!--Habilidades equipadas-->
         <Viewbox Grid.Row="1"
                  Grid.Column="2">
@@ -382,56 +402,63 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Text="ATK (PHY)"
-                       FontSize="20"
-                       VerticalAlignment="Center"
-                       Foreground="Black"
-                       HorizontalAlignment="Center"
-                       FontStyle="Normal" FontFamily="Abril Fatface" FontWeight="Bold"/>
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           Foreground="Black"
+                           HorizontalAlignment="Center"
+                           FontStyle="Normal" 
+                           FontFamily="Abril Fatface" 
+                           FontWeight="Bold"/>
 
                 <TextBlock Grid.Row="1"
-                       Text="ATK (MAG)"
-                       FontSize="20"
-                       Foreground="Black"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontStyle="Normal" FontWeight="Bold" FontFamily="Abril Fatface"/>
+                           Text="ATK (MAG)"
+                           FontSize="20"
+                           Foreground="Black"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontStyle="Normal" FontWeight="Bold"
+                           FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Row="2"
-                       Text="MANA"
-                       FontSize="20"
-                       Foreground="Black"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontStyle="Normal" FontWeight="Bold" FontFamily="Abril Fatface"/>
+                           Text="MANA"
+                           FontSize="20"
+                           Foreground="Black"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontStyle="Normal" FontWeight="Bold" 
+                           FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
-                       Text="{x:Bind selectedKnight[0].AtkPhy, Mode=OneWay}"
-                       FontSize="20"
-                       Foreground="Black"
-                       Margin="10,0,0,0"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
+                           Text="{x:Bind selectedKnight[0].AtkPhy, Mode=OneWay}"
+                           FontSize="20"
+                           Foreground="Black"
+                           Margin="10,0,0,0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
-                       Grid.Row="1"
-                       Text="{x:Bind selectedKnight[0].AtkMag, Mode=OneWay}"
-                       FontSize="20"
-                       Foreground="Black"
-                       Margin="10,0,0,0"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
+                           Grid.Row="1"
+                           Text="{x:Bind selectedKnight[0].AtkMag, Mode=OneWay}"
+                           FontSize="20"
+                           Foreground="Black"
+                           Margin="10,0,0,0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center" 
+                           FontFamily="Abril Fatface"/>
 
                 <TextBlock Grid.Column="1"
-                       Grid.Row="2"
-                       Text="{x:Bind selectedKnight[0].Mana, Mode=OneWay}"
-                       FontSize="20"
-                       Foreground="Black"
-                       Margin="10,0,0,0"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center" FontFamily="Abril Fatface"/>
-
+                           Grid.Row="2"
+                           Text="{x:Bind selectedKnight[0].Mana, Mode=OneWay}"
+                           FontSize="20"
+                           Foreground="Black"
+                           Margin="10,0,0,0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center" 
+                           FontFamily="Abril Fatface"/>
             </Grid>
         </Viewbox>
+        
         <!--Nombre-->
         <Viewbox Grid.Row="2"
                  Grid.Column="4"
@@ -447,7 +474,9 @@
                    FontSize="25"
                    Foreground="Black"
                    FontWeight="Bold"
-                   FontStyle="Normal" TextDecorations="Underline" FontFamily="Abril Fatface"/>
+                   FontStyle="Normal" 
+                   TextDecorations="Underline"
+                   FontFamily="Abril Fatface"/>
             </Grid>
         </Viewbox>
         <!--Lvl-->
@@ -530,7 +559,15 @@
                Opacity="0"
                Visibility="Collapsed"/>
 
-        <Viewbox x:Name="ConfirmBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
+        <!--Cuadro de confirmacion-->
+        <Viewbox x:Name="ConfirmBox" 
+                 Grid.Row="1"
+                 Grid.Column="1" 
+                 Grid.ColumnSpan="3"  
+                 Visibility="Collapsed" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center" 
+                 MaxWidth="400">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -541,13 +578,30 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
-                <Rectangle Fill="DarkCyan" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                <Rectangle Fill="DarkCyan" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="2"/>
                 
-                <TextBlock x:Name="TextConfirm" Grid.Row="0" Grid.ColumnSpan="2" Text="Unequip Skill?" FontFamily="Abril Fatface"/>
+                <TextBlock x:Name="TextConfirm"
+                           Grid.Row="0" 
+                           Grid.ColumnSpan="2" 
+                           Text="Unequip Skill?" 
+                           FontFamily="Abril Fatface"/>
 
-                <Button Grid.Row="1" Grid.Column="0"  Content="Yes" Click="Confirm_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch"/>
-                <Button Grid.Row="1" Grid.Column="1" Content="No" Click="No_Click" FontFamily="Abril Fatface" HorizontalAlignment="Stretch"/>
-                
+                <!--YesButton-->
+                <Button Grid.Row="1" 
+                        Grid.Column="0" 
+                        Content="Yes" 
+                        Click="Confirm_Click"
+                        FontFamily="Abril Fatface"
+                        HorizontalAlignment="Stretch"/>
+                <!--NoButton-->
+                <Button Grid.Row="1" 
+                        Grid.Column="1" 
+                        Content="No" 
+                        Click="No_Click"
+                        FontFamily="Abril Fatface"
+                        HorizontalAlignment="Stretch"/>                
             </Grid>
         </Viewbox>
     </Grid>

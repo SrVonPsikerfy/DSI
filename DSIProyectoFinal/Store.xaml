@@ -105,7 +105,6 @@
         </Style>
     </Page.Resources>
 
-
     <Grid KeyDown="Grid_KeyDown">
         <!-- Definicion de columnas !-->
         <Grid.ColumnDefinitions>
@@ -160,8 +159,7 @@
             <Image Source="/Assets/storeIcons.png" />
         </Viewbox>
 
-        <Viewbox  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            
+        <Viewbox  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">            
         <StackPanel Orientation="Horizontal"  >
             <!--HomeButton-->
             <Button x:Name="HomeButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Transparent"
@@ -177,7 +175,6 @@
         </StackPanel>
         </Viewbox>
 
-
         <!--Dropdown para ordenar el GridView-->
         <Viewbox Grid.Column="2" Grid.Row="0" MaxWidth="200">
             <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center"
@@ -191,15 +188,21 @@
             </ComboBox>
         </Viewbox>
 
-
         <!--Moneda de juego disponible para gastar-->
         <Viewbox x:Name="Monedas" Grid.Column="3" Grid.Row="0" Margin="20, 10, 20, 10" MaxWidth="300">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image Source="./Assets/moneda.png" MaxHeight="89" MaxWidth="133"
-                   HorizontalAlignment="Left" />
-                <TextBlock x:Name="Money" Text="0" FontSize="40" FontFamily="Abril FatFace"
-                           HorizontalAlignment="Center" VerticalAlignment="Center"
-                           Foreground="Purple" FontWeight="Bold"/>
+                <Image Source="./Assets/moneda.png" 
+                       MaxHeight="89" 
+                       MaxWidth="133"
+                       HorizontalAlignment="Left" />
+                <TextBlock x:Name="Money" 
+                           Text="0" 
+                           FontSize="40" 
+                           FontFamily="Abril FatFace"
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"
+                           Foreground="Purple"
+                           FontWeight="Bold"/>
             </StackPanel>
         </Viewbox>
 
@@ -210,7 +213,6 @@
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
                     <TextBlock Style="{StaticResource KotFStyle}"/>
-
                     <Grid>
                         <Image Style="{StaticResource BlueFlagImage}"/>
                         <TextBlock Text="STORE"
@@ -221,12 +223,13 @@
         </Viewbox>
 
         <!--Menu confirmacion-->
-        <Image x:Name="FalseBackground" Grid.ColumnSpan="5" Grid.RowSpan="3"
+        <Image x:Name="FalseBackground"
+               Grid.ColumnSpan="5"
+               Grid.RowSpan="3"
                Source="./Assets/castle.jpg"
                Stretch="Fill"
                Opacity="0"
-               Visibility="Collapsed"/>
-        
+               Visibility="Collapsed"/>        
         <Viewbox x:Name="ConfirmBox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"  Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="400">
             <Grid>
                 <Grid.RowDefinitions>

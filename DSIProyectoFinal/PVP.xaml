@@ -86,7 +86,7 @@
         <Image Grid.ColumnSpan="4" Grid.RowSpan="4"
                Source="./Assets/Backgrounds/oldPaper.png"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Viewbox>
             <Grid>
@@ -120,14 +120,16 @@
             </Grid>
         </Viewbox>
 
-        <Rectangle x:Name="rectangleModeSelection" Grid.Row="1"
+        <!--Rectangulo Verde-->
+        <Rectangle x:Name="rectangleModeSelection" 
+                   Grid.Row="1"
                    Grid.RowSpan="2"
                    Grid.Column="2"
                    Grid.ColumnSpan="2"
                    Fill="Green">
         </Rectangle>
 
-
+        <!--Botones de Lobby-->
         <Viewbox Grid.Column="2"
                     Grid.ColumnSpan="2"
                     Grid.Row="2"
@@ -168,22 +170,25 @@
             </Grid>
         </Viewbox>
 
+        <!--Attack and Defend Icon-->
         <Viewbox Grid.Row="1"  Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">
-
             <StackPanel Orientation="Horizontal">
-
                 <Button x:Name="attackButton"  Click="AttackClick" Background="Transparent">
-                    <Image x:Name="attackImage" Source="/Assets/atacanteIcon.png"
-                   Stretch="Fill"/>
+                    <Image x:Name="attackImage" 
+                           Source="/Assets/atacanteIcon.png"
+                           Stretch="Fill"/>
                 </Button>
-                <Button x:Name="defenseButton"  Click="DefendClick" Background="Transparent">
-                    <Image x:Name="defenseImage" Source="/Assets/defensorSelectedIcon.png"
-                   Stretch="Fill"></Image>
+                <Button x:Name="defenseButton"  
+                        Click="DefendClick" 
+                        Background="Transparent">
+                    <Image x:Name="defenseImage" 
+                           Source="/Assets/defensorSelectedIcon.png"
+                           Stretch="Fill"/>
                 </Button>
             </StackPanel>
         </Viewbox>
 
-
+        <!--PVP Icon-->
         <Image Source="/Assets/pvpIcon.png"
                Grid.ColumnSpan="2"
                Grid.Row="1"
@@ -191,7 +196,6 @@
                Stretch="Uniform"
                VerticalAlignment="Stretch"
                HorizontalAlignment="Stretch"/>
-
 
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2">
             <!--HomeButton-->

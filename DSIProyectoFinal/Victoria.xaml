@@ -42,7 +42,12 @@
         </Rectangle>
 
         <!--Iridium Obtenido-->
-        <Image Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Source="/Assets/moneda.png" MaxHeight="300" MaxWidth="300" />
+        <Image Grid.Row="3" 
+               Grid.RowSpan="2" 
+               Grid.Column="1" 
+               Source="/Assets/moneda.png" 
+               MaxHeight="300" 
+               MaxWidth="300" />
         <Viewbox Grid.Row="4" Grid.Column="2" 
                  MaxWidth="300" 
                  HorizontalAlignment="Left" 
@@ -55,8 +60,15 @@
         </Viewbox>
 
         <!--Experiencia Obtenida-->
-        <Image Grid.Row="3"  Grid.RowSpan="2" Grid.Column="3" Source="/Assets/exp.png"/>
-        <Viewbox  Grid.Row="4" Grid.Column="4"  MaxWidth="150" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Image Grid.Row="3"  
+               Grid.RowSpan="2" 
+               Grid.Column="3" 
+               Source="/Assets/exp.png"/>
+        <Viewbox  Grid.Row="4" 
+                  Grid.Column="4"  
+                  MaxWidth="150" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top">
             <TextBlock Text="30" 
                        x:Name="expCount"                                  
                        FontWeight="Bold" 
@@ -65,21 +77,27 @@
         </Viewbox>
 
         <!--Texto de victoria-->
-        <Grid  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
+        <Grid  Grid.Row="1" 
+               Grid.Column="2" 
+               Grid.ColumnSpan="2" 
+               VerticalAlignment="Bottom">
             <Rectangle Fill="DarkGreen" 
-                   MaxWidth="900"  
-                   HorizontalAlignment="Stretch"/>
+                       MaxWidth="900"  
+                       HorizontalAlignment="Stretch"/>
             <Viewbox VerticalAlignment="Bottom">
                 <TextBlock Text="Victory!" 
-                       Foreground="White" 
-                       VerticalAlignment="Center"                        
-                       FontFamily="Abril Fatface"
-                       HorizontalAlignment="Center" />
+                           Foreground="White" 
+                           VerticalAlignment="Center"
+                           FontFamily="Abril Fatface"
+                           HorizontalAlignment="Center" />
             </Viewbox>
         </Grid>
 
         <!--Modo Historia Button-->
-        <Viewbox  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
+        <Viewbox  Grid.Row="6" 
+                  Grid.Column="1" 
+                  Grid.ColumnSpan="2" 
+                  HorizontalAlignment="Stretch">
             <Button  Margin="0,5,0,5" 
                      BorderThickness="1" 
                      BorderBrush="Black"  
@@ -93,7 +111,10 @@
         </Viewbox>
 
         <!--Menu Button-->
-        <Viewbox  Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+        <Viewbox  Grid.Row="6" 
+                  Grid.Column="3" 
+                  Grid.ColumnSpan="2" 
+                  HorizontalAlignment="Center">
             <Button Margin="0,5,0,5" 
                     BorderThickness="1" 
                     Content="MAIN MENU"                     

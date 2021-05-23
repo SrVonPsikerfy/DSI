@@ -69,21 +69,23 @@
                    TextAlignment="Left"
                    TextWrapping="WrapWholeWords"
                    FontStretch="Expanded"
-                   FontFamily="Abril Fatface"
-                   />
+                   FontFamily="Abril Fatface"/>
             </Grid>
         </Viewbox>
 
         <!--Boton Campaña-->
         <Viewbox Grid.Row="1" Grid.Column="1" >
             <Grid>
-                <Button
-                Click="GoToModoHistoria"
-                Background="Transparent">
+                <Button Click="GoToModoHistoria"
+                        Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
-                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <Image Source="/Assets/book_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
+                        <StackPanel  Orientation="Horizontal"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center" >
+                            <Image Source="/Assets/book_icon.png" 
+                                   MaxHeight="80"
+                                   Margin="0,0,20,0"/>
                             <TextBlock Text="CAMPAIGN" 
                                        VerticalAlignment="Center"
                                        FontFamily="Abril Fatface"
@@ -104,8 +106,12 @@
                         Click="GoToPvp">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
-                        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Image Source="/Assets/pvp_black_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Image Source="/Assets/pvp_black_icon.png"
+                                   MaxHeight="80"
+                                   Margin="0,0,20,0"/>
                             <TextBlock Text="PVP" 
                                        VerticalAlignment="Center"
                                        FontFamily="Abril Fatface"
@@ -130,8 +136,12 @@
                         Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
-                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <Image Source="/Assets/book_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
+                        <StackPanel  Orientation="Horizontal" 
+                                     HorizontalAlignment="Center" 
+                                     VerticalAlignment="Center" >
+                            <Image Source="/Assets/book_icon.png"
+                                   MaxHeight="80" 
+                                   Margin="0,0,20,0"/>
                             <TextBlock Text="TEAMS" 
                                        VerticalAlignment="Center"
                                        FontFamily="Abril Fatface"
@@ -149,8 +159,12 @@
                         Background="Transparent">
                     <Grid>
                         <Image Source="/Assets/blue_flag.png"/>
-                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <Image Source="/Assets/knight_icon.png" MaxHeight="80" Margin="0,0,20,0"/>
+                        <StackPanel  Orientation="Horizontal" 
+                                     HorizontalAlignment="Center" 
+                                     VerticalAlignment="Center" >
+                            <Image Source="/Assets/knight_icon.png"
+                                   MaxHeight="80" 
+                                   Margin="0,0,20,0"/>
                             <TextBlock Text="KNIGHTS" 
                                        VerticalAlignment="Center"
                                        FontFamily="Abril Fatface"
@@ -171,7 +185,6 @@
                 Click="GoToStore">
             <Image Source="./Assets/shop.png" Margin="4,4,4,4"/>
         </Button>
-
 
         <!--Settings and Exit Button-->
         <StackPanel Grid.Row="4" Grid.Column="2"

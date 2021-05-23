@@ -87,12 +87,12 @@
             <ColumnDefinition Width="4*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
+
         <!--Fondo-->
         <Image Grid.ColumnSpan="3" Grid.RowSpan="3"
                Source="./Assets/Backgrounds/oldPaper.png"
                Stretch="Fill"/>
-        
+
         <!--BACK BUTTON-->
         <Button Style="{StaticResource BackButtonStyle}"
                 Click="GoBack">
@@ -113,7 +113,6 @@
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch">
                     <TextBlock Style="{StaticResource KotFStyle}"/>
-
                     <Grid>
                         <Image Style="{StaticResource BlueFlagImage}"/>
                         <TextBlock Text="CAMPAIGN" Margin="0,0,20,0"
@@ -137,7 +136,6 @@
                 <Image Source="/Assets/settingsButton.png" MaxWidth="144" MaxHeight="144"/>
             </Button>
         </StackPanel>
-
 
         <Grid Grid.Row="1" Grid.ColumnSpan="3">
             <Grid.RowDefinitions>
@@ -166,10 +164,10 @@
                       ItemsPanel="{StaticResource ListPanelTemplate}"
                       ItemsSource="{x:Bind Chpt}"
                       ItemClick="ChangeToChapterSelection"
-                      IsItemClickEnabled="True" Background="Beige" BorderThickness="3"
+                      IsItemClickEnabled="True" 
+                      Background="Beige" 
+                      BorderThickness="3"
                       BorderBrush="SandyBrown"/>
-
-
         </Grid>
     </Grid>
 </Page>
