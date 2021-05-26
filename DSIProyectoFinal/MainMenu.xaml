@@ -139,7 +139,7 @@
                         <StackPanel  Orientation="Horizontal" 
                                      HorizontalAlignment="Center" 
                                      VerticalAlignment="Center" >
-                            <Image Source="/Assets/book_icon.png"
+                            <Image Source="/Assets/teams_icon.png"
                                    MaxHeight="80" 
                                    Margin="0,0,20,0"/>
                             <TextBlock Text="TEAMS" 

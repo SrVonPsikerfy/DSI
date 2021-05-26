@@ -283,6 +283,7 @@
     <Content Include="Assets\stick-man-hi.png" />
     <Content Include="Assets\storeIcons.png" />
     <Content Include="Assets\support_class_icon.png" />
+    <Content Include="Assets\teams_icon.png" />
     <Content Include="Assets\unequipedSkill.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
