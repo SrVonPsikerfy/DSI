@@ -121,8 +121,10 @@
             <ContentControl Grid.Row="2" 
                             Grid.Column="6"
                             x:Name="content26" 
-                            PointerPressed="MovingCard" 
-                            HorizontalAlignment="Center">
+                            PointerPressed="MovingCard" KeyDown="MovingCardOnKeyDown"
+                            HorizontalAlignment="Center"
+                            TabIndex="4"
+                            UseSystemFocusVisuals="True">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -154,8 +156,10 @@
             <ContentControl Grid.Row="2" 
                             Grid.Column="7"
                             x:Name="content27"
-                            PointerPressed="MovingCard" 
-                            HorizontalAlignment="Center">
+                            PointerPressed="MovingCard" KeyDown="MovingCardOnKeyDown"
+                            HorizontalAlignment="Center"
+                            TabIndex="5"
+                            UseSystemFocusVisuals="True">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -186,8 +190,10 @@
             <ContentControl Grid.Row="3" 
                             Grid.Column="6" 
                             x:Name="content36"
-                            PointerPressed="MovingCard" 
-                            HorizontalAlignment="Center">
+                            PointerPressed="MovingCard" KeyDown="MovingCardOnKeyDown"
+                            HorizontalAlignment="Center"
+                            TabIndex="6"
+                            UseSystemFocusVisuals="True">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -218,8 +224,10 @@
             <ContentControl Grid.Row="3"
                             Grid.Column="7"
                             x:Name="content37"
-                            PointerPressed="MovingCard" 
-                            HorizontalAlignment="Center">
+                            PointerPressed="MovingCard" KeyDown="MovingCardOnKeyDown"
+                            HorizontalAlignment="Center"
+                            TabIndex="7"
+                            UseSystemFocusVisuals="True">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="4*"/>
@@ -254,7 +262,9 @@
                      HorizontalAlignment="Right" 
                      VerticalAlignment="Stretch">
             <!--Caballero 1-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
+            <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1" KeyDown="ContentControlKeyDown"
+                            TabIndex="0"
+                            UseSystemFocusVisuals="True">
                 <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[0].BackgroundColor, Mode=OneWay}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -286,8 +296,10 @@
             </ContentControl>
 
             <!--Caballero 2-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed" 
-                            x:Name="TeamMember2">
+            <ContentControl PointerPressed="ContentControl_PointerPressed" KeyDown="ContentControlKeyDown"
+                            x:Name="TeamMember2"
+                            TabIndex="1"
+                            UseSystemFocusVisuals="True">
                 <Grid BorderThickness="3" 
                       BorderBrush="Black" 
                       Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
@@ -321,8 +333,10 @@
             </ContentControl>
 
             <!--Caballero 3-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed"
-                            x:Name="TeamMember3">
+            <ContentControl PointerPressed="ContentControl_PointerPressed" KeyDown="ContentControlKeyDown"
+                            x:Name="TeamMember3"
+                            TabIndex="2"
+                            UseSystemFocusVisuals="True">
                 <Grid BorderThickness="3"
                       BorderBrush="Black"
                       Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
@@ -356,8 +370,10 @@
             </ContentControl>
 
             <!--Caballero 4-->
-            <ContentControl PointerPressed="ContentControl_PointerPressed"
-                            x:Name="TeamMember4">
+            <ContentControl PointerPressed="ContentControl_PointerPressed" KeyDown="ContentControlKeyDown"
+                            x:Name="TeamMember4"
+                            TabIndex="3"
+                            UseSystemFocusVisuals="True">
                 <Grid BorderThickness="3" 
                       BorderBrush="Black" 
                       Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">

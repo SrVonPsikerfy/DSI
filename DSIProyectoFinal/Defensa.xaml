@@ -170,7 +170,8 @@
                 Fill="Black" Width="5" HorizontalAlignment="Left"/>
 
                 <!--Casilla pulsable 1-->
-                <ContentControl Grid.Row="0" Grid.Column="1" x:Name="content01" PointerPressed="MovingCard" HorizontalAlignment="Center">
+                <ContentControl Grid.Row="0" Grid.Column="1" x:Name="content01" KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" HorizontalAlignment="Center"
+                                TabIndex="8" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -196,7 +197,8 @@
                 </ContentControl>
                 
                 <!--Casilla pulsable 2-->
-                <ContentControl Grid.Row="0" Grid.Column="2" x:Name="content02" PointerPressed="MovingCard" HorizontalAlignment="Center">
+                <ContentControl Grid.Row="0" Grid.Column="2" x:Name="content02" KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" HorizontalAlignment="Center"
+                                TabIndex="9" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -227,8 +229,9 @@
                 <!--Casilla pulsable 3-->
                 <ContentControl Grid.Row="0" Grid.Column="3"
                                 x:Name="content03" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="10" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -258,8 +261,9 @@
                 <ContentControl Grid.Row="0" 
                                 Grid.Column="4"
                                 x:Name="content04"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="11" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -290,8 +294,9 @@
                 <ContentControl Grid.Row="0"
                                 Grid.Column="5" 
                                 x:Name="content05" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="12" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -322,8 +327,9 @@
                 <ContentControl Grid.Row="0"
                                 Grid.Column="6" 
                                 x:Name="content06" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="13" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -354,8 +360,9 @@
                 <ContentControl Grid.Row="0" 
                                 Grid.Column="7" 
                                 x:Name="content07" 
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="14" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -386,8 +393,9 @@
                 <ContentControl Grid.Row="1" 
                                 Grid.Column="1"
                                 x:Name="content11"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="15" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -418,8 +426,9 @@
                 <ContentControl Grid.Row="1" 
                                 Grid.Column="2" 
                                 x:Name="content12" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="16" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -450,8 +459,9 @@
                 <ContentControl Grid.Row="1" 
                                 Grid.Column="3"                                
                                 x:Name="content13" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="17" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -482,8 +492,9 @@
                 <ContentControl Grid.Row="1" 
                                 Grid.Column="4" 
                                 x:Name="content14" 
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="18" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -514,8 +525,9 @@
                 <ContentControl Grid.Row="1"
                                 Grid.Column="5"
                                 x:Name="content15" 
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="19" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -547,8 +559,9 @@
                 <ContentControl Grid.Row="1"
                                 Grid.Column="6" 
                                 x:Name="content16"
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="20" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -580,8 +593,9 @@
                 <ContentControl Grid.Row="1" 
                                 Grid.Column="7" 
                                 x:Name="content17"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="21" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -612,8 +626,9 @@
                 <ContentControl Grid.Row="2"
                                 Grid.Column="0" 
                                 x:Name="content20" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="22" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -644,8 +659,9 @@
                 <ContentControl Grid.Row="2"
                                 Grid.Column="1" 
                                 x:Name="content21"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="23" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -676,8 +692,9 @@
                 <ContentControl Grid.Row="2"
                                 Grid.Column="2" 
                                 x:Name="content22" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="24" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -708,8 +725,9 @@
                 <ContentControl Grid.Row="2" 
                                 Grid.Column="3" 
                                 x:Name="content23"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="25" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -740,8 +758,9 @@
                 <ContentControl Grid.Row="2"
                                 Grid.Column="4" 
                                 x:Name="content24" 
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="26" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -772,8 +791,9 @@
                 <ContentControl Grid.Row="2" 
                                 Grid.Column="5" 
                                 x:Name="content25" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="27" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -804,8 +824,9 @@
                 <ContentControl Grid.Row="2"
                                 Grid.Column="6" 
                                 x:Name="content26"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="28" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -836,8 +857,9 @@
                 <ContentControl Grid.Row="3"
                                 Grid.Column="0"
                                 x:Name="content30"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="29" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -868,8 +890,9 @@
                 <ContentControl Grid.Row="3" 
                                 Grid.Column="1" 
                                 x:Name="content31"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="30" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -900,8 +923,9 @@
                 <ContentControl Grid.Row="3" 
                                 Grid.Column="2" 
                                 x:Name="content32"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="31" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -932,8 +956,9 @@
                 <ContentControl Grid.Row="3" 
                                 Grid.Column="3"
                                 x:Name="content33" 
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="32" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -964,8 +989,9 @@
                 <ContentControl Grid.Row="3"
                                 Grid.Column="4" 
                                 x:Name="content34" 
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="33" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -996,8 +1022,9 @@
                 <ContentControl Grid.Row="3" 
                                 Grid.Column="5"
                                 x:Name="content35"
-                                PointerPressed="MovingCard"
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard"
+                                HorizontalAlignment="Center"
+                                TabIndex="34" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -1028,8 +1055,9 @@
                 <ContentControl Grid.Row="3" 
                                 Grid.Column="6" 
                                 x:Name="content36" 
-                                PointerPressed="MovingCard" 
-                                HorizontalAlignment="Center">
+                                KeyDown="MovingCardOnKeyDown" PointerPressed="MovingCard" 
+                                HorizontalAlignment="Center"
+                                TabIndex="35" UseSystemFocusVisuals="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
@@ -1066,7 +1094,8 @@
                          VerticalAlignment="Stretch">
                 
                 <!--Caballero 1-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember1"
+                                TabIndex="0" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3" BorderBrush="Black" Background="{x:Bind SelectedTeam[0].BackgroundColor, Mode=OneWay}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -1101,8 +1130,9 @@
                 </ContentControl>
 
                 <!--Caballero 2-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" 
-                                x:Name="TeamMember2">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" 
+                                x:Name="TeamMember2"
+                                TabIndex="1" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3" 
                           BorderBrush="Black" 
                           Background="{x:Bind SelectedTeam[1].BackgroundColor, Mode=OneWay}">
@@ -1139,7 +1169,8 @@
                 </ContentControl>
 
                 <!--Caballero 3-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember3"
+                                TabIndex="2" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3" 
                           BorderBrush="Black" 
                           Background="{x:Bind SelectedTeam[2].BackgroundColor, Mode=OneWay}">
@@ -1176,7 +1207,8 @@
                 </ContentControl>
 
                 <!--Caballero 4-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember4"
+                                TabIndex="3" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3"
                           BorderBrush="Black" 
                           Background="{x:Bind SelectedTeam[3].BackgroundColor, Mode=OneWay}">
@@ -1213,7 +1245,8 @@
                 </ContentControl>
 
                 <!--Caballero 5-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" 
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" 
+                                TabIndex="4" UseSystemFocusVisuals="True"
                                 x:Name="TeamMember5">
                     <Grid BorderThickness="3"
                           BorderBrush="Black" 
@@ -1251,8 +1284,8 @@
                 </ContentControl>
 
                 <!--Caballero 6-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" 
-                                x:Name="TeamMember6">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" 
+                                x:Name="TeamMember6" TabIndex="5" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3" 
                           BorderBrush="Black" 
                           Background="{x:Bind SelectedTeam[5].BackgroundColor, Mode=OneWay}">
@@ -1290,7 +1323,8 @@
                 </ContentControl>
 
                 <!--Caballero 7-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember7">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember7"
+                                TabIndex="6" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3"
                           BorderBrush="Black" 
                           Background="{x:Bind SelectedTeam[6].BackgroundColor, Mode=OneWay}">
@@ -1328,7 +1362,8 @@
                 </ContentControl>
 
                 <!--Caballero 8-->
-                <ContentControl PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember8">
+                <ContentControl KeyDown="ContentControlKeyDown" PointerPressed="ContentControl_PointerPressed" x:Name="TeamMember8"
+                                TabIndex="7" UseSystemFocusVisuals="True">
                     <Grid BorderThickness="3" 
                           BorderBrush="Black" 
                           Background="{x:Bind SelectedTeam[7].BackgroundColor, Mode=OneWay}">

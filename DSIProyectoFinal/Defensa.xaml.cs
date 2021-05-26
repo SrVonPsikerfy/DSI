@@ -163,5 +163,79 @@ namespace DSIProyectoFinal
             }
             
         }
+
+        private void MovingCardOnKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.OriginalKey == Windows.System.VirtualKey.GamepadA)
+            {
+                if (MemberSelected != null)
+                {
+                    Sounds.playSound("button.wav");
+                    ContentControl cell = sender as ContentControl;
+                    //pillo la imagen por su nombre
+                    int posicion = int.Parse(cell.Name[7].ToString()) * 8 + int.Parse(cell.Name[8].ToString()); //8??
+                    if (KnightsOnGrid[posicion] == null)
+                    {
+                        KnightsOnGrid[posicion] = SelectedTeam[IndexOfSelectedKnight];
+                        //se esconde el caballero seleccionado
+                        MemberSelected.Visibility = Visibility.Collapsed;
+                        MemberSelected = null;
+                        //gastar puntos
+                        ManaPoints -= KnightsOnGrid[posicion].Mana;
+                        manaPointsText.Text = ManaPoints.ToString();
+                        //HABILIDADES
+                        StackPanel skillStackPanel = cell.FindName("panel" + cell.Name[7].ToString() + cell.Name[8].ToString()) as StackPanel;
+                        if (skillStackPanel != null)
+                        {
+                            int i = 0;
+                            foreach (Skill skill in KnightsOnGrid[posicion].EquipedAbilities)
+                            {
+                                Image image = new Image();
+                                image.Source = new BitmapImage(new Uri(skill.ImageSource));
+                                skillStackPanel.Children.Add(image);
+                                i++;
+                            }
+                            while (i < 3)
+                            {
+                                Image image = new Image();
+                                image.Source = new BitmapImage(new Uri("ms-appx:///Assets/skills/skill_locked.png"));
+                                skillStackPanel.Children.Add(image);
+                                i++;
+                            }
+                        }
+                    }
+                }
+            }
+              
+        }
+
+        private void ContentControlKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.OriginalKey == Windows.System.VirtualKey.GamepadA)
+            {
+                Sounds.playSound("button.wav");
+                //Cojo el grid de dentro
+                Grid contentGrid = ((sender as ContentControl).Content as Grid);
+
+                //Si es el mismo, deselecciono
+                if (MemberSelected == sender as ContentControl)
+                {
+                    MemberSelected = null;
+                    contentGrid.Opacity = 1;
+                    IndexOfSelectedKnight = -1;
+                }
+                else //Si es distinto...
+                {
+                    //si no habia ninguno seleccionado, lo selecciono
+                    if (MemberSelected == null)
+                    {
+                        MemberSelected = sender as ContentControl;
+                        IndexOfSelectedKnight = int.Parse(MemberSelected.Name[10].ToString()) - 1;
+                        contentGrid.Opacity = 0.5;
+                    }
+                    //else //si habia uno ya seleccionado y es distinto no hago nada
+                }
+            }
+        }
     }
 }
