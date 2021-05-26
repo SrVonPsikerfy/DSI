@@ -75,7 +75,7 @@ namespace DSIProyectoFinal
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             Sounds.playSound("button.wav");
-            if (e.OriginalKey != Windows.System.VirtualKey.GamepadB && e.Key == Windows.System.VirtualKey.Escape || e.Key == Windows.System.VirtualKey.GamepadMenu)
+            if (e.OriginalKey == Windows.System.VirtualKey.GamepadB && e.Key == Windows.System.VirtualKey.Escape || e.Key == Windows.System.VirtualKey.GamepadMenu)
             {
                 if (this.Frame.CanGoBack)
                 {
